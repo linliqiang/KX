@@ -1,0 +1,2037 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>阿立哌访视</title>
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/visit.css">
+
+</head>
+<body>
+
+<div id="app">
+	
+	<section class="ban"></section>
+
+	<ul class="nav">
+		<li><a href="pro-exp.html"></a>项目说明</li>
+		<li class="navs"><a>填写病例</a></li>
+		<li><a href="case-list.html">病例列表</a></li>
+		<li><a href="doc.html">个人信息</a></li>
+	</ul>
+
+	<section class="main">
+		<div class="sub-nav-box">
+			<ul class="sub-nav">
+				<li class="fillok" n="1">基线访视(访视1,第0天)<span><img src="img/g.png" height="13" width="11" alt=""></span></li>
+				<li class="filling" n="2">访视2,治疗14天±天<span><img src="img/g.png" height="13" width="11" alt=""></span></li>
+				<li class="fillno" n="3">访视3,治疗42天±天<span><img src="img/g.png" height="13" width="11" alt=""></span></li>
+			</ul>
+		</div>
+		<div class="content">
+
+			<!-- 导航 -->
+			<div class="content-top" flex fw=wr jc=sb ac=sa>
+				<div @click="snt(1)" class="fill2ok" n="1">基本信息</div>
+				<div @click="snt(2)" class="fill2ok" n="2">阳性与阴性症状量表(PANSS)</div>
+				<div @click="snt(3)" class="fill2ok" n="3">病情严重程度量表(CGI-S)</div>
+				<div @click="snt(4)" class="fill2no" n="4">疗效总评量表(CGI-I)</div>
+				<div @click="snt(5)" class="fill2no" n="5">不良反应量表(UKU)</div>
+				<div @click="snt(6)" class="fill2no" n="6">总体评价及处理措施</div>
+				<div @click="snt(7)" class="fill2no" n="7">其他不良事件询问</div>
+				<div @click="snt(8)" class="fill2no" n="8">研究完成记录</div>
+			</div>
+
+			<!-- 第一步 -->
+			<div class="content1" :class="{sns:sn==1}" v-show="sn==1">
+					
+				<div class="title-time" flex ai=ce>
+					<span>访视时间：</span>
+					<input id="" type="text" alt="首次诊断日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+				</div>
+				<div class="title">体格检查</div>
+				<ul class="c1-f1">
+					<li>
+						<input type="checkbox" name="cb-1" class="cb-11" alt="是否检查体格" ito="5">
+						<label for="">未查，请说明未查原因</label>
+						<input type="text" class="tg">
+						<span>检查日期：</span>
+						<input id="" type="text" alt="检查日期" class="Wdate" fi="fi" readonly="" onclick="new WdatePicker()">
+					</li>
+					<li>
+						<label for="">体重：</label>
+						<input type="number" alt="体重" cha="cha1" fi="fi">
+						<label>KG</label>
+						<label for="">腰围：</label>
+						<input type="number" alt="腰围" cha="cha3" fi="fi">
+						<label>CM</label>
+						<label for="">臀围：</label>
+						<input type="number" alt="臀围" cha="cha4" fi="fi">
+						<label>CM</label>
+					</li>
+				</ul>
+				<div class="title">研究用药服用询问</div>
+				<ul class="c1-f2">
+					<li>
+						<span>本次访视期间是否使用研究用药? </span>
+						<input type="radio" name="c1-r1" value="否" class="rc11">
+						<label for="">否</label>
+						<input type="radio" name="c1-r1" value="是" class="rc12">
+						<label for="">是，请填写研究用药服用记录</label>
+					</li>
+				</ul>
+				<div class="title">研究用药用量记录表</div>
+				<div class="c1-f3">
+					<ul class="c1-f3-body">
+						<li>
+							<div><span>开始日期</span></div>
+							<div><span>结束日期</span></div>
+							<div><span>剂量</span></div>
+							<div><span>单位</span></div>
+							<div><span>剂量是否调整</span></div>
+						</li>
+						<li class="c1-f3-body-item">
+							<div>
+								<input id="" type="text" alt="开始日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+							</div>
+							<div>
+								<input id="" type="text" alt="结束日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+							</div>
+							<div>
+								<input type="text" alt="调整剂量">
+							</div>
+							<div>
+								<span>mg/天</span>
+							</div>
+							<div>
+								<input type="radio" alt="剂量是否调整" name="c1-f3-r0" ito="2">
+								<label for="">否</label>
+								<input type="radio" alt="剂量是否调整" name="c1-f3-r0" oti="3-1">
+								<label for="">是  若是，调整原因：</label>
+								<input type="text" alt="剂量调整原因" otii="3-1">
+							</div>
+						</li>
+						<li class="c1-f3-body-item">
+							<div>
+								<input id="" type="text" alt="开始日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+							</div>
+							<div>
+								<input id="" type="text" alt="结束日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+							</div>
+							<div>
+								<input type="text" alt="调整剂量">
+							</div>
+							<div>
+								<span>mg/天</span>
+							</div>
+							<div>
+								<input type="radio" alt="剂量是否调整" name="c1-f3-r1" ito="2">
+								<label for="">否</label>
+								<input type="radio" alt="剂量是否调整" name="c1-f3-r1" oti="3-2">
+								<label for="">是  若是，调整原因：</label>
+								<input type="text" alt="剂量调整原因" otii="3-2">
+							</div>
+						</li>
+						<li class="c1-f3-body-item">
+							<div>
+								<input id="" type="text" alt="开始日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+							</div>
+							<div>
+								<input id="" type="text" alt="结束日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+							</div>
+							<div>
+								<input type="text" alt="调整剂量">
+							</div>
+							<div>
+								<span>mg/天</span>
+							</div>
+							<div>
+								<input type="radio" alt="剂量是否调整" name="c1-f3-r2" ito="2">
+								<label for="">否</label>
+								<input type="radio" alt="剂量是否调整" name="c1-f3-r2" oti="3-3">
+								<label for="">是  若是，调整原因：</label>
+								<input type="text" alt="剂量调整原因" otii="3-3">
+							</div>
+						</li>
+						<li class="c1-f3-body-item">
+							<div>
+								<input id="" type="text" alt="开始日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+							</div>
+							<div>
+								<input id="" type="text" alt="结束日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+							</div>
+							<div>
+								<input type="text" alt="调整剂量">
+							</div>
+							<div>
+								<span>mg/天</span>
+							</div>
+							<div>
+								<input type="radio" alt="剂量是否调整" name="c1-f3-r3" ito="2">
+								<label for="">否</label>
+								<input type="radio" alt="剂量是否调整" name="c1-f3-r3" oti="3-4">
+								<label for="">是  若是，调整原因：</label>
+								<input type="text" alt="剂量调整原因" otii="3-4">
+							</div>
+						</li>
+						<li class="c1-f3-body-item">
+							<div>
+								<input id="" type="text" alt="开始日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+							</div>
+							<div>
+								<input id="" type="text" alt="结束日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+							</div>
+							<div>
+								<input type="text" alt="调整剂量">
+							</div>
+							<div>
+								<span>mg/天</span>
+							</div>
+							<div>
+								<input type="radio" alt="剂量是否调整" name="c1-f3-r4" ito="2">
+								<label for="">否</label>
+								<input type="radio" alt="剂量是否调整" name="c1-f3-r4" oti="3-5">
+								<label for="">是  若是，调整原因：</label>
+								<input type="text" alt="剂量调整原因" otii="3-5">
+							</div>
+						</li>
+						<li class="c1-f3-body-item">
+							<div>
+								<input id="" type="text" alt="开始日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+							</div>
+							<div>
+								<input id="" type="text" alt="结束日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+							</div>
+							<div>
+								<input type="text" alt="调整剂量">
+							</div>
+							<div>
+								<span>mg/天</span>
+							</div>
+							<div>
+								<input type="radio" alt="剂量是否调整" name="c1-f3-r5" ito="2">
+								<label for="">否</label>
+								<input type="radio" alt="剂量是否调整" name="c1-f3-r5" oti="3-6">
+								<label for="">是  若是，调整原因：</label>
+								<input type="text" alt="剂量调整原因" otii="3-6">
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="title">合并用药记录表</div>
+				<div class="cen-cho">
+					<span>本次访视期间是否使用除研究用药以外的其他任何药物? </span>
+					<input type="radio" name="c5-r1" alt="是否有合并用药" value="无" class="rc21">
+					<label for="">无</label>
+					<input type="radio" name="c5-r1" alt="是否有合并用药" value="有" class="rc22">
+					<label for="">有&nbsp;&nbsp;&nbsp;&nbsp;若有，请填写下来</label>
+				</div>
+				<ul class="c1-f5">
+					<li class="c1-f5-li1">
+						<div><span>药品通用名</span></div>
+						<div><span>每日总剂量</span></div>
+						<div><span>剂量单位</span></div>
+						<div><span>频率</span></div>
+						<div><span>用药途径</span></div>
+						<div><span>开始日期</span></div>
+						<div><span>是否持续</span></div>
+						<div><span>适应症名称</span></div>
+						<div><span>原因<em>*</em></span></div>
+					</li>
+					<li class="c1-f5-li2">
+						<div><input type="text" alt="药品通用名"></div>
+						<div><input type="text" alt="每日总剂量"></div>
+						<div><span>mg/d</span></div>
+						<div><input type="text" alt="服用频率"></div>
+						<div><input type="text" alt="用药途径"></div>
+						<div>
+							<input id="" type="text" alt="服药开始日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+						</div>
+						
+						<div>
+							<p><input type="radio" name='1-5-1' alt="是否持续" ito="2"><label for="">是</label></p>
+							<p><input type="radio" name='1-5-1' alt="是否持续" oti="1-5-1"><label for="">否，结束日期</label></p>
+							<p>
+								<input id="" type="text" alt="结束日期" otii="1-5-1" class="Wdate" readonly="" onclick="new WdatePicker()">
+							</p>
+						</div>
+						<div><input type="text" alt="适应症名称"></div>
+						<div>
+							<p><input type="radio" name="1-5-2" alt="合并用药服用原因" ito="5"><label for="">治疗不良事件</label></p>
+							<p><input type="radio" name="1-5-2" alt="合并用药服用原因" ito="5"><label for="">既往用药</label></p>
+							<p><input type="radio" name="1-5-2" alt="合并用药服用原因" ito="5"><label for="">预防</label></p>
+							<p><input type="radio" name="1-5-2" alt="合并用药服用原因" ito="5"><label for="">补充</label></p>
+							<p><input type="radio" name="1-5-2" alt="合并用药服用原因" oti="1-5-2"><label for="">其他,请详述:</label></p>
+							<p><input type="text" otii="1-5-2" alt="其他合并用药服用原因"></p>
+						</div>
+					</li>
+					<li class="c1-f5-li2">
+						<div><input type="text" alt="药品通用名"></div>
+						<div><input type="text" alt="每日总剂量"></div>
+						<div><span>mg/d</span></div>
+						<div><input type="text" alt="服用频率"></div>
+						<div><input type="text" alt="用药途径"></div>
+						<div>
+							<input id="" type="text" alt="服药开始日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+						</div>
+						
+						<div>
+							<p><input type="radio" name='1-5-3' alt="是否持续" ito="2"><label for="">是</label></p>
+							<p><input type="radio" name='1-5-3' alt="是否持续" oti="1-5-3"><label for="">否，结束日期</label></p>
+							<p>
+								<input id="" type="text" alt="结束日期" otii="1-5-3" class="Wdate" readonly="" onclick="new WdatePicker()">
+							</p>
+						</div>
+						<div><input type="text" alt="适应症名称"></div>
+						<div>
+							<p><input type="radio" name="1-5-4" alt="合并用药服用原因" ito="5"><label for="">治疗不良事件</label></p>
+							<p><input type="radio" name="1-5-4" alt="合并用药服用原因" ito="5"><label for="">既往用药</label></p>
+							<p><input type="radio" name="1-5-4" alt="合并用药服用原因" ito="5"><label for="">预防</label></p>
+							<p><input type="radio" name="1-5-4" alt="合并用药服用原因" ito="5"><label for="">补充</label></p>
+							<p><input type="radio" name="1-5-4" alt="合并用药服用原因" oti="1-5-4"><label for="">其他,请详述:</label></p>
+							<p><input type="text" otii="1-5-4" alt="其他合并用药服用原因"></p>
+						</div>
+					</li>
+					<li class="c1-f5-li2">
+						<div><input type="text" alt="药品通用名"></div>
+						<div><input type="text" alt="每日总剂量"></div>
+						<div><span>mg/d</span></div>
+						<div><input type="text" alt="服用频率"></div>
+						<div><input type="text" alt="用药途径"></div>
+						<div>
+							<input id="" type="text" alt="服药开始日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+						</div>
+						
+						<div>
+							<p><input type="radio" name='1-5-5' alt="是否持续" ito="2"><label for="">是</label></p>
+							<p><input type="radio" name='1-5-5' alt="是否持续" oti="1-5-5"><label for="">否，结束日期</label></p>
+							<p>
+								<input id="" type="text" alt="结束日期" otii="1-5-5" class="Wdate" readonly="" onclick="new WdatePicker()">
+							</p>
+						</div>
+						<div><input type="text" alt="适应症名称"></div>
+						<div>
+							<p><input type="radio" name="1-5-6" alt="合并用药服用原因" ito="5"><label for="">治疗不良事件</label></p>
+							<p><input type="radio" name="1-5-6" alt="合并用药服用原因" ito="5"><label for="">既往用药</label></p>
+							<p><input type="radio" name="1-5-6" alt="合并用药服用原因" ito="5"><label for="">预防</label></p>
+							<p><input type="radio" name="1-5-6" alt="合并用药服用原因" ito="5"><label for="">补充</label></p>
+							<p><input type="radio" name="1-5-6" alt="合并用药服用原因" oti="1-5-6"><label for="">其他,请详述:</label></p>
+							<p><input type="text" otii="1-5-6" alt="其他合并用药服用原因"></p>
+						</div>
+					</li>
+					<li class="c1-f5-li2">
+						<div><input type="text" alt="药品通用名"></div>
+						<div><input type="text" alt="每日总剂量"></div>
+						<div><span>mg/d</span></div>
+						<div><input type="text" alt="服用频率"></div>
+						<div><input type="text" alt="用药途径"></div>
+						<div>
+							<input id="" type="text" alt="服药开始日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+						</div>
+						
+						<div>
+							<p><input type="radio" name='1-5-7' alt="是否持续" ito="2"><label for="">是</label></p>
+							<p><input type="radio" name='1-5-7' alt="是否持续" oti="1-5-7"><label for="">否，结束日期</label></p>
+							<p>
+								<input id="" type="text" alt="结束日期" otii="1-5-7" class="Wdate" readonly="" onclick="new WdatePicker()">
+							</p>
+						</div>
+						<div><input type="text" alt="适应症名称"></div>
+						<div>
+							<p><input type="radio" name="1-5-8" alt="合并用药服用原因" ito="5"><label for="">治疗不良事件</label></p>
+							<p><input type="radio" name="1-5-8" alt="合并用药服用原因" ito="5"><label for="">既往用药</label></p>
+							<p><input type="radio" name="1-5-8" alt="合并用药服用原因" ito="5"><label for="">预防</label></p>
+							<p><input type="radio" name="1-5-8" alt="合并用药服用原因" ito="5"><label for="">补充</label></p>
+							<p><input type="radio" name="1-5-8" alt="合并用药服用原因" oti="1-5-8"><label for="">其他,请详述:</label></p>
+							<p><input type="text" otii="1-5-8" alt="其他合并用药服用原因"></p>
+						</div>
+					</li>
+				</ul>
+				<div class="title">非药物治疗</div>
+				<div class="cen-cho">
+					<span>是否有既往（过去三个月）/合并非药物治疗（包括心理治疗等所有伴随非药物治疗情况）？ </span>
+					<input type="radio" name="cc1-1" class="rc31" value="无">
+					<label for="">无</label>
+					<input type="radio" name="cc1-1" class="rc32" value="有">
+					<label for="">有&nbsp;&nbsp;&nbsp;&nbsp;若有，请填写下来</label>
+				</div>
+				<ul class="c1-f6" flex jc=ce ai=ce>
+					<li>
+						<div><span>序号</span></div>
+						<div><span>治疗方案</span></div>
+						<div><span>治疗原因</span></div>
+						<div><span>用法</span></div>
+						<div><span>频率</span></div>
+						<div><span>开始日期</span></div>
+						<div style="padding-left:115px;"><span>是否持续</span></div>
+					</li>
+					<li class="c1-f6-item">
+						<div><span>1</span></div>
+						<div><input type="text" alt="治疗方案"></div>
+						<div><input type="text" alt="治疗原因"></div>
+						<div><input type="text" alt="用法"></div>
+						<div><input type="text" alt="频率"></div>
+						<div>
+							<input id="" type="text" alt="开始日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+						</div>
+						<div>
+							<p>
+								<input type="radio" name="1-6-1" ito="2" alt="结束日期">
+								<label>是</label>
+							</p>
+							<p>
+								<input type="radio" name="1-6-1" oti="1-6-1" alt="结束日期">
+								<label>否,结束日期</label>
+								<input id="" type="text" alt="结束日期" otii="1-6-1" class="Wdate" readonly="" onclick="new WdatePicker()">
+							</p>
+						</div>
+					</li>
+					<li class="c1-f6-item">
+						<div><span>2</span></div>
+						<div><input type="text" alt="治疗方案"></div>
+						<div><input type="text" alt="治疗原因"></div>
+						<div><input type="text" alt="用法"></div>
+						<div><input type="text" alt="频率"></div>
+						<div>
+							<input id="" type="text" alt="开始日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+						</div>
+						<div>
+							<p>
+								<input type="radio" name="1-6-2" ito="2" alt="结束日期">
+								<label>是</label>
+							</p>
+							<p>
+								<input type="radio" name="1-6-2" oti="1-6-2" alt="结束日期">
+								<label>否,结束日期</label>
+								<input id="" type="text" alt="结束日期" otii="1-6-2" class="Wdate" readonly="" onclick="new WdatePicker()">
+							</p>
+						</div>
+					</li>
+					<li class="c1-f6-item">
+						<div><span>3</span></div>
+						<div><input type="text" alt="治疗方案"></div>
+						<div><input type="text" alt="治疗原因"></div>
+						<div><input type="text" alt="用法"></div>
+						<div><input type="text" alt="频率"></div>
+						<div>
+							<input id="" type="text" alt="开始日期" class="Wdate" readonly="" onclick="new WdatePicker()">
+						</div>
+						<div>
+							<p>
+								<input type="radio" name="1-6-3" ito="2" alt="结束日期">
+								<label>是</label>
+							</p>
+							<p>
+								<input type="radio" name="1-6-3" oti="1-6-3" alt="结束日期">
+								<label>否,结束日期</label>
+								<input id="" type="text" alt="结束日期" otii="1-6-3" class="Wdate" readonly="" onclick="new WdatePicker()">
+							</p>
+						</div>
+					</li>
+					
+				</ul>
+				<!-- 第一步保存 -->
+				<div class="sub">
+					<button class="sub1">保存</button>
+				</div>
+				
+			</div>
+
+			<!-- 第二步 -->
+			<div class="content3" :class="{sns:sn==3}" v-show="sn==2">
+				<!-- 第三步一楼 -->
+				<div class="cb3-f1">
+					<h4>精神分裂症以外的既往史及现病史</h4>
+					<div class="cb3-f1-title2">
+						<input type="checkbox" class="cb3-check" name="cb3-check1">
+						<label for="">未评，请说明未评原因</label>
+						<input id="" type="text" class="rea">
+						<label for="">评定日期：</label>
+						<input id="" type="text" class="Wdate time1" readonly="" onclick="new WdatePicker()">
+					</div>
+					<ul class="cb3-f1-body cb3-f1-body1">
+						<li>
+							<div>(1)阳性分量表</div>
+							<div>无(1分)</div>
+							<div>很轻(2分)</div>
+							<div>轻度(3分)</div>
+							<div>中度(4分)</div>
+							<div>偏重(5分)</div>
+							<div>重度(6分)</div>
+							<div>极重(7分)</div>
+						</li>
+						<li>
+							<div>P1 妄想</div>
+							<div><input type="radio" name="cb311" alt="妄想分数" value="1" v-model="cb3num11"></div>
+							<div><input type="radio" name="cb311" alt="妄想分数" value="2" v-model="cb3num11"></div>
+							<div><input type="radio" name="cb311" alt="妄想分数" value="3" v-model="cb3num11"></div>
+							<div><input type="radio" name="cb311" alt="妄想分数" value="4" v-model="cb3num11"></div>
+							<div><input type="radio" name="cb311" alt="妄想分数" value="5" v-model="cb3num11"></div>
+							<div><input type="radio" name="cb311" alt="妄想分数" value="6" v-model="cb3num11"></div>
+							<div><input type="radio" name="cb311" alt="妄想分数" value="7" v-model="cb3num11"></div>
+						</li>
+						<li>
+							<div>P2 联想散漫</div>
+							<div><input type="radio" name="cb312" alt="联想散漫" value="1" v-model="cb3num12"></div>
+							<div><input type="radio" name="cb312" alt="联想散漫" value="2" v-model="cb3num12"></div>
+							<div><input type="radio" name="cb312" alt="联想散漫" value="3" v-model="cb3num12"></div>
+							<div><input type="radio" name="cb312" alt="联想散漫" value="4" v-model="cb3num12"></div>
+							<div><input type="radio" name="cb312" alt="联想散漫" value="5" v-model="cb3num12"></div>
+							<div><input type="radio" name="cb312" alt="联想散漫" value="6" v-model="cb3num12"></div>
+							<div><input type="radio" name="cb312" alt="联想散漫" value="7" v-model="cb3num12"></div>
+						</li>
+						<li>
+							<div>P3 幻觉行为</div>
+							<div><input type="radio" name="cb313" alt="幻觉行为" value="1" v-model="cb3num13"></div>
+							<div><input type="radio" name="cb313" alt="幻觉行为" value="2" v-model="cb3num13"></div>
+							<div><input type="radio" name="cb313" alt="幻觉行为" value="3" v-model="cb3num13"></div>
+							<div><input type="radio" name="cb313" alt="幻觉行为" value="4" v-model="cb3num13"></div>
+							<div><input type="radio" name="cb313" alt="幻觉行为" value="5" v-model="cb3num13"></div>
+							<div><input type="radio" name="cb313" alt="幻觉行为" value="6" v-model="cb3num13"></div>
+							<div><input type="radio" name="cb313" alt="幻觉行为" value="7" v-model="cb3num13"></div>
+						</li>
+						<li>
+							<div>P4 兴奋</div>
+							<div><input type="radio" name="cb314" alt="兴奋" value="1" v-model="cb3num14"></div>
+							<div><input type="radio" name="cb314" alt="兴奋" value="2" v-model="cb3num14"></div>
+							<div><input type="radio" name="cb314" alt="兴奋" value="3" v-model="cb3num14"></div>
+							<div><input type="radio" name="cb314" alt="兴奋" value="4" v-model="cb3num14"></div>
+							<div><input type="radio" name="cb314" alt="兴奋" value="5" v-model="cb3num14"></div>
+							<div><input type="radio" name="cb314" alt="兴奋" value="6" v-model="cb3num14"></div>
+							<div><input type="radio" name="cb314" alt="兴奋" value="7" v-model="cb3num14"></div>
+						</li>
+						<li>
+							<div>P5 夸大</div>
+							<div><input type="radio" name="cb315" alt="夸大" value="1" v-model="cb3num15"></div>
+							<div><input type="radio" name="cb315" alt="夸大" value="2" v-model="cb3num15"></div>
+							<div><input type="radio" name="cb315" alt="夸大" value="3" v-model="cb3num15"></div>
+							<div><input type="radio" name="cb315" alt="夸大" value="4" v-model="cb3num15"></div>
+							<div><input type="radio" name="cb315" alt="夸大" value="5" v-model="cb3num15"></div>
+							<div><input type="radio" name="cb315" alt="夸大" value="6" v-model="cb3num15"></div>
+							<div><input type="radio" name="cb315" alt="夸大" value="7" v-model="cb3num15"></div>
+						</li>
+						<li>
+							<div>P6 猜疑/被害</div>
+							<div><input type="radio" name="cb316" alt="猜疑/被害" value="1" v-model="cb3num16"></div>
+							<div><input type="radio" name="cb316" alt="猜疑/被害" value="2" v-model="cb3num16"></div>
+							<div><input type="radio" name="cb316" alt="猜疑/被害" value="3" v-model="cb3num16"></div>
+							<div><input type="radio" name="cb316" alt="猜疑/被害" value="4" v-model="cb3num16"></div>
+							<div><input type="radio" name="cb316" alt="猜疑/被害" value="5" v-model="cb3num16"></div>
+							<div><input type="radio" name="cb316" alt="猜疑/被害" value="6" v-model="cb3num16"></div>
+							<div><input type="radio" name="cb316" alt="猜疑/被害" value="7" v-model="cb3num16"></div>
+						</li>
+						<li>
+							<div>P7 敌对性</div>
+							<div><input type="radio" name="cb317" alt="敌对性" value="1" v-model="cb3num17"></div>
+							<div><input type="radio" name="cb317" alt="敌对性" value="2" v-model="cb3num17"></div>
+							<div><input type="radio" name="cb317" alt="敌对性" value="3" v-model="cb3num17"></div>
+							<div><input type="radio" name="cb317" alt="敌对性" value="4" v-model="cb3num17"></div>
+							<div><input type="radio" name="cb317" alt="敌对性" value="5" v-model="cb3num17"></div>
+							<div><input type="radio" name="cb317" alt="敌对性" value="6" v-model="cb3num17"></div>
+							<div><input type="radio" name="cb317" alt="敌对性" value="7" v-model="cb3num17"></div>
+						</li>
+						<li class="numBoxb">
+							<div co="blue">阳性分量表总分</div>
+							<div class="numBox" co="blue">{{cb3num1}}</div>
+						</li>
+					</ul>
+					<ul class="cb3-f1-body cb3-f1-body2">
+						<li>
+							<div>(2)阴性分量表</div>
+							<div>无(1分)</div>
+							<div>很轻(2分)</div>
+							<div>轻度(3分)</div>
+							<div>中度(4分)</div>
+							<div>偏重(5分)</div>
+							<div>重度(6分)</div>
+							<div>极重(7分)</div>
+						</li>
+						<li>
+							<div>N1 情感迟钝</div>
+							<div><input type="radio" name="cb321" alt="情感迟钝" value="1" v-model="cb3num21"></div>
+							<div><input type="radio" name="cb321" alt="情感迟钝" value="2" v-model="cb3num21"></div>
+							<div><input type="radio" name="cb321" alt="情感迟钝" value="3" v-model="cb3num21"></div>
+							<div><input type="radio" name="cb321" alt="情感迟钝" value="4" v-model="cb3num21"></div>
+							<div><input type="radio" name="cb321" alt="情感迟钝" value="5" v-model="cb3num21"></div>
+							<div><input type="radio" name="cb321" alt="情感迟钝" value="6" v-model="cb3num21"></div>
+							<div><input type="radio" name="cb321" alt="情感迟钝" value="7" v-model="cb3num21"></div>
+						</li>
+						<li>
+							<div>N2 情绪退缩</div>
+							<div><input type="radio" name="cb322" alt="情绪退缩" value="1" v-model="cb3num22"></div>
+							<div><input type="radio" name="cb322" alt="情绪退缩" value="2" v-model="cb3num22"></div>
+							<div><input type="radio" name="cb322" alt="情绪退缩" value="3" v-model="cb3num22"></div>
+							<div><input type="radio" name="cb322" alt="情绪退缩" value="4" v-model="cb3num22"></div>
+							<div><input type="radio" name="cb322" alt="情绪退缩" value="5" v-model="cb3num22"></div>
+							<div><input type="radio" name="cb322" alt="情绪退缩" value="6" v-model="cb3num22"></div>
+							<div><input type="radio" name="cb322" alt="情绪退缩" value="7" v-model="cb3num22"></div>
+						</li>
+						<li>
+							<div>N3 情感交流障碍</div>
+							<div><input type="radio" name="cb323" alt="情感交流障碍" value="1" v-model="cb3num23"></div>
+							<div><input type="radio" name="cb323" alt="情感交流障碍" value="2" v-model="cb3num23"></div>
+							<div><input type="radio" name="cb323" alt="情感交流障碍" value="3" v-model="cb3num23"></div>
+							<div><input type="radio" name="cb323" alt="情感交流障碍" value="4" v-model="cb3num23"></div>
+							<div><input type="radio" name="cb323" alt="情感交流障碍" value="5" v-model="cb3num23"></div>
+							<div><input type="radio" name="cb323" alt="情感交流障碍" value="6" v-model="cb3num23"></div>
+							<div><input type="radio" name="cb323" alt="情感交流障碍" value="7" v-model="cb3num23"></div>
+						</li>
+						<li>
+							<div>N4 被动/淡漠社交退缩</div>
+							<div><input type="radio" name="cb324" alt="被动/淡漠社交退缩" value="1" v-model="cb3num24"></div>
+							<div><input type="radio" name="cb324" alt="被动/淡漠社交退缩" value="2" v-model="cb3num24"></div>
+							<div><input type="radio" name="cb324" alt="被动/淡漠社交退缩" value="3" v-model="cb3num24"></div>
+							<div><input type="radio" name="cb324" alt="被动/淡漠社交退缩" value="4" v-model="cb3num24"></div>
+							<div><input type="radio" name="cb324" alt="被动/淡漠社交退缩" value="5" v-model="cb3num24"></div>
+							<div><input type="radio" name="cb324" alt="被动/淡漠社交退缩" value="6" v-model="cb3num24"></div>
+							<div><input type="radio" name="cb324" alt="被动/淡漠社交退缩" value="7" v-model="cb3num24"></div>
+						</li>
+						<li>
+							<div>N5 抽象思维困难</div>
+							<div><input type="radio" name="cb325" alt="抽象思维困难" value="1" v-model="cb3num25"></div>
+							<div><input type="radio" name="cb325" alt="抽象思维困难" value="2" v-model="cb3num25"></div>
+							<div><input type="radio" name="cb325" alt="抽象思维困难" value="3" v-model="cb3num25"></div>
+							<div><input type="radio" name="cb325" alt="抽象思维困难" value="4" v-model="cb3num25"></div>
+							<div><input type="radio" name="cb325" alt="抽象思维困难" value="5" v-model="cb3num25"></div>
+							<div><input type="radio" name="cb325" alt="抽象思维困难" value="6" v-model="cb3num25"></div>
+							<div><input type="radio" name="cb325" alt="抽象思维困难" value="7" v-model="cb3num25"></div>
+						</li>
+						<li>
+							<div class="n6">N6 交谈缺乏自发性和流畅性</div>
+							<div><input type="radio" name="cb326" alt="交谈缺乏自发性和流畅性" value="1" v-model="cb3num26"></div>
+							<div><input type="radio" name="cb326" alt="交谈缺乏自发性和流畅性" value="2" v-model="cb3num26"></div>
+							<div><input type="radio" name="cb326" alt="交谈缺乏自发性和流畅性" value="3" v-model="cb3num26"></div>
+							<div><input type="radio" name="cb326" alt="交谈缺乏自发性和流畅性" value="4" v-model="cb3num26"></div>
+							<div><input type="radio" name="cb326" alt="交谈缺乏自发性和流畅性" value="5" v-model="cb3num26"></div>
+							<div><input type="radio" name="cb326" alt="交谈缺乏自发性和流畅性" value="6" v-model="cb3num26"></div>
+							<div><input type="radio" name="cb326" alt="交谈缺乏自发性和流畅性" value="7" v-model="cb3num26"></div>
+						</li>
+						<li>
+							<div>N7 刻板思维</div>
+							<div><input type="radio" name="cb327" alt="刻板思维" value="1" v-model="cb3num27"></div>
+							<div><input type="radio" name="cb327" alt="刻板思维" value="2" v-model="cb3num27"></div>
+							<div><input type="radio" name="cb327" alt="刻板思维" value="3" v-model="cb3num27"></div>
+							<div><input type="radio" name="cb327" alt="刻板思维" value="4" v-model="cb3num27"></div>
+							<div><input type="radio" name="cb327" alt="刻板思维" value="5" v-model="cb3num27"></div>
+							<div><input type="radio" name="cb327" alt="刻板思维" value="6" v-model="cb3num27"></div>
+							<div><input type="radio" name="cb327" alt="刻板思维" value="7" v-model="cb3num27"></div>
+						</li>
+						<li class="numBoxb">
+							<div co="blue">阴性分量表总分</div>
+							<div class="numBox" co="blue">{{cb3num2}}</div>
+						</li>
+					</ul>
+					<ul class="cb3-f1-body cb3-f1-body3">
+						<li>
+							<div>(3)一般精神病理性分量表</div>
+							<div>无(1分)</div>
+							<div>很轻(2分)</div>
+							<div>轻度(3分)</div>
+							<div>中度(4分)</div>
+							<div>偏重(5分)</div>
+							<div>重度(6分)</div>
+							<div>极重(7分)</div>
+						</li>
+						<li>
+							<div>G1 关注身体健康</div>
+							<div><input type="radio" name="cb331" alt="关注身体健康" value="1" v-model="cb3num31"></div>
+							<div><input type="radio" name="cb331" alt="关注身体健康" value="2" v-model="cb3num31"></div>
+							<div><input type="radio" name="cb331" alt="关注身体健康" value="3" v-model="cb3num31"></div>
+							<div><input type="radio" name="cb331" alt="关注身体健康" value="4" v-model="cb3num31"></div>
+							<div><input type="radio" name="cb331" alt="关注身体健康" value="5" v-model="cb3num31"></div>
+							<div><input type="radio" name="cb331" alt="关注身体健康" value="6" v-model="cb3num31"></div>
+							<div><input type="radio" name="cb331" alt="关注身体健康" value="7" v-model="cb3num31"></div>
+						</li>
+						<li>
+							<div>G2 焦虑</div>
+							<div><input type="radio" name="cb332" alt="焦虑" value="1" v-model="cb3num32"></div>
+							<div><input type="radio" name="cb332" alt="焦虑" value="2" v-model="cb3num32"></div>
+							<div><input type="radio" name="cb332" alt="焦虑" value="3" v-model="cb3num32"></div>
+							<div><input type="radio" name="cb332" alt="焦虑" value="4" v-model="cb3num32"></div>
+							<div><input type="radio" name="cb332" alt="焦虑" value="5" v-model="cb3num32"></div>
+							<div><input type="radio" name="cb332" alt="焦虑" value="6" v-model="cb3num32"></div>
+							<div><input type="radio" name="cb332" alt="焦虑" value="7" v-model="cb3num32"></div>
+						</li>
+						<li>
+							<div>G3 自罪感</div>
+							<div><input type="radio" name="cb333" alt="自罪感" value="1" v-model="cb3num33"></div>
+							<div><input type="radio" name="cb333" alt="自罪感" value="2" v-model="cb3num33"></div>
+							<div><input type="radio" name="cb333" alt="自罪感" value="3" v-model="cb3num33"></div>
+							<div><input type="radio" name="cb333" alt="自罪感" value="4" v-model="cb3num33"></div>
+							<div><input type="radio" name="cb333" alt="自罪感" value="5" v-model="cb3num33"></div>
+							<div><input type="radio" name="cb333" alt="自罪感" value="6" v-model="cb3num33"></div>
+							<div><input type="radio" name="cb333" alt="自罪感" value="7" v-model="cb3num33"></div>
+						</li>
+						<li>
+							<div>G4 紧张</div>
+							<div><input type="radio" name="cb334" alt="紧张" value="1" v-model="cb3num34"></div>
+							<div><input type="radio" name="cb334" alt="紧张" value="2" v-model="cb3num34"></div>
+							<div><input type="radio" name="cb334" alt="紧张" value="3" v-model="cb3num34"></div>
+							<div><input type="radio" name="cb334" alt="紧张" value="4" v-model="cb3num34"></div>
+							<div><input type="radio" name="cb334" alt="紧张" value="5" v-model="cb3num34"></div>
+							<div><input type="radio" name="cb334" alt="紧张" value="6" v-model="cb3num34"></div>
+							<div><input type="radio" name="cb334" alt="紧张" value="7" v-model="cb3num34"></div>
+						</li>
+						<li>
+							<div>G5 装相和作态</div>
+							<div><input type="radio" name="cb335" alt="装相和作态" value="1" v-model="cb3num35"></div>
+							<div><input type="radio" name="cb335" alt="装相和作态" value="2" v-model="cb3num35"></div>
+							<div><input type="radio" name="cb335" alt="装相和作态" value="3" v-model="cb3num35"></div>
+							<div><input type="radio" name="cb335" alt="装相和作态" value="4" v-model="cb3num35"></div>
+							<div><input type="radio" name="cb335" alt="装相和作态" value="5" v-model="cb3num35"></div>
+							<div><input type="radio" name="cb335" alt="装相和作态" value="6" v-model="cb3num35"></div>
+							<div><input type="radio" name="cb335" alt="装相和作态" value="7" v-model="cb3num35"></div>
+						</li>
+						<li>
+							<div>G6 抑郁</div>
+							<div><input type="radio" name="cb336" alt="抑郁" value="1" v-model="cb3num36"></div>
+							<div><input type="radio" name="cb336" alt="抑郁" value="2" v-model="cb3num36"></div>
+							<div><input type="radio" name="cb336" alt="抑郁" value="3" v-model="cb3num36"></div>
+							<div><input type="radio" name="cb336" alt="抑郁" value="4" v-model="cb3num36"></div>
+							<div><input type="radio" name="cb336" alt="抑郁" value="5" v-model="cb3num36"></div>
+							<div><input type="radio" name="cb336" alt="抑郁" value="6" v-model="cb3num36"></div>
+							<div><input type="radio" name="cb336" alt="抑郁" value="7" v-model="cb3num36"></div>
+						</li>
+						<li>
+							<div>G7 动作迟缓</div>
+							<div><input type="radio" name="cb337" alt="动作迟缓" value="1" v-model="cb3num37"></div>
+							<div><input type="radio" name="cb337" alt="动作迟缓" value="2" v-model="cb3num37"></div>
+							<div><input type="radio" name="cb337" alt="动作迟缓" value="3" v-model="cb3num37"></div>
+							<div><input type="radio" name="cb337" alt="动作迟缓" value="4" v-model="cb3num37"></div>
+							<div><input type="radio" name="cb337" alt="动作迟缓" value="5" v-model="cb3num37"></div>
+							<div><input type="radio" name="cb337" alt="动作迟缓" value="6" v-model="cb3num37"></div>
+							<div><input type="radio" name="cb337" alt="动作迟缓" value="7" v-model="cb3num37"></div>
+						</li>
+						<li>
+							<div>G8 不合作</div>
+							<div><input type="radio" name="cb338" alt="不合作" value="1" v-model="cb3num38"></div>
+							<div><input type="radio" name="cb338" alt="不合作" value="2" v-model="cb3num38"></div>
+							<div><input type="radio" name="cb338" alt="不合作" value="3" v-model="cb3num38"></div>
+							<div><input type="radio" name="cb338" alt="不合作" value="4" v-model="cb3num38"></div>
+							<div><input type="radio" name="cb338" alt="不合作" value="5" v-model="cb3num38"></div>
+							<div><input type="radio" name="cb338" alt="不合作" value="6" v-model="cb3num38"></div>
+							<div><input type="radio" name="cb338" alt="不合作" value="7" v-model="cb3num38"></div>
+						</li>
+						<li>
+							<div>G9 不寻常思维</div>
+							<div><input type="radio" name="cb339" alt="不寻常思维" value="1" v-model="cb3num39"></div>
+							<div><input type="radio" name="cb339" alt="不寻常思维" value="2" v-model="cb3num39"></div>
+							<div><input type="radio" name="cb339" alt="不寻常思维" value="3" v-model="cb3num39"></div>
+							<div><input type="radio" name="cb339" alt="不寻常思维" value="4" v-model="cb3num39"></div>
+							<div><input type="radio" name="cb339" alt="不寻常思维" value="5" v-model="cb3num39"></div>
+							<div><input type="radio" name="cb339" alt="不寻常思维" value="6" v-model="cb3num39"></div>
+							<div><input type="radio" name="cb339" alt="不寻常思维" value="7" v-model="cb3num39"></div>
+						</li>
+						<li>
+							<div>G10 定向障碍</div>
+							<div><input type="radio" name="cb3310" alt="定向障碍" value="1" v-model="cb3num310"></div>
+							<div><input type="radio" name="cb3310" alt="定向障碍" value="2" v-model="cb3num310"></div>
+							<div><input type="radio" name="cb3310" alt="定向障碍" value="3" v-model="cb3num310"></div>
+							<div><input type="radio" name="cb3310" alt="定向障碍" value="4" v-model="cb3num310"></div>
+							<div><input type="radio" name="cb3310" alt="定向障碍" value="5" v-model="cb3num310"></div>
+							<div><input type="radio" name="cb3310" alt="定向障碍" value="6" v-model="cb3num310"></div>
+							<div><input type="radio" name="cb3310" alt="定向障碍" value="7" v-model="cb3num310"></div>
+						</li>
+						<li>
+							<div>G11 注意障碍</div>
+							<div><input type="radio" name="cb3311" alt="注意障碍" value="1" v-model="cb3num311"></div>
+							<div><input type="radio" name="cb3311" alt="注意障碍" value="2" v-model="cb3num311"></div>
+							<div><input type="radio" name="cb3311" alt="注意障碍" value="3" v-model="cb3num311"></div>
+							<div><input type="radio" name="cb3311" alt="注意障碍" value="4" v-model="cb3num311"></div>
+							<div><input type="radio" name="cb3311" alt="注意障碍" value="5" v-model="cb3num311"></div>
+							<div><input type="radio" name="cb3311" alt="注意障碍" value="6" v-model="cb3num311"></div>
+							<div><input type="radio" name="cb3311" alt="注意障碍" value="7" v-model="cb3num311"></div>
+						</li>
+						<li>
+							<div>G12 判断和自知力缺乏</div>
+							<div><input type="radio" name="cb3312" alt="判断和自知力缺乏" value="1" v-model="cb3num312"></div>
+							<div><input type="radio" name="cb3312" alt="判断和自知力缺乏" value="2" v-model="cb3num312"></div>
+							<div><input type="radio" name="cb3312" alt="判断和自知力缺乏" value="3" v-model="cb3num312"></div>
+							<div><input type="radio" name="cb3312" alt="判断和自知力缺乏" value="4" v-model="cb3num312"></div>
+							<div><input type="radio" name="cb3312" alt="判断和自知力缺乏" value="5" v-model="cb3num312"></div>
+							<div><input type="radio" name="cb3312" alt="判断和自知力缺乏" value="6" v-model="cb3num312"></div>
+							<div><input type="radio" name="cb3312" alt="判断和自知力缺乏" value="7" v-model="cb3num312"></div>
+						</li>
+						<li>
+							<div>G13 意志障碍</div>
+							<div><input type="radio" name="cb3313" alt="意志障碍" value="1" v-model="cb3num313"></div>
+							<div><input type="radio" name="cb3313" alt="意志障碍" value="2" v-model="cb3num313"></div>
+							<div><input type="radio" name="cb3313" alt="意志障碍" value="3" v-model="cb3num313"></div>
+							<div><input type="radio" name="cb3313" alt="意志障碍" value="4" v-model="cb3num313"></div>
+							<div><input type="radio" name="cb3313" alt="意志障碍" value="5" v-model="cb3num313"></div>
+							<div><input type="radio" name="cb3313" alt="意志障碍" value="6" v-model="cb3num313"></div>
+							<div><input type="radio" name="cb3313" alt="意志障碍" value="7" v-model="cb3num313"></div>
+						</li>
+						<li>
+							<div>G14 冲动控制缺乏</div>
+							<div><input type="radio" name="cb3314" alt="冲动控制缺乏" value="1" v-model="cb3num314"></div>
+							<div><input type="radio" name="cb3314" alt="冲动控制缺乏" value="2" v-model="cb3num314"></div>
+							<div><input type="radio" name="cb3314" alt="冲动控制缺乏" value="3" v-model="cb3num314"></div>
+							<div><input type="radio" name="cb3314" alt="冲动控制缺乏" value="4" v-model="cb3num314"></div>
+							<div><input type="radio" name="cb3314" alt="冲动控制缺乏" value="5" v-model="cb3num314"></div>
+							<div><input type="radio" name="cb3314" alt="冲动控制缺乏" value="6" v-model="cb3num314"></div>
+							<div><input type="radio" name="cb3314" alt="冲动控制缺乏" value="7" v-model="cb3num314"></div>
+						</li>
+						<li>
+							<div>G15 先占观念</div>
+							<div><input type="radio" name="cb3315" alt="先占观念" value="1" v-model="cb3num315"></div>
+							<div><input type="radio" name="cb3315" alt="先占观念" value="2" v-model="cb3num315"></div>
+							<div><input type="radio" name="cb3315" alt="先占观念" value="3" v-model="cb3num315"></div>
+							<div><input type="radio" name="cb3315" alt="先占观念" value="4" v-model="cb3num315"></div>
+							<div><input type="radio" name="cb3315" alt="先占观念" value="5" v-model="cb3num315"></div>
+							<div><input type="radio" name="cb3315" alt="先占观念" value="6" v-model="cb3num315"></div>
+							<div><input type="radio" name="cb3315" alt="先占观念" value="7" v-model="cb3num315"></div>
+						</li>
+						<li>
+							<div>G16 主动回避社交</div>
+							<div><input type="radio" name="cb3316" alt="主动回避社交" value="1" v-model="cb3num316"></div>
+							<div><input type="radio" name="cb3316" alt="主动回避社交" value="2" v-model="cb3num316"></div>
+							<div><input type="radio" name="cb3316" alt="主动回避社交" value="3" v-model="cb3num316"></div>
+							<div><input type="radio" name="cb3316" alt="主动回避社交" value="4" v-model="cb3num316"></div>
+							<div><input type="radio" name="cb3316" alt="主动回避社交" value="5" v-model="cb3num316"></div>
+							<div><input type="radio" name="cb3316" alt="主动回避社交" value="6" v-model="cb3num316"></div>
+							<div><input type="radio" name="cb3316" alt="主动回避社交" value="7" v-model="cb3num316"></div>
+						</li>
+						<li class="numBoxb">
+							<div co="blue">一般精神病理性分量表总分</div>
+							<div class="numBox" co="blue">{{cb3num3}}</div>
+						</li>
+					</ul>
+
+
+					<div class="allNum">
+						<span  co="red">总分</span>
+						<span co="red" fz="18">{{cb3numall}}</span>
+					</div>
+
+
+					<!-- 第二步保存 -->
+					<div class="sub">
+						<button class="sub2">保存</button>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- 第三步 -->
+			<div class="content2" :class="{sns:sn==2}" v-show="sn==3">
+				<div class="title">病情严重程度量表(CGI-S)</div>
+				<div class="c2-f1" flex jc=fs ai=ce>
+					<input type="checkbox" class="kb1">
+					<label for="">未评，请说明未评原因</label>
+					<input type="text" class="kb1t">
+					<span>评定日期</span>
+					<input id="" type="text" alt="首次诊断日期" class="Wdate c2time" readonly="" onclick="new WdatePicker()">
+				</div>
+				<div class="c2-f2-title">请您根据具体患者的病情与同一研究的其它同类患者比较，作出评定。</div>
+				<ul class="c2-f3" flex >
+					<li>
+						<span>CGI-S</span>
+					</li>
+					<li>
+						<span>无病(0分)</span>
+						<em><input type="radio" name="rr1" alt="评定情况"></em>
+					</li>
+					<li>
+						<span>基本无病(1分)</span>
+						<em><input type="radio" name="rr1" alt="评定情况"></em>
+					</li>
+					<li>
+						<span>极轻(2分)</span>
+						<em><input type="radio" name="rr1" alt="评定情况"></em>
+					</li>
+					<li>
+						<span>轻度(3分)</span>
+						<em><input type="radio" name="rr1" alt="评定情况"></em>
+					</li>
+					<li>
+						<span>中度(4分)</span>
+						<em><input type="radio" name="rr1" alt="评定情况"></em>
+					</li>
+					<li>
+						<span>偏重(5分)</span>
+						<em><input type="radio" name="rr1" alt="评定情况"></em>
+					</li>
+					<li>
+						<span>重度(6分)</span>
+						<em><input type="radio" name="rr1" alt="评定情况"></em>
+					</li>
+					<li>
+						<span>极重(7分)</span>
+						<em><input type="radio" name="rr1" alt="评定情况"></em>
+					</li>
+				</ul>
+				<!-- 第三步保存 -->
+				<div class="sub">
+					<button class="sub3">保存</button>
+				</div>
+
+			</div>
+
+			<!-- 第四步 -->
+			<div class="content4" :class="{sns:sn==4}" v-show="sn==4">
+				<div class="title">疗效总评量表(CGI-I)</div>
+				<div class="c3-f1" flex jc=fs ai=ce>
+					<input type="checkbox" class="kb2">
+					<label for="">未评，请说明未评原因</label>
+					<input type="text" class="kb2t">
+					<span>评定日期</span>
+					<input id="" type="text" alt="首次诊断日期" class="Wdate c4time" readonly="" onclick="new WdatePicker()">
+				</div>
+				<div class="c3-f2-title">请您根据被评者目前病情与入组时相比，作出评定。</div>
+				<ul class="c3-f3" flex >
+					<li>
+						<span>CGI-S</span>
+					</li>
+					<li>
+						<span>未评(0分)</span>
+						<em><input type="radio" name="rr2" alt="评定情况"></em>
+					</li>
+					<li>
+						<span>显著进步(1分)</span>
+						<em><input type="radio" name="rr2" alt="评定情况"></em>
+					</li>
+					<li>
+						<span>进步(2分)</span>
+						<em><input type="radio" name="rr2" alt="评定情况"></em>
+					</li>
+					<li>
+						<span>稍进步(3分)</span>
+						<em><input type="radio" name="rr2" alt="评定情况"></em>
+					</li>
+					<li>
+						<span>无变化(4分)</span>
+						<em><input type="radio" name="rr2" alt="评定情况"></em>
+					</li>
+					<li>
+						<span>稍恶化(5分)</span>
+						<em><input type="radio" name="rr2" alt="评定情况"></em>
+					</li>
+					<li>
+						<span>恶化(6分)</span>
+						<em><input type="radio" name="rr2" alt="评定情况"></em>
+					</li>
+					<li>
+						<span>严重恶化(7分)</span>
+						<em><input type="radio" name="rr2" alt="评定情况"></em>
+					</li>
+				</ul>
+				<!-- 第四步保存 -->
+				<div class="sub">
+					<button class="sub4">保存</button>
+				</div>
+			</div>
+
+			<!-- 第五步 -->
+			<div class="content5" :class="{sns:sn==5}" v-show="sn==5">
+				<div class="title">不良反应量表(UKU)</div>
+				<div class="cb5-f1-title2">
+					<input type="checkbox" class="cb5-check" name="cb5-check1">
+					<label for="">未评，请说明未评原因</label>
+					<input id="" type="text" class="rea cb5-checkt">
+					<label for="">评定日期：</label>
+					<input id="" type="text" class="Wdate time1 cb5-checkti" readonly="" onclick="new WdatePicker()">
+				</div>
+				<ul class="cb5-f2" flex jc=ce ai=en>
+					<li>
+						<span>副作用分类</span>
+					</li>
+					<li>
+						<span>编号</span>
+					</li>
+					<li>
+						<span>症状</span>
+					</li>
+					<li>
+						<span>未评价</span>
+					</li>
+					<li>
+						<p>
+							<span>严重程度评分</span>
+						</p>
+						<p>
+							<span>无或可疑(0分)</span>
+							<span>轻度(1分)</span>
+							<span>中度(2分)</span>
+							<span>重度(3分)</span>
+						</p>
+					</li>
+					<li>
+						<p>
+							<span>与药物关系</span>
+						</p>
+						<p>
+							<span>不可能</span>
+							<span>可能</span>
+							<span>很可能</span>
+						</p>
+					</li>
+				</ul>
+				<div class="cb5-f3" flex jc=ce>
+					<ul class="cb5-f3-left">
+						<li>
+							<span>精神性</span>
+						</li>
+						<li>
+							<span>神经性</span>
+						</li>
+						<li>
+							<span>植物神经性</span>
+						</li>
+						<li>
+							<span>其他</span>
+						</li>
+					</ul>
+					<ul class="cb5-f3-right">
+						<li>
+							<span>1.1</span>
+							<span>注意力集中困难</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-1" alt="注意力集中困难"></span>
+							<span><input type="radio" name="c5-3-1" alt="注意力集中困难"></span>
+							<span><input type="radio" name="c5-3-1" alt="注意力集中困难"></span>
+							<span><input type="radio" name="c5-3-1" alt="注意力集中困难"></span>
+							<span><input type="radio" name="c5-3-1" alt="注意力集中困难"></span>
+							<span><input type="radio" name="c5-3-1" alt="注意力集中困难"></span>
+							<span><input type="radio" name="c5-3-1" alt="注意力集中困难"></span>
+						</li>
+						<li>
+							<span>1.2</span>
+							<span>衰弱/疲乏/易疲劳</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-2" alt="衰弱/疲乏/易疲劳"></span>
+							<span><input type="radio" name="c5-3-2" alt="衰弱/疲乏/易疲劳"></span>
+							<span><input type="radio" name="c5-3-2" alt="衰弱/疲乏/易疲劳"></span>
+							<span><input type="radio" name="c5-3-2" alt="衰弱/疲乏/易疲劳"></span>
+							<span><input type="radio" name="c5-3-2" alt="衰弱/疲乏/易疲劳"></span>
+							<span><input type="radio" name="c5-3-2" alt="衰弱/疲乏/易疲劳"></span>
+							<span><input type="radio" name="c5-3-2" alt="衰弱/疲乏/易疲劳"></span>
+						</li>
+						<li>
+							<span>1.3</span>
+							<span>思睡/镇静</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-3" alt="思睡/镇静"></span>
+							<span><input type="radio" name="c5-3-3" alt="思睡/镇静"></span>
+							<span><input type="radio" name="c5-3-3" alt="思睡/镇静"></span>
+							<span><input type="radio" name="c5-3-3" alt="思睡/镇静"></span>
+							<span><input type="radio" name="c5-3-3" alt="思睡/镇静"></span>
+							<span><input type="radio" name="c5-3-3" alt="思睡/镇静"></span>
+							<span><input type="radio" name="c5-3-3" alt="思睡/镇静"></span>
+						</li>
+						<li>
+							<span>1.4</span>
+							<span>记忆下降</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-4" alt="记忆下降"></span>
+							<span><input type="radio" name="c5-3-4" alt="记忆下降"></span>
+							<span><input type="radio" name="c5-3-4" alt="记忆下降"></span>
+							<span><input type="radio" name="c5-3-4" alt="记忆下降"></span>
+							<span><input type="radio" name="c5-3-4" alt="记忆下降"></span>
+							<span><input type="radio" name="c5-3-4" alt="记忆下降"></span>
+							<span><input type="radio" name="c5-3-4" alt="记忆下降"></span>
+						</li>
+						<li>
+							<span>1.5</span>
+							<span>抑郁</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-5" alt="抑郁"></span>
+							<span><input type="radio" name="c5-3-5" alt="抑郁"></span>
+							<span><input type="radio" name="c5-3-5" alt="抑郁"></span>
+							<span><input type="radio" name="c5-3-5" alt="抑郁"></span>
+							<span><input type="radio" name="c5-3-5" alt="抑郁"></span>
+							<span><input type="radio" name="c5-3-5" alt="抑郁"></span>
+							<span><input type="radio" name="c5-3-5" alt="抑郁"></span>
+						</li>
+						<li>
+							<span>1.6</span>
+							<span>紧张/内心不安</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-6" alt="紧张/内心不安"></span>
+							<span><input type="radio" name="c5-3-6" alt="紧张/内心不安"></span>
+							<span><input type="radio" name="c5-3-6" alt="紧张/内心不安"></span>
+							<span><input type="radio" name="c5-3-6" alt="紧张/内心不安"></span>
+							<span><input type="radio" name="c5-3-6" alt="紧张/内心不安"></span>
+							<span><input type="radio" name="c5-3-6" alt="紧张/内心不安"></span>
+							<span><input type="radio" name="c5-3-6" alt="紧张/内心不安"></span>
+						</li>
+						<li>
+							<span>1.7</span>
+							<span>睡眠时间增加</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-7" alt="睡眠时间增加"></span>
+							<span><input type="radio" name="c5-3-7" alt="睡眠时间增加"></span>
+							<span><input type="radio" name="c5-3-7" alt="睡眠时间增加"></span>
+							<span><input type="radio" name="c5-3-7" alt="睡眠时间增加"></span>
+							<span><input type="radio" name="c5-3-7" alt="睡眠时间增加"></span>
+							<span><input type="radio" name="c5-3-7" alt="睡眠时间增加"></span>
+							<span><input type="radio" name="c5-3-7" alt="睡眠时间增加"></span>
+						</li>
+						<li>
+							<span>1.8</span>
+							<span>睡眠时间减少</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-8" alt="睡眠时间减少"></span>
+							<span><input type="radio" name="c5-3-8" alt="睡眠时间减少"></span>
+							<span><input type="radio" name="c5-3-8" alt="睡眠时间减少"></span>
+							<span><input type="radio" name="c5-3-8" alt="睡眠时间减少"></span>
+							<span><input type="radio" name="c5-3-8" alt="睡眠时间减少"></span>
+							<span><input type="radio" name="c5-3-8" alt="睡眠时间减少"></span>
+							<span><input type="radio" name="c5-3-8" alt="睡眠时间减少"></span>
+						</li>
+						<li>
+							<span>1.9</span>
+							<span>梦增加</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-9" alt="梦增加"></span>
+							<span><input type="radio" name="c5-3-9" alt="梦增加"></span>
+							<span><input type="radio" name="c5-3-9" alt="梦增加"></span>
+							<span><input type="radio" name="c5-3-9" alt="梦增加"></span>
+							<span><input type="radio" name="c5-3-9" alt="梦增加"></span>
+							<span><input type="radio" name="c5-3-9" alt="梦增加"></span>
+							<span><input type="radio" name="c5-3-9" alt="梦增加"></span>
+						</li>
+						<li>
+							<span>1.10</span>
+							<span>情感淡漠</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-10" alt="情感淡漠"></span>
+							<span><input type="radio" name="c5-3-10" alt="情感淡漠"></span>
+							<span><input type="radio" name="c5-3-10" alt="情感淡漠"></span>
+							<span><input type="radio" name="c5-3-10" alt="情感淡漠"></span>
+							<span><input type="radio" name="c5-3-10" alt="情感淡漠"></span>
+							<span><input type="radio" name="c5-3-10" alt="情感淡漠"></span>
+							<span><input type="radio" name="c5-3-10" alt="情感淡漠"></span>
+						</li>
+						<li>
+							<span>2.1</span>
+							<span>肌张力障碍</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-11" alt="肌张力障碍"></span>
+							<span><input type="radio" name="c5-3-11" alt="肌张力障碍"></span>
+							<span><input type="radio" name="c5-3-11" alt="肌张力障碍"></span>
+							<span><input type="radio" name="c5-3-11" alt="肌张力障碍"></span>
+							<span><input type="radio" name="c5-3-11" alt="肌张力障碍"></span>
+							<span><input type="radio" name="c5-3-11" alt="肌张力障碍"></span>
+							<span><input type="radio" name="c5-3-11" alt="肌张力障碍"></span>
+						</li>
+						<li>
+							<span>2.2</span>
+							<span>强直</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-12" alt="注意力集中困难"></span>
+							<span><input type="radio" name="c5-3-12" alt="注意力集中困难"></span>
+							<span><input type="radio" name="c5-3-12" alt="注意力集中困难"></span>
+							<span><input type="radio" name="c5-3-12" alt="注意力集中困难"></span>
+							<span><input type="radio" name="c5-3-12" alt="注意力集中困难"></span>
+							<span><input type="radio" name="c5-3-12" alt="注意力集中困难"></span>
+							<span><input type="radio" name="c5-3-12" alt="注意力集中困难"></span>
+						</li>
+						<li>
+							<span>2.3</span>
+							<span>运动减少/运动不能</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-13" alt="运动减少/运动不能"></span>
+							<span><input type="radio" name="c5-3-13" alt="运动减少/运动不能"></span>
+							<span><input type="radio" name="c5-3-13" alt="运动减少/运动不能"></span>
+							<span><input type="radio" name="c5-3-13" alt="运动减少/运动不能"></span>
+							<span><input type="radio" name="c5-3-13" alt="运动减少/运动不能"></span>
+							<span><input type="radio" name="c5-3-13" alt="运动减少/运动不能"></span>
+							<span><input type="radio" name="c5-3-13" alt="运动减少/运动不能"></span>
+						</li>
+						<li>
+							<span>2.4</span>
+							<span>运动减少/运动不能</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-14" alt="运动减少/运动不能"></span>
+							<span><input type="radio" name="c5-3-14" alt="运动减少/运动不能"></span>
+							<span><input type="radio" name="c5-3-14" alt="运动减少/运动不能"></span>
+							<span><input type="radio" name="c5-3-14" alt="运动减少/运动不能"></span>
+							<span><input type="radio" name="c5-3-14" alt="运动减少/运动不能"></span>
+							<span><input type="radio" name="c5-3-14" alt="运动减少/运动不能"></span>
+							<span><input type="radio" name="c5-3-14" alt="运动减少/运动不能"></span>
+						</li>
+						<li>
+							<span>2.5</span>
+							<span>震颤</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-15" alt="震颤"></span>
+							<span><input type="radio" name="c5-3-15" alt="震颤"></span>
+							<span><input type="radio" name="c5-3-15" alt="震颤"></span>
+							<span><input type="radio" name="c5-3-15" alt="震颤"></span>
+							<span><input type="radio" name="c5-3-15" alt="震颤"></span>
+							<span><input type="radio" name="c5-3-15" alt="震颤"></span>
+							<span><input type="radio" name="c5-3-15" alt="震颤"></span>
+						</li>
+						<li>
+							<span>2.6</span>
+							<span>静坐不能</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-16" alt="静坐不能"></span>
+							<span><input type="radio" name="c5-3-16" alt="静坐不能"></span>
+							<span><input type="radio" name="c5-3-16" alt="静坐不能"></span>
+							<span><input type="radio" name="c5-3-16" alt="静坐不能"></span>
+							<span><input type="radio" name="c5-3-16" alt="静坐不能"></span>
+							<span><input type="radio" name="c5-3-16" alt="静坐不能"></span>
+							<span><input type="radio" name="c5-3-16" alt="静坐不能"></span>
+						</li>
+						<li>
+							<span>2.7</span>
+							<span>抽搐发作</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-17" alt="抽搐发作"></span>
+							<span><input type="radio" name="c5-3-17" alt="抽搐发作"></span>
+							<span><input type="radio" name="c5-3-17" alt="抽搐发作"></span>
+							<span><input type="radio" name="c5-3-17" alt="抽搐发作"></span>
+							<span><input type="radio" name="c5-3-17" alt="抽搐发作"></span>
+							<span><input type="radio" name="c5-3-17" alt="抽搐发作"></span>
+							<span><input type="radio" name="c5-3-17" alt="抽搐发作"></span>
+						</li>
+						<li>
+							<span>2.8</span>
+							<span>感觉异常</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-18" alt="感觉异常"></span>
+							<span><input type="radio" name="c5-3-18" alt="感觉异常"></span>
+							<span><input type="radio" name="c5-3-18" alt="感觉异常"></span>
+							<span><input type="radio" name="c5-3-18" alt="感觉异常"></span>
+							<span><input type="radio" name="c5-3-18" alt="感觉异常"></span>
+							<span><input type="radio" name="c5-3-18" alt="感觉异常"></span>
+							<span><input type="radio" name="c5-3-18" alt="感觉异常"></span>
+						</li>
+						<li>
+							<span>3.1</span>
+							<span>眼适应性调节障碍</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-19" alt="眼适应性调节障碍"></span>
+							<span><input type="radio" name="c5-3-19" alt="眼适应性调节障碍"></span>
+							<span><input type="radio" name="c5-3-19" alt="眼适应性调节障碍"></span>
+							<span><input type="radio" name="c5-3-19" alt="眼适应性调节障碍"></span>
+							<span><input type="radio" name="c5-3-19" alt="眼适应性调节障碍"></span>
+							<span><input type="radio" name="c5-3-19" alt="眼适应性调节障碍"></span>
+							<span><input type="radio" name="c5-3-19" alt="眼适应性调节障碍"></span>
+						</li>
+						<li>
+							<span>3.2</span>
+							<span>唾液分泌增加</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-20" alt="唾液分泌增加"></span>
+							<span><input type="radio" name="c5-3-20" alt="唾液分泌增加"></span>
+							<span><input type="radio" name="c5-3-20" alt="唾液分泌增加"></span>
+							<span><input type="radio" name="c5-3-20" alt="唾液分泌增加"></span>
+							<span><input type="radio" name="c5-3-20" alt="唾液分泌增加"></span>
+							<span><input type="radio" name="c5-3-20" alt="唾液分泌增加"></span>
+							<span><input type="radio" name="c5-3-20" alt="唾液分泌增加"></span>
+						</li>
+						<li>
+							<span>3.3</span>
+							<span>唾液分泌减少(口干)</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-21" alt="唾液分泌减少(口干)"></span>
+							<span><input type="radio" name="c5-3-21" alt="唾液分泌减少(口干)"></span>
+							<span><input type="radio" name="c5-3-21" alt="唾液分泌减少(口干)"></span>
+							<span><input type="radio" name="c5-3-21" alt="唾液分泌减少(口干)"></span>
+							<span><input type="radio" name="c5-3-21" alt="唾液分泌减少(口干)"></span>
+							<span><input type="radio" name="c5-3-21" alt="唾液分泌减少(口干)"></span>
+							<span><input type="radio" name="c5-3-21" alt="唾液分泌减少(口干)"></span>
+						</li>
+						<li>
+							<span>3.4</span>
+							<span>恶心/呕吐</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-22" alt="恶心/呕吐"></span>
+							<span><input type="radio" name="c5-3-22" alt="恶心/呕吐"></span>
+							<span><input type="radio" name="c5-3-22" alt="恶心/呕吐"></span>
+							<span><input type="radio" name="c5-3-22" alt="恶心/呕吐"></span>
+							<span><input type="radio" name="c5-3-22" alt="恶心/呕吐"></span>
+							<span><input type="radio" name="c5-3-22" alt="恶心/呕吐"></span>
+							<span><input type="radio" name="c5-3-22" alt="恶心/呕吐"></span>
+						</li>
+						<li>
+							<span>3.5</span>
+							<span>腹泻</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-23" alt="腹泻"></span>
+							<span><input type="radio" name="c5-3-23" alt="腹泻"></span>
+							<span><input type="radio" name="c5-3-23" alt="腹泻"></span>
+							<span><input type="radio" name="c5-3-23" alt="腹泻"></span>
+							<span><input type="radio" name="c5-3-23" alt="腹泻"></span>
+							<span><input type="radio" name="c5-3-23" alt="腹泻"></span>
+							<span><input type="radio" name="c5-3-23" alt="腹泻"></span>
+						</li>
+						<li>
+							<span>3.6</span>
+							<span>便秘</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-24" alt="便秘"></span>
+							<span><input type="radio" name="c5-3-24" alt="便秘"></span>
+							<span><input type="radio" name="c5-3-24" alt="便秘"></span>
+							<span><input type="radio" name="c5-3-24" alt="便秘"></span>
+							<span><input type="radio" name="c5-3-24" alt="便秘"></span>
+							<span><input type="radio" name="c5-3-24" alt="便秘"></span>
+							<span><input type="radio" name="c5-3-24" alt="便秘"></span>
+						</li>
+						<li>
+							<span>3.7</span>
+							<span>排尿障碍</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-25" alt="排尿障碍"></span>
+							<span><input type="radio" name="c5-3-25" alt="排尿障碍"></span>
+							<span><input type="radio" name="c5-3-25" alt="排尿障碍"></span>
+							<span><input type="radio" name="c5-3-25" alt="排尿障碍"></span>
+							<span><input type="radio" name="c5-3-25" alt="排尿障碍"></span>
+							<span><input type="radio" name="c5-3-25" alt="排尿障碍"></span>
+							<span><input type="radio" name="c5-3-25" alt="排尿障碍"></span>
+						</li>
+						<li>
+							<span>3.8</span>
+							<span>多尿/烦渴</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-26" alt="多尿/烦渴"></span>
+							<span><input type="radio" name="c5-3-26" alt="多尿/烦渴"></span>
+							<span><input type="radio" name="c5-3-26" alt="多尿/烦渴"></span>
+							<span><input type="radio" name="c5-3-26" alt="多尿/烦渴"></span>
+							<span><input type="radio" name="c5-3-26" alt="多尿/烦渴"></span>
+							<span><input type="radio" name="c5-3-26" alt="多尿/烦渴"></span>
+							<span><input type="radio" name="c5-3-26" alt="多尿/烦渴"></span>
+						</li>
+						<li>
+							<span>3.9</span>
+							<span>直立性头昏</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-27" alt="直立性头昏"></span>
+							<span><input type="radio" name="c5-3-27" alt="直立性头昏"></span>
+							<span><input type="radio" name="c5-3-27" alt="直立性头昏"></span>
+							<span><input type="radio" name="c5-3-27" alt="直立性头昏"></span>
+							<span><input type="radio" name="c5-3-27" alt="直立性头昏"></span>
+							<span><input type="radio" name="c5-3-27" alt="直立性头昏"></span>
+							<span><input type="radio" name="c5-3-27" alt="直立性头昏"></span>
+						</li>
+						<li>
+							<span>3.10</span>
+							<span>心悸/心动过速</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-28" alt="心悸/心动过速"></span>
+							<span><input type="radio" name="c5-3-28" alt="心悸/心动过速"></span>
+							<span><input type="radio" name="c5-3-28" alt="心悸/心动过速"></span>
+							<span><input type="radio" name="c5-3-28" alt="心悸/心动过速"></span>
+							<span><input type="radio" name="c5-3-28" alt="心悸/心动过速"></span>
+							<span><input type="radio" name="c5-3-28" alt="心悸/心动过速"></span>
+							<span><input type="radio" name="c5-3-28" alt="心悸/心动过速"></span>
+						</li>
+						<li>
+							<span>3.11</span>
+							<span>出汗增加</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-29" alt="出汗增加"></span>
+							<span><input type="radio" name="c5-3-29" alt="出汗增加"></span>
+							<span><input type="radio" name="c5-3-29" alt="出汗增加"></span>
+							<span><input type="radio" name="c5-3-29" alt="出汗增加"></span>
+							<span><input type="radio" name="c5-3-29" alt="出汗增加"></span>
+							<span><input type="radio" name="c5-3-29" alt="出汗增加"></span>
+							<span><input type="radio" name="c5-3-29" alt="出汗增加"></span>
+						</li>
+						<li>
+							<span>4.1</span>
+							<span>皮疹</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-30" alt="皮疹"></span>
+							<span><input type="radio" name="c5-3-30" alt="皮疹"></span>
+							<span><input type="radio" name="c5-3-30" alt="皮疹"></span>
+							<span><input type="radio" name="c5-3-30" alt="皮疹"></span>
+							<span><input type="radio" name="c5-3-30" alt="皮疹"></span>
+							<span><input type="radio" name="c5-3-30" alt="皮疹"></span>
+							<span><input type="radio" name="c5-3-30" alt="皮疹"></span>
+						</li>
+						<li>
+							<span>4.2</span>
+							<span>瘙痒</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-31" alt="瘙痒"></span>
+							<span><input type="radio" name="c5-3-31" alt="瘙痒"></span>
+							<span><input type="radio" name="c5-3-31" alt="瘙痒"></span>
+							<span><input type="radio" name="c5-3-31" alt="瘙痒"></span>
+							<span><input type="radio" name="c5-3-31" alt="瘙痒"></span>
+							<span><input type="radio" name="c5-3-31" alt="瘙痒"></span>
+							<span><input type="radio" name="c5-3-31" alt="瘙痒"></span>
+						</li>
+						<li>
+							<span>4.3</span>
+							<span>光敏反应</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-32" alt="光敏反应"></span>
+							<span><input type="radio" name="c5-3-32" alt="光敏反应"></span>
+							<span><input type="radio" name="c5-3-32" alt="光敏反应"></span>
+							<span><input type="radio" name="c5-3-32" alt="光敏反应"></span>
+							<span><input type="radio" name="c5-3-32" alt="光敏反应"></span>
+							<span><input type="radio" name="c5-3-32" alt="光敏反应"></span>
+							<span><input type="radio" name="c5-3-32" alt="光敏反应"></span>
+						</li>
+						<li>
+							<span>4.4</span>
+							<span>色素沉着</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-33" alt="色素沉着"></span>
+							<span><input type="radio" name="c5-3-33" alt="色素沉着"></span>
+							<span><input type="radio" name="c5-3-33" alt="色素沉着"></span>
+							<span><input type="radio" name="c5-3-33" alt="色素沉着"></span>
+							<span><input type="radio" name="c5-3-33" alt="色素沉着"></span>
+							<span><input type="radio" name="c5-3-33" alt="色素沉着"></span>
+							<span><input type="radio" name="c5-3-33" alt="色素沉着"></span>
+						</li>
+						<li>
+							<span>4.5</span>
+							<span>体重增加</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-34" alt="体重增加"></span>
+							<span><input type="radio" name="c5-3-34" alt="体重增加"></span>
+							<span><input type="radio" name="c5-3-34" alt="体重增加"></span>
+							<span><input type="radio" name="c5-3-34" alt="体重增加"></span>
+							<span><input type="radio" name="c5-3-34" alt="体重增加"></span>
+							<span><input type="radio" name="c5-3-34" alt="体重增加"></span>
+							<span><input type="radio" name="c5-3-34" alt="体重增加"></span>
+						</li>
+						<li>
+							<span>4.6</span>
+							<span>体重减少</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-35" alt="体重减少"></span>
+							<span><input type="radio" name="c5-3-35" alt="体重减少"></span>
+							<span><input type="radio" name="c5-3-35" alt="体重减少"></span>
+							<span><input type="radio" name="c5-3-35" alt="体重减少"></span>
+							<span><input type="radio" name="c5-3-35" alt="体重减少"></span>
+							<span><input type="radio" name="c5-3-35" alt="体重减少"></span>
+							<span><input type="radio" name="c5-3-35" alt="体重减少"></span>
+						</li>
+						<li>
+							<span>4.7</span>
+							<span>月经过多</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-36" alt="月经过多"></span>
+							<span><input type="radio" name="c5-3-36" alt="月经过多"></span>
+							<span><input type="radio" name="c5-3-36" alt="月经过多"></span>
+							<span><input type="radio" name="c5-3-36" alt="月经过多"></span>
+							<span><input type="radio" name="c5-3-36" alt="月经过多"></span>
+							<span><input type="radio" name="c5-3-36" alt="月经过多"></span>
+							<span><input type="radio" name="c5-3-36" alt="月经过多"></span>
+						</li>
+						<li>
+							<span>4.8</span>
+							<span>必经</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-37" alt="必经"></span>
+							<span><input type="radio" name="c5-3-37" alt="必经"></span>
+							<span><input type="radio" name="c5-3-37" alt="必经"></span>
+							<span><input type="radio" name="c5-3-37" alt="必经"></span>
+							<span><input type="radio" name="c5-3-37" alt="必经"></span>
+							<span><input type="radio" name="c5-3-37" alt="必经"></span>
+							<span><input type="radio" name="c5-3-37" alt="必经"></span>
+						</li>
+						<li>
+							<span>4.9</span>
+							<span>泌乳</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-38" alt="泌乳"></span>
+							<span><input type="radio" name="c5-3-38" alt="泌乳"></span>
+							<span><input type="radio" name="c5-3-38" alt="泌乳"></span>
+							<span><input type="radio" name="c5-3-38" alt="泌乳"></span>
+							<span><input type="radio" name="c5-3-38" alt="泌乳"></span>
+							<span><input type="radio" name="c5-3-38" alt="泌乳"></span>
+							<span><input type="radio" name="c5-3-38" alt="泌乳"></span>
+						</li>
+						<li>
+							<span>4.10</span>
+							<span>男性乳房发育</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-39" alt="男性乳房发育"></span>
+							<span><input type="radio" name="c5-3-39" alt="男性乳房发育"></span>
+							<span><input type="radio" name="c5-3-39" alt="男性乳房发育"></span>
+							<span><input type="radio" name="c5-3-39" alt="男性乳房发育"></span>
+							<span><input type="radio" name="c5-3-39" alt="男性乳房发育"></span>
+							<span><input type="radio" name="c5-3-39" alt="男性乳房发育"></span>
+							<span><input type="radio" name="c5-3-39" alt="男性乳房发育"></span>
+						</li>
+						<li>
+							<span>4.11</span>
+							<span>性欲增强</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-40" alt="性欲增强"></span>
+							<span><input type="radio" name="c5-3-40" alt="性欲增强"></span>
+							<span><input type="radio" name="c5-3-40" alt="性欲增强"></span>
+							<span><input type="radio" name="c5-3-40" alt="性欲增强"></span>
+							<span><input type="radio" name="c5-3-40" alt="性欲增强"></span>
+							<span><input type="radio" name="c5-3-40" alt="性欲增强"></span>
+							<span><input type="radio" name="c5-3-40" alt="性欲增强"></span>
+						</li>
+						<li>
+							<span>4.12</span>
+							<span>性欲减退</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-41" alt="性欲减退"></span>
+							<span><input type="radio" name="c5-3-41" alt="性欲减退"></span>
+							<span><input type="radio" name="c5-3-41" alt="性欲减退"></span>
+							<span><input type="radio" name="c5-3-41" alt="性欲减退"></span>
+							<span><input type="radio" name="c5-3-41" alt="性欲减退"></span>
+							<span><input type="radio" name="c5-3-41" alt="性欲减退"></span>
+							<span><input type="radio" name="c5-3-41" alt="性欲减退"></span>
+						</li>
+						<li>
+							<span>4.13</span>
+							<span>勃起障碍</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-42" alt="勃起障碍"></span>
+							<span><input type="radio" name="c5-3-42" alt="勃起障碍"></span>
+							<span><input type="radio" name="c5-3-42" alt="勃起障碍"></span>
+							<span><input type="radio" name="c5-3-42" alt="勃起障碍"></span>
+							<span><input type="radio" name="c5-3-42" alt="勃起障碍"></span>
+							<span><input type="radio" name="c5-3-42" alt="勃起障碍"></span>
+							<span><input type="radio" name="c5-3-42" alt="勃起障碍"></span>
+						</li>
+						<li>
+							<span>4.14</span>
+							<span>射精障碍</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-43" alt="射精障碍"></span>
+							<span><input type="radio" name="c5-3-43" alt="射精障碍"></span>
+							<span><input type="radio" name="c5-3-43" alt="射精障碍"></span>
+							<span><input type="radio" name="c5-3-43" alt="射精障碍"></span>
+							<span><input type="radio" name="c5-3-43" alt="射精障碍"></span>
+							<span><input type="radio" name="c5-3-43" alt="射精障碍"></span>
+							<span><input type="radio" name="c5-3-43" alt="射精障碍"></span>
+						</li>
+						<li>
+							<span>4.15</span>
+							<span>性高潮障碍</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-44" alt="性高潮障碍"></span>
+							<span><input type="radio" name="c5-3-44" alt="性高潮障碍"></span>
+							<span><input type="radio" name="c5-3-44" alt="性高潮障碍"></span>
+							<span><input type="radio" name="c5-3-44" alt="性高潮障碍"></span>
+							<span><input type="radio" name="c5-3-44" alt="性高潮障碍"></span>
+							<span><input type="radio" name="c5-3-44" alt="性高潮障碍"></span>
+							<span><input type="radio" name="c5-3-44" alt="性高潮障碍"></span>
+						</li>
+						<li>
+							<span>4.16</span>
+							<span>阴道干燥</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-45" alt="阴道干燥"></span>
+							<span><input type="radio" name="c5-3-45" alt="阴道干燥"></span>
+							<span><input type="radio" name="c5-3-45" alt="阴道干燥"></span>
+							<span><input type="radio" name="c5-3-45" alt="阴道干燥"></span>
+							<span><input type="radio" name="c5-3-45" alt="阴道干燥"></span>
+							<span><input type="radio" name="c5-3-45" alt="阴道干燥"></span>
+							<span><input type="radio" name="c5-3-45" alt="阴道干燥"></span>
+						</li>
+						<li>
+							<span>4.17</span>
+							<span>头痛</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-46" alt="头痛"></span>
+							<span><input type="radio" name="c5-3-46" alt="头痛"></span>
+							<span><input type="radio" name="c5-3-46" alt="头痛"></span>
+							<span><input type="radio" name="c5-3-46" alt="头痛"></span>
+							<span><input type="radio" name="c5-3-46" alt="头痛"></span>
+							<span><input type="radio" name="c5-3-46" alt="头痛"></span>
+							<span><input type="radio" name="c5-3-46" alt="头痛"></span>
+						</li>
+						<li>
+							<span>4.18</span>
+							<span>躯体依赖</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-47" alt="躯体依赖"></span>
+							<span><input type="radio" name="c5-3-47" alt="躯体依赖"></span>
+							<span><input type="radio" name="c5-3-47" alt="躯体依赖"></span>
+							<span><input type="radio" name="c5-3-47" alt="躯体依赖"></span>
+							<span><input type="radio" name="c5-3-47" alt="躯体依赖"></span>
+							<span><input type="radio" name="c5-3-47" alt="躯体依赖"></span>
+							<span><input type="radio" name="c5-3-47" alt="躯体依赖"></span>
+						</li>
+						<li>
+							<span>4.19</span>
+							<span>精神依赖</span>
+							<span><input type="checkbox" ito="7"></span>
+							<span><input type="radio" name="c5-3-48" alt="精神依赖"></span>
+							<span><input type="radio" name="c5-3-48" alt="精神依赖"></span>
+							<span><input type="radio" name="c5-3-48" alt="精神依赖"></span>
+							<span><input type="radio" name="c5-3-48" alt="精神依赖"></span>
+							<span><input type="radio" name="c5-3-48" alt="精神依赖"></span>
+							<span><input type="radio" name="c5-3-48" alt="精神依赖"></span>
+							<span><input type="radio" name="c5-3-48" alt="精神依赖"></span>
+						</li>
+	
+	
+					</ul>
+				</div>
+				<!-- 第五步保存 -->
+				<div class="sub">
+					<button class="sub5">保存</button>
+				</div>
+			</div>
+
+			<!-- 第六步 -->
+			<div class="content6" :class="{sns:sn==5}" v-show="sn==6">
+				<div class="title">总体评价</div>
+
+				<div class="cb6-f2" flex jc=ce ai=ce>
+					<div class="cb6-f2-left" flex fd=co jc=fe ai=ce>
+						<span>患者</span>
+						<span>医生</span>
+					</div>
+					<div class="cb6-f2-right">
+						<p>
+							<span>评分</span>
+						</p>
+						<p>
+							<span>无副作用(0分)</span>
+							<span>轻度副作用，不影响患者日常活动（1分）</span>
+							<span>中度影响患者的日常活动（2分）</span>
+							<span>显著影响患者的日常活动（3分）</span>
+						</p>
+						<p>
+							<span><input type="radio" name="c6-r1" alt="总体评价(患者)"></span>
+							<span><input type="radio" name="c6-r1" alt="总体评价(患者)"></span>
+							<span><input type="radio" name="c6-r1" alt="总体评价(患者)"></span>
+							<span><input type="radio" name="c6-r1" alt="总体评价(患者)"></span>
+						</p>
+						<p>
+							<span><input type="radio" name="c6-r2" alt="总体评价(医生)"></span>
+							<span><input type="radio" name="c6-r2" alt="总体评价(医生)"></span>
+							<span><input type="radio" name="c6-r2" alt="总体评价(医生)"></span>
+							<span><input type="radio" name="c6-r2" alt="总体评价(医生)"></span>
+						</p>
+					</div>
+				</div>
+
+				<div class="title c6-t2">处理措施</div>
+
+				<div class="cb6-f4" flex jc=ce ai=ce>
+					<div class="cb6-f4-left" flex fd=co jc=ce ai=ce>
+						<span>评分</span>
+					</div>
+					<div class="cb6-f4-right">
+						<p>
+							<span>处理</span>
+						</p>
+						<p>
+							<span>未处理(0分)</span>
+							<span class="cb6-f4s">更频繁评价副作用，但未减少药物剂量和/或偶尔用拮抗药物(1分)</span>
+							<span>减少药物剂量和/或持续用拮抗药物(2分)</span>
+							<span>停用药物或改用其他药物(3分)</span>
+						</p>
+						<p>
+							<span><input type="radio" name="c6-r3" alt="处理措施"></span>
+							<span><input type="radio" name="c6-r3" alt="处理措施"></span>
+							<span><input type="radio" name="c6-r3" alt="处理措施"></span>
+							<span><input type="radio" name="c6-r3" alt="处理措施"></span>
+						</p>
+
+					</div>
+				</div>
+
+				<!-- 第六步保存 -->
+				<div class="sub">
+					<button class="sub6">保存</button>
+				</div>
+			</div>
+
+			<!-- 第七步 -->
+			<div class="content7" :class="{sns:sn==5}" v-show="sn==7">
+				<div class="title">其他不良事件询问</div>
+				<div class="c7-f1-title2">
+					<span>是否有重要的用药史(过去三个月)或当前正在使用药物？</span>
+					<input type="radio" id="yongyao01" name="yongyao0" value="0" alt="是否有重要的用药史(过去三个月)或当前正在使用药物">
+					<label for="yongyao01">否</label>
+					<input type="radio" id="yongyao02" name="yongyao0" value="1" alt="是否有重要的用药史(过去三个月)或当前正在使用药物">
+					<label for="yongyao02">是</label>
+					<em>是，请继续填写下来</em>
+				</div>
+				<ul class="c7-f2">
+					<li class="c7-f2-li1">
+						<div><span>编号</span></div>
+						<div><span>不良事件名称</span></div>
+						<div><span>发生日期</span></div>
+						<div><span>是否持续</span></div>
+						<div><span>不良事件的结局</span></div>
+						<div><span>严重程度</span></div>
+						<div><span>研究用药剂量调整</span></div>
+						<div><span>是否为严重不良事件</span></div>
+						<div><span>处理措施</span></div>
+						<div><span>与研究用药的关系</span></div>
+					</li>
+					<li class="c7-f2-li2">
+						<div><span>01</span></div>
+						<div><input type="text" alt="不良事件名称" name=""></div>
+						<div>
+							<input id="" type="text" class="Wdate" readonly="" onclick="new WdatePicker()" alt="发生日期">
+						</div>
+						<div>
+							<p><input type="radio" name="c7-1-1" alt="是否持续" ito="2"><label for="">是</label></p>
+							<p><input type="radio" name="c7-1-1" alt="是否持续" oti="7-1"><label for="">否，结束日期：</label></p>
+							<p>
+								<input id="" type="text" class="Wdate" alt="结束日期" otii="7-1" readonly="" onclick="new WdatePicker()">
+							</p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-1-2" alt="不良事件的结局"><label for="">已恢复/已解决</label></p>
+							<p><input type="radio" name="c7-1-2" alt="不良事件的结局"><label for="">恢复/解决中</label></p>
+							<p><input type="radio" name="c7-1-2" alt="不良事件的结局"><label for="">未恢复/未解决</label></p>
+							<p><input type="radio" name="c7-1-2" alt="不良事件的结局"><label for="">已恢复/已解决，伴有后遗症</label></p>
+							<p><input type="radio" name="c7-1-2" alt="不良事件的结局"><label for="">致命的</label></p>
+							<p><input type="radio" name="c7-1-2" alt="不良事件的结局"><label for="">未知的</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-1-3" alt="严重程度"><label for="">轻度</label></p>
+							<p><input type="radio" name="c7-1-3" alt="严重程度"><label for="">中度</label></p>
+							<p><input type="radio" name="c7-1-3" alt="严重程度"><label for="">严重或有重要医学意义,但不会立即危及生命</label></p>
+							<p><input type="radio" name="c7-1-3" alt="严重程度"><label for=""></label>危及生命;需紧急治疗</p>
+							<p><input type="radio" name="c7-1-3" alt="严重程度"><label for="">死亡</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-1-4" alt="研究用药剂量调整"><label for="">剂量增加</label></p>
+							<p><input type="radio" name="c7-1-4" alt="研究用药剂量调整"><label for="">剂量不变</label></p>
+							<p><input type="radio" name="c7-1-4" alt="研究用药剂量调整"><label for="">剂量减少</label></p>
+							<p><input type="radio" name="c7-1-4" alt="研究用药剂量调整"><label for="">暂停服药</label></p>
+							<p><input type="radio" name="c7-1-4" alt="研究用药剂量调整"><label for="">永久停药</label></p>
+							<p><input type="radio" name="c7-1-4" alt="研究用药剂量调整"><label for="">不适用</label></p>
+							<p><input type="radio" name="c7-1-4" alt="研究用药剂量调整"><label for="">未知</label></p>
+						</div>
+						
+						<div>
+							<p><input type="radio" name="c7-1-5" alt="是否为严重不良事件"><label for="">是</label></p>
+							<p><input type="radio" name="c7-1-5" alt="是否为严重不良事件"><label for="">否</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-1-6" alt="处理措施"><label for="">无</label></p>
+							<p><input type="radio" name="c7-1-6" alt="处理措施"><label for="">药物治疗</label></p>
+							<p><input type="radio" name="c7-1-6" alt="处理措施"><label for="">非药物治疗</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-1-7" alt="与研究用药的关系"><label for="">肯定有关</label></p>
+							<p><input type="radio" name="c7-1-7" alt="与研究用药的关系"><label for="">很可能有关</label></p>
+							<p><input type="radio" name="c7-1-7" alt="与研究用药的关系"><label for="">可能有关</label></p>
+							<p><input type="radio" name="c7-1-7" alt="与研究用药的关系"><label for="">可能无关</label></p>
+							<p><input type="radio" name="c7-1-7" alt="与研究用药的关系"><label for="">无关</label></p>
+						</div>
+					</li>
+					<li class="c7-f2-li2">
+						<div><span>02</span></div>
+						<div><input type="text" alt="不良事件名称" name=""></div>
+						<div>
+							<input id="" type="text" class="Wdate" readonly="" onclick="new WdatePicker()" alt="发生日期">
+						</div>
+						<div>
+							<p><input type="radio" name="c7-2-1" alt="是否持续" ito="2"><label for="">是</label></p>
+							<p><input type="radio" name="c7-2-1" alt="是否持续" oti="7-2"><label for="">否，结束日期：</label></p>
+							<p>
+								<input id="" type="text" class="Wdate" alt="结束日期" otii="7-2" readonly="" onclick="new WdatePicker()">
+							</p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-2-2" alt="不良事件的结局"><label for="">已恢复/已解决</label></p>
+							<p><input type="radio" name="c7-2-2" alt="不良事件的结局"><label for="">恢复/解决中</label></p>
+							<p><input type="radio" name="c7-2-2" alt="不良事件的结局"><label for="">未恢复/未解决</label></p>
+							<p><input type="radio" name="c7-2-2" alt="不良事件的结局"><label for="">已恢复/已解决，伴有后遗症</label></p>
+							<p><input type="radio" name="c7-2-2" alt="不良事件的结局"><label for="">致命的</label></p>
+							<p><input type="radio" name="c7-2-2" alt="不良事件的结局"><label for="">未知的</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-2-3" alt="严重程度"><label for="">轻度</label></p>
+							<p><input type="radio" name="c7-2-3" alt="严重程度"><label for="">中度</label></p>
+							<p><input type="radio" name="c7-2-3" alt="严重程度"><label for="">严重或有重要医学意义,但不会立即危及生命</label></p>
+							<p><input type="radio" name="c7-2-3" alt="严重程度"><label for=""></label>危及生命;需紧急治疗</p>
+							<p><input type="radio" name="c7-2-3" alt="严重程度"><label for="">死亡</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-2-4" alt="研究用药剂量调整"><label for="">剂量增加</label></p>
+							<p><input type="radio" name="c7-2-4" alt="研究用药剂量调整"><label for="">剂量不变</label></p>
+							<p><input type="radio" name="c7-2-4" alt="研究用药剂量调整"><label for="">剂量减少</label></p>
+							<p><input type="radio" name="c7-2-4" alt="研究用药剂量调整"><label for="">暂停服药</label></p>
+							<p><input type="radio" name="c7-2-4" alt="研究用药剂量调整"><label for="">永久停药</label></p>
+							<p><input type="radio" name="c7-2-4" alt="研究用药剂量调整"><label for="">不适用</label></p>
+							<p><input type="radio" name="c7-2-4" alt="研究用药剂量调整"><label for="">未知</label></p>
+						</div>
+						
+						<div>
+							<p><input type="radio" name="c7-2-5" alt="是否为严重不良事件"><label for="">是</label></p>
+							<p><input type="radio" name="c7-2-5" alt="是否为严重不良事件"><label for="">否</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-2-6" alt="处理措施"><label for="">无</label></p>
+							<p><input type="radio" name="c7-2-6" alt="处理措施"><label for="">药物治疗</label></p>
+							<p><input type="radio" name="c7-2-6" alt="处理措施"><label for="">非药物治疗</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-2-7" alt="与研究用药的关系"><label for="">肯定有关</label></p>
+							<p><input type="radio" name="c7-2-7" alt="与研究用药的关系"><label for="">很可能有关</label></p>
+							<p><input type="radio" name="c7-2-7" alt="与研究用药的关系"><label for="">可能有关</label></p>
+							<p><input type="radio" name="c7-2-7" alt="与研究用药的关系"><label for="">可能无关</label></p>
+							<p><input type="radio" name="c7-2-7" alt="与研究用药的关系"><label for="">无关</label></p>
+						</div>
+					</li>
+					<li class="c7-f2-li2">
+						<div><span>03</span></div>
+						<div><input type="text" alt="不良事件名称" name=""></div>
+						<div>
+							<input id="" type="text" class="Wdate" readonly="" onclick="new WdatePicker()" alt="发生日期">
+						</div>
+						<div>
+							<p><input type="radio" name="c7-3-1" alt="是否持续" ito="2"><label for="">是</label></p>
+							<p><input type="radio" name="c7-3-1" alt="是否持续" otii="7-3"><label for="">否，结束日期：</label></p>
+							<p>
+								<input id="" type="text" class="Wdate" alt="结束日期" oti="7-3" readonly="" onclick="new WdatePicker()">
+							</p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-3-2" alt="不良事件的结局"><label for="">已恢复/已解决</label></p>
+							<p><input type="radio" name="c7-3-2" alt="不良事件的结局"><label for="">恢复/解决中</label></p>
+							<p><input type="radio" name="c7-3-2" alt="不良事件的结局"><label for="">未恢复/未解决</label></p>
+							<p><input type="radio" name="c7-3-2" alt="不良事件的结局"><label for="">已恢复/已解决，伴有后遗症</label></p>
+							<p><input type="radio" name="c7-3-2" alt="不良事件的结局"><label for="">致命的</label></p>
+							<p><input type="radio" name="c7-3-2" alt="不良事件的结局"><label for="">未知的</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-3-3" alt="严重程度"><label for="">轻度</label></p>
+							<p><input type="radio" name="c7-3-3" alt="严重程度"><label for="">中度</label></p>
+							<p><input type="radio" name="c7-3-3" alt="严重程度"><label for="">严重或有重要医学意义,但不会立即危及生命</label></p>
+							<p><input type="radio" name="c7-3-3" alt="严重程度"><label for=""></label>危及生命;需紧急治疗</p>
+							<p><input type="radio" name="c7-3-3" alt="严重程度"><label for="">死亡</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-3-4" alt="研究用药剂量调整"><label for="">剂量增加</label></p>
+							<p><input type="radio" name="c7-3-4" alt="研究用药剂量调整"><label for="">剂量不变</label></p>
+							<p><input type="radio" name="c7-3-4" alt="研究用药剂量调整"><label for="">剂量减少</label></p>
+							<p><input type="radio" name="c7-3-4" alt="研究用药剂量调整"><label for="">暂停服药</label></p>
+							<p><input type="radio" name="c7-3-4" alt="研究用药剂量调整"><label for="">永久停药</label></p>
+							<p><input type="radio" name="c7-3-4" alt="研究用药剂量调整"><label for="">不适用</label></p>
+							<p><input type="radio" name="c7-3-4" alt="研究用药剂量调整"><label for="">未知</label></p>
+						</div>
+						
+						<div>
+							<p><input type="radio" name="c7-3-5" alt="是否为严重不良事件"><label for="">是</label></p>
+							<p><input type="radio" name="c7-3-5" alt="是否为严重不良事件"><label for="">否</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-3-6" alt="处理措施"><label for="">无</label></p>
+							<p><input type="radio" name="c7-3-6" alt="处理措施"><label for="">药物治疗</label></p>
+							<p><input type="radio" name="c7-3-6" alt="处理措施"><label for="">非药物治疗</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-3-7" alt="与研究用药的关系"><label for="">肯定有关</label></p>
+							<p><input type="radio" name="c7-3-7" alt="与研究用药的关系"><label for="">很可能有关</label></p>
+							<p><input type="radio" name="c7-3-7" alt="与研究用药的关系"><label for="">可能有关</label></p>
+							<p><input type="radio" name="c7-3-7" alt="与研究用药的关系"><label for="">可能无关</label></p>
+							<p><input type="radio" name="c7-3-7" alt="与研究用药的关系"><label for="">无关</label></p>
+						</div>
+					</li>
+					<li class="c7-f2-li2">
+						<div><span>04</span></div>
+						<div><input type="text" alt="不良事件名称" name=""></div>
+						<div>
+							<input id="" type="text" class="Wdate" readonly="" onclick="new WdatePicker()" alt="发生日期">
+						</div>
+						<div>
+							<p><input type="radio" name="c7-4-1" alt="是否持续" ito="2"><label for="">是</label></p>
+							<p><input type="radio" name="c7-4-1" alt="是否持续" otii="7-4"><label for="">否，结束日期：</label></p>
+							<p>
+								<input id="" type="text" class="Wdate" alt="结束日期" oti="7-4" readonly="" onclick="new WdatePicker()">
+							</p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-4-2" alt="不良事件的结局"><label for="">已恢复/已解决</label></p>
+							<p><input type="radio" name="c7-4-2" alt="不良事件的结局"><label for="">恢复/解决中</label></p>
+							<p><input type="radio" name="c7-4-2" alt="不良事件的结局"><label for="">未恢复/未解决</label></p>
+							<p><input type="radio" name="c7-4-2" alt="不良事件的结局"><label for="">已恢复/已解决，伴有后遗症</label></p>
+							<p><input type="radio" name="c7-4-2" alt="不良事件的结局"><label for="">致命的</label></p>
+							<p><input type="radio" name="c7-4-2" alt="不良事件的结局"><label for="">未知的</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-4-3" alt="严重程度"><label for="">轻度</label></p>
+							<p><input type="radio" name="c7-4-3" alt="严重程度"><label for="">中度</label></p>
+							<p><input type="radio" name="c7-4-3" alt="严重程度"><label for="">严重或有重要医学意义,但不会立即危及生命</label></p>
+							<p><input type="radio" name="c7-4-3" alt="严重程度"><label for=""></label>危及生命;需紧急治疗</p>
+							<p><input type="radio" name="c7-4-3" alt="严重程度"><label for="">死亡</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-4-4" alt="研究用药剂量调整"><label for="">剂量增加</label></p>
+							<p><input type="radio" name="c7-4-4" alt="研究用药剂量调整"><label for="">剂量不变</label></p>
+							<p><input type="radio" name="c7-4-4" alt="研究用药剂量调整"><label for="">剂量减少</label></p>
+							<p><input type="radio" name="c7-4-4" alt="研究用药剂量调整"><label for="">暂停服药</label></p>
+							<p><input type="radio" name="c7-4-4" alt="研究用药剂量调整"><label for="">永久停药</label></p>
+							<p><input type="radio" name="c7-4-4" alt="研究用药剂量调整"><label for="">不适用</label></p>
+							<p><input type="radio" name="c7-4-4" alt="研究用药剂量调整"><label for="">未知</label></p>
+						</div>
+						
+						<div>
+							<p><input type="radio" name="c7-4-5" alt="是否为严重不良事件"><label for="">是</label></p>
+							<p><input type="radio" name="c7-4-5" alt="是否为严重不良事件"><label for="">否</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-4-6" alt="处理措施"><label for="">无</label></p>
+							<p><input type="radio" name="c7-4-6" alt="处理措施"><label for="">药物治疗</label></p>
+							<p><input type="radio" name="c7-4-6" alt="处理措施"><label for="">非药物治疗</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-4-7" alt="与研究用药的关系"><label for="">肯定有关</label></p>
+							<p><input type="radio" name="c7-4-7" alt="与研究用药的关系"><label for="">很可能有关</label></p>
+							<p><input type="radio" name="c7-4-7" alt="与研究用药的关系"><label for="">可能有关</label></p>
+							<p><input type="radio" name="c7-4-7" alt="与研究用药的关系"><label for="">可能无关</label></p>
+							<p><input type="radio" name="c7-4-7" alt="与研究用药的关系"><label for="">无关</label></p>
+						</div>
+					</li>
+					<li class="c7-f2-li2">
+						<div><span>05</span></div>
+						<div><input type="text" alt="不良事件名称" name=""></div>
+						<div>
+							<input id="" type="text" class="Wdate" readonly="" onclick="new WdatePicker()" alt="发生日期">
+						</div>
+						<div>
+							<p><input type="radio" name="c7-5-1" alt="是否持续" ito="2"><label for="">是</label></p>
+							<p><input type="radio" name="c7-5-1" alt="是否持续" otii="7-5"><label for="">否，结束日期：</label></p>
+							<p>
+								<input id="" type="text" class="Wdate" alt="结束日期" oti="7-5" readonly="" onclick="new WdatePicker()">
+							</p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-5-2" alt="不良事件的结局"><label for="">已恢复/已解决</label></p>
+							<p><input type="radio" name="c7-5-2" alt="不良事件的结局"><label for="">恢复/解决中</label></p>
+							<p><input type="radio" name="c7-5-2" alt="不良事件的结局"><label for="">未恢复/未解决</label></p>
+							<p><input type="radio" name="c7-5-2" alt="不良事件的结局"><label for="">已恢复/已解决，伴有后遗症</label></p>
+							<p><input type="radio" name="c7-5-2" alt="不良事件的结局"><label for="">致命的</label></p>
+							<p><input type="radio" name="c7-5-2" alt="不良事件的结局"><label for="">未知的</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-5-3" alt="严重程度"><label for="">轻度</label></p>
+							<p><input type="radio" name="c7-5-3" alt="严重程度"><label for="">中度</label></p>
+							<p><input type="radio" name="c7-5-3" alt="严重程度"><label for="">严重或有重要医学意义,但不会立即危及生命</label></p>
+							<p><input type="radio" name="c7-5-3" alt="严重程度"><label for=""></label>危及生命;需紧急治疗</p>
+							<p><input type="radio" name="c7-5-3" alt="严重程度"><label for="">死亡</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-5-4" alt="研究用药剂量调整"><label for="">剂量增加</label></p>
+							<p><input type="radio" name="c7-5-4" alt="研究用药剂量调整"><label for="">剂量不变</label></p>
+							<p><input type="radio" name="c7-5-4" alt="研究用药剂量调整"><label for="">剂量减少</label></p>
+							<p><input type="radio" name="c7-5-4" alt="研究用药剂量调整"><label for="">暂停服药</label></p>
+							<p><input type="radio" name="c7-5-4" alt="研究用药剂量调整"><label for="">永久停药</label></p>
+							<p><input type="radio" name="c7-5-4" alt="研究用药剂量调整"><label for="">不适用</label></p>
+							<p><input type="radio" name="c7-5-4" alt="研究用药剂量调整"><label for="">未知</label></p>
+						</div>
+						
+						<div>
+							<p><input type="radio" name="c7-5-5" alt="是否为严重不良事件"><label for="">是</label></p>
+							<p><input type="radio" name="c7-5-5" alt="是否为严重不良事件"><label for="">否</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-5-6" alt="处理措施"><label for="">无</label></p>
+							<p><input type="radio" name="c7-5-6" alt="处理措施"><label for="">药物治疗</label></p>
+							<p><input type="radio" name="c7-5-6" alt="处理措施"><label for="">非药物治疗</label></p>
+						</div>
+						<div>
+							<p><input type="radio" name="c7-5-7" alt="与研究用药的关系"><label for="">肯定有关</label></p>
+							<p><input type="radio" name="c7-5-7" alt="与研究用药的关系"><label for="">很可能有关</label></p>
+							<p><input type="radio" name="c7-5-7" alt="与研究用药的关系"><label for="">可能有关</label></p>
+							<p><input type="radio" name="c7-5-7" alt="与研究用药的关系"><label for="">可能无关</label></p>
+							<p><input type="radio" name="c7-5-7" alt="与研究用药的关系"><label for="">无关</label></p>
+						</div>
+					</li>
+				</ul>
+				<div class="c7-text">
+					备注：
+					<br>
+					轻度：无症状或轻度症状；仅临床或诊断发现，不影响行为和功能，不需用处方药来缓解症状，但可根据入组患者的要求给予处方药。
+					<br>
+中度：最小的、局部的或非侵入性治疗指征；年龄相关工具性日常生活活动（Activities of DailyLivingADL）受限（工具性ADL指做饭、购物、使用电话、理财等），入组患者可以继续进行研究，可能需要对症治疗。
+					<br>
+严重或有重要医学意义，但不会立即危及生命：导致住院治疗或延长住院时间；致残；自理性ADL受限（自理性ADL指洗澡、穿衣和脱衣、进食、如厕、服药、并未卧床不起）。
+				</div>
+				<!-- 第七步保存 -->
+				<div class="sub">
+					<button class="sub7">保存</button>
+				</div>
+			</div>
+
+			<!-- 第八步 -->
+			<div class="content8" :class="{sns:sn==5}" v-show="sn==8">
+				<div class="title">研究完成记录</div>
+				<ul class="c8-f2">
+					<li>
+						<span>入组患者是否完成研究？</span>
+					</li>
+					<li>
+						<input type="radio" class="rad8-1-1" name="8-1" alt="入组患者是否完成研究" value="是">
+						<label for="">是，入组患者完成研究日期：</label>
+						<input id="" type="text" alt="首次诊断日期" class="Wdate" readonly="" onclick="new WdatePicker()" alt="入组患者完成研究日期">
+					</li>
+					<li>
+						<input type="radio" class="rad8-1-2" name="8-1" alt="入组患者是否完成研究" value="否">
+						<label for="">否，入组患者退出研究日期：</label>
+						<input id="" type="text" alt="首次诊断日期" class="Wdate inp8-2" readonly="" onclick="new WdatePicker()" alt="入组患者退出研究日期">
+					</li>
+				</ul>
+				<ul class="c8-f3">
+					<li>
+						<span>若“否”，研究终止的主要原因？(单选)</span>
+					</li>
+					<li>
+						<input type="radio" name="8-2" alt="研究终止的主要原因">
+						<label for="">撤回知情同意，请详述：</label>
+						<input type="text" alt="撤回知情同意详情">
+					</li>
+					<li>
+						<input type="radio" name="8-2" alt="研究终止的主要原因">
+						<label for="">不良事件，请详述：</label>
+						<input type="text" alt="不良事件详情">
+					</li>
+					<li>
+						<input type="radio" name="8-2" alt="研究终止的主要原因">
+						<label for="">严重违背研究方案，请详述：</label>
+						<input type="text" alt="严重违背研究方案详情">
+					</li>
+					<li>
+						<input type="radio" name="8-2" alt="研究终止的主要原因">
+						<label for="">申办方终止研究，请详述：</label>
+						<input type="text" alt="申办方终止研究详情">
+					</li>
+					<li>
+						<input type="radio" name="8-2" alt="研究终止的主要原因">
+						<label for="">入组患者死亡，死亡日期：</label>
+						<input id="" type="text" alt="首次诊断日期" class="Wdate" readonly="" onclick="new WdatePicker()" alt="死亡日期">
+						<label for="">死亡原因：</label>
+						<input type="text" alt="死亡原因">
+					</li>
+					<li>
+						<input type="radio" name="8-2" alt="研究终止的主要原因">
+						<label for="">疗效不佳，请详述：</label>
+						<input type="text"  alt="疗效不佳详情">
+					</li>
+					<li>
+						<input type="radio" name="8-2" alt="研究终止的主要原因">
+						<label for="">其他，请详述：</label>
+						<input type="text" alt="其他原因详情">
+					</li>
+					
+				</ul>
+				<!-- 第八步保存 -->
+				<div class="sub">
+					<button class="sub8">保存</button>
+				</div>
+			</div>
+
+
+		</div>
+	</section>
+
+	
+
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/vue.js"></script>
+<script src="My97DatePicker/WdatePicker.js"></script>
+<script src="js/bdyz.js"></script>
+<script src="js/main.js"></script>
+<script src="js/visit.js"></script>
+</body>
+</html>

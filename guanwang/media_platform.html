@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>媒体平台</title>
+	
+	<link rel="stylesheet" href="css/main.css">
+	
+	<script>
+       if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+            // document.write('<link href="'+cssArr[i]+'" type="text/css" rel=stylesheet>');
+        }
+        else {
+
+            document.write('<link href="css/pc/media_platform.css" type="text/css" rel=stylesheet>');
+           
+        }
+	</script>
+
+</head>
+<body>
+
+<div id="app">
+	
+
+
+	<div id="header" class="header">
+
+		<div class="nav">
+			<img src="img/logo.png" height="52" width="156" alt="">
+			<ul>
+				<li class="icon1Box">
+
+					<a href="index.html">
+						<div class="nav-sub-left icon1"></div>
+						<div class="nav-sub-right">
+							<span>首页</span>
+							<em>home</em>
+						</div>
+					</a>
+					
+				</li>
+				<li class="icon2Box">
+					<a>
+						<div class="nav-sub-left icon2"></div>
+						<div class="nav-sub-right">
+							<span>媒体平台</span>
+							<em>media</em>
+						</div>
+					</a>
+				</li>
+				<li class="icon3Box">
+					<a href="business_cooperation.html">
+						<div class="nav-sub-left icon3"></div>
+						<div class="nav-sub-right">
+							<span>业务合作</span>
+							<em>business</em>
+						</div>
+					</a>
+				</li>
+				<li class="icon4Box">
+					<a href="index.html#m4">
+						<div class="nav-sub-left icon4"></div>
+						<div class="nav-sub-right">
+							<span>合作伙伴</span>
+							<em>Partners</em>
+						</div>
+					</a>
+				</li>
+				<li class="icon5Box">
+					<a href="news.html">
+						<div class="nav-sub-left icon5"></div>
+						<div class="nav-sub-right">
+							<span>新闻中心</span>
+							<em>news</em>
+						</div>
+					</a>
+				</li>
+				<li class="icon6Box">
+					<a href="about_us.html">
+						<div class="nav-sub-left icon6"></div>
+						<div class="nav-sub-right">
+							<span>关于我们</span>
+							<em>About us</em>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+
+	</div>
+
+
+
+	<div id="main" class="main">
+		
+		<section id="ban" class="ban"></section>
+
+		<section class="content">
+			<ul class="content-nav">
+				<li @click="cnT(1)" :class="{cnav:cnSign==1}">中华医学信息导报</li>
+				<li @click="cnT(2)" :class="{cnav:cnSign==2}">神经时讯</li>
+				<li @click="cnT(3)" :class="{cnav:cnSign==3}">全科学苑</li>
+				<li @click="cnT(4)" :class="{cnav:cnSign==4}">围术期医学论坛</li>
+				<li @click="cnT(5)" :class="{cnav:cnSign==5}">心脏健康社区</li>
+			</ul>
+			<div class="content-body content-body1" v-show="cnSign==1">
+				<div class="cb-left">
+					<div class="cbl-top">
+						<img src="img/media_platform/m1.png" height="66" width="324" alt="">
+						<p>【认证：中华医学会机关刊】</p>
+					</div>
+					<div class="cbl-bottom">
+						<p>《中华医学信息导报》(China Medical News)是中华医学会机关报（会刊），中华医学会旗下唯一报纸，创刊于1986年7月，国际统一刊号ISSN 1000-8039，集信息传播、学术发布、继续教育于一身，以“传播医学信息，引领临床实践”为宗旨，以“打造中国医学学术发布首选平台”。</p>
+					</div>
+				</div>
+				<div class="cb-right">
+					<div class="cbr-item1">
+						<p><em>01/</em><span>传播力</span></p>
+						<ul class="liS">
+							<li>全国覆盖各级专科分会、地方医学会</li>
+							<li>中华医学会学术年会指定宣传及唯一上会媒体</li>
+							<li>长城会、天坛会等顶尖学术会议官方合作媒体</li>
+						</ul>
+					</div>
+					<div class="cbr-item2">
+						<p><em>02/</em><span>公信力</span></p>
+						<ul class="liS">
+							<li>中华医学会对外宣传窗口</li>
+							<li>中华医学会联系各分会与会员的信息桥梁与纽带</li>
+							<li>与15个重点领域专科分会达成战略合作</li>
+						</ul>
+					</div>
+					<div class="cbr-item3">
+						<p><em>03/</em><span>影响力</span></p>
+						<ul class="liS">
+							<li>高端医院全覆盖：全国2000 家三级医院</li>
+							<li>高端专家全覆盖：二三级医院院长3000名，中华 医学会理事、各专科分会委员、地方（副省级以上）医学会专家委员8000名</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="content-body content-body2" v-show="cnSign==2">
+				<div class="cb-left">
+					<div class="cbl-top">
+						<img src="img/media_platform/m2.png" height="58" width="209"alt="">
+						<p>【专注神经时讯/学术/人文】</p>
+					</div>
+					<div class="cbl-bottom">
+						<p>为了进一步促进国内外神经内科、神经外科、神经心理领域的交流和发展，康迅传媒依托中华医学会《中华医学信息导报》编辑委员会积累的丰富专家资源，搭建沟通学会-医生-企业的交流平台，创办由国际医学出版传媒集团出版的在线杂志——《神经时讯》，并于2018年2月开始试运营。</p>
+					</div>
+				</div>
+				<div class="cb-right">
+					<div class="cbr-item1">
+						<p><em>01/</em><span></span></p>
+						<ul class="liS">
+							<li>专业媒体矩阵分享专家权威资讯</li>
+							<li>联合专家开发编制课程体系，实时传递国内外神经领域最新进展</li>
+						</ul>
+					</div>
+					<div class="cbr-item2">
+						<p><em>02/</em><span>专家资源</span></p>
+						<ul>
+							<li>总编辑:赵继宗院士(中国科学院院士、国家神经性疾病临床医学研究中心主任)</li>
+							<li>神内主编:王拥军教授(天坛医院副院长、神经病学中心主任)</li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+			<div class="content-body content-body2" v-show="cnSign==3">
+				<div class="cb-left">
+					<div class="cbl-top">
+						<img src="img/media_platform/m3.png" height="87" width="99" alt="">
+						<p>【专注全科医学，服务基层医生】</p>
+					</div>
+					<div class="cbl-bottom">
+						<p>响应国家《“健康中国2030”规划纲要》要加大基层和偏远地区扶持力度，充分发挥“中华医学信息导报”和“中国乡村医生培训中心”等媒体和机构的专家资源优势，康迅传媒成立《全科学苑》，专为广大基层医生提供免费在线学习机会。</p>
+					</div>
+				</div>
+				<div class="cb-right">
+					<div class="cbr-item1">
+						<p><em>01/</em><span></span></p>
+						<ul>
+							<li>平台于2017年5月上线试运营，截止2018年底积累3万+粉丝、覆盖50+微信社群。</li>
+						</ul>
+					</div>
+					<div class="cbr-item2">
+						<p><em>02/</em><span></span></p>
+						<ul class="liS">
+							<li>每周提供海量微视频课程，主讲基层使用技术</li>
+							<li>邀请临床专家结合基层诊疗实际制作和审核，确保教学课件高质量</li>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+			<div class="content-body content-body4" v-show="cnSign==4">
+				<div class="cb-left">
+					<div class="cbl-top">
+						<img src="img/media_platform/m4.png" height="85" width="92"  alt="">
+						<p>【围术期资讯  独家首创平台】</p>
+					</div>
+					<div class="cbl-bottom">
+						<p>国内外非常专业的围手术期互联网学术交流平台和专业期刊目前尚属空白，为满足国内相关领域广大医护人员对围手术期医学的了解，有效指导临床诊疗活动，根据临床需求，《中华医学信息导报》编辑团队在中华医学会相关专科分会、专家与社会各界的支持下启动建设《围术期医学论坛》新媒体平台。</p>
+					</div>
+				</div>
+				<div class="cb-right">
+					<div class="cbr-item1">
+						<p><em>01/</em><span>权威专家资源</span></p>
+						<ul>
+							<li>依托中华医学会麻醉学分会、神外分会指导背景，通过全媒体采访、会议直播等积累了丰富专家资源</li>
+
+						</ul>
+					</div>
+					<div class="cbr-item2">
+						<p><em>02/</em><span>分享视频素材</span></p>
+						<ul>
+							<li>以专家采访视频、手术演示视频、学术讲座视频为主要内容，提高理论与实操的结合</li>
+
+						</ul>
+					</div>
+					<div class="cbr-item3">
+						<p><em>03/</em><span>拓展传播渠道</span></p>
+						<ul>
+							<li>搭建微博、微信、搜狐、百家等自媒体矩阵，开发终端产品，便于基层医护人员学习</li>
+						</ul>
+					</div>
+					<div class="cbr-item4">
+						<p><em>03/</em><span>建设课程专栏</span></p>
+						<ul>
+							<li>联合专家指定课程专栏，提供更使用美容</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="content-body" v-show="cnSign==5">
+				<div class="cb-left">
+					<div class="cbl-top">
+						<img src="img/media_platform/m5.png" height="84" width="86"  alt="">
+						<p>【专注心血管病  预防/治疗/康复】</p>
+					</div>
+					<div class="cbl-bottom">
+						<p>国家心血管病中心隶属国家卫生健康委员会，是预防和治疗心血管疾病研究、培训和教育的全国性领导机构和国家工作平台。随着互联网+健康教育的应用发展，国家心血管病中心于2016年上线《心脏健康社区》。</p>
+					</div>
+				</div>
+				<div class="cb-right">
+					<div class="cbr-item1">
+						<p><em>01/</em><span>权威机构</span></p>
+						<ul>
+							<li>隶属于专注心血管病健康、教育、防治、研究、培训、学术交流、国际合作、政策及编制指南、技术规范、相关标准等的权威机构。</li>
+						</ul>
+					</div>
+					<div class="cbr-item2">
+						<p><em>02/</em><span>专业平台</span></p>
+						<ul>
+							<li>心血管病监测、随访、分析、预测发病和发布死亡、疾病负担、危险因素流行和发展趋势的专业研究平台</li>
+						</ul>
+					</div>
+					<div class="cbr-item3">
+						<p><em>03/</em><span>基层服务</span></p>
+						<ul>
+							<li>是心血管病临床研究、推动心血管防治新技术的应用转化、提高整体防治能力的服务组织。中心心血管病防治技术服务平台覆盖全国29省市自治区，为2600余家基层医疗机构提供资讯指导服务</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+	</div>
+
+
+
+	<div id="footer" class="footer">
+		<div>
+			<ul>
+				<li>
+					<h4>媒体平台</h4>
+					<p><a href="media_platform.html?type=1">中华医学信息导报</a></p>
+					<p><a href="media_platform.html?type=2">神经时讯</a></p>
+					<p><a href="media_platform.html?type=3">全科学苑</a></p>
+					<p><a href="media_platform.html?type=4">围术期医学论坛</a></p>
+					<p><a href="media_platform.html?type=5">心脏健康社区</a></p>
+				</li>
+				<li>
+					<h4>业务合作</h4>
+					<p><a href="business_cooperation.html?type=1">编辑出版</a></p>
+					<p><a href="business_cooperation.html?type=2">医学服务</a></p>
+					<p><a href="business_cooperation.html?type=3">学术活动</a></p>
+					<p><a href="business_cooperation.html?type=4">新媒体</a></p>
+					<p><a href="business_cooperation.html?type=5">多媒体服务</a></p>
+				</li>
+				<li>
+					<h4>合作伙伴</h4>
+					<p><a>外企客户</a></p>
+					<p><a>其他客户</a></p>
+				</li>
+				<li>
+					<h4>新闻中心</h4>
+					<p><a href="news.html?type=1">企业公告</a></p>
+					<p><a href="news.html?type=2">媒体报道</a></p>
+					<p><a href="news.html?type=3">新闻发布</a></p>
+					<p><a>社交媒体</a></p>
+				</li>
+				<li>
+					<h4>关于我们</h4>
+					<p><a href="about_us.html?type=1">公司简介</a></p>
+					<p><a href="about_us.html?type=2">企业文化</a></p>
+					<p><a href="about_us.html?type=3">企业资质</a></p>
+					<p><a href="about_us.html?type=4">联系我们</a></p>
+					<p><a href="about_us.html?type=5">加入我们</a></p>
+				</li>
+			</ul>
+			</ul>
+			<div class="footer-right">
+				<div class="wx">
+					<img src="img/vv_1.png" height="36" width="36" alt="">
+					<span>微信</span>
+				</div>
+				<div class="wb">
+					<img src="img/vv_2.png" height="36" width="35" alt="">
+					<span>微博</span>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<div id="footer2" class="footer2">
+		<p>备案号：京ICP备180140024号-4 | 北京康迅传媒股份有限公司</p>
+	</div>
+
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/media_platform.js"></script>
+</body>
+</html>

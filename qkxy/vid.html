@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>视频</title>
+	<link rel="stylesheet" href="font/iconfont.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+	<link rel="stylesheet" href="dist/carousel1/css/ft-carousel.css" />
+
+	<link rel="stylesheet" href="css/vid.css">
+</head>
+<body>
+
+<div id="app" v-cloak>
+	
+	<div id="header" class="header">
+		<div class="headerTop">
+
+			<a href="index.html"><img src="img/logo.png" class="logo" height="74" width="193" alt="" /></a>
+			
+			<a href="search.html"><input type="text" class="search" placeholder="请输入要搜索的关键词"></a>
+			
+			<img src="img/searchLogo.png" class="searchLogo" height="21" width="21" alt="" />
+			
+		</div>
+		<div id="navBox" class="navBox">
+			<div class="navB">
+				<ul class="nav clearfix">
+					<li><a href="index.html">首页</a></li>
+					<li><a :class="{ navSign: navSign == 2}" href="javascript:void(0);">视频</a></li>
+					<li><a href="article.html">文章</a></li>
+					<li><a href="play.html">直播</a></li>
+					<li><a href="case.html">病例</a></li>
+					<li><a href="expert.html">专家</a></li>
+					<li><a href="quesition.html">问答</a></li>
+				</ul>
+
+
+				<div class="logReg" v-if="userMsg == false">
+					<a href="login.html">登录</a>
+					<span>|</span>
+					<a href="regPhone.html">注册</a>
+				</div>
+
+				<div class="logUser" v-if="userMsg">
+					<div>
+						<a href="msg.html"><img src="img/sm.png" alt=""></a>
+						<span>3</span>
+						<div class="UserHead">
+							<a href="user.html"><img src="img/zji.jpg" alt=""></a>
+						</div>
+					</div>
+					<ul>
+						<li @click="touser(1)"><i class="iconfont icon-shoucang"></i>我的收藏</li>
+						<li @click="touser(2)"><i class="iconfont icon-fabuxiangmu"></i>我的发布</li>
+						<li @click="touser(3)"><i class="iconfont icon-guanzhu"></i>我的关注</li>
+						<li @click="touser(4)"><i class="iconfont icon-shezhi"></i>个人设置</li>
+						<li @click="touser(5)"><i class="iconfont icon-Opinion"></i>意见反馈</li>
+						<li @click="touser(6)"><i class="iconfont icon-dingdan"></i>订单       </li>
+						<li @click="touser(7)"><i class="iconfont icon-yaoqingma"></i>邀请码    </li>
+						<li @click="signOut()"><i class="iconfont icon-tuichu"></i>退出       </li>
+					</ul>
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="main" class="main">
+
+		<div class="main-content">
+
+			<div class="col-side2-box">
+
+				<div class="lsign"></div>
+				
+				<ul class="col-side2">
+					<li :class="{ colSide2Signs: csNum==1 }" @click="csThing(1)">全部</li>
+					<li :class="{ colSide2Signs: csNum==2 }" @click="csThing(2)" class="xindian">
+						心电图
+						<span>hot</span>
+					</li>
+					<li :class="{ colSide2Signs: csNum==3 }" @click="csThing(3)">呼吸</li>
+					<li :class="{ colSide2Signs: csNum==4 }" @click="csThing(4)">内分泌</li>
+					<li :class="{ colSide2Signs: csNum==5 }" @click="csThing(5)">双心</li>
+					<li :class="{ colSide2Signs: csNum==6 }" @click="csThing(6)">中医中药</li>
+					<li :class="{ colSide2Signs: csNum==7 }" @click="csThing(7)">骨科</li>
+					<li :class="{ colSide2Signs: csNum==8 }" @click="csThing(8)">消化系统</li>
+
+				</ul>
+
+				<div class="col-side2-box-p">
+					<i class="iconfont icon-zuo"></i>
+					<i class="iconfont icon-you"></i>
+				</div>
+
+			</div>
+
+			
+		
+			
+			<!-- 播放视频 -->
+			<div class="ban" v-show=" csNum == 1 ">
+
+
+				<div class="lunbo">
+					<!-- 轮播 -->
+					<div class="example">
+	                  <div class="ft-carousel" id="carousel_1">
+	                    <ul class="carousel-inner">
+	                      <li class="carousel-item"><a href="vidDet.html"><img src="img/sp1.png" /></a></li>
+	                      <li class="carousel-item"><a href="vidDet.html"><img src="img/sp2.png" /></a></li>
+	                      <li class="carousel-item"><a href="vidDet.html"><img src="img/sp1.png" /></a></li>
+	                      <li class="carousel-item"><a href="vidDet.html"><img src="img/sp2.png" /></a></li>
+	                    </ul>
+	                  </div>
+	                </div>
+
+				</div>
+
+
+				
+			</div>
+
+
+			<div class="vidList2" v-show="csNum == 2">
+
+				<div  class="vidItem" v-for="(item,index) in list2">
+					<a  @click="xindian(item.free)"><img :src="item.img" alt=""></a>
+					<p class="TOver2"><a class="titleColor"  @click="xindian(item.free)">{{item.title}}</a></p>
+					<p>
+						<span>{{item.title2}}</span>
+						<span class="price" v-if="item.free==1">{{item.price}}</span>
+						<span class="price" :class="{ price0 : item.free==2 }" v-if="item.free!=1">￥{{item.price}}</span>
+					</p>
+				</div>
+
+
+			</div>
+
+
+			<div class="vidList" v-show="csNum != 2">
+
+				<div  class="vidItem" v-for="(item,index) in 8">
+					<a href="vidDet.html"><img src="img/listimg_09.png" alt=""></a>
+					<p class="TOver2"><a class="titleColor" href="vidDet.html">新生儿复苏石兰临床指南新生儿新生儿复苏石兰临床指南新生儿新生儿复苏石兰临床指南新生儿新生儿复苏石兰临床指南新生儿新生儿复苏石兰临床指南新生儿新生儿复苏石兰临床指南新生儿</a></p>
+					<p><span>颜子俊</span><span>四川省人民医院四川省人民医院</span></p>
+					<p><span>2000</span>人观看</p>
+				</div>
+
+			</div>
+
+
+			
+
+
+
+
+
+			<div class="loadMore" style="clear:both">
+				<button @click="repeatItemMore()">加载更多</button>
+			</div>
+
+
+
+	
+
+		</div>
+
+
+		<div class="side-bar">
+			
+			<div class="side-logo">
+				<img src="img/ban2_05.png" alt="">
+			</div>
+
+			<p class="left-title">
+				<span>热门视频</span>
+			</p>
+
+			<div class="side-item" v-for="(item,index) in 2">
+				<img src="img/yuandian_15.png" alt="">
+				<p class="TOver cp"><a href="vidDet.html">新生儿复苏石兰临床指南新生儿复苏石兰临</a></p>
+			</div>
+			<div class="side-item" v-for="(item,index) in 3">
+				<img src="img/yuandian_15.png" alt="">
+				<p class="TOver cp"><a href="vidDet.html">新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南</a></p>
+			</div>
+
+			<!-- <p class="side-list2-more"><a href="expert.html">查看更多>></a></p> -->
+
+			
+
+		</div>
+		
+		
+
+	</div>
+
+	<div id="footer" class="footer">
+
+		<div class="footerB">
+			
+			<div class="firendLink">
+				<p>友情链接</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">国家卫计委</a>
+					<a href="http://www.baidu.com">世界卫生组织</a>
+					<a href="http://www.baidu.com">国家食品药品监督管理局</a>
+					<a href="http://www.baidu.com">国家中医药管理局</a>
+					<a href="http://www.baidu.com">中国医疗</a>
+					<a href="http://www.baidu.com">新浪健康</a>
+					<a href="http://www.baidu.com">搜狐健康</a>
+					<a href="http://www.baidu.com">凤凰健康</a>
+					<a href="http://www.baidu.com">百姓健康</a>
+					<a href="http://www.baidu.com">爱爱医</a>
+					<a href="http://www.baidu.com">网易健康</a>
+					<a href="http://www.baidu.com">MedSci</a>
+					<a href="http://www.baidu.com">医学论坛网</a>
+					<a href="http://www.baidu.com">华西医院</a>
+					<a href="http://www.baidu.com">北京协和医院</a>
+					<a href="http://www.baidu.com">北京朝阳医院</a>
+					<a href="http://www.baidu.com">医保卡余额查询</a>
+				</div>
+				<p>合作媒体</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">人民日报</a>
+					<a href="http://www.baidu.com">北京新闻网</a>
+					<a href="http://www.baidu.com">北京周报</a>
+				</div>
+			</div>
+			<div class="erweima">
+				<div>
+					<span>关注微信</span>
+					<img src="img/erweima2.png" width="112" height="98" alt="二维码" />
+				</div>
+				<p>
+					<a href="about.html">关于我们</a>
+					<span>|</span>
+					<a href="contact.html">联系我们</a>
+					<span>|</span>
+					<a @click="tofeed">意见反馈</a>
+				</p>
+			</div>
+
+		</div>
+
+		
+	</div>
+
+</div>
+	
+	
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+
+<script src="dist/carousel1/js/ft-carousel.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/main.js"></script>
+<script src="js/vid.js"></script>
+</body>
+</html>

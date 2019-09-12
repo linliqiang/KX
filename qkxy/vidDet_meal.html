@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>视频</title>
+	<link rel="stylesheet" href="font/iconfont.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="video/css/video-js.min.css">
+	<link rel="stylesheet" href="css/vidDet_meal.css">
+</head>
+<body>
+
+<div id="app" v-cloak>
+	
+	<div id="header" class="header">
+		<div class="headerTop">
+
+			<a href="index.html"><img src="img/logo.png" class="logo" height="74" width="193" alt="" /></a>
+			
+			<a href="search.html"><input type="text" class="search" placeholder="请输入要搜索的关键词"></a>
+			
+			<img src="img/searchLogo.png" class="searchLogo" height="21" width="21" alt="" />
+			
+		</div>
+		<div id="navBox" class="navBox">
+			<div class="navB">
+				<ul class="nav clearfix">
+					<li><a href="index.html">首页</a></li>
+					<li><a :class="{ navSign: navSign==2}" href="vid.html">视频</a></li>
+					<li><a href="article.html">文章</a></li>
+					<li><a href="play.html">直播</a></li>
+					<li><a href="case.html">病例</a></li>
+					<li><a href="expert.html">专家</a></li>
+					<li><a href="quesition.html">问答</a></li>
+				</ul>
+				<div class="logReg" v-if="userMsg == false">
+					<a href="login.html">登录</a>
+					<span>|</span>
+					<a href="regPhone.html">注册</a>
+				</div>
+				<div class="logUser" v-if="userMsg">
+					<div>
+						<a href="msg.html"><img src="img/sm.png" alt=""></a>
+						<span>3</span>
+						<div class="UserHead">
+							<a href="user.html"><img src="img/zji.jpg" alt=""></a>
+						</div>
+					</div>
+					<ul>
+						<li @click="touser(1)"><i class="iconfont icon-shoucang"></i>我的收藏</li>
+						<li @click="touser(2)"><i class="iconfont icon-fabuxiangmu"></i>我的发布</li>
+						<li @click="touser(3)"><i class="iconfont icon-guanzhu"></i>我的关注</li>
+						<li @click="touser(4)"><i class="iconfont icon-shezhi"></i>个人设置</li>
+						<li @click="touser(5)"><i class="iconfont icon-Opinion"></i>意见反馈</li>
+						<li @click="touser(6)"><i class="iconfont icon-dingdan"></i>订单       </li>
+						<li @click="touser(7)"><i class="iconfont icon-yaoqingma"></i>邀请码    </li>
+						<li @click="signOut()"><i class="iconfont icon-tuichu"></i>退出       </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="main" class="main">
+		<div class="banBoxf">
+			<!-- 播放视频 -->
+			<div class="banBox">
+				<div class="ban">
+				    <img src="img/timg.jpg" alt="">
+				</div>
+			    <div class="banBox-right">
+			    	<h2>套餐标题套餐标题套餐标题套餐标题套餐标题套餐标题套餐标题套餐标题套餐标题套餐标题套</h2>
+			    	<div class="price">
+			    		<span>第四期</span>
+			    		<em class="price2">￥39.9</em>
+			    	</div>
+			    	<p>活动时间：2018年12月31日 至 2019年3月1日</p>
+			    	<button @click="topay">立即购买</button>
+			    </div>
+			</div>
+		</div>
+		<div class="box">	
+			<div class="box-left">
+				<ul class="boxNav">
+					<li @click="boxNavt(1)" :class="{liSign:boxNavSign == 1}">套餐介绍</li>
+					<li @click="boxNavt(2)" :class="{liSign:boxNavSign == 2}">课程目录</li>
+				</ul>
+				<div class="msg" v-show=" boxNavSign == 1 ">
+					<p>一位视力正在衰退的老绅士住进了一家旅馆的客房。他双手各拿一瓶酒。在墙上有只苍蝇，他误以为是枚钉子。他把两只瓶子朝上一挂，瓶子掉下来摔碎了，酒洒了一地。一个女服务员发现发生的事情以后，对他深表同情，决定帮他个忙。
+　　于是，第二天早上他到楼顶花园散步时，她把一枚钉子钉在了苍蝇停过的地方。
+　　这里，老人回到了房里。倒洒的酒味让他想起了那件事。他抬头往墙上一看，苍蝇又停在了那儿!他轻手轻脚地走近，使尽全力拍了一掌。听到一声大叫，好心的女服务员冲进房来。让她大为吃惊的是，可怜的老头正坐在地板上，牙关紧咬，右手滴血不止。
+						<br/>
+						约翰逊先生从前未乘过飞机，他读过许多关于飞行事故的报道。所以，有一天一位朋友邀请他乘自己的小飞机飞行时，约翰逊先生非常担心，不敢接受。不过，由于朋友不断保证说飞行是很安全的，约翰逊先生终于被说服了，登上了飞机。
+　　他的朋友启动引擎开始在机场跑道上滑行。约翰逊先生听说飞行中最危险的是起飞与降落，所以他吓得紧闭双眼。
+　　过了一两分钟，他睁开双眼朝窗外望去，接着对朋友说道：“看下面那些人，他们看起来就象蚂蚁一样小，是不是？”
+　　“那些就是蚂蚁，”他的朋友答道，“我们还在地面上。”
+						<br/>
+						一个冬天的早晨，一名雇员解释他为什么迟到了四十五分钟才起来上班。“外面太滑了，我每向前迈一步，就要向后退两步。”
+　　老板狐疑地看着他。“噢，是吗？那你是怎样到这里来的？”
+　　“后来我决定放弃，”他说，“然后我就往家里走。”
+					</p>
+				</div>
+				<div class="catalog" v-show=" boxNavSign == 2 ">
+					<p><span>心电图专栏</span></p>
+					<ul>
+						<li v-for="(item,index) in curriculum" @click="toDet">
+							<span class="catalogTitle">{{item.title}}</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="box-right">
+				<div class="side-bar">
+					<p class="left-title">
+						<span>热门视频</span>
+					</p>
+					<div class="side-item" v-for="(item,index) in 5">
+						<img src="img/yuandian_15.png" alt="">
+						<p class="TOver cp"><a href="vidDet.html">新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer" class="footer">
+		<div class="footerB">
+			<div class="firendLink">
+				<p>友情链接</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">国家卫计委</a>
+					<a href="http://www.baidu.com">世界卫生组织</a>
+					<a href="http://www.baidu.com">国家食品药品监督管理局</a>
+					<a href="http://www.baidu.com">国家中医药管理局</a>
+					<a href="http://www.baidu.com">中国医疗</a>
+					<a href="http://www.baidu.com">新浪健康</a>
+					<a href="http://www.baidu.com">搜狐健康</a>
+					<a href="http://www.baidu.com">凤凰健康</a>
+					<a href="http://www.baidu.com">百姓健康</a>
+					<a href="http://www.baidu.com">爱爱医</a>
+					<a href="http://www.baidu.com">网易健康</a>
+					<a href="http://www.baidu.com">MedSci</a>
+					<a href="http://www.baidu.com">医学论坛网</a>
+					<a href="http://www.baidu.com">华西医院</a>
+					<a href="http://www.baidu.com">北京协和医院</a>
+					<a href="http://www.baidu.com">北京朝阳医院</a>
+					<a href="http://www.baidu.com">医保卡余额查询</a>
+				</div>
+				<p>合作媒体</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">人民日报</a>
+					<a href="http://www.baidu.com">北京新闻网</a>
+					<a href="http://www.baidu.com">北京周报</a>
+				</div>
+			</div>
+			<div class="erweima">
+				<div>
+					<span>关注微信</span>
+					<img src="img/erweima2.png" width="112" height="98" alt="二维码" />
+				</div>
+				<p>
+					<a href="about.html">关于我们</a>
+					<span>|</span>
+					<a href="contact.html">联系我们</a>
+					<span>|</span>
+					<a @click="tofeed">意见反馈</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="qqFace/js/jquery.qqFace.js"></script>
+<script src="js/main.js"></script>
+<script src="video/js/video.min.js"></script>
+<script src="js/vidDet_meal.js"></script>
+</body>
+</html>

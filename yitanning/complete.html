@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+</head>
+<body>
+
+<div class="visit_over" id="visit_over">
+
+    <p>调研结束记录表</p>
+    <p>患者是否完成调研？<br>
+        <input type="radio" name="visitoverRadio1" onclick="visitOverThing1(1)">
+        <label for="">是，患者完成调研日期：</label>
+        <input type="text" ro="100" name="g-visitdate" id="g-visitdate" class="Wdate visit-over-timeinput1" readonly="" onclick="new WdatePicker()" alt="完成调研日期">
+        <br>
+        <input type="radio" name="visitoverRadio1" onclick="visitOverThing1(2)">
+        <label for="">否，患者退出调研日期：</label>
+        <input type="text" name="g-visitdate" id="g-visitdate" class="Wdate visit-over-timeinput2" readonly="" onclick="new WdatePicker()" alt="退出调研日期">
+    </p>
+
+    <div class="visit_over-body">
+   
+            <ul>
+                <li>若“否”，调研终止的主要原因？(单选)</li>
+                <li>
+                    <input type="radio" ro="20" name="visitoverRadio2" onclick="visitOverThing2(0)">
+                    <label for="">不良事件，请详述：</label>
+                    <input type="text" style="width:600px;" class="vo-input10">
+                </li>
+                <li>
+                    <input type="radio" ro="20" name="visitoverRadio2" onclick="visitOverThing2(1)">
+                    <label for="">严重违背调研方案，请详述：</label>
+                    <input type="text" style="width:550px;" class="vo-input11">
+                </li>
+                <li>
+                    <input type="radio" ro="20" name="visitoverRadio2" onclick="visitOverThing2(2)">
+                    <label for="">申办方终止调研，请详述：</label>
+                    <input type="text" style="width:560px;" class="vo-input12">
+                </li>
+                <li>
+                    <input type="radio" ro="20" name="visitoverRadio2" onclick="visitOverThing2(3)">
+                    <label for="">患者死亡，死亡日期：</label>
+                    <input type="text" name="g-visitdate" id="g-visitdate" class="Wdate vo-input13" readonly="" onclick="new WdatePicker()" alt="开始日期">
+                    死亡原因：<input type="text" style="width:366px;" class="vo-input13">
+                </li>
+                <li>
+                    <input type="radio" ro="20" name="visitoverRadio2" onclick="visitOverThing2(4)">
+                    <label for="">疗效不佳，请详述：</label>
+                    <input type="text" style="width:600px;" class="vo-input14">
+                </li>
+                <li style="border-bottom:1px solid rgb(228,229,229);">
+                    <input type="radio" ro="20" name="visitoverRadio2" onclick="visitOverThing2(5)">
+                    <label for="">其他原因，请详述：</label>
+                    <input type="text" style="width:600px;" class="vo-input15">
+                </li>
+                
+            </ul>
+
+            <div class="visit_over-body-bottom">
+                <button onclick="completeSave()">保存并提交</button>
+            </div>
+
+    </div>
+            
+</div>
+<script src="js/complete.js"></script>
+</body>
+</body>
+</html>

@@ -1,0 +1,339 @@
+.det-Msg{
+	margin:20px 0px;
+}
+
+
+/*#问答评论*/
+.comment{
+	margin-top: 100px;
+	padding-bottom: 80px;
+}
+.comment-f1{
+	height: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+}
+.comment-f1 span:nth-child(1){
+	font-weight: bold;
+}
+.textarea1{
+	border-radius: 8px;
+	padding:10px;
+}
+.comment-f3{
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	padding:0px  20px 0px 6px;
+}
+.comment-f3 button{
+	width: 67px;
+	height: 30px;
+	background: #fa8821;
+	color: #fff; 
+	border-radius: 10px;
+}
+.my-rep:not(:last-child){
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 20px;
+	position: relative;
+}
+.my-rep>div.csign{
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	overflow: hidden;
+	left:0;
+	top: 0;
+	margin-left: 35px;
+	margin-top: 50px;
+	z-index: 999;
+}
+.my-rep>div.csign img{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+}
+
+.my-rep:hover .de-rep1{
+	display: block;
+}
+.my-rep1{
+	height: 80px;
+	display: flex;
+	align-items:center;
+}
+.my-rep1>div:nth-child(1){
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-left: 2px;
+}
+.my-rep1>div:nth-child(1) img{
+	width: 50px;
+	height: 50px;
+}
+.my-rep1>div:nth-child(2){
+	margin-left: 20px;
+	font-size: 14px;
+}
+.my-rep1>div:nth-child(2) p:nth-child(2){
+	font-size: 12px;
+	margin-top: 6px;
+}
+.my-rep2{
+	padding:0px 10px 10px 0px;
+}
+.my-rep3{
+	height: 30px;
+}
+.my-rep3 i{
+	font-size: 18px;
+}
+.my-rep3>div{
+	min-width: auto;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.my-rep3>div i{
+	margin-right: 0px;
+}
+.my-rep3>div:nth-child(2){
+	width: 70px;
+	display: flex;
+	align-items:center;
+	margin-left: 30px;
+	cursor: pointer;
+}
+.my-rep3>div:nth-child(2) button{
+	background: #f9f9f9;
+	margin-left: 4px;
+	cursor: pointer;
+}
+.my-zan{
+	color: #fa8821;
+}
+.rep-text{
+	font-size: 12px;
+}
+.other-rep{
+	/*width: calc(100% - 10px);*/
+	margin: 10px 0px 0px 0px;
+	border-left:0px;
+	padding: 8px 0px 8px 8px;
+	background: #f7f7f7;
+}
+.other-rep-item{
+	font-size: 14px;
+	border-bottom: 1px dashed #ccc;
+	margin-bottom: 20px;
+}
+.other-rep-item:hover .de-rep2{
+	display: block;
+}
+.other-rep-item>div:nth-child(1) span{
+	margin-right: 0px;
+	margin:0px;
+}
+.other-rep-item>div:nth-child(1) .peo{
+	color: #fa8821;
+	font-size: 12px;
+}
+.other-rep-item>div:nth-child(2){
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.other-rep-item>div:nth-child(2)>div{
+	margin-right: 0px;
+	float: left;
+	font-size: 12px;
+}
+
+
+
+
+.other-rep-item>div:nth-child(2)>div:nth-child(2){
+	/*width: 50px;*/
+	float: right;
+}
+
+
+
+
+/*#新代码*/
+.other-rep-item>div:nth-child(2)>div:nth-child(3){
+	width: 50px;
+	float: right;
+}
+.other-rep-item>div:nth-child(2)>div:nth-child(3){
+	width: auto;
+	/*float: right;*/
+	margin-right: 10px;
+}
+/*新代码#*/
+
+
+.other-rept{
+	display: -webkit-flex; /* Safari */
+    display: flex;
+}
+.other-reptl{
+	width: 40px;
+	height: 40px;
+	background: green;
+	display: -webkit-flex; /* Safari */
+    display: flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+}
+.other-reptl img{
+	width: 40px;
+	height: 40px;
+}
+.other-reptr{
+	margin-left: 10px;
+	padding-top: 4px;
+}
+.other-reptr>div:nth-child(2){
+	font-size: 12px;
+}
+
+.other-repb{
+	display: -webkit-flex; /* Safari */
+    display: flex;
+    align-items: flex-start;
+    -webkit-align-items: flex-start;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+.other-repb span{
+	width: 680px;
+	font-size: 12px;
+}
+.other-repb div{
+	width: 45px;
+}
+.repBut2d>button{
+	opacity: 0;
+	/*width: 0px;*/
+}
+
+.other-rep-item:hover .repBut2d>button{
+	/*color: red;*/
+	opacity: 1;
+	/*width: auto;*/
+}
+
+
+.my-rep3>.delre1{
+	opacity: 0;
+}
+.my-rep3:hover .delre1{
+	opacity: 1;
+}
+
+
+.bh span{
+	color: #fa8821;
+}
+
+
+
+
+.repBut2{
+	display: flex;
+	align-items:center;
+}
+.repBut2 i{
+	margin-right: 4px;
+}
+.repBut2 button{
+	background: #f9f9f9;
+}
+.rep-textarea1{
+	padding: 10px;
+}
+.rep-textarea1>div:nth-child(2) button{
+	width: 67px;
+	height: 30px;
+	background: #fa8821;
+	color: #fff; 
+	border-radius: 10px;
+}
+.rep-textarea1>div:nth-child(2) button:nth-child(2){
+	margin-left: 600px;
+	background: #fff;
+	color: #ccc; 
+	border:1px  solid #ccc;
+}
+.rep-textarea1>div:nth-child(2) button:nth-child(3){
+	margin-left: 10px;
+}
+.de-rep1,.de-rep2{
+	width: 40px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	display: none;
+}
+.de-rep1{
+	float: right;
+}
+.de-rep2{
+	float: right;
+}
+.bh{
+	color: #fa8821;
+}
+.comment i.icon-xiaolian{
+	font-size: 24px;
+}
+.pinlunsz button{
+	background: #f7f7f7;
+}
+/*问答评论#*/
+
+
+
+
+
+/*回复楼主*/
+.hfLou{
+	padding:10px 0px 10px 0px;
+}
+.hfLou textarea{
+	border-radius: 8px;
+	padding: 10px;
+}
+.hfLou button{
+	width: 67px;
+	height: 30px;
+	background: #fa8821;
+	color: #fff; 
+	border-radius: 10px;
+}
+.hfLou button:nth-child(2){
+	background: #fff;
+	color: #ccc; 
+	border:1px  solid #ccc;
+}
+.hfLou>div>button:nth-child(2){
+	margin-left: 600px;
+}
+/*问答评论#*/
+
+
+/*如果评论不是自己的则没有删除按钮，给回复按钮这个class*/
+.hfs{
+	margin-right: 50px !important;
+}

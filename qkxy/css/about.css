@@ -1,0 +1,40 @@
+.main-content{
+	width: 934px;
+	padding: 0px 0px 0px 0px;
+	background:#f0f2f7;
+	margin: 0 auto;
+}
+.ban{
+	width: 934px;
+	height: 294px;
+	margin:0 auto;
+	background: url("../img/abg.png") no-repeat ;
+	background-size: 100% 100%;
+	margin-bottom: 20px;
+}
+.aboutT,.aboutM{
+	width: 934px;
+	margin: 0 auto;
+	padding:0 28px;
+	background: #fff;
+}
+.aboutT{
+	padding: 20px 28px 20px 28px;
+}
+
+.aboutT span{
+	display: inline-block;
+	height: 22px;
+	line-height: 20px;
+	font-size: 18px;
+	font-weight: 550;
+	border-left: 3px solid #fa8821;
+	padding-left: 12px;
+}
+.aboutM{
+	font-size: 14px;
+	padding-bottom: 20px;
+}
+.aboutMB{
+	padding-bottom: 200px;
+}

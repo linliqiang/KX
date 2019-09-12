@@ -1,0 +1,88 @@
+html{
+	background: #fff;
+}
+body{
+	min-height: 100vh;
+	background: #fff;
+}
+
+/*#重置mui样式*/
+p{
+	margin-bottom: 0px;
+}
+/*重置mui样式#*/
+a:link, a:visited {  text-decoration: none;color: #fff;border: none;  }
+a:hover, a:active {  text-decoration: none;color: #fff;border: none;  }
+#app{
+	padding-top: 1.6rem;
+	padding-bottom: 0.586667rem;
+}
+#app textarea{
+	color: #000 !important;
+}
+.mui-bar-nav{
+	height: 1.2rem;
+	background: #333333;
+	box-shadow: 0px 0px 0px 0px;
+}
+.mui-bar-nav a,.mui-bar-nav h1{
+	color: #fff;
+}
+.mui-bar-nav h1{
+	letter-spacing: 1px;
+}
+.mui-bar-nav .mui-pull-right{
+	font-size: 15px;
+	height: 100%;
+	padding-top: 15px;
+}
+.padMsg{
+	width: 10rem;
+	background:#ccc;
+	min-height: 100vh;
+	background: #a72750;
+	padding-top: 0.8rem;
+}
+
+.title{
+	width: 9.2rem;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 0.466667rem;
+	display: -webkit-flex;
+	display: flex;
+	align-items:center;
+	-webkit-align-items:center;
+}
+.title img{
+	width: 0.7rem;
+	height: 0.6rem;
+	align-self: flex-start;
+	-webkit-align-self: flex-start;
+	margin-right: 0.2rem;
+}
+.title span{
+	color: #fff;
+	padding-top: 0.05rem;
+}
+
+.padMsgBox{
+	width: 9.2rem;
+	/*height: 10.0rem;*/
+	background: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0.4rem;
+	border-radius: 0.3rem;
+	padding-bottom: 0.6rem;
+	/*padding-top: 0.933333rem;*/
+	display: -webkit-flex;
+	display: flex;
+	flex-direction:column; 
+	-webkit-flex-direction:column;
+	align-items:center; 
+	-webkit-align-items:center;
+}
+
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>观看记录</title>
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/cube-ui/lib/cube.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/look_rec.css">
+</head>
+<body>
+  <div id="app" v-cloak>
+    <div class="topbar">
+      <a class='topl' href="javascript:history.go(-1)"></a>
+      <a class="cen">观看记录</a>
+      <a class='topr' href="index.html"></a>
+    </div>
+		<div class="main">
+      			<div class="scroll-list-wrap">
+              <cube-scroll
+                ref="scroll"
+                :data="data"
+                :options="options"
+                @pulling-up="onPullingUp">
+                <ul class="itemBox">
+                    <li v-for="(item,index) in data">
+                      <a flex  jc=sb ai=ce>
+                        <img :src="item.img" alt="" onclick="javascript:window.location.href='details.html'">
+                        <div class="left" flex fd=co jc=sb ai=fs>
+                          <h4 lh="2" onclick="javascript:window.location.href='details.html'">{{item.title}}</h4>
+                          <p flex jc=sb ai=fs>
+                            <span lh="1">已观看{{item.timeing}}</span>
+                          </p>
+                        </div>
+                        <h1 @click="quxiao(index)"></h1>
+                      </a>
+                    </li>
+                    <li class="mod" flex jc=ce ai=ce>
+                      <span>{{upt}}</span>
+                    </li>
+                </ul>
+              </cube-scroll>
+            </div>
+		</div>
+  </div>
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="https://unpkg.com/cube-ui/lib/cube.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/look_rec.js"></script>
+</body>
+</html>

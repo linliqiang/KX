@@ -1,0 +1,51 @@
+html{
+	background: #e0e1e2;
+}
+body{
+	background: #e0e1e2;
+}
+#app{
+	min-height: 100vh;
+	background: #e0e1e2;
+	padding: 0.2rem 0.16rem 0.16rem 0.16rem;
+}
+.main{
+	width: 100%;
+	height: calc(100vh - 0.32rem);
+	background: #e0e1e2;
+}
+li{
+	padding: 0.16rem 0.16rem 0rem 0.16rem;
+	margin-bottom: 0.2rem;
+	background: #fff;
+	border-radius: 0.2rem;
+}
+a{
+	display: block;
+	width: 100%;
+}
+h4{
+	font-size: 0.45rem;
+	padding: 0.3rem 0rem 0.3rem 0rem;
+	color: #000;
+	overflow:hidden; 
+    white-space:nowrap;
+    text-overflow:ellipsis; 
+}
+img{
+	width: 100%;
+	height: 5.09rem;
+}
+p{
+	padding-bottom: 0.3rem;
+}
+em,span{
+	font-size: 0.36rem;
+	color: #999999;
+}
+em{
+	margin-left: 2rem;
+}
+.scroll-list-wrap{
+	height: 100%;
+}

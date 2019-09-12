@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>报名信息</title>
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="mui/css/mui.min.css">
+  <link rel="stylesheet" href="mui/css/mui.picker.min.css"/>
+  <link rel="stylesheet" href="css/signUp.css">
+</head>
+<body>
+  <div id="app" class="noticeDet" v-cloak>
+		<div class="main">
+			<h4>{{data.meet.Title}}</h4>
+      <h5>报名信息</h5>
+      <div class="mbox">
+        <span>姓名：</span><input type="text" v-model="name">
+      </div>
+      <div class="sexBox">
+        <span>性别：</span>
+        <div>
+          <input class="radio-style" type="radio" name="radio1" value="男"><em>男</em>
+          <input class="radio-style woman" type="radio" name="radio1" value="女"><em>女</em>
+        </div>
+      </div>
+      <div class="mbox">
+        <span>地区：</span><input type="text" v-model="region"  name="address" id="address" readonly>
+      </div>
+      <div class="mbox">
+        <span>单位：</span><input type="text" v-model="company">
+      </div>
+      <div class="mbox">
+        <span>职称：</span><input type="text" v-model="position">
+      </div>
+      <div class="mbox">
+        <span>邮箱：</span><input type="text" v-model="mail">
+      </div>
+      <div class="mbox">
+        <span>手机：</span><input type="number" v-model="phone">
+      </div>
+      <div class="code">
+        <input type="text" placeholder="验证码" v-model="code">
+        <button @click="getCode($event)">{{codeNumber}}</button>
+      </div>
+      <div class="sub">
+        <button @click="subt">提交</button>
+      </div>
+		</div>
+  </div>
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="mui/js/mui.min.js"></script>
+<script src="mui/js/mui.picker.min.js"></script>
+<script src="js/city.data-3.js"></script>
+<script src="js/main.js"></script>
+<script src="js/signUp.js"></script>
+</body>
+</html>

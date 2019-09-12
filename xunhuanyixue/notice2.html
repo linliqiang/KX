@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>会议注册</title>
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/cube-ui/lib/cube.min.css">
+  <link rel="stylesheet" href="css/notice.css">
+</head>
+<body>
+  <div id="app" class="notice" v-cloak>
+		<div class="main">
+			<div class="scroll-list-wrap" v-show="noData">
+			  <cube-scroll
+			    ref="scroll"
+			    :data="data"
+			    :options="options"
+			    @pulling-up="onPullingUp">
+								<ul>
+									<li v-for="(item,index) in data" @click="noticeDet(item.Id)">
+										<a>
+											<h4>{{item.Title}}</h4>
+											<img :src="item.OSSName"  alt="">
+										</a>
+									</li>
+								</ul>
+				  </cube-scroll>
+			</div>
+		</div>
+  </div>
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="https://unpkg.com/cube-ui/lib/cube.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/notice2.js"></script>
+</body>
+</html>

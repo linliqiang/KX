@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>全科学苑</title>
+	<link rel="stylesheet" href="font/iconfont.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="dist/carousel1/css/ft-carousel.css" />
+	<link rel="stylesheet" type="text/css" href="dist/carousel2/css/jquery.bxslider.css">
+
+</head>
+<body>
+
+<div id="app">
+	
+	<div id="header" class="header">
+		<div class="headerTop">
+
+			<a href="index.html"><img src="img/logo.png" class="logo" height="74" width="193" alt="" /></a>
+			
+			<a href="search.html"><input type="text" class="search" placeholder="请输入要搜索的关键词"></a>
+			
+			<img src="img/searchLogo.png" class="searchLogo" height="21" width="21" alt="" />
+			
+		</div>
+		<div id="navBox" class="navBox">
+			<div class="navB">
+				<ul class="nav clearfix">
+					<li><a :class="{ navSign: navSign==1}" href="javascript:void(0);">首页</a></li>
+					<li><a href="vid.html">视频</a></li>
+					<li><a href="article.html">文章</a></li>
+					<li><a href="play.html">直播</a></li>
+					<li><a href="case.html">病例</a></li>
+					<li><a href="expert.html">专家</a></li>
+					<li><a href="quesition.html">问答</a></li>
+				</ul>
+
+
+
+				<div class="logReg" v-if="userMsg == false">
+					<a href="login.html">登录</a>
+					<span>|</span>
+					<a href="regPhone.html">注册</a>
+				</div>
+
+				<div class="logUser" v-if="userMsg">
+					<div>
+						<a href="msg.html"><img src="img/sm.png" alt=""></a>
+						<span>3</span>
+						<div class="UserHead">
+							<a href="user.html"><img src="img/zji.jpg" alt=""></a>
+						</div>
+					</div>
+					<ul>
+						<li @click="touser(1)"><i class="iconfont icon-shoucang"></i>我的收藏</li>
+						<li @click="touser(2)"><i class="iconfont icon-fabuxiangmu"></i>我的发布</li>
+						<li @click="touser(3)"><i class="iconfont icon-guanzhu"></i>我的关注</li>
+						<li @click="touser(4)"><i class="iconfont icon-shezhi"></i>个人设置</li>
+						<li @click="touser(5)"><i class="iconfont icon-Opinion"></i>意见反馈</li>
+						<li @click="touser(6)"><i class="iconfont icon-dingdan"></i>订单       </li>
+						<li @click="touser(7)"><i class="iconfont icon-yaoqingma"></i>邀请码    </li>
+						<li @click="signOut()"><i class="iconfont icon-tuichu"></i>退出       </li>
+					</ul>
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="main" class="main">
+
+		<div class="main-content">
+			
+			<!-- 一楼 -->
+			<div class="ban">
+				<div class="lunbo">
+					<!-- 轮播 -->
+					<div class="example">
+	                  <div class="ft-carousel" id="carousel_1">
+	                    <ul class="carousel-inner">
+	                      <li class="carousel-item"><a href="vidDet_meal.html"><img src="img/s110.png" /></a></li>
+	                      <li class="carousel-item"><a href="http://www.baidu.com"><img src="img/s2.png" /></a></li>
+	                      <li class="carousel-item"><a href="http://www.baidu.com"><img src="img/s1.png" /></a></li>
+	                      <li class="carousel-item"><a href="http://www.baidu.com"><img src="img/s2.png" /></a></li>
+	                      <li class="carousel-item"><a href="http://www.baidu.com"><img src="img/asd.png" /></a></li>
+	                    </ul>
+	                  </div>
+	                </div>
+
+				</div>
+				<div class="banC">
+					<div><a href="http://www.baidu.com"><img src="img/ban2_03.png" alt=""></a></div>
+					<div><a href="http://www.baidu.com"><img src="img/ban2_03.png" alt=""></a></div>
+				</div>
+				
+			</div>
+
+			<!-- 二楼 -->
+			<div class="main-scroll">
+
+				<p class="main-scroll-t1">
+					<img src="img/zbtj.png" alt="">
+					<span>直播推荐</span>
+					<a href="play.html">查看更多>></a>
+				</p>
+
+				<div class="ms1">
+
+					  <div class="slide"><a href="playing.html"><img src="img/carousel2/mn1.png"></a></div>
+					  <div class="slide"><a href="playing.html"><img src="img/carousel2/mn2.jpg"></a></div>
+					  <div class="slide"><a href="playing.html"><img src="img/carousel2/mn3.png"></a></div>
+					  <div class="slide"><a href="playing.html"><img src="img/carousel2/mn4.png"></a></div>
+					   <div class="slide"><a href="playing.html"><img src="img/carousel2/asd.png"></a></div>
+
+					  <div class="slide"><a href="playing.html"><img src="img/carousel2/mn1.png"></a></div>
+					  <div class="slide"><a href="playing.html"><img src="img/carousel2/mn2.jpg"></a></div>
+					  <div class="slide"><a href="playing.html"><img src="img/carousel2/mn3.png"></a></div>
+					  <div class="slide"><a href="playing.html"><img src="img/carousel2/mn4.png"></a></div>
+					  
+
+				</div>
+
+
+
+				<p class="main-scroll-t1">
+					<img src="img/lo_20.png" alt="">
+					<span>精彩视频</span>
+					<a href="play.html">查看更多>></a>
+				</p>
+	
+				<div class="ms2">
+					
+					<div class="slide">
+						<a href="vidDet.html"><img src="img/carousel2/ms1.jpg"></a>
+						<p class="TOver"><a href="vidDet.html">直播说明直播说明直播说明直播说明说明直播说明直播说明直播说明说明直播说明直播说明直播说明说明直播说明直播说明直播说明说明直播说明直说明</a></p>
+						<div><a href="vidDet.html"><img src="img/pla.png" alt=""></a></div>
+					</div>
+
+				    <div class="slide">
+				    	<a href="vidDet.html"><img src="img/carousel2/ms2.jpg"></a>
+				    	<p class="TOver"><a href="vidDet.html">直播说明直播说明直播说明直播说明直播说明</a></p>
+				    	<div><a href="vidDet.html"><img src="img/pla.png" alt=""></a></div>
+				    </div>
+
+				    <div class="slide">
+				    	<a href="vidDet.html"><img src="img/carousel2/ms3.jpg"></a>
+				    	<p class="TOver"><a href="vidDet.html">直播说明直播说明直播说明直播说明直播说明</a></p>
+				    	<div><a href="vidDet.html"><img src="img/pla.png" alt=""></a></div>
+				    </div>
+
+				    <div class="slide">
+				    	<a href="vidDet.html"><img src="img/carousel2/ms4.jpg"></a>
+				    	<p class="TOver"><a href="vidDet.html">直播说明直播说明直播说明直播说明直播说明</a></p>
+				    	<div><a href="vidDet.html"><img src="img/pla.png" alt=""></a></div>
+				    </div>
+
+				    <div class="slide">
+				    	<a href="vidDet.html"><img src="img/carousel2/ms5.jpg"></a>
+				    	<p class="TOver"><a href="vidDet.html">直播说明直播说明直播说明直播说明直播说明</a></p>
+				    	<div><a href="vidDet.html"><img src="img/pla.png" alt=""></a></div>
+				    </div>
+
+				    <div class="slide">
+				    	<a href="vidDet.html"><img src="img/carousel2/ms1.jpg"></a>
+				    	<p class="TOver"><a href="vidDet.html">直播说明直播说明直播说明直播说明直播说明</a></p>
+				    	<div><a href="vidDet.html"><img src="img/pla.png" alt=""></a></div>
+				    </div>
+
+				    <div class="slide">
+				    	<a href="vidDet.html"><img src="img/carousel2/ms2.jpg"></a>
+				    	<p class="TOver"><a href="vidDet.html">直播说明直播说明直播说明直播说明直播说明</a></p>
+				    	<div><a href="vidDet.html"><img src="img/pla.png" alt=""></a></div>
+				    </div>
+
+				    <div class="slide">
+				    	<a href="vidDet.html"><img src="img/carousel2/ms3.jpg"></a>
+				    	<p class="TOver"><a href="vidDet.html">直播说明直播说明直播说明直播说明直播说明</a></p>
+				    	<div><a href="vidDet.html"><img src="img/pla.png" alt=""></a></div>
+				    </div>
+
+				    <div class="slide">
+				    	<a href="vidDet.html"><img src="img/carousel2/ms4.jpg"></a>
+				    	<p class="TOver"><a href="vidDet.html">直播说明直播说明直播说明直播说明直播说明</a></p>
+				    	<div><a href="vidDet.html"><img src="img/pla.png" alt=""></a></div>
+				    </div>
+
+				    <div class="slide">
+				    	<a href="vidDet.html"><img src="img/carousel2/ms5.jpg"></a>
+				    	<p class="TOver"><a href="vidDet.html">直播说明直播说明直播说明直播说明直播说明</a></p>
+				    	<div><a href="vidDet.html"><img src="img/pla.png" alt=""></a></div>
+				    </div>
+
+
+					
+				</div>
+
+			</div>
+
+			<div class="col-side">
+				<p class="col-side-tbox" style="margin-bottom:-10px">
+					<img src="img/zxlogo.png" alt="">
+					<span>资讯</span>
+				</p>
+				<ul class="col-side-nav">
+					<li class="cp" :class="{ colSideSign: csNum==1 }" @click="csThing(1)">全部</li>
+					<li class="cp" :class="{ colSideSign: csNum==2 }" @click="csThing(2)">政策法规</li>
+					<li class="cp" :class="{ colSideSign: csNum==3 }" @click="csThing(3)">时事热点</li>
+					<li class="cp" :class="{ colSideSign: csNum==4 }" @click="csThing(4)">人文</li>
+				</ul>
+
+				<!-- 资讯 -->
+				<div class="repeatItemBox">
+
+					<div class="repeatItem" v-for="(item,index) in repeatItem" :class="{lastLists : index == repeatItem.length-1}">
+						<a class="transBig" href="newsDet.html"><img :src="item.img" alt=""></a>
+						<div>
+							<p class="OOver"><a class="titleColor wryh" href="newsDet.html">{{item.title}}</a></p>
+							<p class="TOver">{{item.msg}}</p>
+							<p>
+								<span v-if="item.form"><em>来源：</em>{{item.form}}</span>
+								<span v-if ="item.form"></span>
+								<span>{{item.time}}</span>
+							</p>
+						</div>
+					</div>
+					<div class="loadMore">
+						<button @click="repeatItemMore()">加载更多</button>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+		<div class="side-bar">
+			
+			<div class="side-logo">
+				<a href="play.html"><img src="img/ban250.png" alt=""></a>
+			</div>
+
+			<p class="cen-title">
+				<img src="img/yuandian_15.png" alt="">
+				<span>直播预告</span>
+			</p>
+
+			<div class="side-list1" v-for="item in 2">
+				<a href="play.html"><img src="img/r_23.png" alt=""></a>
+				<p><a href="play.html">蜻蜓公布了首届倾听日的超级会员蜻蜓公布了首届倾听日的超级会员</a></p>
+				<div>
+					<p>
+						<span>05-12</span>
+						<span>12:00</span>
+					</p>
+				</div>
+			</div>
+
+			<p class="cen-title cen-title2">
+				<img src="img/yuandian_15.png" alt="">
+				<span>推荐专家</span>
+			</p>
+
+			<div class="side-list2-box">
+				<div class="side-list2" v-for="item in 5">
+					<div class="expHeadImg">
+						<a href="expDet.html"><img src="img/zji.jpg" alt=""></a>
+					</div>
+					<div class="expMsg">
+						<p>
+							<span><a href="expDet.html">张一凡</a></span>
+							<span>风湿免疫风湿免疫科科科科科科</span>
+						</p>
+						<p><a href="vidDet.html">蜻蜓公布了首届倾听蜓公布了首届倾听蜓公布了首届倾听日</a></p>
+					</div>
+				</div>
+				<p class="side-list2-more"><a href="expert.html">查看更多>></a></p>
+			</div>
+
+			
+
+		</div>
+		
+		
+
+	</div>
+
+	<div id="footer" class="footer">
+
+		<div class="footerB">
+			
+			<div class="firendLink">
+				<p>友情链接</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">国家卫计委</a>
+					<a href="http://www.baidu.com">世界卫生组织</a>
+					<a href="http://www.baidu.com">国家食品药品监督管理局</a>
+					<a href="http://www.baidu.com">国家中医药管理局</a>
+					<a href="http://www.baidu.com">中国医疗</a>
+					<a href="http://www.baidu.com">新浪健康</a>
+					<a href="http://www.baidu.com">搜狐健康</a>
+					<a href="http://www.baidu.com">凤凰健康</a>
+					<a href="http://www.baidu.com">百姓健康</a>
+					<a href="http://www.baidu.com">爱爱医</a>
+					<a href="http://www.baidu.com">网易健康</a>
+					<a href="http://www.baidu.com">MedSci</a>
+					<a href="http://www.baidu.com">医学论坛网</a>
+					<a href="http://www.baidu.com">华西医院</a>
+					<a href="http://www.baidu.com">北京协和医院</a>
+					<a href="http://www.baidu.com">北京朝阳医院</a>
+					<a href="http://www.baidu.com">医保卡余额查询</a>
+				</div>
+				<p>合作媒体</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">人民日报</a>
+					<a href="http://www.baidu.com">北京新闻网</a>
+					<a href="http://www.baidu.com">北京周报</a>
+				</div>
+			</div>
+			<div class="erweima">
+				<div>
+					<span>关注微信</span>
+					<img src="img/erweima2.png" width="112" height="98" alt="二维码" />
+				</div>
+				<p>
+					<a href="about.html">关于我们</a>
+					<span>|</span>
+					<a href="contact.html">联系我们</a>
+					<span>|</span>
+					<a @click="tofeed">意见反馈</a>
+				</p>
+			</div>
+
+		</div>
+
+		
+	</div>
+
+</div>
+	
+	
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+
+<script src="dist/carousel1/js/ft-carousel.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/main.js"></script>
+
+<script type="text/javascript" src="dist/carousel2/js/jquery.bxslider.js"></script>
+
+<script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+
+/*.plate1-right1::after {
+    content: ".";
+    clear: both;
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    height: 0;
+}*/
+
+
+/*医院焦虑*/
+.anxious{
+    border: 1px solid rgb(234,232,233);
+    border-radius: 8px;
+}
+.anxious input[type=text]{
+    height: 24px;
+}
+.anxious>p{
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border-bottom: 1px solid rgb(234,232,233);
+}
+
+.anxious-body{
+    background: rgb(250,249,249);
+    padding: 10px 0px 0px 10px;
+    font-size: 12px;
+    border: 1px solid rgb(234,232,233);
+    font-weight: normal;
+}
+.anxious-body ul:nth-child(1){
+    overflow: hidden;
+}
+.anxious-body ul:nth-child(1) li{
+    float: left;
+    width: 33%;
+    padding: 0px 0px 10px 30px;
+}
+.anxious-body input [type=text]{
+    width: 170px;
+    height: 28px;
+}
+
+.anxious-body ul:nth-child(2){
+    overflow: hidden;
+}
+.anxious-body ul:nth-child(2) li{
+    width: 33.33%;
+    float: left;
+    padding: 22px 0px 22px 30px;
+    border-top: 1px solid rgb(234,232,233); 
+    border-left: 1px solid rgb(234,232,233); 
+    background: #ffffff;
+}
+.anxious-body p{
+    height: 26px;
+}
+.anxious-body li p{
+    padding-left: 20px;
+    padding-right: 100px;
+}
+.anxious-body li p span{
+    float: right;
+}
+.anxious-body li p:first-of-type{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.anxious-body-number{
+    border: 1px solid rgb(234,232,233); 
+    border-right: 1px solid rgb(234,232,233); 
+    background: #ffffff;
+}
+.anxious-body-number p{
+    height: 54px;
+    line-height: 54px;
+    text-align: center;
+}
+.anxious-body-bottom{
+    padding: 55px 0px 55px 0px;
+    text-align: center;
+}
+.anxious-body-bottom button{
+    display: inline-block;
+    width: 150px;
+    height: 42px;
+    color: rgb(0,183,238);
+    border-radius: 8px;
+    border: 1px solid rgb(0,183,238);
+    background: #ffffff;
+}
+
+
+.anxious-body li p .anxiousList1, .anxious-body li p .anxiousList2{
+    float: none;
+}
+.anxiousList1{
+    color: red;
+}
+.anxiousList2{
+    color: rgb(29,80,226);
+}

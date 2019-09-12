@@ -1,0 +1,105 @@
+@charset "UTF-8";
+*{
+/*    font-family: Microsoft YaHei,-apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;*/
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+ol,ul,li {  list-style: none;  }
+span,em,b{
+	font-style: normal;
+}
+/*链接、已访问过、鼠标悬停、点下鼠标，LVHA*/
+a:link, a:visited {  text-decoration: none;color: #f7f7f7;border: none;  }
+a:hover, a:active {  text-decoration: none;color: #f7f7f7;border: none;  }
+/*苹果机上多行文本框和输入框有默认阴影*/
+input{  box-shadow:0px 0px 0px rgba(0,0,0,0); -webkit-appearance: none;  }
+textarea{  box-shadow:0px 0px 0px rgba(0,0,0,0); -webkit-appearance: none;  }
+/*button按钮去除边框和外边框*/
+button{  border:0px; outline: 0px;  }
+/*调整placeholder样式*/
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {  color: #000;  } 
+input:-moz-placeholder, textarea:-moz-placeholder {  color: #000;  } 
+input::-moz-placeholder, textarea::-moz-placeholder {  color: #000;  } 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {  color: #000;  }
+/*----------------------------------------移动端样式，兼容重置#----------------------------------------*/
+
+
+/*----------------------------------------#淘宝移动端fiexible样式重置----------------------------------------*/
+@charset "utf-8";
+html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+html,body{font-family:sans-serif}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}
+input,select,textarea{font-size:100%}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+abbr,acronym{border:0;font-variant:normal}
+del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}
+q:before,q:after{content:''}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+a:hover{text-decoration:underline}
+ins,a{text-decoration:none}
+/*----------------------------------------淘宝移动端fiexible样式重置#----------------------------------------*/
+
+
+/*----------------------------------------#弹性盒子----------------------------------------*/
+[flex],[flex] * {  box-sizing:border-box  }
+[flex] {  display:-webkit-flex;  display:flex  }
+[fd=ro] {  flex-direction:row; -webkit-flex-direction:row;  }
+[fd=rr] {  flex-direction:row-reverse; -webkit-flex-direction:row-reverse;  }
+[fd=co] {  flex-direction:column; -webkit-flex-direction:column;  }
+[fd=cr] {  flex-direction:column-reverse; -webkit-flex-direction:column-reverse;  }
+[fw=no] {  flex-wrap:nowrap; -webkit-flex-wrap:nowrap;  }
+[fw=wr] {  flex-wrap:wrap; -webkit-flex-wrap:wrap;  }
+[fw=re] {  flex-wrap:wrap-reverse; -webkit-flex-wrap:wrap-reverse;  }
+[jc=fs] {  justify-content:flex-start; -webkit-justify-content:flex-start;  }
+[jc=fe] {  justify-content:flex-end; -webkit-justify-content:flex-end;  }
+[jc=ce] {  justify-content:center; -webkit-justify-content:center;  }
+[jc=sb] {  justify-content:space-between; -webkit-justify-content:space-between;  }
+[jc=sa] {  justify-content:space-around; -webkit-justify-content:space-around;  }
+[ai=fs] {  align-items:flex-start; -webkit-align-items:flex-start;  }
+[ai=fe] {  align-items:flex-end; -webkit-align-items:flex-end;  }
+[ai=ce] {  align-items:center; -webkit-align-items:center;  }
+[ai=ba] {  align-items:baseline; -webkit-align-items:baseline;  }
+[ai=st] {  align-items:stretch; -webkit-align-items:stretch;  }
+[ac=fs] {  align-content:flex-start; -webkit-align-content:flex-start;  }
+[ac=fe] {  align-content:flex-end; -webkit-align-content:flex-end;  }
+[ac=ce] {  align-content:center; -webkit-align-content:center;  }
+[ac=sb] {  align-content:space-between; -webkit-align-content:space-between;  }
+[ac=sa] {  align-content:space-around; -webkit-align-content:space-around;  }
+[ac=st] {  align-content:stretch; -webkit-align-content:stretch;  }
+[as=au] {  align-self:auto; -webkit-align-self:auto;  }
+[as=au] {  align-self:flex-start; -webkit-align-self:flex-start;  }
+[as=au] {  align-self:flex-end; -webkit-align-self:flex-end;  }
+[as=au] {  align-self:center; -webkit-align-self:center;  }
+[as=au] {  align-self:baseline; -webkit-align-self:baseline;  }
+[as=au] {  align-self:stretch; -webkit-align-self:stretch;  }
+/*----------------------------------------弹性盒子#----------------------------------------*/
+
+
+/*----------------------------------------#样式----------------------------------------*/
+[ex=ex0]{  pointer-events: none； }
+[ex=ex1]{  overflow:hidden; white-space:nowrap;text-overflow:ellipsis;  }
+[ex=ex2]{  overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;  }
+[ex=ex3]{  padding: 15px 0px; line-height: 1; }/*文字在安卓机上垂直不居中,不设置高，用上下padding撑开，line-height给1*/
+[ex=ex4]{ /*水平垂直居中于父容器*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+/*----------------------------------------样式#----------------------------------------*/
+
+
+
+

@@ -1,0 +1,243 @@
+@charset "UTF-8";
+body{
+	min-height: 100vh;
+}
+body{
+	background: #f8f8f8;
+	min-width: 1180px;
+}
+input[type="text"],input[type="number"]{
+	padding-left: 10px;
+	border: 1px solid #e2dfdf;
+	font-size: 12px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+	-webkit-appearance: none !important;
+	margin: 0;
+}
+a:link, a:visited {  text-decoration: none;color: #fff;border: none;  }
+a:hover, a:active {  text-decoration: none;color: #fff;border: none;  }
+#app{
+	width: 1350px;
+	min-height: 100vh;
+	margin-left:auto;
+	margin-right: auto;
+	padding-bottom: 200px;
+}
+.ban{
+	width: 1350px;
+	height: 185px;
+	background-image: url("../img/ban.png");
+	background-position: center center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.navss{
+	width: 100%;
+	height: 52px;
+	display: -webkit-flex; /* Safari */
+  display: flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+.navss li{
+	width: 336px;
+	height: 50px;
+	background:#2a9cf4;
+	text-align: center;
+	line-height: 50px;
+	color: #fff;
+	font-size: 18px;
+}
+.navss li a{
+	color: #fff;
+}
+.navss .navs{
+	background: #4155ae;
+}
+
+.main{
+	margin-top: 26px;
+  padding: 10px 0px 0px 0px;
+  background: #fff;
+  position: relative;
+  height: 1000px;
+}
+.choise{
+	width: 100%;
+	height: 50px;
+}
+.choise button{
+	width: 130px;
+	height: 50px;
+	background: #f9f9f9;
+	color: #626476;
+	border:1px solid rgba(0,0,0,0.2);
+}
+.choise button.chos{
+	background: #2a9cf4;
+	color: #fff;
+}
+.content{
+	width: 100%;
+	min-height: 600px;
+	background: #fff; 
+	position: absolute;
+	z-index: -1;
+}
+.cho{
+	z-index: 1;
+}
+.content>h4{
+	width: 100%;
+	height: 50px;
+	background: #f9f9f9;
+	font-weight: 400;
+	font-weight: 14px;
+	color: #7d7878;
+	line-height: 50px;
+	text-align: center;
+	border-bottom: 1px dashed #7d7878;
+}
+.msg{
+	padding: 40px 0px;
+}
+.msg input{
+	color: #7d7878;
+}
+.msg li{
+	display:-webkit-flex;  display:flex;
+	justify-content:center; -webkit-justify-content:center;
+	align-items:center; -webkit-align-items:center;
+	margin-bottom: 40px;
+}
+.msg li div{
+	display:-webkit-flex;  display:flex;
+	justify-content:center; -webkit-justify-content:center;
+	align-items:center; -webkit-align-items:center;
+}
+.msg li div:last-child{
+	margin-left: 50px;
+}
+.msg li div p{
+	position: relative;
+}
+.msg li div p:after{
+	content: attr(t);
+	position: absolute;
+	width: 260px;
+	height: 20px;
+	left:0;
+	top:50%;
+	color: #7d7878;
+	font-size: 12px;
+	margin-top: 25px;
+}
+.msg li span{
+	width: 100px;
+	font-size: 14px;
+	white-space: pre-wrap
+}
+.msg li input{
+	width: 240px;
+	height: 40px;
+}
+.msgSub{
+	text-align: center;
+	padding: 50px 0px;
+}
+.msgSub button{
+	width: 250px;
+	height: 50px;
+	background: #fff;
+	color: #3c8cc6;
+	border: 1px solid #3c8cc6;
+	border-radius: 10px;
+	font-size: 18px;
+	letter-spacing: 3px;
+}
+
+
+
+/*省市区*/
+.form-inline div[data-toggle="distpicker"]{
+	margin-left: 20px !important;
+}
+.form-inline .form-group{
+	margin-left: 10px !important;
+	width: 204px !important;
+}
+.form-inline .form-group select{
+	width: 190px !important;
+}
+.msg li:nth-child(3){
+	display:-webkit-flex;  display:flex;
+	justify-content:center; -webkit-justify-content:center;
+	align-items:center; -webkit-align-items:center;
+}
+.msg li:nth-child(3) div.containerss{
+	/*margin-left: 0px;*/
+}
+.msg li div.containerss{
+	width: 770px;
+	margin-left: 0px;
+/*	margin-left: auto;
+	margin-right: auto;*/
+	padding-right: 0px;
+	/*margin-top: 10px;*/
+	/*margin-left: -100px;*/
+}
+.containerss>h4{
+	width: 74px !important;
+}
+.containerss{
+	padding-left: 0px;
+}
+
+.msg li:nth-child(3){
+	position: relative;
+}
+
+
+
+
+
+.content2-main{
+	width: 600px;
+	height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	/*background: #f8f8f8;*/
+	padding-top: 50px;
+	margin-top: 50px;
+}
+.content2-main li{
+	display:-webkit-flex;  display:flex;
+	justify-content:center; -webkit-justify-content:center;
+	align-items:center; -webkit-align-items:center;
+	margin-bottom: 30px;
+}
+.content2-main li span{
+	width: 150px;
+	text-align: right;
+}
+.content2-main li input{
+	width: 240px;
+	height: 40px;
+	border: 1px solid #e2dfdf;
+	padding-left: 10px;
+}
+.content2-main li button{
+	width: 110px;
+    height: 30px;
+    border: 1px solid #00b7ee;
+    color: #00b7ee;
+    border-radius: 8px;
+    background: #fff;
+}

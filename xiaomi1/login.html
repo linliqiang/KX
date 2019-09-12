@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>登录</title>
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <div id="app" v-cloak>
+		<div class="main" flex fd=co jc=fs ai=ce>
+			<ul>
+        <li phone>
+          <input type="number" placeholder="请输入手机号码" v-model="phone">
+        </li>
+        <li code>
+          <input type="number" placeholder="请输入6位验证码" v-model="code">
+          <span @click="getCode" class="code">{{n}}</span>
+        </li>   
+      </ul>
+      <button @click="login">登录</button>
+		</div>
+  </div>
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

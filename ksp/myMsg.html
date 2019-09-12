@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>卡双平</title>
+
+  <link rel="stylesheet" href="mui/css/mui.min.css">
+
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="stylesheet" href="css/myMsg.css">
+
+</head>
+<body>
+
+<header class="mui-bar mui-bar-nav" id="experthead" style="z-index:999">
+      <a class="mui-icon-left-nav mui-icon mui-icon-arrowleft headback" onClick="javascript :history.back(-1);"></a>
+      <h1 class="mui-title">个人信息</h1>
+  </header>
+  
+  <div id="app" class="myMsg">
+  	<div class="myMsgBox">
+      <h4>个人信息</h4>
+  		<input class="num" type="text" placeholder="姓名" v-model="name">
+      <input class="pas" type="text" placeholder="医院" v-model="hospital">
+      <input class="name" type="text" placeholder="科室" v-model="department">
+      <input class="hospital" type="text" placeholder="职称" v-model="duty">
+      <input class="department" type="number" placeholder="电话" v-model="phone" oninput="oi2(this)">
+
+      <a class="myMsgBut" @click="updateOk">修改</a>
+
+  	</div>
+  </div>
+<script src="js/vue.js"></script>
+<script src="mui/js/mui.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/myMsg.js"></script>
+</body>
+</html>

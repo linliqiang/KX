@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>个人中心</title>
+	<link rel="stylesheet" href="font/iconfont.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/user.css">
+
+	<link rel="stylesheet" href="dist/imgjiancai/css/cropper.min.css">
+    <link rel="stylesheet" href="dist/imgjiancai/css/ImgCropping.css">
+
+</head>
+<body>
+
+<div id="app">
+	
+	<div id="header" class="header">
+		<div class="headerTop">
+
+			<a href="index.html"><img src="img/logo.png" class="logo" height="74" width="193" alt="" /></a>
+			
+			<a href="search.html"><input type="text" class="search" placeholder="请输入要搜索的关键词"></a>
+			
+			<img src="img/searchLogo.png" class="searchLogo" height="21" width="21" alt="" />
+			
+		</div>
+		<div id="navBox" class="navBox">
+			<div class="navB">
+				<ul class="nav clearfix">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="vid.html">视频</a></li>
+					<li><a href="article.html">文章</a></li>
+					<li><a href="play.html">直播</a></li>
+					<li><a href="case.html">病例</a></li>
+					<li><a href="expert.html">专家</a></li>
+					<li><a href="quesition.html">问答</a></li>
+				</ul>
+
+
+				<div class="logReg" v-if="userMsg == false">
+					<a href="login.html">登录</a>
+					<span>|</span>
+					<a href="regPhone.html">注册</a>
+				</div>
+
+				<div class="logUser" v-if="userMsg">
+					<div>
+						<a href="msg.html"><img src="img/sm.png" alt=""></a>
+						<span>3</span>
+						<div class="UserHead">
+							<a href="user.html"><img src="img/zji.jpg" alt=""></a>
+						</div>
+					</div>
+					<ul>
+						<li @click="touser(1)"><i class="iconfont icon-shoucang"></i>我的收藏</li>
+						<li @click="touser(2)"><i class="iconfont icon-fabuxiangmu"></i>我的发布</li>
+						<li @click="touser(3)"><i class="iconfont icon-guanzhu"></i>我的关注</li>
+						<li @click="touser(4)"><i class="iconfont icon-shezhi"></i>个人设置</li>
+						<li @click="touser(5)"><i class="iconfont icon-Opinion"></i>意见反馈</li>
+						<li @click="touser(6)"><i class="iconfont icon-dingdan"></i>订单       </li>
+						<li @click="touser(7)"><i class="iconfont icon-yaoqingma"></i>邀请码    </li>
+						<li @click="signOut()"><i class="iconfont icon-tuichu"></i>退出       </li>
+					</ul>
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="main" class="main">
+
+		<div class="main-content">
+			
+			<div class="ban">
+				
+				<div class="banCon">
+					<div>
+						<img src="img/zji.jpg" alt="">
+					</div>
+					<div>
+						<div>
+							<span>{{userMsg.name}}</span>
+							<span class="ordinaryIMG" v-if="userMsg.type == 'ordinary'"></span>
+							<img src="img/docG.png" v-if="userMsg.type == 'doctor'" alt="">
+							<img src="img/zjg.png" v-if="userMsg.type == 'expert'" alt="">
+							<span>风湿免疫科</span>
+						</div>
+						<p>成都市二医院</p>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="subNavBox">  
+				<ul class="subNav">
+					<li :class="{ subNavSign : subNavSign == 1 }" @click="myChoise(1)"><span><i class="iconfont icon-shoucang"></i>我的收藏</span></li>
+					<li :class="{ subNavSign : subNavSign == 2 }" @click="myChoise(2)"><span><i class="iconfont icon-fabuxiangmu"></i>我的发布</span></li>
+					<li :class="{ subNavSign : subNavSign == 3 }" @click="myChoise(3)"><span><i class="iconfont icon-guanzhu"></i>我的关注</span></li>
+					<li :class="{ subNavSign : subNavSign == 4 }" @click="myChoise(4)"><span><i class="iconfont icon-shezhi"></i>个人设置</span></li>
+					<li :class="{ subNavSign : subNavSign == 5 }" @click="myChoise(5)"><span><i class="iconfont icon-Opinion"></i>意见反馈</span></li>
+					<li :class="{ subNavSign : subNavSign == 6 }" @click="myChoise(6)"><span><i class="iconfont icon-dingdan"></i>订单       </span></li>
+					<li :class="{ subNavSign : subNavSign == 7 }" @click="myChoise(7)"><span><i class="iconfont icon-yaoqingma"></i>邀请码    </span></li>
+					
+				</ul>
+				<div class="subNavCot">
+					<!-- 我的收藏 -->
+					<div class="coll" v-show="subNavSign == 1">
+						<ul class="collNav">
+							<li :class="{ collNavs : collNav == 1 }" @click="collClick(1)">视频</li>
+							<li :class="{ collNavs : collNav == 2 }" @click="collClick(2)">文章</li>
+							<li :class="{ collNavs : collNav == 3 }" @click="collClick(3)">直播</li>
+							<li :class="{ collNavs : collNav == 4 }" @click="collClick(4)">病例</li>
+							<li :class="{ collNavs : collNav == 5 }" @click="collClick(5)">资讯</li>
+						</ul>
+						<div>
+							<!-- 我的收藏-视频 -->
+							<div v-show="collNav == 1">
+							
+								<div class="repeatItem" v-for="(item,index) in repeatItem1">
+									<a class="transBig" href="vid.html">
+										<img src="img/new2_03.png" alt="">
+										<span><em>{{item.look}}</em>观看</span>
+									</a>
+									<div>
+										<p class="OOver"><a class="titleColor wryh" href="vid.html">{{item.title}}</a></p>
+										<p class="TOver">{{item.msg}}</p>
+										<p>
+											<!-- 来源或姓名 -->
+											<span v-if="item.name">{{item.name}}</span>
+											<span v-if="item.name"></span>
+											<span v-if="item.company">{{item.company}}</span>
+										</p>
+										<p class="delButtr">
+											<img src="img/xia.png" alt="">
+											<button @click="delColl(index,1)">取消收藏</button>
+										</p>
+									</div>
+								</div>
+
+								<div class="loadMore">
+									<button @click="repeatItemMore1()" v-if="repeatItem1.length>0">加载更多</button>
+									<button v-if="repeatItem1.length==0">没有数据</button>
+								</div>
+
+							</div>
+							<!-- 我的收藏-文章 -->
+							<div v-show="collNav == 2">
+								<div class="repeatItem" v-for="(item,index) in repeatItem2">
+									<a class="transBig" href="artDet.html"><img :src="item.img ? item.img : 'img/new2_032.png'" alt=""></a>
+									<div>
+										<p class="OOver"><a class="titleColor wryh" href="artDet.html">{{item.title}}</a></p>
+										<p class="TOver">{{item.msg}}</p>
+										<p>
+											<!-- 来源或姓名 -->
+											<span v-if="item.name">{{item.name}}</span>
+											<span v-if="item.company">{{item.company}}</span>
+											<span :class="{ timeLe :  item.name == '' && item.company == '' }">{{item.time}}</span>
+										</p>
+										<p class="delButtr">
+											<img src="img/xia.png" alt="">
+											<button @click="delColl(index,2)">取消收藏</button>
+										</p>
+									</div>
+								</div>
+								<div class="loadMore">
+									<button @click="repeatItemMore2()" v-if="repeatItem2.length>0">加载更多</button>
+									<button v-if="repeatItem2.length==0">没有数据</button>
+								</div>
+							</div>
+							<!-- 我的收藏-直播 -->
+							<div v-show="collNav == 3">
+								<div class="repeatItem" v-for="(item,index) in repeatItem3">
+									<a class="transBig" href="play.html"><img src="img/new2_03.png" alt=""></a>
+									<div>
+										<p class="OOver"><a class="titleColor wryh" href="play.html">{{item.title}}</a></p>
+										<p class="TOver">{{item.msg}}</p>
+										<p>
+											<!-- 来源或姓名 -->
+											<span>{{item.look}}观看</span>
+										</p>
+										<p class="delButtr">
+											<img src="img/xia.png" alt="">
+											<button @click="delColl(index,3)">取消收藏</button>
+										</p>
+									</div>
+								</div>
+								<div class="loadMore">
+									<button @click="repeatItemMore3()" v-if="repeatItem3.length>0">加载更多</button>
+									<button v-if="repeatItem3.length==0">没有数据</button>
+								</div>
+							</div>
+							<!-- 我的收藏-病例 -->
+							<div v-show="collNav == 4">
+								<div class="repeatItem" v-for="(item,index) in repeatItem4">
+									<a class="transBig" href="caseDet.html"><img :src="item.img ? item.img : 'img/new2_032.png'" alt=""></a>
+									<div>
+										<p class="OOver"><span>{{item.type}}</span><a class="titleColor wryh" href="caseDet.html">{{item.title}}</a></p>
+										<p class="TOver">{{item.msg}}</p>
+										<div>
+											<div v-if=" item.headerImg ">
+												<a v-if=" item.formType == 'doctor' " href="dorDet.html">
+													<img :src="item.headerImg" alt="">
+												</a>
+												<a v-if=" item.formType == 'expert' " href="expDet.html">
+													<img :src="item.headerImg" alt="">
+												</a>
+												<a v-if=" item.formType == '' " href="javascript:void(0)">
+													<img :src="item.headerImg" alt="">
+												</a>
+											</div>
+											<span class="caseform" v-if="item.name">{{item.name}}</span>
+											<span class="casetime" :class="{ timeLe : item.headerImg == '' && item.name == '' }">{{item.time}}</span>
+
+											<div class="signImg" v-if="item.formType != '' && item.headerImg != '' ">
+												<img v-if="item.formType == 'doctor'" src="img/docG.png" alt="">
+												<img v-if="item.formType == 'expert'" src="img/zjg.png" alt="">
+											</div>
+											
+
+										</div>
+									</div>
+								</div>
+								<div class="loadMore">
+									<button @click="repeatItemMore4()" v-if="repeatItem4.length>0">加载更多</button>
+									<button v-if="repeatItem4.length==0">没有数据</button>
+								</div>
+							</div>
+							<!-- 我的收藏-资讯 -->
+							<div v-show="collNav == 5">
+								<div class="repeatItem" v-for="(item,index) in repeatItem5">
+									<a class="transBig" href="newsDet.html"><img src="img/new2_03.png" alt=""></a>
+									<div>
+										<p class="OOver"><a class="titleColor wryh" href="newsDet.html">{{item.title}}</a></p>
+										<p class="TOver">{{item.msg}}</p>
+										<p>
+											<!-- 来源或姓名 -->
+											<span v-if="item.form"><em>来源：</em>{{item.form}}</span>
+											<span v-if="item.form"></span>
+											<span v-if="item.time">{{item.time}}</span>
+										</p>
+										<p class="delButtr">
+											<img src="img/xia.png" alt="">
+											<button @click="delColl(index,5)">取消收藏</button>
+										</p>
+									</div>
+								</div>
+								<div class="loadMore">
+									<button @click="repeatItemMore5()" v-if="repeatItem5.length>0">加载更多</button>
+									<button v-if="repeatItem5.length==0">没有数据</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 我的发布 -->
+					<div class="rel" v-show="subNavSign == 2">
+						<ul class="relNav" :class="{ relNavExp : userMsg.type=='expert' }">
+							<li :class="{ relNavs : relNav == 1 }" @click="relClick(1)" v-if="userMsg.type == 'expert'">视频</li>
+							<li :class="{ relNavs : relNav == 2 }" @click="relClick(2)" v-if="userMsg.type == 'expert'">文章</li>
+							<li :class="{ relNavs : relNav == 3 }" @click="relClick(3)">病例</li>
+							<li :class="{ relNavs : relNav == 4 }" @click="relClick(4)">提问</li>
+							<img class="fabuBut" @click="tofabu()" src="img/fabu.png" alt="">
+						</ul>
+						<div>
+							<!-- 普通用户，没有发布任何内容 -->
+							<div v-show="relNav == 0" class="ord">
+								<!-- <p v-if="renzheng" style="color:#fa8821;">您已提交认证，正在审核中</p> -->
+								<!-- <p v-else>您还没有实名认证，<a href="renzheng.html">现在去认证</a></p> -->
+								
+							</div>
+							<!-- 我的发布-视频 -->
+							<div v-show="relNav == 1">
+								<div class="repeatItem" v-for="(item,index) in repeatItem6">
+									<a class="transBig" href="vid.html">
+										<img src="img/new2_03.png" alt="">
+										<span><em>{{item.look}}</em>观看</span>
+									</a>
+									<div>
+										<p class="OOver"><a class="titleColor wryh" href="vid.html">{{item.title}}</a></p>
+										<p class="TOver">{{item.msg}}</p>
+										<p>
+											<!-- 来源或姓名 -->
+											<span v-if="item.name">{{item.name}}</span>
+											<span v-if="item.name"></span>
+											<span v-if="item.company">{{item.company}}</span>
+										</p>
+									</div>
+								</div>
+								<div class="loadMore">
+									<button @click="repeatItemMore6()" v-if="repeatItem6.length>0">加载更多</button>
+									<button v-if="repeatItem6.length==0">没有数据</button>
+								</div>
+							</div>
+							<!-- 我的发布-文章 -->
+							<div v-show="relNav == 2">
+								<div class="repeatItem" v-for="(item,index) in repeatItem7">
+									<a class="transBig" href="artDet.html"><img :src="item.img ? item.img : 'img/new2_032.png'" alt=""></a>
+									<div>
+										<p class="OOver"><a class="titleColor wryh" href="artDet.html">{{item.title}}</a></p>
+										<p class="TOver">{{item.msg}}</p>
+										<p>
+											<!-- 来源或姓名 -->
+											<span v-if="item.name">{{item.name}}</span>
+											<span v-if="item.company">{{item.company}}</span>
+											<span v-if="item.time">{{item.time}}</span>
+										</p>
+									</div>
+								</div>
+								<div class="loadMore">
+									<button @click="repeatItemMore7()" v-if="repeatItem7.length>0">加载更多</button>
+									<button v-if="repeatItem7.length==0">没有数据</button>
+								</div>
+							</div>
+
+							<!-- 我的发布-病例 -->
+							<div v-show="relNav == 3">
+								<div class="repeatItem" v-for="(item,index) in repeatItem8">
+									<a class="transBig" href="caseDet.html"><img :src="item.img ? item.img : 'img/new2_032.png'" alt=""></a>
+									<div>
+										<p class="OOver"><span>{{item.type}}</span><a class="titleColor wryh" href="caseDet.html">{{item.title}}</a></p>
+										<p class="TOver">{{item.msg}}</p>
+										<div>
+											<div v-if=" item.headerImg ">
+												<a v-if=" item.formType == 'doctor' " href="dorDet.html">
+													<img :src="item.headerImg" alt="">
+												</a>
+												<a v-if=" item.formType == 'expert' " href="expDet.html">
+													<img :src="item.headerImg" alt="">
+												</a>
+												<a v-if=" item.formType == '' " href="javascript:void(0)">
+													<img :src="item.headerImg" alt="">
+												</a>
+											</div>
+											<span class="caseform" v-if="item.name">{{item.name}}</span>
+											<span class="casetime" v-if="item.time">{{item.time}}</span>
+
+											<div class="signImg" v-if="item.formType != ''">
+												<img v-if="item.formType == 'doctor'" src="img/docG.png" alt="">
+												<img v-if="item.formType == 'expert'" src="img/zjg.png" alt="">
+											</div>
+											
+
+										</div>
+									</div>
+								</div>
+								<div class="loadMore">
+									<button @click="repeatItemMore8()" v-if="repeatItem8.length>0">加载更多</button>
+									<button v-if="repeatItem8.length==0">没有数据</button>
+								</div>
+							</div>
+
+							<!-- 我的发布-提问 -->
+							<div v-show="relNav == 4">
+								<div class="quseRepeatBox">
+
+									<div class="quesItem" v-for="(item,index) in quseRepeatItem1">
+
+										<div>
+											<!-- <img src="img/wd_03.png" alt=""> -->
+											<em>问</em>
+											<a class="titleColor wryh OOver" href="queDet.html">{{item.title}}</a>
+										</div>
+										<div v-show=" item.msg ">
+											<!-- <img src="img/wd_06.png" alt=""> -->
+											<em>答</em>
+											<p class="TOver"><a href="queDet.html">{{item.msg}}</a></p>
+										</div>
+										<div>
+											<span><em>{{item.answer}}</em>回答</span>
+											<span :class="{ quseGuanzhu : item.guanzhu }" @click="quseGuanzhuThing(index,1)">{{item.guanzhu ? "已关注" : "关注"}}</span>
+											<a href ="queDet.html?type=2"><i class="iconfont icon-Opinion"></i>写回答</a>
+										</div>
+
+									</div>
+									<div class="loadMore">
+										<button @click="qItemMore1()" v-if="quseRepeatItem1.length>0">加载更多</button>
+										<button v-if="quseRepeatItem1.length==0">没有数据</button>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- 我的关注 -->
+					<div class="foll" v-show="subNavSign == 3">
+						<ul class="follNav">
+							<li :class="{ follNavs : follNav == 1 }" @click="follClick(1)">关注的医友</li>
+							<li :class="{ follNavs : follNav == 2 }" @click="follClick(2)">关注的问题</li>
+						</ul>
+						<div>
+							
+							<!-- 我的关注-医友 -->
+							<div class="follBox" v-show="follNav == 1">
+								<div class="foll1" v-for="(item,index) in gzyy">
+									<div><img :src="item.img" alt=""></div>
+									<div>
+										<span>{{item.name}}</span>
+										<button :class="{ follBoxButNO : !item.guanzhu }" @click="yygz(index)">{{item.guanzhu ? "已关注" : "关注"}}</button>
+									</div>
+								</div>
+							</div>
+							<!-- 我的关注-问题 -->
+							<div v-show="follNav == 2">
+
+								<div class="quseRepeatBox">
+									<div class="quesItem" v-for="(item,index) in quseRepeatItem2">
+
+										<div><img src="img/wd_03.png" alt=""><a class="titleColor wryh OOver" href="queDet.html">{{item.title}}</a></div>
+										<div v-show=" item.msg ">
+											<img src="img/wd_06.png" alt="">
+											<p class="TOver">{{item.msg}}</p>
+										</div>
+										<div>
+											<span><em>{{item.answer}}</em>回答</span>
+											<span :class="{ quseGuanzhu : item.guanzhu }" @click="quseGuanzhuThing(index,2)">{{item.guanzhu ? "已关注" : "关注"}}</span>
+											<a href="queDet.html"><i class="iconfont icon-Opinion"></i></i>写回答</a>
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+					<!-- 个人设置 -->
+					<div class="set" v-show="subNavSign == 4">
+						<ul class="setNav">
+							<li :class="{ setNavs : setNav == 1 }" @click="setClick(1)">我的资料</li>
+							<li :class="{ setNavs : setNav == 2 }" @click="setClick(2)" v-if=" userMsg.type != 'expert' ">认证消息</li>
+							<li :class="{ setNavs : setNav == 3 }" @click="setClick(3)">账号管理</li>
+							<li :class="{ setNavs : setNav == 4 }" @click="setClick(4)">修改密码</li>
+						</ul>
+						<div class="setBox">
+
+							<!-- 个人设置-我的资料 -->
+							<div class="setBoxmy" v-show="setNav == 1">
+								<div>
+									<span>头像</span>
+									<div   id="finalImgBox"><img  id="finalImg" src="img/zji.jpg" alt=""></div>
+									<div>
+										<button id="replaceImg" class="l-btn">更换头像</button>
+										<p style="font-size:12px;margin-top:6px">支持jpg、png格式的图片，且文件小于20m</p>
+									</div>
+								</div>
+								<div>
+									<span>昵称</span>
+									<input type="text" placeholder="请输入你的昵称" alt="昵称">
+								</div>
+								<div>
+									<span>姓名</span>
+									<input type="text" placeholder="请输入你的姓名" alt="姓名">
+								</div>
+								<div>
+									<span>性别</span>
+									<input id="sex1" type="radio" name="sex" alt="性别"><label for="sex1" style="margin-right:20px;">男</label>
+									<input id="sex2" type="radio" name="sex" alt="性别"><label for="sex2">女</label>
+								</div>
+								<div>
+									<span>邮箱</span>
+									<input type="text" placeholder="请输入你的邮箱"  alt="邮箱" regs="mail">
+								</div>
+								<div>
+									<span>所在地</span>
+									<input type="text"  placeholder="请输入你的地址" alt="地址">
+								</div>
+								<div>
+									<span>街道地址</span>
+									<input type="text"  placeholder="请输入街道地址" alt="街道地址">
+								</div>
+								<div>
+									<button @click="userSave">保存</button>
+								</div>
+
+							</div>
+
+							<!-- 个人设置-认证消息 -->
+							<div class="setBoxrz" v-show=" setNav == 2 " >
+								<!-- 未认证 -->
+								<div class="ordrz" v-show="userMsg.type == 'ordinary'" style="margin-top:20px;">
+
+									<!-- 您还没有认证医生资格，是否 -->
+									<!-- <a href="javascript:window.open('renzheng.html')">前往认证</a> -->
+
+									<p v-if="renzheng" style="color:#fa8821;">您已提交认证，正在审核中</p>
+									<p v-else>您还没有实名认证，<a href="renzheng.html">现在去认证</a></p>
+
+
+								</div>
+								<!-- 已认证 -->
+								<div class="ysrz" v-show="userMsg.type == 'doctor'">
+									<div>
+										<span>真实姓名：</span>
+										<input type="text" :value="userMsg.name" alt="真实姓名">
+									</div>
+									<div>
+										<span>单位：</span>
+										<input type="text" :value="userMsg.company" alt="单位">
+									</div>
+									<div>
+										<span>执业资格证编号：</span>
+										<input type="text" :value="userMsg.ysNum" alt="执业资格证编号">
+									</div>
+									<div>
+										<span>执业资格证图片：</span>
+										<div><img id="ysimg" src="img/yisheng.jpg" alt=""></div>
+										<button @click="ysrzImg">重新上传</button>
+										<input id="ysrzInp" type="file" style="display:none">
+									</div>
+									<div>
+										<span></span>
+										<button @click="ysChange">提交修改</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- 个人设置-账号管理 -->
+							<div class="setBoxadm" v-show="setNav == 3">
+
+								<div v-show="userMsg.phone" class="setBoxadm1">
+									<p>手机号</p>
+									<p>你已绑定手机号<span>13983655666</span></p>
+									<button @click="bdPhone">更换手机</button>
+								</div>
+
+								<div v-show="!userMsg.phone" class="setBoxadm2">
+									
+									<div class="setPhoneON">
+										您还没有绑定手机，是否<button @click="bdPhone">立即绑定</button>
+									</div>
+
+									<!-- <div class="setPhone">
+										<p>请输入你要绑定的手机号码</p>
+										<input type="text" class="setPhoneText1" placeholder="请输入你的手机号码">
+										<br/>
+										<input type="text" class="setPhoneText2" placeholder="请输入验证码">
+										<button @click="getYanNum()">{{yanNum}}</button>
+										<br/>
+										<button @click="setPhoneOK">确认</button>
+									</div> -->
+
+								</div>
+
+								
+
+							</div>
+							<!-- 个人设置-修改密码 -->
+							<div class="setBoxpsw" v-show="setNav == 4">
+
+								<p>原密码</p>
+								<input type="text" class="setPsw1" placeholder="输入原密码">
+								<input type="password" class="setPsw2" placeholder="输入新密码，不少于6位数">
+								<input type="password" class="setPsw3" placeholder="确认新密码">
+								<button @click="setPsw">确定</button>
+								
+							</div>
+						</div>
+					</div>
+					<!-- 意见反馈 -->
+					<div class="feed" v-show="subNavSign == 5">
+						<textarea name="" id="" cols="120" rows="14"></textarea>
+						<p>联系方式：（电话、邮箱、qq等）</p>
+						<input type="text">
+						<button @click="feedSub">提交</button>
+					</div>
+					<!-- 订单 -->
+					<div class="dingdan" v-show="subNavSign == 6">
+
+						<h4>我的订单</h4>
+
+						<div class="yaoqing-f3">
+							<span :class="{yaoqingNS: dingdanSign == 1}" @click="dingdanSignT(1)">全部</span>
+							<span :class="{yaoqingNS: dingdanSign == 2}" @click="dingdanSignT(2)">未支付</span>
+							<span :class="{yaoqingNS: dingdanSign == 3}" @click="dingdanSignT(3)">已支付</span>
+						</div>
+
+						
+
+						<div class="dingdanBox">
+							<ul>
+								<li v-for="(item,index) in dingdan" @click="tovid(item.pay)">
+									<img src="img/xindian.png" alt="">
+									<div>
+										<p>{{item.title}}</p>
+										<p>
+											<span>{{item.title2}}</span>
+											<span v-if="item.pay=='ok'">已付￥{{item.price}}</span>
+											<del v-if="item.pay=='no'">未付￥{{item.price}}</del>
+										</p>
+									</div>
+								</li>
+							</ul>
+							<div class="loadMore">
+								<button @click="dingdanMore()" v-if="dingdan.length>0">加载更多</button>
+								<button v-if="dingdan.length==0">没有数据</button>
+							</div>
+						</div>
+
+					</div>
+					<!-- 邀请码 -->
+					<div class="yaoqing" v-show="subNavSign == 7">
+						<h4>我的邀请码</h4>
+						<div class="yaoqing-f2">
+							<input type="text" placeholder="请输入邀请码" v-model="code">
+							<button @click="codeT">兑换</button>
+						</div>
+						<div class="yaoqing-f3">
+							<span :class="{yaoqingNS: yaoqingSign == 1}" @click="yaoqingSignT(1)">我的学习卡</span>
+							<span :class="{yaoqingNS: yaoqingSign == 2}" @click="yaoqingSignT(2)">邀请卡说明</span>
+						</div>
+						<div class="dingdanBox" v-if="yaoqingSign == 1">
+							<h5 v-if="dingdan.length<1">暂无免费学习课程</h5>
+							<ul>
+								<li v-for="(item,index) in yaoqing" @click="tovid2">
+									<em>课程免费卡</em>
+									<img src="img/xindian.png" alt="">
+									<div>
+										<p>{{item.title}}</p>
+										<p>
+											<span>有效期：永久有效</span>
+											<b><i class="iconfont icon-jiantou1"></i></b>
+										</p>
+									</div>
+								</li>
+							</ul>
+							<div class="loadMore">
+								<button @click="yaoqingMore()" v-if="yaoqing.length>0">加载更多</button>
+								<button v-if="yaoqing.length==0">没有数据</button>
+							</div>
+						</div>
+						<div class="yaoqing-f5" v-if="yaoqingSign == 2">
+							<p>1、输入邀请码可以获得免费观看课程的权限</p>
+							<p>2、开通邀请码权限的用户，我们将发送至您手机或者可以从本公司相关人员告知获得</p>
+							<p>3、观看课程权限：根据每次活动推广方案进行开放使用</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+	</div>
+
+	<div id="footer" class="footer">
+
+		<div class="footerB">
+			
+			<div class="firendLink">
+				<p>友情链接</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">国家卫计委</a>
+					<a href="http://www.baidu.com">世界卫生组织</a>
+					<a href="http://www.baidu.com">国家食品药品监督管理局</a>
+					<a href="http://www.baidu.com">国家中医药管理局</a>
+					<a href="http://www.baidu.com">中国医疗</a>
+					<a href="http://www.baidu.com">新浪健康</a>
+					<a href="http://www.baidu.com">搜狐健康</a>
+					<a href="http://www.baidu.com">凤凰健康</a>
+					<a href="http://www.baidu.com">百姓健康</a>
+					<a href="http://www.baidu.com">爱爱医</a>
+					<a href="http://www.baidu.com">网易健康</a>
+					<a href="http://www.baidu.com">MedSci</a>
+					<a href="http://www.baidu.com">医学论坛网</a>
+					<a href="http://www.baidu.com">华西医院</a>
+					<a href="http://www.baidu.com">北京协和医院</a>
+					<a href="http://www.baidu.com">北京朝阳医院</a>
+					<a href="http://www.baidu.com">医保卡余额查询</a>
+				</div>
+				<p>合作媒体</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">人民日报</a>
+					<a href="http://www.baidu.com">北京新闻网</a>
+					<a href="http://www.baidu.com">北京周报</a>
+				</div>
+			</div>
+			<div class="erweima">
+				<div>
+					<span>关注微信</span>
+					<img src="img/erweima2.png" width="112" height="98" alt="二维码" />
+				</div>
+				<p>
+					<a href="about.html">关于我们</a>
+					<span>|</span>
+					<a href="contact.html">联系我们</a>
+					<span>|</span>
+					<a @click="tofeed">意见反馈</a>
+				</p>
+			</div>
+
+		</div>
+
+		
+	</div>
+
+</div>
+
+
+<!--图片裁剪框 start-->
+<div style="display: none" class="tailoring-container">
+    <div class="black-cloth" onclick="closeTailor(this)"></div>
+    <div class="tailoring-content">
+            <div class="tailoring-content-one">
+                <label title="上传图片" for="chooseImg" class="l-btn choose-btn">
+                    <input type="file" accept="image/jpg,image/jpeg,image/png" name="file" id="chooseImg" class="hidden" onchange="selectImg(this)">
+                    选择图片
+                </label>
+                <div class="close-tailoring"  onclick="closeTailor(this)">×</div>
+            </div>
+            <div class="tailoring-content-two">
+                <div class="tailoring-box-parcel">
+                    <img id="tailoringImg">
+                </div>
+                <div class="preview-box-parcel">
+                    <p>图片预览：</p>
+                    <div class="square previewImg"></div>
+                    <div class="circular previewImg"></div>
+                </div>
+            </div>
+            <div class="tailoring-content-three">
+                <button class="l-btn cropper-reset-btn">复位</button>
+                <button class="l-btn cropper-rotate-btn">旋转</button>
+                <button class="l-btn cropper-scaleX-btn">换向</button>
+                <button class="l-btn sureCut" id="sureCut">确定</button>
+            </div>
+        </div>
+</div>
+<!--图片裁剪框 end-->
+	
+
+<!--  -->
+
+
+	
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+
+
+<script src="dist/imgjiancai/js/cropper.min.js"></script>
+
+<script src="js/main.js"></script>
+<script src="js/user.js"></script>
+<script>
+
+    //弹出框水平垂直居中
+    (window.onresize = function () {
+        var win_height = $(window).height();
+        var win_width = $(window).width();
+        if (win_width <= 768){
+            $(".tailoring-content").css({
+                "top": (win_height - $(".tailoring-content").outerHeight())/2,
+                "left": 0
+            });
+        }else{
+            $(".tailoring-content").css({
+                "top": (win_height - $(".tailoring-content").outerHeight())/2,
+                "left": (win_width - $(".tailoring-content").outerWidth())/2
+            });
+        }
+    })();
+
+    //弹出图片裁剪框
+    $("#replaceImg").on("click",function () {
+        $(".tailoring-container").toggle();
+
+    });
+    //图像上传
+    function selectImg(file) {
+        if (!file.files || !file.files[0]){
+            return;
+        }
+        var reader = new FileReader();
+        reader.onload = function (evt) {
+            var replaceSrc = evt.target.result;
+            //更换cropper的图片
+            $('#tailoringImg').cropper('replace', replaceSrc,false);//默认false，适应高度，不失真
+        }
+        reader.readAsDataURL(file.files[0]);
+    }
+    //cropper图片裁剪
+    $('#tailoringImg').cropper({
+        aspectRatio: 1/1,//默认比例
+        preview: '.previewImg',//预览视图
+        guides: false,  //裁剪框的虚线(九宫格)
+        autoCropArea: 0.5,  //0-1之间的数值，定义自动剪裁区域的大小，默认0.8
+        movable: true, //是否允许移动图片
+        dragCrop: false,  //是否允许移除当前的剪裁框，并通过拖动来新建一个剪裁框区域
+        movable: true,  //是否允许移动剪裁框
+        resizable: true,  //是否允许改变裁剪框的大小
+        zoomable: false,  //是否允许缩放图片大小
+        mouseWheelZoom: false,  //是否允许通过鼠标滚轮来缩放图片
+        touchDragZoom: true,  //是否允许通过触摸移动来缩放图片
+        rotatable: true,  //是否允许旋转图片
+        crop: function(e) {
+            // 输出结果数据裁剪图像。
+        }
+    });
+    //旋转
+    $(".cropper-rotate-btn").on("click",function () {
+        $('#tailoringImg').cropper("rotate", 45);
+    });
+    //复位
+    $(".cropper-reset-btn").on("click",function () {
+        $('#tailoringImg').cropper("reset");
+    });
+    //换向
+    var flagX = true;
+    $(".cropper-scaleX-btn").on("click",function () {
+        if(flagX){
+            $('#tailoringImg').cropper("scaleX", -1);
+            flagX = false;
+        }else{
+            $('#tailoringImg').cropper("scaleX", 1);
+            flagX = true;
+        }
+        flagX != flagX;
+    });
+
+    //裁剪后的处理
+    $("#sureCut").on("click",function () {
+        if ($("#tailoringImg").attr("src") == null ){
+            return false;
+        }else{
+            var cas = $('#tailoringImg').cropper('getCroppedCanvas');//获取被裁剪后的canvas
+            var base64url = cas.toDataURL('image/png'); //转换为base64地址形式
+            $("#finalImg").prop("src",base64url);//显示为图片的形式
+
+            //关闭裁剪框
+            closeTailor();
+        }
+    });
+    //关闭裁剪框
+    function closeTailor() {
+
+        $(".tailoring-container").toggle();
+    }
+
+
+// $(document).ready(function(){
+// 	console.log("inin")
+// 	console.log($(".cropper-canvas"))
+	
+
+// })
+
+
+</script>
+</body>
+</html>
+
+<!-- 剪裁框，真正的图片容器的class  cropper-canvas  -->

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>全科学苑</title>
+	<link rel="stylesheet" href="font/iconfont.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/edit.css">
+
+	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+	<link href="dist/summer/summernote.css" rel="stylesheet"/>
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+	<script src="dist/summer/summernote.js"></script>
+	<script src="dist/summer/lang/summernote-zh-CN.js"></script>    <!-- 中文-->
+
+
+</head>
+<body>
+
+<div id="app">
+	
+	
+
+
+
+	<div id="main" class="main">
+
+		<div class="main-content">
+
+			<h2 class="edTitle">编辑文章</h2>
+
+			<div class="editart">
+				
+				
+
+				<div class="title">
+					<h4>标题：</h4>
+					<input class="titleInp" type="text" placeholder="请在此输入标题">
+				</div>
+
+				<div class="m">		
+					<div class="summernote">请输入文章正文</div>
+				</div>
+
+				<div class="butBot">
+					<div class="inputImgf">
+						<img src="img/upVid.png" id="show" width="120">
+						<input id="file" class="filepath" onchange="changepic(this)" type="file">
+						<span>上传封面图片</span>
+					</div>
+					<button class="buta">发布</button>
+				</div>
+
+			</div>
+				
+
+		</div>
+		
+		
+
+	</div>
+
+
+	<div id="footer" class="footer">
+
+		<div class="footerB">
+			
+			<div class="firendLink">
+				<p>友情链接</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">国家卫计委</a>
+					<a href="http://www.baidu.com">世界卫生组织</a>
+					<a href="http://www.baidu.com">国家食品药品监督管理局</a>
+					<a href="http://www.baidu.com">国家中医药管理局</a>
+					<a href="http://www.baidu.com">中国医疗</a>
+					<a href="http://www.baidu.com">新浪健康</a>
+					<a href="http://www.baidu.com">搜狐健康</a>
+					<a href="http://www.baidu.com">凤凰健康</a>
+					<a href="http://www.baidu.com">百姓健康</a>
+					<a href="http://www.baidu.com">爱爱医</a>
+					<a href="http://www.baidu.com">网易健康</a>
+					<a href="http://www.baidu.com">MedSci</a>
+					<a href="http://www.baidu.com">医学论坛网</a>
+					<a href="http://www.baidu.com">华西医院</a>
+					<a href="http://www.baidu.com">北京协和医院</a>
+					<a href="http://www.baidu.com">北京朝阳医院</a>
+					<a href="http://www.baidu.com">医保卡余额查询</a>
+				</div>
+				<p>合作媒体</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">人民日报</a>
+					<a href="http://www.baidu.com">北京新闻网</a>
+					<a href="http://www.baidu.com">北京周报</a>
+				</div>
+			</div>
+			<div class="erweima">
+				<div>
+					<span>关注微信</span>
+					<img src="img/erweima2.png" width="112" height="98" alt="二维码" />
+				</div>
+				<p>
+					<a href="about.html">关于我们</a>
+					<span>|</span>
+					<a href="contact.html">联系我们</a>
+					<span>|</span>
+					<a @click="tofeed">意见反馈</a>
+				</p>
+			</div>
+
+		</div>
+
+		
+	</div>
+
+</div>
+	
+	
+<script src="js/vue.js"></script>
+<script src="js/main.js"></script>
+<script src="js/edit.js"></script>
+<script>
+
+
+	 function changepic() {
+        var reads= new FileReader();
+        f=document.getElementById('file').files[0];
+        reads.readAsDataURL(f);
+        reads.onload=function (e) {
+            document.getElementById('show').src=this.result;
+        };
+    }
+
+
+
+	$(document).ready(function(){
+
+		$('.summernote').summernote({
+	            height: 500,
+	            tabsize: 2,
+	            lang: 'zh-CN',
+	            toolbar:[
+	            	['style',['bold','italic','underline','clear']],//文字样式
+	            	['fontsize',['fontsize']],//字号
+	            	['color',['color']],//颜色
+	            	['para',['ul','ol','paragraph']],//无序，有序，段落
+	            	['table',['table']],//表格
+	            	['insert',['link','picture','video']],//链接，图片，视频
+	            	['misc',['undo','fullscreen']],//撤销，全屏
+	            ],
+	    });
+
+		$(".buta").click(function(){
+			if( $(".titleInp").val() == "" ){
+				alertWarn("请输入文章标题")
+			}else if( $('.summernote').summernote('code') == "" || $('.summernote').summernote('code') == "请输入文章正文..." ){
+				alertWarn("请输入文章正文")
+			}else{
+				alert4();
+			}
+			
+		});
+		$(".note-editable").focus(function(){
+			if(this.innerText=='请输入文章正文'){
+				this.innerText=''
+			}
+		});
+		$(".note-editable").blur(function(){
+			if(this.innerText==''){
+				this.innerText='请输入文章正文'
+			}
+		})
+
+		// $("button").click(function(){
+	    //     console.log($('.summernote').summernote('code'))
+	    //     $(".test").html($('.summernote').summernote('code'))
+	    // })
+	     
+	     
+	     
+	    $("#show").click(function(){
+	    	$("#file").click();
+	    })
+
+	    
+
+	})
+
+</script>
+
+</body>
+</html>

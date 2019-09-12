@@ -1,0 +1,86 @@
+body { 
+	background: url("../images/body.png"); 
+	background-position: center center; 
+	background-repeat: no-repeat; 
+	background-attachment: fixed; 
+	background-size: cover; 
+	overflow:hidden; 
+	height: 100vh;
+}
+#app{
+	padding: 2.933333rem 0.4rem 0rem 0.4rem;
+}
+.main{
+	width: 100%;
+}
+input{
+	margin-left: 0.3rem;
+	font-size: 0.4rem;
+	border: 0px;
+	outline: 0px;
+	/*color: #999999;*/
+}
+ul{
+	border-radius: 0.4rem;
+	background: #fff;
+	overflow: hidden;
+}
+#app ul li{
+	width: 9.333333rem;
+	height: 1.55rem;
+	display: -webkit-flex; /* Safari */
+  display: flex;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  align-items: center;
+  -webkit-align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid #eeeeee;
+
+}
+li input{
+	width: 9rem;
+	height: 1.4rem;
+}
+li[code]{
+	display: -webkit-flex; /* Safari */
+  display: flex;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  align-items: center;
+  -webkit-align-items: center;
+}
+li[code] input{
+	width: 6rem;
+	height: 1.4rem;
+}
+li[code] span{
+	width: 2.4rem;
+	height: 1rem;
+	background: #71dbb7;
+	color: #fff;
+	text-align: center;
+	line-height: 1rem;
+	margin-left: 0.266667rem;
+}
+li[code]{
+	border-bottom: 0px;
+}
+
+button{
+	width: 9.066667rem;
+	height: 1.28rem;
+	background: linear-gradient(to bottom left, #30c4ed , #208eba); /* 标准的语法 */
+	border-radius: 0.4rem;
+	margin-top: 1.306667rem;
+	color: #fff;
+	font-size: 0.4rem;
+	letter-spacing: 3px;
+}
+
+
+
+
+.my_alert_m{
+	margin-top: 6.5rem;
+}

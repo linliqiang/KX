@@ -1,0 +1,339 @@
+----------------------------------------#淘宝移动端fiexible适配----------------------------------------*/
+@charset "utf-8";
+html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+/*html,body{font-family:sans-serif}*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}
+input,select,textarea{font-size:100%}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+abbr,acronym{border:0;font-variant:normal}
+del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}
+q:before,q:after{content:''}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+a:hover{text-decoration:underline}
+ins,a{text-decoration:none}
+/*----------------------------------------淘宝移动端fiexible适配#----------------------------------------*/
+
+
+
+
+
+/*----------------------------------------#移动端样式，兼容重置----------------------------------------*/
+*{
+    box-sizing: border-box;
+}
+li {  list-style: none;  }
+
+/*链接、已访问过、鼠标悬停、点下鼠标，LVHA*/
+a:link, a:visited {  text-decoration: none;color: #fff;border: none;  }
+a:hover, a:active {  text-decoration: none;color: #fff;border: none;  }
+/*a:link, a:visited {  text-decoration: none;border: none;  }*/
+/*a:hover, a:active {  text-decoration: none;border: none;  }*/
+
+/*苹果机上多行文本框和输入框有默认阴影*/
+input[type="text"]{  box-shadow:0px 0px 0px rgba(0,0,0,0); -webkit-appearance: none;  }
+textarea{  box-shadow:0px 0px 0px rgba(0,0,0,0); -webkit-appearance: none;  }
+
+input{ outline: 0px; }
+/*textarea{ outline: 0px; }*/
+
+button{  border:0px; outline: 0px;  }
+
+/*调整placeholder样式*/
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {  color: #666666;  } 
+input:-moz-placeholder, textarea:-moz-placeholder {  color: #666666;  } 
+input::-moz-placeholder, textarea::-moz-placeholder {  color: #666666;  } 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {  color: #666666;  }
+/*----------------------------------------移动端样式，兼容重置#----------------------------------------*/
+
+textarea{
+	color: #8f8f94 !important;
+}
+
+
+
+/* 点击搜索框获取焦点 placeholder消失-开始 */
+/* WebKit browsers */
+textarea:focus::-webkit-input-placeholder {
+color: transparent;
+/* transparent是全透明黑色(black)的速记法，即一个类似rgba(0,0,0,0)这样的值 */
+}
+/* Mozilla Firefox 4 to 18 */
+textarea:focus:-moz-placeholder {
+color: transparent;
+}
+/* Mozilla Firefox 19+ */
+textarea:focus::-moz-placeholder {
+color: transparent;
+}
+/* Internet Explorer 10+ */
+textarea:focus:-ms-input-placeholder {
+color: transparent;
+}
+/* 点击搜索框获取焦点 placeholder消失-结束 */
+
+
+
+
+
+/*----------------------------------------#class样式----------------------------------------*/
+.ex-00{  position: fixed;width: 100%;height: 100%;top: 0;left:0;background: #000;opacity: 0.4;z-index: 9999;  }
+.ex-0{  pointer-events: none； }
+.ex-1{  overflow:hidden; white-space:nowrap;text-overflow:ellipsis;  }
+.ex-2{  overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;  }
+.ex-3{ padding: 15px 0px; line-height: 1; }/*文字在安卓机上垂直不居中,不设置高，用上下padding撑开，line-height给1*/
+.ex-4{ min-height: 100vh; }/*移动端最小高度为屏幕高度*/
+/*----------------------------------------class样式#----------------------------------------*/
+
+
+
+.bg{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left:0;
+	background: #000;
+	opacity: 0.4;
+	z-index: 9999;
+}
+
+
+/*#注册成功弹框*/
+.alertReg{
+	width: 7.066667rem;
+	height: 3.173333rem;
+	position: fixed;
+	top: 50%;
+	left:50%;
+	margin-top: -1.58rem;
+	margin-left: -3.5rem;
+	background: #fff;
+	z-index: 99999;
+	border-radius: 10px;
+	color: #000;
+	display: flex;
+	display: -webkit-flex;
+	align-items:center;
+	-webkit-align-items:center;
+	justify-content: center;
+	-webkit-justify-content: center;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+}
+.alertReg p{
+	width: 100%;
+	height: 1.893333rem;
+	background:#fff;
+	text-align: center;
+	line-height: 1.893333rem;
+	font-size: 18px;
+}
+.alertReg a{
+	width: 100%;
+	height: 1.28rem;
+	background:#ccc;
+	text-align: center;
+	line-height: 1.28rem;
+	font-size: 15px;
+	background: #f2f1f1;
+	color: #a72750;
+}
+/*注册成功弹框#*/
+
+/*#修改成功弹框*/
+.alertMod{
+	width: 7.066667rem;
+	height: 3.173333rem;
+	position: fixed;
+	top: 50%;
+	left:50%;
+	margin-top: -1.58rem;
+	margin-left: -3.5rem;
+	background: #fff;
+	z-index: 99999;
+	border-radius: 10px;
+	color: #000;
+	display: flex;
+	display: -webkit-flex;
+	align-items:center;
+	-webkit-align-items:center;
+	justify-content: center;
+	-webkit-justify-content: center;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+}
+.alertMod p{
+	width: 100%;
+	height: 1.893333rem;
+	background:#fff;
+	text-align: center;
+	line-height: 1.893333rem;
+	font-size: 18px;
+}
+.alertMod a{
+	width: 100%;
+	height: 1.28rem;
+	background:#ccc;
+	text-align: center;
+	line-height: 1.28rem;
+	font-size: 15px;
+	background: #f2f1f1;
+	color: #a72750;
+}
+/*修改成功弹框#
+
+
+/*#查看大图弹框*/
+.alertBigImg{
+	position: fixed;
+	z-index: 99999;
+	top: 0;
+	left:0;
+	width: 100%;
+	background: rgba(0,0,0,0.4);
+	height: 100%;
+	display: flex;
+	display: -webkit-flex;
+	align-items:center;
+	-webkit-align-items:center;
+	justify-content: center;
+	-webkit-justify-content: center;
+}
+.alertBigImg img{
+	max-width: 90%;
+	max-height: 90%;
+
+}
+/*查看大图弹框#*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.padMsgBox .upload{
+	width: 8.0rem;
+	/*height: 1.866667rem;*/
+	padding: 0px 0px 0.2rem 0px;
+	border: 0px solid #dedddd;
+	margin-top: 0.2rem;
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+  	flex-wrap: wrap;
+  	-webkit-flex-wrap: wrap;
+}
+
+.upload .item{
+	width: 1.84rem;
+	height: 1.333333rem;
+	margin-top: 0.5rem;
+	border: 1px solid #b3b2b2;
+
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+	align-items: center;
+    -webkit-align-items: center;
+
+    padding: 1px;
+
+
+
+}
+.upload .item:nth-child(3n-1){
+	margin-left: 1.1rem;
+	margin-right: 1.1rem;
+}
+.upload .itemimg{
+	width: 100%;
+	height: 100%;
+}
+
+
+#uploadBut{
+	position: relative;
+	width: 1.84rem;
+	height: 1.333333rem;
+	border:0px;
+}
+#uploadBut img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8;
+}
+#uploadBut input{
+	width: 1.84rem;
+	height: 1.333333rem;
+	position: absolute;
+	top: 0;
+	left:0;
+	z-index: 9;
+	opacity: 0;
+}
+
+.padMsgBox textarea{
+	width: 8.0rem;
+	min-height: 2.453333rem;
+	border: 1px solid #b3b2b2;
+	border-radius: 0.2rem;
+	margin-top: 0.533333rem;
+	padding: 0.24rem;
+	font-size: 15px;
+}
+
+.fillBut{
+	width: 8.4rem;
+	height: 1.413333rem;
+	background: #a72750;
+	border-radius: 0.3rem;
+	text-align: center;
+	line-height: 1.413333rem;
+	color: #fff;
+	font-size: 0.453333rem;
+	letter-spacing: 0.1rem;
+	margin-top: 0.7rem;
+}
+
+
+
+
+
+
+
+/*单选框样式1*/
+.radio-style{
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    position: relative;
+    z-index: 99;
+    opacity: 0;
+    background: pink;
+    font-size: 16px;
+}
+.radio-style-img {   
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    position: relative;
+    margin-left: -0.5rem;
+    z-index: 98; 
+    /*border: 1px solid red; */
+} 

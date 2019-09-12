@@ -1,0 +1,143 @@
+.main-content{
+	width: 1182px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.msgNav{
+	width: 170px;
+	height: 92px;
+}
+.msgNav li{
+	width: 170px;
+	height: 46px;
+	display: flex;
+	align-items:center;
+	border:1px solid #ccc;
+	font-size: 14px;
+	padding-left: 20px;
+	cursor: pointer;
+}
+.msgNav li:nth-child(2){
+	border-top: 0px;
+}
+.msgNav li:nth-child(1) i{
+	font-size: 20px;
+}
+.msgNav li:nth-child(2) i{
+	font-size: 24px;
+}
+.msgNav li span:nth-child(2){
+	margin:0px 10px;
+}
+.msgNav li span:nth-child(3){
+	display: inline-block;
+	padding: 1px 6px;
+	background: red;
+	border-radius: 50%;
+	color: #fff;
+}
+
+.msgNav .msgSign i{
+	color: #fa8821;
+}
+.msgNav .msgSign span:nth-child(2){
+	color: #fa8821;
+}
+
+
+.msgRight{
+	width: 910px;
+}
+.msgRight>div{
+	width: 100%;
+	height: 56px;
+	display: flex;
+	justify-content: flex-start;
+	align-items:center;
+	border-bottom: 1px solid #ccc;
+	padding-right: 30px;
+}
+.msgRight>div span{
+	font-size: 14px;
+	color: #848484;
+}
+.msgRight>div img{
+	margin-right: 10px;
+}
+.msgRight>div>p{
+	font-size: 14px;
+	width: 716px;
+	overflow:hidden; 
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.msgRight>div>p em{
+	font-style: normal;
+	color: #848484;
+}
+.msgRight>div>p a{
+	color: #fa8821;
+}
+.msgRight>div>span:nth-child(4){
+	margin-left: 30px;
+}
+
+
+
+
+.msgRight2{
+	width: 910px;
+}
+.msgRight2>div{
+	width: 100%;
+	/*height: 56px;*/
+	min-height: 56px;
+	display: flex;
+	justify-content: flex-start;
+	align-items:flex-start;
+	border-bottom: 1px solid #ccc;
+	padding: 20px 30px 20px 0px;
+}
+.msgRight2>div:hover p span{
+	color: #fa8821;
+}
+.msgRight2>div:hover i{
+	color: #fa8821;
+}
+.msgRight2>div span{
+	font-size: 14px;
+	color: #848484;
+}
+.msgRight2>div img{
+	margin-right: 10px;
+	margin-top: 5px;
+}
+.msgRight2>div>p{
+	font-size: 14px;
+	width: 656px;
+	margin-right: 40px; 
+	color: #848484;
+	line-height: 19px;
+	cursor: pointer;
+}
+.msgRight2>div>p>span{
+	display: inline-block;
+	min-width: 656px;
+}
+.msgRight2>div span{
+	margin-top: 0px;
+}
+.msgRight2 i{
+	margin-left: 20px;
+	display: none;
+	cursor: pointer;
+}
+.msgRight2 .pSign{
+	overflow:hidden; 
+    white-space:nowrap;
+    text-overflow:ellipsis; 
+}
+
+
+

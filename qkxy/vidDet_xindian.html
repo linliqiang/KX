@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>视频</title>
+	<link rel="stylesheet" href="font/iconfont.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="video/css/video-js.min.css">
+	<link rel="stylesheet" href="css/vidDet_xindian.css">
+</head>
+<body>
+<div id="app" v-cloak>
+	<div id="header" class="header">
+		<div class="headerTop">
+
+			<a href="index.html"><img src="img/logo.png" class="logo" height="74" width="193" alt="" /></a>
+			
+			<a href="search.html"><input type="text" class="search" placeholder="请输入要搜索的关键词"></a>
+			
+			<img src="img/searchLogo.png" class="searchLogo" height="21" width="21" alt="" />
+			
+		</div>
+		<div id="navBox" class="navBox">
+			<div class="navB">
+				<ul class="nav clearfix">
+					<li><a href="index.html">首页</a></li>
+					<li><a :class="{ navSign: navSign==2}" href="vid.html">视频</a></li>
+					<li><a href="article.html">文章</a></li>
+					<li><a href="play.html">直播</a></li>
+					<li><a href="case.html">病例</a></li>
+					<li><a href="expert.html">专家</a></li>
+					<li><a href="quesition.html">问答</a></li>
+				</ul>
+				<div class="logReg" v-if="userMsg == false">
+					<a href="login.html">登录</a>
+					<span>|</span>
+					<a href="regPhone.html">注册</a>
+				</div>
+				<div class="logUser" v-if="userMsg">
+					<div>
+						<a href="msg.html"><img src="img/sm.png" alt=""></a>
+						<span>3</span>
+						<div class="UserHead">
+							<a href="user.html"><img src="img/zji.jpg" alt=""></a>
+						</div>
+					</div>
+					<ul>
+						<li @click="touser(1)"><i class="iconfont icon-shoucang"></i>我的收藏</li>
+						<li @click="touser(2)"><i class="iconfont icon-fabuxiangmu"></i>我的发布</li>
+						<li @click="touser(3)"><i class="iconfont icon-guanzhu"></i>我的关注</li>
+						<li @click="touser(4)"><i class="iconfont icon-shezhi"></i>个人设置</li>
+						<li @click="touser(5)"><i class="iconfont icon-Opinion"></i>意见反馈</li>
+						<li @click="touser(6)"><i class="iconfont icon-dingdan"></i>订单       </li>
+						<li @click="touser(7)"><i class="iconfont icon-yaoqingma"></i>邀请码    </li>
+						<li @click="signOut()"><i class="iconfont icon-tuichu"></i>退出       </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="main" class="main">
+		<div class="banBoxf">
+			<!-- 播放视频 -->
+			<div class="banBox">
+				<div class="ban">
+					<video  style="display:none" ref="vid" id="vid" controlsList="nodownload" controls  width="787" height="443" poster="video/m.jpg" >
+				        <source src="" type="video/mp4">
+				    </video>
+				    <img src="img/timg.jpg" alt="">
+				</div>
+			    <div class="banBox-right">
+			    	<p>第一期标题第一期标题第一期标题第一期标题第一期标题第一期标题第一期标题第一期标题第一期标题</p>
+			    	<div class="price">
+			    		<span>第四期</span>
+			    		<em class="price1" v-if="videoJurisdiction == 0">免费</em>
+			    		<em class="price2" v-if="videoJurisdiction == 1">￥19.9</em>
+			    		<em class="price3" v-if="videoJurisdiction == 2">￥19.9</em>
+			    	</div>
+			    	<button @click="quanping" v-if="videoJurisdiction == 1">立即购买</button>
+			    </div>
+			</div>
+		</div>
+		<div class="box">
+			<div class="box-left">
+				<ul class="boxNav">
+					<li @click="boxNavt(1)" :class="{liSign:boxNavSign == 1}">介绍</li>
+					<li @click="boxNavt(2)" :class="{liSign:boxNavSign == 2}">目录</li>
+					<li @click="boxNavt(3)" :class="{liSign:boxNavSign == 3}">评论</li>
+				</ul>
+				<div class="msg" v-show=" boxNavSign == 1 ">
+					<p>一位视力正在衰退的老绅士住进了一家旅馆的客房。他双手各拿一瓶酒。在墙上有只苍蝇，他误以为是枚钉子。他把两只瓶子朝上一挂，瓶子掉下来摔碎了，酒洒了一地。一个女服务员发		   现发生的事情以后，对他深表同情，决定帮他个忙。
+				　　		于是，第二天早上他到楼顶花园散步时，她把一枚钉子钉在了苍蝇停过的地方。
+				　　		这里，老人回到了房里。倒洒的酒味让他想起了那件事。他抬头往墙上一看，苍蝇又停在了那儿!他轻手轻脚地走近，使尽全力拍了一掌。听到一声大叫，好心的女服务员冲进房来。让她大为吃惊的是，可怜的老头正坐在地板上，牙关紧咬，右手滴血不止。
+						<br/>
+						约翰逊先生从前未乘过飞机，他读过许多关于飞行事故的报道。所以，有一天一位朋友邀请他乘自己的小飞机飞行时，约翰逊先生非常担心，不敢接受。不过，由于朋友不断保证说飞行是很安全的，约翰逊先生终于被说服了，登上了飞机。
+　　他的朋友启动引擎开始在机场跑道上滑行。约翰逊先生听说飞行中最危险的是起飞与降落，所以他吓得紧闭双眼。
+　　过了一两分钟，他睁开双眼朝窗外望去，接着对朋友说道：“看下面那些人，他们看起来就象蚂蚁一样小，是不是？”
+　　“那些就是蚂蚁，”他的朋友答道，“我们还在地面上。”
+						<img src="img/timg.jpg" alt="">
+						<br/>
+						一个冬天的早晨，一名雇员解释他为什么迟到了四十五分钟才起来上班。“外面太滑了，我每向前迈一步，就要向后退两步。”
+　　老板狐疑地看着他。“噢，是吗？那你是怎样到这里来的？”
+　　“后来我决定放弃，”他说，“然后我就往家里走。”
+					</p>
+				</div>
+				<div class="catalog" v-show=" boxNavSign == 2 ">
+					<ul>
+						
+						<li v-for="(item,index) in curriculum" @click="videoPlay(item.videoSrc,item.jurisdiction,index)" :class="{videoSignLink:videoSign==index}">
+							<i class="iconfont icon-bofang"></i>
+							<span class="catalogTitle">{{item.title}}</span>
+							<span class="catalogLook">
+								<i class="iconfont icon-suo" v-if="item.jurisdiction==0"></i>
+								<h6 v-if="item.jurisdiction==100">播放</h6>
+								<h6 v-if="item.jurisdiction==10">可试看</h6>
+							</span>
+						</li>
+					</ul>
+				</div>
+				<div class="pinglun" v-show=" boxNavSign == 3 ">
+					<!-- #评论区域 -->
+					<div class="comment">
+						<p class="comment-f1">
+							<span>发布评论</span>
+						</p>
+						<textarea class="textarea1" id="mainarea" name="mainarea" @click="isToLogin" placeholder="写下你的评论..."></textarea>
+						<div class="comment-f3">
+							<div><i class="iconfont icon-xiaolian yjxiao"></i></div>
+							<button class="yijiBut" @click="huifu1OK">发送</button>
+						</div>
+						<div class="comment-main">
+							<div  class="comment-item">
+								<!-- 一级评论 -->
+								<div class="my-rep" v-for="(item,index) in commentData.data">
+												<!-- 专家或医生标志 -->
+												<div v-if="item.formType" class="csign">
+													<img v-if="item.formType=='doctor'" src="img/docG.png" alt="">
+													<img v-if="item.formType=='expert'" src="img/zjg.png" alt="">
+												</div>
+												<!-- 我的评论 -->
+												<div class="my-rep1">
+													<div>
+														<a v-if="item.formType=='doctor'" href="dorDet.html">
+															<img :src="item.img" alt="">
+														</a>
+														<a v-if="item.formType=='expert'" href="expDet.html">
+															<img :src="item.img" alt="">
+														</a>
+														<a v-if="item.formType=='ordinary'" href="javascript:void(0)">
+															<img :src="item.img" alt="">
+														</a>
+														
+													</div>
+													<div>
+														<p class="peo">{{item.name}}</p>
+														<p>{{item.time}}</p>
+													</div>
+												</div>
+												<div class="my-rep2 rep-text" v-html="replace(item.msg)"></div>
+												<div class="my-rep3">
+													<div @click="dianzan($event,index)"><i class="iconfont icon-zan"></i><span>{{item.zan}}</span></div>
+													<div @click="huifu2(index)">
+														<i class="iconfont icon-pinglun"></i>
+														<button>评论</button>
+													</div>
+													<button class="de-rep1" @click=delCom(index)>删除</button>
+												</div>
+
+												<!-- 二级评论容器 -->
+												<div class="other-rep">
+
+													<!-- 二级评论-每条 -->
+													<div class="other-rep-item" v-for="(item2,index2) in item.otherData.slice(0,item.n)">
+														<div class="rep-text">
+															<span class="peo">{{item2.formName}}</span>
+															<span v-show="item2.toName">回复</span>
+															<span v-show="item2.toName" class="peo">{{item2.toName}}</span>
+															<span>：</span>
+															<span v-html="replace(item2.msg)"></span>
+														</div>
+														<div>
+															<div>{{item2.time}}</div>  
+															<div class="repBut2"  @click="huifu2(index,item2.formName,index2)">
+																<i class="iconfont icon-pinglun"></i>
+																<button>回复</button>
+															</div> 
+															<button class="de-rep2" @click=delCom(index,index2)>删除</button>
+														</div>
+						
+													</div>
+
+													<!-- 展开收起 -->
+													<p class="pinlunsz">
+														<button  @click="showAll(index)" v-show=" item.otherData.length > 3 ">{{item.ntext}}</button>
+													</p>
+
+												</div>
+
+
+												<!-- 二级评论容器 -->
+												<div class="rep-textarea1" v-show="item.repBoxShow">
+													<textarea class="textarea1" :id="forId(index)" v-html="item.repBoxMsg"></textarea>
+													<div>
+														<i class="iconfont icon-xiaolian erjixiao"></i>
+														<button @click="huifu2qu(index)">取消</button>
+														<button @click="huifu2OK(index)">发送</button>
+													</div>
+												</div>
+
+											</div>
+
+											
+
+										</div>
+
+									</div>
+
+					</div>
+					<!-- 评论区域# -->
+				</div>
+			</div>
+			<div class="box-right">
+				<div class="side-bar">
+					<p class="left-title">
+						<span>热门视频</span>
+					</p>
+					<div class="side-item" v-for="(item,index) in 5">
+						<img src="img/yuandian_15.png" alt="">
+						<p class="TOver cp"><a href="vidDet.html">新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer" class="footer">
+		<div class="footerB">
+			<div class="firendLink">
+				<p>友情链接</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">国家卫计委</a>
+					<a href="http://www.baidu.com">世界卫生组织</a>
+					<a href="http://www.baidu.com">国家食品药品监督管理局</a>
+					<a href="http://www.baidu.com">国家中医药管理局</a>
+					<a href="http://www.baidu.com">中国医疗</a>
+					<a href="http://www.baidu.com">新浪健康</a>
+					<a href="http://www.baidu.com">搜狐健康</a>
+					<a href="http://www.baidu.com">凤凰健康</a>
+					<a href="http://www.baidu.com">百姓健康</a>
+					<a href="http://www.baidu.com">爱爱医</a>
+					<a href="http://www.baidu.com">网易健康</a>
+					<a href="http://www.baidu.com">MedSci</a>
+					<a href="http://www.baidu.com">医学论坛网</a>
+					<a href="http://www.baidu.com">华西医院</a>
+					<a href="http://www.baidu.com">北京协和医院</a>
+					<a href="http://www.baidu.com">北京朝阳医院</a>
+					<a href="http://www.baidu.com">医保卡余额查询</a>
+				</div>
+				<p>合作媒体</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">人民日报</a>
+					<a href="http://www.baidu.com">北京新闻网</a>
+					<a href="http://www.baidu.com">北京周报</a>
+				</div>
+			</div>
+			<div class="erweima">
+				<div>
+					<span>关注微信</span>
+					<img src="img/erweima2.png" width="112" height="98" alt="二维码" />
+				</div>
+				<p>
+					<a href="about.html">关于我们</a>
+					<span>|</span>
+					<a href="contact.html">联系我们</a>
+					<span>|</span>
+					<a @click="tofeed">意见反馈</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="qqFace/js/jquery.qqFace.js"></script>
+<script src="js/main.js"></script>
+<script src="video/js/video.min.js"></script>
+<script src="js/vidDet_xindian.js"></script>
+</body>
+</html>

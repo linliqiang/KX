@@ -1,0 +1,122 @@
+html{
+	background: #e0e1e2;
+}
+body{
+	background: #e0e1e2;
+	line-height: 18px;
+}
+#app{
+	height: 100vh;
+	background: #e0e1e2;
+	padding: 0.16rem;
+}
+.main{
+	width: 100%;
+	height: calc(100vh - 0.32rem);
+	background: #fff;
+}
+.title{
+	width: 100%;
+	height: 1.5rem;
+	background: pink;
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+  	align-items:center;
+  	-webkit-align-items:center;
+  	background: #fff;
+}
+.title a{
+	flex:1;
+	-webkit-flex:1;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	text-align: center;
+	/*padding:0.48rem 0rem;*/
+}
+.title a.titleSign{
+	color: #fea31a;
+	border-bottom: 2px solid #fea31a;
+}
+.title span{
+	font-size: 0.4rem;
+}
+.listBox{
+	margin-top: 0.4rem;
+}
+.itemBox{
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	background: #e0e1e2;
+}
+.itemBox li{
+	width: 100%;
+	height: 2.6rem;
+	margin-bottom: 0.16rem;
+	background: #fff;
+	
+}
+.itemBox li a{
+	width: 100%;
+	height: 100%;
+	padding: 0.2rem 0.16rem;
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+  	flex-direction: row;
+	-webkit-flex-direction: row;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+}
+.itemBox li a img{
+	width: 3.466667rem;
+	height: 100%;
+}
+.ibright{
+	flex:1;
+	/*height: 2.493333rem;*/
+	padding: 0rem 0.1rem 0.16rem 0.293333rem;
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+  	flex-direction: column;
+	-webkit-flex-direction: column;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+}
+.ibright p{
+	margin-bottom: 0px;
+}
+.ibright p span{
+	font-size: 0.36rem;
+}
+.ibright p span:nth-child(1){
+	width: 3.2rem;
+	overflow:hidden; 
+    white-space:nowrap;
+    text-overflow:ellipsis; 
+}
+.ibright1{
+	color: #000;
+	font-size: 0.4rem;
+	line-height: 0.6rem;
+	overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.ibright2{
+	font-size: 12px;
+	color: #999999;
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+  	flex-direction: row;
+	-webkit-flex-direction: row;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+}
+.scroll-list-wrap{
+	position: relative;
+	height: calc(100% - 1.5rem);
+	border-top:0.16rem solid #e0e1e2;
+}
+

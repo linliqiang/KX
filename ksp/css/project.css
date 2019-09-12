@@ -1,0 +1,66 @@
+html{
+	background: #fff;
+}
+body{
+	min-height: 100vh;
+	background: #fff;
+}
+.project{
+	width: 10rem;
+	background:#ccc;
+	min-height: 100vh;
+	background: #a72750;
+	padding: 2.266667rem 0px;
+}
+.projectBox{
+	/*min-height: 7rem;*/
+	width: 9.2rem;
+	/*height: 10.0rem;*/
+	background: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3rem;
+	/*padding-top: 0.933333rem;*/
+	display: -webkit-flex;
+	display: flex;
+	flex-direction:column; 
+	-webkit-flex-direction:column;
+	align-items:center; 
+	-webkit-align-items:center;
+	padding: 0.56rem 0.533333rem;
+}
+.projectBox h4{
+	align-self: flex-start;
+	-webkit-align-self: flex-start;
+	font-size: 0.373333rem;
+	font-weight: bold;
+	font-size: 0.4rem;
+}
+.projectBox p{
+	width: 100%;
+	margin-top: 0.56rem;
+	min-height: 4rem;
+}
+.projectBox a{
+	width: 5.333333rem;
+	height: 1.226667rem;
+	background: #a72750;
+	color: #fff;
+	text-align: center;
+	line-height: 1.226667rem;
+	margin-top: 0.56rem;
+	font-size: 0.373333rem;
+	letter-spacing: 2px;
+	border-radius: 0.2rem;
+}
+
+.mui-bar-nav{
+	background: #333333;
+	box-shadow: 0px 0px 0px 0px;
+}
+.mui-bar-nav a{
+	color: #fff;
+}
+.mui-bar-nav h1{
+	color: #fff;
+}

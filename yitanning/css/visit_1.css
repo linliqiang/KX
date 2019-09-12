@@ -1,0 +1,36 @@
+.visit{
+	font-size: 14px;
+	background: rgb(250,249,249);
+	overflow: hidden;
+	border: #cccccc;
+}
+.visit-top{
+	padding-bottom: 14px;
+	overflow: hidden;
+}
+.visit-top li{
+	margin-top: 14px;
+	margin-left: 14px;
+	padding: 5px 0px 5px 8px;
+	float: left;
+	background: rgb(71,150,241);
+	color: #ffffff;
+	border-radius: 8px;
+}
+.visit-top span{
+	display: inline-block;
+	padding: 4px 0px 4px 8px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	background: rgb(237,238,241);
+	color: rgb(71,150,241);
+	margin-left: 8px;
+}
+
+.visit-body{
+	width: 1090px;
+	font-size: 12px;
+	border: #cccccc;
+	margin-left: 10px;
+	background: pink;
+}

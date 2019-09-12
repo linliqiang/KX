@@ -1,0 +1,149 @@
+html{
+	background: #fff;
+}
+body{
+	min-height: 100vh;
+	background: #fff;
+}
+
+/*#重置mui样式*/
+p{
+	margin-bottom: 0px;
+}
+/*重置mui样式#*/
+a:link, a:visited {  text-decoration: none;color: #fff;border: none;  }
+a:hover, a:active {  text-decoration: none;color: #fff;border: none;  }
+#app{
+	padding-top: 1.6rem;
+	padding-bottom: 0.586667rem;
+}
+#app textarea{
+	color: #000 !important;
+}
+.mui-bar-nav{
+	height: 1.2rem;
+	background: #333333;
+	box-shadow: 0px 0px 0px 0px;
+}
+.mui-bar-nav a,.mui-bar-nav h1{
+	color: #fff;
+}
+.mui-bar-nav h1{
+	letter-spacing: 1px;
+}
+.mui-bar-nav .mui-pull-right{
+	font-size: 15px;
+	height: 100%;
+	padding-top: 15px;
+}
+.padMsg{
+	width: 10rem;
+	background:#ccc;
+	min-height: 100vh;
+	background: #a72750;
+	padding-top: 0.8rem;
+}
+
+.title{
+	width: 9.2rem;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 0.466667rem;
+	display: -webkit-flex;
+	display: flex;
+	align-items:center;
+	-webkit-align-items:center;
+}
+.title img{
+	width: 0.7rem;
+	height: 0.6rem;
+	align-self: flex-start;
+	-webkit-align-self: flex-start;
+	margin-right: 0.2rem;
+}
+.title span{
+	color: #fff;
+	padding-top: 0.05rem;
+}
+
+.padMsgBox{
+	width: 9.2rem;
+	/*height: 10.0rem;*/
+	background: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0.4rem;
+	border-radius: 0.3rem;
+	padding-bottom: 0.6rem;
+	/*padding-top: 0.933333rem;*/
+	display: -webkit-flex;
+	display: flex;
+	flex-direction:column; 
+	-webkit-flex-direction:column;
+	align-items:center; 
+	-webkit-align-items:center;
+}
+
+.padMsgBox textarea{
+	width: 8.0rem;
+	min-height: 2.453333rem;
+	border: 1px solid #b3b2b2;
+	border-radius: 0.2rem;
+	margin-top: 0.533333rem;
+	padding: 0.24rem;
+	font-size: 15px;
+}
+
+.padMsgBox .upload{
+	width: 8.0rem;
+	/*height: 1.866667rem;*/
+	padding: 0px 0px 0.5rem 0px;
+	border: 0px solid #dedddd;
+	margin-top: 0.533333rem;
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+  	flex-wrap: wrap;
+  	-webkit-flex-wrap: wrap;
+}
+
+.item{
+	width: 1.84rem;
+	height: 1.333333rem;
+	margin-top: 0.5rem;
+}
+.item:nth-child(3n-1){
+	margin-left: 1.1rem;
+	margin-right: 1.1rem;
+}
+.itemimg{
+	width: 1.84rem;
+	height: 1.333333rem;
+}
+
+
+#uploadBut{
+	position: relative;
+	width: 1.84rem;
+	height: 1.333333rem;
+}
+#uploadBut img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8;
+}
+
+
+
+.fillBut{
+	width: 8.4rem;
+	height: 1.413333rem;
+	background: #a72750;
+	border-radius: 0.3rem;
+	text-align: center;
+	line-height: 1.413333rem;
+	color: #fff;
+	font-size: 0.453333rem;
+	letter-spacing: 0.1rem;
+	margin-top: 1rem;
+}

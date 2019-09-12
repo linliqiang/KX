@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+</head>
+<body>
+
+<div class="beSelected" id="beSelected">
+	<p>入选标准</p>
+	<ul>
+		<li>
+			<span>项目</span>
+			<span>是</span>
+			<span>否</span>
+		</li>
+		<li>
+			<span>1、年龄18~65岁，男女不限，住院或门诊患者</span>
+			<span><input type="radio" name="beSelectedRadio1" id="beSelectedAgeOK" alt="年龄" value="1"></span>
+			<span><input type="radio" name="beSelectedRadio1" id="beSelectedAgeNO" alt="年龄" value="0"></span>
+		</li>
+		<li>
+			<span>2、医院焦虑抑郁量表（HAD）焦虑因子和/或抑郁因子评分≥8分</span>
+			<span><input type="radio" name="beSelectedRadio2" alt="焦虑分子总分" value="1"></span>
+			<span><input type="radio" name="beSelectedRadio2" alt="焦虑分子总分" value="0"></span>
+		</li>
+		<li>
+			<span>3、过去至少一个月，每晚睡眠时间≤6.5和/或每晚睡眠潜伏期＞30min，每周出现三天及以上</span>
+			<span><input type="radio" name="beSelectedRadio3" alt="睡眠情况" value="1"></span>
+			<span><input type="radio" name="beSelectedRadio3" alt="睡眠情况" value="0"></span>
+		</li>
+		<li>
+			<span>4、入组前7天内没有使用过失眠治疗药物</span>
+			<span><input type="radio" name="beSelectedRadio4" alt="是否使用过失眠治疗药物" value="1"></span>
+			<span><input type="radio" name="beSelectedRadio4" alt="是否使用过失眠治疗药物" value="0"></span>
+		</li>
+		<li>
+			<span>需所有问题回答“是”，方可进入调研</span>
+		</li>
+	</ul>
+
+	<div class="beSelected-save">
+		<button onclick="beSelectedSave1()">保存</button>
+	</div>
+
+</div>
+
+<script src="js/beSelected.js"></script>
+</body>
+</html>

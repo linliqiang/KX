@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+  <title>详情</title>
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/cube-ui/lib/cube.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/details.css">
+</head>
+<body>
+  <div id="app" v-cloak>
+    
+		<div class="main">
+
+              <div class="scroll-list-wrap" >
+                  <cube-scroll
+                    ref="scroll"
+                    :data="dataUser"
+                    :options="options"
+                    @pulling-up="onPullingUp">
+                    <ul class="msg">
+                      
+                      <li class="msgtb">
+                         
+                                  <div class="f1">
+                                      <video
+                                        x5-playsinline="" 
+                                        preload="auto" 
+                                        webkit-playsinline='true' 
+                                        playsinline='true'
+                                        id="video"
+                                        controls
+                                        poster="images/m.png">
+                                        <source src="video/qwe.mp4" type="video/mp4">
+                                        <source src="video/qwe.mp4" type="video/mp4">
+                                        <source src="video/qwe.ogg" type="video/ogg">
+                                        <source src="video/qwe.webm" type="video/webm">
+                                      </video>
+                                    </div>
+
+                                    <div class="f2">
+                                      <h1>医疗网是最大的中文医疗黄页网站</h1>
+                                    </div>
+
+
+                                    <div class="f32">
+                                      <span>张海花</span>
+                                      <span>成都华西医院</span>
+                                      <span>2019-11-10</span>
+                                    </div>
+                                    
+                                    <div class="f4">
+                                      <button @click="signt(1)" :class="{bsign1:sign==1}"><em></em><span>视频简介</span></button>
+                                      <button @click="signt(2)" :class="{bsign2:sign==2}"><em></em><span>留言</span></button>
+                                  </div>
+                     
+                      </li>
+
+                      <li v-show="sign==1" :class="{fbody:sign==1}">
+                          <!-- 简介 -->
+                          <div class="int">
+
+                            <h2 style="font-size:0.4rem;padding: 0.5rem 0rem;">专家简介</h2>
+
+                            <div>
+                            <img src="images/ttt.png" alt="">
+
+                                                        北京大学人民医院血液病研究所所长，血液病专家， 博士生导师、教授
+                          国家基金委创新群体，科技部、教育部创新团队带头人
+                          国家重点学科、国家临床重点专科负责人
+                          亚太血液联盟常委会主任
+                          第四届中国医师协会血液科医师分会会长
+                          第九届中华医学会血液学分会主任委员
+                          美国血液学会国际常委会委员
+                          国际白血病比较研究组织（IACRLR）全球委员会委员
+                           
+                          主持“国家重点研发计划”“863”项目、国自然“杰青”、重点项目等国家课题；以通讯或第一作者发表SCI 论文380余篇，包括New Engl J Med、Lancet Oncol、J Clin Oncol、Blood、Leukemia、BBMT和BMT等，入选2014-2017年中国高被引学者榜单（医学）；移植领域的相关成果被美国、英国骨髓移植协会、美国国家癌症研究所等共28项国际指南或共识引用；排名第一获国家科技进步二等奖2项、省部级一等奖4项、吴阶平医药创新奖。
+                           
+                          任《中华血液学杂志》总编辑、British Journal of Haematology副主编，Journal of Hematology and Oncology副主编, Chin Med J （Engl）副主编, Annals of Hematology高级编委；Blood，BMT及Blood Reviews的Editorial Board。牵头制定17项指南/共识，培养博士后6名、博士生58名，硕士生10名，北京市拔尖人才2名、科技新星1名，省级突贡专家1名。
+                            </div>
+
+                            <h2 style="font-size:0.4rem;padding: 0.5rem 0rem;">视频简介</h2>
+
+                            <div>
+                                                    血液系统疾病是严重危害人民生命健康的重大疾病，为了规范血液系统疾病的规范诊疗和管理，保证患者的安全和生命质量，进而惠及数亿人民的身体健康。由《中华医学信息导报》打造的“小米讲堂”在线教育活动正式在《中华医学信息导报》微信公众号平台上线。
+                        本次活动邀请到血液领域著名专家，针对IFD诊疗、IFD疑难病例、血液疾病诊治、血液疑难病例等方面进行线上授课，主要面向广大血液领域相关医生，通过线上学习的形式，希冀帮助全国广大的血液领域的医生夯实血液系统疾病用药基础，提高医生对血液病患者的诊治能力，从而增强全社会对血液病的防控意识。
+                            </div>
+                          
+
+                          </div>
+                          <div class="scbut">
+                            <span @click="sct">{{sctext}}</span>
+                          </div>
+                      </li>
+
+                      <li  class="msgitem2" v-for="(item,index) in dataUser"  v-show="sign==2">
+                        <div class="msg2-left">
+                          <img :src="item.img"  alt="">
+                        </div>
+                        <div class="msg2-right">
+                          <div class="m2r1" flex jc=sb ai=ce>
+                            <div flex fd=co>
+                              <span>{{item.name}}</span>
+                              <em>{{item.time}}</em>
+                            </div>
+                            <div class="m2r12">
+                              <div flex ai=ce>
+                                <span>视频质量：</span>
+                                <div>
+                                  <cube-rate v-model="item.value1" :disabled="disabled" :max="max1" :justify="justify"></cube-rate>
+                                </div>
+                              </div>
+                              <div flex ai=ce>
+                                <span>视频质量：</span>
+                                <div>
+                                  <cube-rate v-model="item.value2" :disabled="disabled" :max="max1" :justify="justify"></cube-rate>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="m2r2">
+                            <p>{{item.msg}}</p>
+                          </div>
+                          <div class="m2r3" flex ai=ce>
+                            <span v-show="item.v1">内容精炼</span>
+                            <span v-show="item.v2">讲解清晰</span>
+                            <span v-show="item.v3">长度适中</span>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mod" flex jc=ce ai=ce  v-show="sign==2">
+                        <span>{{upt}}</span>
+                      </li>
+                      <li>
+                      </li>
+                    </ul>
+                  </cube-scroll>
+              </div>
+
+           
+
+
+
+          
+          <!-- 答题 -->
+          <div class="butas" @click="datit">
+            <span>答题</span>
+          </div>
+
+
+
+
+
+          <!-- #左侧滑入模块 -->
+          <div class='alerts'>
+            <div class="tic3close"></div>
+            <section flex jc=ce ai=ce>
+              <span class="dati" @click="datit"><em></em></span>
+              <span class="pf" @click="pft"><em></em></span>
+              <em class="tic3close"></em>
+            </section>
+          </div>
+          <!-- 左侧滑入模块# -->
+
+          <!-- #评分弹框 -->
+          <div class="sco" >
+            <h1>
+              <span>您的评分</span>
+              <em @click="cha"></em>
+            </h1>
+
+            <section class="f3 f3t" flex  jc=sb ai=ce>
+
+                <div class="st-left" flex jc=fs ai=ce>
+                  <span>视频质量：</span>
+                  <div class="st-left-s">
+                    <cube-rate v-model="value1" :disabled="disabled1" :max="max1" :justify="justify1"></cube-rate>
+                  </div>
+                </div>
+
+                <div class="st-right" flex jc=fs ai=ce>
+                  <span>感兴趣程度：</span>
+                  <div class="st-right-s">
+                    <cube-rate v-model="value2" :disabled="disabled2" :max="max2" :justify="justify2"></cube-rate>
+                  </div>
+                </div>
+
+            </section>
+
+            <h1>
+              <span>您的评价</span>
+            </h1>
+
+            <div class="sbut" flex jc=ce ai=ce>
+              <button :class="{st:starText1}" @click="stt(1)">内容精炼</button>
+              <button :class="{st:starText2}" @click="stt(2)">讲解清晰</button>
+              <button :class="{st:starText3}" @click="stt(3)">长度合适</button>
+            </div>
+
+            <textarea name="" id="" placeholder="请写下你的评价..." v-model="contentText2" ></textarea>
+
+            <div class="rateSub">
+              <button @click="retaSubs">发送</button>
+            </div>
+
+          </div>
+          <!-- 评分弹框# -->
+
+          <!-- #答题弹框 -->
+          <div class="datibox" :class="{datiboxs:datisign}">
+                <b @click="datitt"></b>
+                <h6>观后答题<span>（成功提交后不可更改，请仔细检查后再提交）</span></h6>
+                <ul>
+
+                  <li>
+                      <h1>1、高峰论坛活动展板高峰论坛活动展板（多选）</h1>
+                      <div>
+                        <p>
+                          <input type="checkbox" name="c1" value="1" alt="1">
+                          <em>A、答案答案</em>
+                        </p>
+                        <p>
+                          <input type="checkbox" name="c1" value="2" alt="1">
+                          <em>B、答案答案</em>
+                        </p>
+                        <p>
+                          <input type="checkbox" name="c1" value="3" alt="1">
+                          <em>C、答案答案</em>
+                        </p>
+                        <p>
+                          <input type="checkbox" name="c1" value="4" alt="1">
+                          <em>D、答案答案</em>
+                        </p>
+                        <p>
+                          <input type="checkbox" name="c1" value="5" alt="1">
+                          <em>E、答案答案</em>
+                        </p>
+                      </div>
+                  </li>
+                  <li v-for="(item,index) in dataans">
+                      <h1>{{(index+2)+"、"+item.title}}</h1>
+                      <div>
+                        <p>
+                          <input type="radio" :name="index+1" value="1" v-model="item.value" :alt="index+2">
+                          <em>A、{{item.qus1}}</em>
+                        </p>
+                        <p>
+                          <input type="radio" :name="index+1" value="2" v-model="item.value" :alt="index+2">
+                          <em>B、{{item.qus2}}</em>
+                        </p>
+                        <p>
+                          <input type="radio" :name="index+1" value="3" v-model="item.value" :alt="index+2">
+                          <em>C、{{item.qus3}}</em>
+                        </p>
+                        <p>
+                          <input type="radio" :name="index+1" value="4" v-model="item.value" :alt="index+2">
+                          <em>D、{{item.qus4}}</em>
+                        </p>
+                      </div>
+                  </li>
+                </ul>
+                <div class="subbox">
+                  <button  @click="datitt2">提交</button>
+                </div>
+          </div>
+          <!-- 答题弹框# -->
+
+    </div>
+  </div>
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="https://unpkg.com/cube-ui/lib/cube.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/details.js"></script>
+</body>
+</html>

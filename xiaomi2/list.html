@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>列表</title>
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/cube-ui/lib/cube.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/list.css">
+</head>
+<body>
+  <div id="app" v-cloak>
+
+		<div class="main">
+      			<div class="scroll-list-wrap">
+              <cube-scroll
+                ref="scroll"
+                :data="data"
+                :options="options"
+                @pulling-up="onPullingUp">
+                <ul class="itemBox">
+          
+                    <li v-for="(item,index) in data" class="item">
+                      <a flex  jc=sb ai=ce>
+
+                        <div class="left" flex fd=co jc=sb ai=fs>
+                          <h4 lh="2">{{item.title}}</h4>
+                          <section v-show="signs">
+                              <h5 class="hsign1" flex ai=fs v-show="item.sign==1"><em></em><span>血液疾病诊治</span></h5>
+                              <h5 class="hsign2" flex ai=fs v-show="item.sign==2"><em></em><span>IFD疑难病例</span></h5>
+                              <h5 class="hsign3" flex ai=fs v-show="item.sign==3"><em></em><span>IFD诊疗</span></h5>
+                              <h5 class="hsign4" flex ai=fs v-show="item.sign==4"><em></em><span>其他血液疑难病例</span></h5>
+                              <h5 class="hsign5" flex ai=fs v-show="item.sign==5"><em></em><span>大查房</span></h5>
+                              <h5 class="hsign6" flex ai=fs v-show="item.sign==6"><em></em><span>第六种</span></h5>
+                          </section>
+                          
+                          <p flex jc=sb ai=fs>
+                            <span lh="1">{{item.author}}</span>
+                            <em lh="1">{{item.company}}</em>
+                          </p>
+                        </div>
+
+                        <div class="right">
+                          <img :src="item.img" alt="">
+                          <b>{{item.peonum}}人观看</b>
+                        </div>
+
+                      </a>
+                    </li>
+
+                    <li class="mod" flex jc=ce ai=ce>
+                      <span>{{upt}}</span>
+                    </li>
+
+                
+
+
+                </ul>
+              </cube-scroll>
+            </div>
+     
+		</div>
+  </div>
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="https://unpkg.com/cube-ui/lib/cube.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/list.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+.main-content{
+	width: 1182px;
+	padding-bottom: 300px;
+}
+.main-content>h1{
+	padding: 60px 0px 50px 350px;
+	font-size: 30px;
+	font-weight: normal;
+	color: #7e7d7e;
+}
+
+.main-content>ul{
+	width: 500px;
+	height: 270px;
+	margin:0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
+}
+.main-content li{
+	width: 250px;
+	height: 130px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 30px;
+}
+.main-content li div{
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	margin-bottom: 20px;
+	border:1px solid #ccc;
+	color: #ccc;
+}
+.main-content li i{
+	font-size: 40px;
+}
+.main-content li:nth-child(1) i{
+	font-size: 50px;
+}
+.main-content li:nth-child(2) i{
+	font-weight: 600;
+}
+.main-content li:nth-child(3) i{
+	font-weight: 600;
+}
+.main-content>div{
+	margin-top: 60px;
+}
+.title{
+	display: flex;
+	padding: 16px;
+}
+.title input{
+	flex:1;
+	border:0px;
+	font-size: 16px;
+}
+
+.main-content>div>button{
+	width: 340px;
+	height: 50px;
+	background: #fa8821;
+	color: #fff;
+	border-radius: 10px;
+}
+.main-content li span{
+	color: #ccc;
+}
+.main-content li i{
+	color: #ccc;
+}
+.main-content li .editSign{
+	border:0px;
+	background: -moz-linear-gradient(top, #fedab9 0%, #fa8821 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#fa8821));
+    background: -webkit-linear-gradient(top, #fedab9 0%,#fa8821 100%);
+    background: -o-linear-gradient(top, #fedab9 0%,#fa8821 100%);
+    background: -ms-linear-gradient(top, #fedab9 0%,#fa8821 100%);
+    background: linear-gradient(to bottom, #fedab9 0%,#fa8821 100%);
+	color: #fff;
+}
+.main-content li .editSign i{
+	color: #fff;
+}
+.main-content li .editSignspan{
+	color: #fa8821;
+}
+.nextBut{
+	text-align: center;
+}
+.nextBut button{
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+
+
+
+/*编辑视频*/
+h2.edTitle{
+	font-weight: normal;
+	padding-left: 155px;
+}
+.editart{
+	width: 860px;
+	margin: 0 auto;
+	/*border:1px solid #ccc;*/
+	box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.04);
+}
+
+.editart .m{ 
+	width: 860px; 
+	margin-left: auto; 
+	margin-right: auto;
+	/*margin-top: 30px;*/
+}
+
+
+.m .panel-default>.panel-heading{
+	background: #fff;
+}
+.m .note-editor.note-frame{
+	border:0px;
+	border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+
+
+.editart .fabu{
+	height: 240px;
+	position: relative;
+	padding: 30px;
+}
+.editart .fabu img{
+	width: 142px;
+	height: 104px;
+	float: left;
+}
+.editart .fabu button:nth-child(2){
+	background: #fff;
+	float: left;
+	margin-top: 40px;
+}
+.editart .fabu button:nth-child(4){
+	display: inline-block;
+	width: 100px;
+	height: 40px;
+	float: right;
+	background: #fa8821;
+	color: #fff;
+	position: absolute;
+	right:0;
+	bottom: 0;
+	border-radius: 6px;
+	margin-right: 30px;
+	margin-bottom: 30px;
+}
+
+.buta{
+	width: 100px;
+	height: 40px;
+	background: #fa8821;
+	color: #fff;
+	float: right;
+	border-radius: 6px;
+}
+
+
+.butBot{
+	height: 100px;
+	position: relative;
+}
+.butBot .buta{
+	width: 100;
+	height: 40px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin-right: 30px;
+	margin-bottom: 30px;
+}
+
+
+.note-resizebar{
+	display: none;
+}
+
+
+.inputImgf{
+	width: 300px;
+	height: 100px;
+	position: relative;
+	margin-left: 30px;
+}
+.inputImgf img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 120px;
+	height: 88px;
+}
+.inputImgf input{
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin-left: 0px;
+	margin-top: 0px;
+	width: 120px;
+	height: 88px;
+	z-index: 6;
+	opacity: 0;
+}
+.inputImgf span{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: 130px;
+	margin-top: 30px;
+	width: 90px;
+	height: 30px;
+	z-index: 5;
+}
+
+
+
+.note-fontname{
+	display: none !important;
+}
+
+.dropdown-menu li:nth-child(2){
+	display: none !important;
+}
+
+.dropdown-menu li:nth-child(3){
+	display: none !important;
+}
+
+.note-view button:nth-child(2){
+	display: none;
+}
+.note-view button:nth-child(3){
+	display: none;
+}

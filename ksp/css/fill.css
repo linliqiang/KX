@@ -1,0 +1,131 @@
+html{
+	background: #fff;
+}
+body{
+	min-height: 100vh;
+	background: #fff;
+}
+#app{
+	padding-bottom: 2rem;
+}
+.fill{
+	width: 10rem;
+	background:#ccc;
+	min-height: 100vh;
+	background: #a72750;
+	padding-top: 60px;
+}
+.fillBox{
+	width: 9.2rem;
+	/*height: 12rem;*/
+	background: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3rem;
+	padding-top: 0.1rem;
+	padding-bottom: 0.6rem;
+	/*padding-bottom: 1rem;*/
+	display: -webkit-flex;
+	display: flex;
+	flex-direction:column; 
+	-webkit-flex-direction:column;
+	align-items:center; 
+	-webkit-align-items:center;
+}
+.fillBox>div{
+	width: 8.5rem;
+
+	display: flex;
+	display: -webkit-flex;
+	
+	flex-direction: row;
+	-webkit-flex-direction: row;
+
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+
+}
+.fillBox>div>div{
+	width: 4rem;
+	height: 2rem;
+	border:1px solid #dedddd;
+	border-radius: 0.2rem;
+	margin-top: 0.2rem;
+	/*padding: 0px 0.293333rem;*/
+	position: relative;
+}
+.fillBox>div>div span{
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0.56rem;
+	height: 0.56rem;
+	border-radius: 50%;
+	background: #a72750;
+	text-align: center;
+	line-height: 0.56rem;
+	margin-top: -0.21rem;
+	margin-right: -0.21rem;
+}
+.fillBox>div>div span i{
+	color: #fff;
+}
+
+
+.fillBox>div>div.signs{
+	background: #a72750;
+	border:0px;
+}
+.fillBox>div>div.signs p{
+	color: #fff;
+	/*font-size: 12px;*/
+}
+.fillBox>div>div.signs span{
+	opacity: 1;
+}
+
+
+
+
+.fillBox>div>div>p{
+	width: 3.5rem;
+	position: absolute;
+	top:50%; 
+	left:50%;
+	transform:translate(-50%, -50%);
+	font-size: 12px;
+	color: #000;
+}
+.fillBox>div>div>p.sign{
+	text-align: center;
+}
+
+
+
+.fillBut{
+	width: 8.4rem;
+	height: 1.413333rem;
+	background: #a72750;
+	border-radius: 0.3rem;
+	text-align: center;
+	line-height: 1.413333rem;
+	color: #fff;
+	font-size: 0.453333rem;
+	letter-spacing: 0.2rem;
+	margin-top: 0.3rem;
+}
+
+.mui-bar-nav{
+	background: #333333;
+	box-shadow: 0px 0px 0px 0px;
+}
+.mui-bar-nav a{
+	color: #fff;
+}
+.mui-bar-nav h1{
+	color: #fff;
+}

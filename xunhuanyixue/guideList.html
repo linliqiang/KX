@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>指南共识</title>
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/cube-ui/lib/cube.min.css">
+  <link rel="stylesheet" href="css/guideList.css">
+</head>
+<body>
+  <div id="app" class="articleList" v-cloak>
+  	<div class="main">
+  		<div class="scroll-list-wrap" v-show="noData">
+		  <cube-scroll
+		    ref="scroll"
+		    :data="data"
+		    :options="options"
+		    @pulling-up="onPullingUp">
+				<ul class="itemBox">
+				    <li v-for="(item,index) in data" @click="guideDet(item.Id)">
+				    	<a>
+				    		<img :src="'http://xhyx.ikangxun.com'+item.OSSName" alt="">
+				    		<div class="ibright">
+				    			<p class="ibright1">{{item.Title}}</p>
+				    			<p class="ibright2">
+				    				<span>{{longTimeToData(item.CreateDate)}}</span>
+				    			</p>
+				    		</div>
+				    	</a>
+				    </li>
+				</ul>
+		  </cube-scroll>
+		</div>
+  	</div>
+  </div>
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="https://unpkg.com/cube-ui/lib/cube.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/guideList.js"></script>
+</body>
+</html>

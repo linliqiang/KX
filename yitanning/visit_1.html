@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+</head>
+<body>
+
+	<div class="visit-1">
+		
+		<div>
+			<label for="">筛选号：</label><input type="text" alt="筛选号" oninput="regThing(this)">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<label for="">患者姓名缩写：</label><input type="text" alt="患者姓名缩写" oninput="regThing(this)">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<label for="">访视日期：</label><input type="text" name="g-visitdate" id="g-visitdate" class="Wdate" readonly="" onclick="new WdatePicker()" alt="访视日期">
+		</div>
+
+		<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;血压&nbsp;&nbsp;<input type="text" alt="血压" oninput="regThing(this)">&nbsp;&nbsp;/&nbsp;&nbsp;<input type="text" alt="血压" oninput="regThing(this)">&nbsp;&nbsp;(mmHg)</div>
+
+		<div class="visit-1-box">
+			<div style="height:168px;line-height: 168px;">
+				右佐匹克隆片药物服用询问
+			</div>
+			<div>
+				<p>此前是否使用右佐匹克隆片？</p>
+				<p>
+					<input type="radio" name="visit-1Radio1" value="否" alt="右佐匹克隆片药物服用询问" ro="3" onclick="visit1Thing1(1)"><label for="">否</label>
+					<input type="radio" name="visit-1Radio1" value="是" alt="右佐匹克隆片药物服用询问" onclick="visit1Thing1(2)"><label for="">是，请填写报告表末的药物服用记录</label>
+				</p>
+				<p class="visit1Thingp">此前是否调整右佐匹克隆片的剂量？</p>
+				<p class="visit1Thingp">
+					<input type="radio" name="visit-1Radio2" alt="右佐匹克隆片药物服用询问" ro="1" onclick="visit1Thing1(3)"><label for="">否</label>
+					<input type="radio" name="visit-1Radio2" alt="右佐匹克隆片药物服用询问" onclick="visit1Thing1(4)"><label for="">是，请填写药物服用记录中的调整原因</label>
+				</p>
+			</div>
+	
+		</div>
+
+		<div class="visit-1-box">
+			<div style="height:168px;line-height: 168px;">
+				盐酸文拉法辛缓释片药物服用询问
+			</div>
+			<div>
+				<p>此前是否使用盐酸文拉法辛缓释片？</p>
+				<p>
+					<input type="radio" name="visit-1Radio3" alt="盐酸文拉法辛缓释片药物服用询问" ro="3" onclick="visit1Thing2(1)"><label for="">否</label>
+					<input type="radio" name="visit-1Radio3" alt="盐酸文拉法辛缓释片药物服用询问" onclick="visit1Thing2(2)"><label for="">是，请填写报告表末的药物服用记录</label>
+				</p>
+				<p class="visit2Thingp">此前是否调整盐酸文拉法辛缓释片的剂量？</p>
+				<p class="visit2Thingp">
+					<input type="radio" name="visit-1Radio4" alt="盐酸文拉法辛缓释片药物服用询问" ro="1" onclick="visit1Thing2(3)"><label for="">否</label>
+					<input type="radio" name="visit-1Radio4" alt="盐酸文拉法辛缓释片药物服用询问" onclick="visit1Thing2(4)"><label for="">是，请填写药物服用记录中的调整原因</label>
+				</p>
+			</div>
+	
+		</div>
+
+		<div class="visit-1-box">
+			<div style="height:94px;line-height: 94px;">
+				合并用药询问
+			</div>
+			<div>
+				<p>目前是否使用除右佐匹克隆片和盐酸文拉法辛缓释片以外的其他任何药物？</p>
+				<p>
+					<input type="radio" name="visit-1Radio5" alt="合并用药询问" onclick="visit1Thing3(1)"><label for="">否</label>
+					<input type="radio" name="visit-1Radio5" alt="合并用药询问" onclick="visit1Thing3(2)"><label for="">是，请填写报告表末的药物服用记录</label>
+				</p>
+			</div>
+	
+		</div>
+
+		<div class="visit-1-box">
+			<div style="height:94px;line-height: 94px;">
+				不良事件询问
+			</div>
+			<div>
+				<p>此前是否发生不良事件？</p>
+				<p>
+					<input type="radio" name="visit-1Radio6" alt="不良事件询问" onclick="visit1Thing4(1)"><label for="">否</label>
+					<input type="radio" name="visit-1Radio6" alt="不良事件询问" onclick="visit1Thing4(2)"><label for="">是，请填写报告表末的药物服用记录</label>
+				</p>
+			</div>
+	
+		</div>
+
+		<div class="visit-1-bottom">
+			<button onclick="visit1Save()">保存并下一步</button>
+		</div>
+
+
+	</div>
+
+<script src="js/visit_1.js"></script>
+</body>
+</html>

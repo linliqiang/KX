@@ -1,0 +1,135 @@
+html{
+	background: #fff;
+}
+body{
+	min-height: 100vh;
+	background: #fff;
+}
+#app{
+	/*padding-bottom: 2rem;*/
+}
+.reg{
+	width: 10rem;
+	background:#ccc;
+	min-height: 100vh;
+	background: #a72750;
+	padding-top: 60px;
+}
+.regBox{
+	width: 9.2rem;
+	/*height: 17.4rem;*/
+	background: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3rem;
+	padding-top: 10px;
+	padding-bottom: 0.45rem;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction:column; 
+	-webkit-flex-direction:column;
+	align-items:center; 
+	-webkit-align-items:center;
+}
+.regBox p{
+	height: 1px;
+	width: 100%;
+	margin-top: 0.6rem;
+	margin-bottom: 0.2rem;
+	border-top: 1px dashed #dedddd;
+}
+
+#app input{
+	width: 8.36rem;
+	height: 1rem;
+	margin-top: 0.3rem;
+	border: 1px solid #b3b2b2; 
+	padding-left: 1.2rem;
+	font-size: 0.4rem;
+	color: #000;
+}
+.num{
+	background: url(../images/icon_reg_1.jpg) no-repeat 0.2rem 0.2rem;
+	background-size: 0.55rem 0.55rem;
+}
+.pas{
+	background: url(../images/icon_reg_2.jpg) no-repeat 0.2rem 0.2rem;
+	background-size: 0.55rem 0.55rem;
+}
+.name{
+	background: url(../images/icon_reg_3.jpg) no-repeat 0.2rem 0.2rem;
+	background-size: 0.55rem 0.55rem; 
+}
+.hospital{
+	background: url(../images/icon_reg_4.jpg) no-repeat 0.2rem 0.2rem;
+	background-size: 0.55rem 0.55rem;
+}
+.department{
+	background: url(../images/icon_reg_5.jpg) no-repeat 0.2rem 0.2rem;
+	background-size: 0.55rem 0.55rem;
+}
+.titles{
+	background: url(../images/icon_reg_6.jpg) no-repeat 0.18rem 0.2rem;
+	background-size: 0.55rem 0.55rem;
+}
+.titlesz{
+	background-size: 0.65rem 0.55rem;
+}
+.phone{
+	background: url(../images/icon_reg_7.jpg) no-repeat 0.25rem 0.2rem;
+	background-size: 0.55rem 0.55rem;
+}
+#app .codeBox{
+	width: 8.36rem;
+	height: 1rem;
+	margin-top: 0.3rem;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	align-items:center; 
+	-webkit-align-items:center;
+}
+#app .code{
+	width: 4rem;
+	margin-top: 0px;
+	background-size: 0.7rem 0.7rem;
+	padding-left: 0.4rem;
+}
+#app .codeBox div{
+	width: 2.4rem;
+	height: 1rem;
+	background: #fff;
+}
+#app .codeBox div canvas{
+	width: 2.4rem;
+	height: 1rem;
+}
+#app .codeBox u{
+	color: #a72750;
+}
+
+.regBut{
+	width: 8.4rem;
+	height: 1.413333rem;
+	background: #a72750;
+	border-radius: 0.3rem;
+	text-align: center;
+	line-height: 1.413333rem;
+	color: #fff;
+	font-size: 0.453333rem;
+	letter-spacing: 0.2rem;
+	margin-top: 0.5rem;
+}
+
+
+.mui-bar-nav{
+	background: #333333;
+	box-shadow: 0px 0px 0px 0px;
+}
+.mui-bar-nav a{
+	color: #fff;
+}
+.mui-bar-nav h1{
+	color: #fff;
+}

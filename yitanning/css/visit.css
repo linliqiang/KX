@@ -1,0 +1,777 @@
+.visit{
+	font-size: 14px;
+	background: rgb(250,249,249);
+	overflow: hidden;
+	/*border: rgb(228,229,229);*/
+	border: black;
+}
+.visit-top{
+	padding-bottom: 14px;
+	overflow: hidden;
+}
+.visit-top li{
+	margin-top: 14px;
+	margin-left: 14px;
+	padding: 5px 0px 5px 8px;
+	float: left;
+	background:linear-gradient(to bottom, rgb(234,233,233), rgb(214,214,214));
+	color: #000000;
+	border-radius: 8px;
+}
+.visit-top span{
+	display: inline-block;
+	padding: 4px 0px 4px 8px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	background: rgb(237,238,241);
+	color: #000000;
+	margin-left: 8px;
+}
+.visit-top .visitTopQian{
+    background:rgb(68,150,242);
+    color: #ffffff;
+}
+.visit-top .visitTopQian span{
+    color: rgb(68,150,242);
+}
+.visit-top .visitTopZhong{
+    background:rgb(57,101,228);
+    color: #ffffff;
+}
+.visit-top .visitTopZhong span{
+    color: rgb(57,101,228);
+}
+
+
+
+
+.visit-body{
+	width: 1090px;
+	font-size: 12px;
+	border: rgb(228,229,229);;
+	margin-left: 10px;
+}
+
+
+
+
+
+
+.visit-1>div:nth-child(1),.visit-1>div:nth-child(2){
+	padding: 16px 0px 16px 28px;
+}
+.visit-1>div:nth-child(1) input,.visit-1>div:nth-child(2) input{
+	height: 28px;
+}
+.visit-1>div:nth-child(1) input{
+	width: 170px;
+}
+.visit-1>div:nth-child(2) input{
+	width: 76px;
+}
+.visit-1-box{
+	overflow: hidden;
+	border: 1px solid rgb(228,229,229);
+	margin-top: -1px;
+}
+.visit-1-box>div:nth-child(1){
+	float: left;
+	width: 210px;
+	background: rgb(248,247,247);
+	text-align: center;
+	border-right: 1px solid rgb(228,229,229);
+}
+.visit-1-box>div:nth-child(2){
+	float: right;
+	width: 878px;
+	background: #ffffff;
+}
+.visit-1-box>div:nth-child(2){
+	padding: 20px 0px 0px 20px;
+}
+.visit-1-box>div:nth-child(2) p{
+	padding-bottom: 20px;
+
+}
+.visit-1-bottom{
+	padding-top: 36px;
+	padding-bottom: 42px;
+	text-align: center;
+	background: rgb(248,247,247);
+}
+.visit-1-bottom button{
+	width: 150px;
+	height: 44px;
+	border: 1px solid rgb(0,183,238);
+	border-radius: 8px;
+	color: rgb(0,183,238);
+	background: #ffffff;
+}
+
+
+
+
+
+
+/*医院焦虑*/
+.visit_2{
+    border: 1px solid rgb(234,232,233);
+    border-radius: 8px;
+}
+.visit_2 input[type=text]{
+    height: 30px;
+}
+.visit_2>p{
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border-bottom: 1px solid rgb(234,232,233);
+}
+
+.visit_2-body{
+    background: rgb(250,249,249);
+    padding: 10px 0px 0px 10px;
+    font-size: 12px;
+    border: 1px solid rgb(234,232,233);
+    font-weight: normal;
+}
+.visit_2-body ul:nth-child(1){
+    overflow: hidden;
+}
+.visit_2-body ul:nth-child(1) li{
+    float: left;
+    width: 33%;
+    padding: 0px 0px 10px 30px;
+}
+.visit_2-body input [type=text]{
+    width: 170px;
+    height: 28px;
+}
+
+.visit_2-body ul:nth-child(2){
+    overflow: hidden;
+}
+.visit_2-body ul:nth-child(2) li{
+    width: 33.33%;
+    float: left;
+    padding: 22px 0px 22px 30px;
+    border-top: 1px solid rgb(234,232,233); 
+    border-left: 1px solid rgb(234,232,233); 
+    background: #ffffff;
+}
+.visit_2-body p{
+    height: 26px;
+}
+.visit_2-body li p{
+    padding-left: 20px;
+    padding-right: 100px;
+}
+.visit_2-body li p span{
+    float: right;
+}
+.visit_2-body li p:first-of-type{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.visit_2-body-number{
+    border: 1px solid rgb(234,232,233); 
+    border-right: 1px solid rgb(234,232,233); 
+    background: #ffffff;
+}
+.visit_2-body-number p{
+    height: 54px;
+    line-height: 54px;
+    text-align: center;
+}
+.visit_2-body-bottom{
+    padding: 55px 0px 55px 0px;
+    text-align: center;
+}
+.visit_2-body-bottom button{
+    display: inline-block;
+    width: 150px;
+    height: 42px;
+    color: rgb(0,183,238);
+    border-radius: 8px;
+    border: 1px solid rgb(0,183,238);
+    background: #ffffff;
+}
+
+
+.visit_2-body li p .visit_2List1, .visit_2-body li p .visit_2List2{
+    float: none;
+}
+.visit_2List1{
+    color: red;
+}
+.visit_2List2{
+    color: rgb(29,80,226);
+}
+
+
+
+
+
+
+/*失眠程度*/
+.visit_3{
+    border: 1px solid rgb(234,232,233);
+    border-radius: 8px;
+}
+.visit_3 input[type=text]{
+    height: 30px;
+}
+.visit_3>p{
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border-bottom: 1px solid rgb(234,232,233);
+}
+
+.visit_3-body{
+    background: rgb(250,249,249);
+    padding: 10px 0px 0px 10px;
+    font-size: 12px;
+    border: 1px solid rgb(234,232,233);
+    font-weight: normal;
+}
+.visit_3-body ul:nth-child(1){
+    overflow: hidden;
+}
+.visit_3-body ul:nth-child(1) li{
+    float: left;
+    width: 33%;
+    padding: 0px 0px 10px 30px;
+}
+
+.visit_3-body input [type=text]{
+    width: 170px;
+    height: 28px;
+}
+
+.visit_3-body ul:nth-child(2){
+    overflow: hidden;
+
+}
+.visit_3-body ul:nth-child(2) li{
+
+   /* padding: 22px 0px 22px 30px;*/
+    border-top: 1px solid rgb(234,232,233); 
+    border-left: 1px solid rgb(234,232,233); 
+    background: #ffffff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.visit_3-body ul:nth-child(2) span{
+	display: inline-block;
+	border-right: 1px solid rgb(228,229,229);
+	/*padding: 20px 20px 20px 0px;*/
+	width: 178px;
+	height: 100%;
+	float: left;
+	/*margin:0 auto;*/
+}
+.visit_3-body ul:nth-child(2) .visit_3-body-title{
+	width: 185px;
+	padding: 20px 20px 20px 20px;
+	text-align: left;
+}
+
+.visit_3-body .paddingtop22{
+	padding-top: 22px;
+}
+.visit_3-body .paddingtop66{
+	padding-top: 66px;
+}
+
+
+
+.visit_3-body-bottom{
+    padding: 55px 0px 55px 0px;
+    text-align: center;
+}
+.visit_3-body-bottom button{
+    display: inline-block;
+    width: 150px;
+    height: 42px;
+    color: rgb(0,183,238);
+    border-radius: 8px;
+    border: 1px solid rgb(0,183,238);
+    background: #ffffff;
+}
+
+
+/*失眠程度*/
+.visit_4{
+    border: 1px solid rgb(234,232,233);
+    border-radius: 8px;
+}
+.visit_4 input[type=text]{
+    height: 30px;
+}
+.visit_4>p{
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border-bottom: 1px solid rgb(234,232,233);
+}
+
+.visit_4-body{
+    background: rgb(250,249,249);
+    padding: 10px 0px 0px 10px;
+    font-size: 12px;
+    border: 1px solid rgb(234,232,233);
+    font-weight: normal;
+}
+.visit_4-body ul:nth-child(1){
+    overflow: hidden;
+}
+.visit_4-body ul:nth-child(1) li{
+    float: left;
+    width: 33%;
+    padding: 0px 0px 10px 30px;
+}
+
+.visit_4-body input [type=text]{
+    width: 170px;
+    height: 28px;
+}
+
+.visit_4-body ul:nth-child(2){
+    overflow: hidden;
+
+}
+.visit_4-body ul:nth-child(2) li{
+
+   /* padding: 22px 0px 22px 30px;*/
+    border-top: 1px solid rgb(234,232,233); 
+    border-left: 1px solid rgb(234,232,233); 
+    background: #ffffff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.visit_4-body ul:nth-child(2) span{
+    display: inline-block;
+    border-right: 1px solid rgb(228,229,229);
+    /*padding: 20px 20px 20px 0px;*/
+    width: 147px;
+    height: 100%;
+    float: left;
+    /*margin:0 auto;*/
+}
+.visit_4-body ul:nth-child(2) .visit_4-body-title{
+    width: 192px;
+    padding: 20px 20px 20px 20px;
+    text-align: left;
+}
+
+.visit_4-body .paddingtop22{
+    padding-top: 22px;
+}
+.visit_4-body .paddingtop66{
+    padding-top: 66px;
+}
+
+
+
+.visit_4-body-bottom{
+    padding: 55px 0px 55px 0px;
+    text-align: center;
+}
+.visit_4-body-bottom button{
+    display: inline-block;
+    width: 150px;
+    height: 42px;
+    color: rgb(0,183,238);
+    border-radius: 8px;
+    border: 1px solid rgb(0,183,238);
+    background: #ffffff;
+}
+
+
+
+/*失眠程度*/
+.visit_5{
+    border: 1px solid rgb(234,232,233);
+    border-radius: 8px;
+}
+.visit_5 input[type=text]{
+    height: 30px;
+}
+.visit_5>p{
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border-bottom: 1px solid rgb(234,232,233);
+}
+
+.visit_5-body{
+    background: rgb(250,249,249);
+    padding: 10px 0px 0px 10px;
+    font-size: 12px;
+    border: 1px solid rgb(234,232,233);
+    font-weight: normal;
+}
+
+.visit_5-body input [type=text]{
+    width: 170px;
+    height: 28px;
+}
+
+.visit_5-body .v5bul{
+    overflow: hidden;
+
+}
+.visit_5-body .v5bul li{
+    border-top: 1px solid rgb(234,232,233); 
+    border-left: 1px solid rgb(234,232,233); 
+    background: #ffffff;
+    text-align: center;
+    overflow: hidden;
+}
+.visit_5-body .v5bul li span:nth-child(5){
+    width: 379px;
+}
+
+.visit_5-body .v5bul span{
+    display: inline-block;
+    border-right: 1px solid rgb(228,229,229);
+    width: 174px;
+    height: 100%;
+    float: left;
+}
+
+.visit_5-body .paddingtop22{
+    padding-top: 22px;
+}
+
+
+.visit_5-body-bottom{
+    padding: 55px 0px 55px 0px;
+    text-align: center;
+}
+.visit_5-body-bottom button{
+    display: inline-block;
+    width: 150px;
+    height: 42px;
+    color: rgb(0,183,238);
+    border-radius: 8px;
+    border: 1px solid rgb(0,183,238);
+    background: #ffffff;
+}
+
+
+/*失眠程度*/
+.visit_6{
+    border: 1px solid rgb(234,232,233);
+    border-radius: 8px;
+}
+.visit_6 input[type=text]{
+    height: 30px;
+}
+.visit_6>p{
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border-bottom: 1px solid rgb(234,232,233);
+}
+
+.visit_6-body{
+    background: rgb(250,249,249);
+    padding: 10px 0px 0px 10px;
+    font-size: 12px;
+    border: 1px solid rgb(234,232,233);
+    font-weight: normal;
+}
+
+.visit_6-body input [type=text]{
+    width: 170px;
+    height: 28px;
+}
+
+.visit_6-body .v5bul{
+    overflow: hidden;
+
+}
+.visit_6-body .v5bul li{
+    border-top: 1px solid rgb(234,232,233); 
+    border-left: 1px solid rgb(234,232,233); 
+    background: #ffffff;
+    text-align: center;
+    overflow: hidden;
+}
+.visit_6-body .v5bul li span:nth-child(5){
+    width: 379px;
+}
+
+.visit_6-body .v5bul span{
+    display: inline-block;
+    border-right: 1px solid rgb(228,229,229);
+    width: 174px;
+    height: 100%;
+    float: left;
+}
+
+.visit_6-body .paddingtop22{
+    padding-top: 22px;
+}
+
+
+.visit_6-body-bottom{
+    padding: 55px 0px 55px 0px;
+    text-align: center;
+}
+.visit_6-body-bottom button{
+    display: inline-block;
+    width: 150px;
+    height: 42px;
+    color: rgb(0,183,238);
+    border-radius: 8px;
+    border: 1px solid rgb(0,183,238);
+    background: #ffffff;
+}
+
+
+/*失眠程度*/
+.visit_7{
+    border: 1px solid rgb(234,232,233);
+    border-radius: 8px;
+}
+.visit_7 input[type=text]{
+    height: 30px;
+}
+.visit_7>p{
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border-bottom: 1px solid rgb(234,232,233);
+}
+
+.visit_7-body{
+    background: rgb(250,249,249);
+    padding: 10px 0px 0px 10px;
+    font-size: 12px;
+    border: 1px solid rgb(234,232,233);
+    font-weight: normal;
+}
+
+.visit_7-body input[type=text]{
+    width: 98px;
+    height: 28px;
+    border: 1px solid rgb(228,229,229);
+}
+
+.visit_7-body ul{
+    overflow: hidden;
+
+}
+.visit_7-body ul li{
+    border-top: 1px solid rgb(234,232,233); 
+    border-left: 1px solid rgb(234,232,233); 
+    background: #ffffff;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.visit_7-body ul span{
+    display: inline-block;
+    border-right: 1px solid rgb(228,229,229);
+    width: 110px;
+    height: 100%;
+    float: left;
+}
+.visit_7-body ul li span{
+    /*line-height: 168px;*/
+    padding-top: 80px;
+    line-height: 20px;
+    border-bottom: 1px solid rgb(228,229,229);
+}
+.visit_7-body ul li:nth-child(1) span{
+    line-height: 60px;
+    padding-top: 0px;
+}
+
+.visit_7-body .paddingtop22{
+    padding-top: 22px;
+}
+
+
+.visit_7-body-bottom{
+    padding: 55px 0px 55px 0px;
+    text-align: center;
+}
+.visit_7-body-bottom button{
+    display: inline-block;
+    width: 150px;
+    height: 42px;
+    color: rgb(0,183,238);
+    border-radius: 8px;
+    border: 1px solid rgb(0,183,238);
+    background: #ffffff;
+}
+
+
+/*失眠程度*/
+.visit_8{
+    border: 1px solid rgb(234,232,233);
+    border-radius: 8px;
+}
+.visit_8 input[type=text]{
+    height: 30px;
+}
+.visit_8>p{
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border-bottom: 1px solid rgb(234,232,233);
+}
+
+.visit_8-body{
+    background: rgb(250,249,249);
+    padding: 10px 0px 0px 10px;
+    font-size: 12px;
+    border: 1px solid rgb(234,232,233);
+    font-weight: normal;
+}
+
+.visit_8-body input[type=text]{
+    width: 98px;
+    height: 28px;
+    border: 1px solid rgb(228,229,229);
+}
+
+.visit_8-body ul{
+    overflow: hidden;
+
+}
+.visit_8-body ul li{
+    border-top: 1px solid rgb(234,232,233); 
+    border-left: 1px solid rgb(234,232,233); 
+    background: #ffffff;
+    text-align: center;
+    overflow: hidden;
+}
+
+.visit_8-body ul li span:nth-child(1){
+    width: 85px;
+}
+.visit_8-body ul span{
+    display: inline-block;
+    border-right: 1px solid rgb(228,229,229);
+    width: 110px;
+    height: 100%;
+    float: left;
+}
+.visit_8-body ul li span{
+    /*line-height: 168px;*/
+    padding-top: 80px;
+    line-height: 20px;
+    border-bottom: 1px solid rgb(228,229,229);
+}
+.visit_8-body ul li:nth-child(1) span{
+    line-height: 60px;
+    padding-top: 0px;
+}
+
+.visit_8-body .paddingtop22{
+    padding-top: 22px;
+}
+
+
+.visit_8-body-bottom{
+    padding: 55px 0px 55px 0px;
+    text-align: center;
+}
+.visit_8-body-bottom button{
+    display: inline-block;
+    width: 150px;
+    height: 42px;
+    color: rgb(0,183,238);
+    border-radius: 8px;
+    border: 1px solid rgb(0,183,238);
+    background: #ffffff;
+}
+
+/*失眠程度*/
+.visit_over{
+    border: 1px solid rgb(234,232,233);
+    border-radius: 8px;
+}
+.visit_over input[type=text]{
+    height: 30px;
+}
+.visit_over>p{
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border-bottom: 1px solid rgb(234,232,233);
+}
+.visit_over>p:nth-child(2){
+    height: 160px;
+    padding-left: 40px;
+    text-align: left;
+}
+.visit_over-body{
+    background: rgb(250,249,249);
+    padding: 10px 0px 0px 10px;
+    font-size: 12px;
+    border: 1px solid rgb(234,232,233);
+    font-weight: normal;
+}
+
+.visit_over-body input[type=text]{
+    width: 160px;
+    height: 28px;
+    border: 1px solid rgb(228,229,229);
+}
+
+.visit_over-body ul{
+    overflow: hidden;
+
+}
+.visit_over-body ul li{
+    border-top: 1px solid rgb(234,232,233); 
+    border-left: 1px solid rgb(234,232,233); 
+    background: #ffffff;
+    text-align: left;
+    overflow: hidden;
+    padding:20px 0px 20px 40px;
+}
+
+.visit_over-body ul li span:nth-child(1){
+    width: 85px;
+}
+.visit_over-body ul span{
+    display: inline-block;
+    border-right: 1px solid rgb(228,229,229);
+    width: 110px;
+    height: 100%;
+    float: left;
+}
+.visit_over-body ul li span{
+    /*line-height: 168px;*/
+    padding-top: 80px;
+    line-height: 20px;
+    border-bottom: 1px solid rgb(228,229,229);
+}
+.visit_over-body ul li:nth-child(1) span{
+    line-height: 60px;
+    padding-top: 0px;
+}
+
+.visit_over-body-bottom{
+    padding: 55px 0px 55px 0px;
+    text-align: center;
+}
+.visit_over-body-bottom button{
+    display: inline-block;
+    width: 150px;
+    height: 42px;
+    color: rgb(0,183,238);
+    border-radius: 8px;
+    border: 1px solid rgb(0,183,238);
+    background: #ffffff;
+}

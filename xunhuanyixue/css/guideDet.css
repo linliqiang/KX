@@ -1,0 +1,73 @@
+html{
+	background: #e0e1e2;
+}
+body{
+	background: #e0e1e2;
+}
+#app{
+	min-height: 100vh;
+	background: #e0e1e2;
+	padding: 0.16rem;
+}
+.main{
+	width: 100%;
+	background: #fff;
+	padding: 0.16rem;
+	min-height: calc(100vh - 0.32rem);
+}
+.main h4{
+	padding: 0.533333rem 0px 0.533333rem 0.186667rem;
+	font-size: 0.45rem;
+}
+.main div img{
+	width: 100%;
+	height: 6.14rem;
+}
+.main>p{
+	font-size: 0.38rem;
+	line-height: 0.63rem;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+.main>p img{
+	max-width: 100%;
+}
+.fujian{
+	padding: 0rem 0rem 0.5rem 0rem;
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	justify-content: center;
+	-webkit-justify-content: center;
+	align-items:center;
+	-webkit-align-items:center;
+}
+.fujian span{
+	display: inline-block;
+	width: 3rem;
+	height: 1rem;
+	background: #fea31a;
+	border-radius: 0.2rem;
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+  	flex-direction: row;
+	-webkit-flex-direction: row;
+	justify-content: center;
+	-webkit-justify-content: center;
+	align-items:center;
+	-webkit-align-items:center;
+}
+.fujian span img{
+	width: 0.533333rem;
+	height: 0.56rem;
+}
+.fujian span em{
+	color: #fff;
+	margin-left: 0.2rem;
+}
+.fujian span.zhu{
+	width: 100%;
+	background: rgba(0,0,0,0);
+	color: #999999;
+}

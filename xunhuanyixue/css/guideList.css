@@ -1,0 +1,73 @@
+html{
+	background: #e0e1e2;
+}
+body{
+	background: #e0e1e2;
+}
+#app{
+	min-height: 100vh;
+	background: #e0e1e2;
+	padding: 0.16rem;
+}
+.main{
+	width: 100%;
+	height: calc(100vh - 0.32rem);
+	background: #fff;
+}
+.itemBox{
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	background: #e0e1e2;
+}
+.itemBox li{
+	width: 100%;
+	height: 2.6rem;
+	margin-bottom: 0.16rem;
+	background: #fff;
+}
+.itemBox li a{
+	width: 100%;
+	height: 100%;
+	padding: 0.2rem 0.16rem;
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+  	flex-direction: row;
+	-webkit-flex-direction: row;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+}
+.itemBox li a img{
+	width: 3.466667rem;
+	height: 100%;
+}
+.ibright{
+	flex:1;
+	padding: 0rem 0.1rem 0.16rem 0.293333rem;
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+  	flex-direction: column;
+	-webkit-flex-direction: column;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+}
+.ibright p{
+	margin-bottom: 0px;
+}
+.ibright1{
+	color: #000;
+	font-size: 0.4rem;
+	line-height: 0.6rem;
+	overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.ibright2 span,.ibright2 em{
+	font-size: 0.36rem;
+	color: #999999;
+}
+.scroll-list-wrap{
+	height: 100%;
+}

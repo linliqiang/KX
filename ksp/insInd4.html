@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>卡双平</title>
+
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="stylesheet" href="mui/css/mui.min.css">
+
+  <link rel="stylesheet" href="css/insInd.css">
+
+</head>
+<body>
+
+  <header class="mui-bar mui-bar-nav" id="experthead" style="z-index:999">
+      <a class="mui-icon-left-nav mui-icon mui-icon-arrowleft headback" onClick="javascript :history.back(-1);"></a>
+      <h1 class="mui-title">填写病例</h1>
+      <a class="mui-pull-right mui-icon"  href="look.html">预览</a>
+  </header>
+  
+  <div id="app" class="padMsg">
+
+    <p class="title">
+      <img src="images/look3.jpg" alt="">
+      <span>{{title}}</span>
+    </p>
+
+  	<div class="padMsgBox">
+
+
+      <div class="upload">
+
+                <div class="item" v-for="(item,index) in imgData" @click="imgBigShow(item.imgUrl)">
+                  <img class="itemimg" :src="item.imgUrl"  alt="">
+                </div>
+
+                <div class="item" id="uploadBut" @click="upThing">
+                  <img class="itemimg" src="images/eximg2.jpg"  alt="">
+                </div>
+
+      </div>
+
+
+
+  		<p>
+        <span>FPG：</span>
+        <input type="number" v-model="fpg" oninput="oi(this)" alt="FPG">  
+        <em>mmol/L</em>
+      </p>
+
+      <p>
+        <span>HbAIc：</span>
+        <input type="number" v-model="HbAIc" oninput="oi(this)" alt="HbAIc">  
+        <em>%</em>
+      </p>
+
+      <p>
+        <span>FINS：</span>
+        <input type="number" v-model="fins" oninput="oi(this)" alt="FINS">  
+        <em>uIU/ml</em>
+      </p>
+
+      <p>
+        <span>AST：</span>
+        <input type="number" v-model="ast" oninput="oi(this)" alt="AST">  
+        <em>u/L</em>
+      </p>
+
+      <p>
+        <span>ALT：</span>
+        <input type="number" v-model="alt" oninput="oi(this)" alt="ALT">  
+        <em>u/L</em>
+      </p>
+      
+      
+      
+
+      
+
+      <a class="fillBut" @click="subBut">保存并下一步</a>
+
+  	</div>
+  </div>
+<input id="file" class="filepath" onchange="changepic(this)" type="file" style="display:none" accept="image/*">
+<script src="js/vue.js"></script>
+<script src="js/main.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="mui/js/mui.min.js"></script>
+<script src="js/insInd4.js"></script>
+</body>
+</html>

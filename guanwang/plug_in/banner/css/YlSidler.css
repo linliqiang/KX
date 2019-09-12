@@ -1,0 +1,158 @@
+/* 全局 */
+.sun_banner{
+	width:100%;
+	height:100%;
+	background: -webkit-linear-gradient(#25252D, #515263); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(#25252D, #515263); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(#25252D, #515263); /* Firefox 3.6 - 15 */
+	background: linear-gradient(#25252D, #515263); /* 标准的语法 */
+}
+
+.Yl-container{width:100%; height:100%; overflow:hidden; position:relative;}
+.Yl-container .Yl-wrapper{ width: 100%; height: 100%; overflow: hidden;position:relative;}
+.Yl-container .Yl-wrapper i{list-style:none; font-style:normal;}
+.Yl-container .Yl-wrapper .Yl-slide{ width: 100%; height: 100%; overflow: hidden; position:absolute; display: none;}
+.Yl-container .Yl-wrapper .Yl-slide.active{ display: block;}
+
+.Yl-container .Yl-wrapper .Yl-slide .Yl-img0{width: 700px; height: 300px; background:url(../../../img/banner11.png) center center no-repeat; position:absolute;top:20%; margin-top: 0px;right:0;margin-right: -700px; z-index:0;}
+
+.Yl-container .Yl-wrapper .Yl-slide .Yl-img1{width: 30%; height: 190px; background:url(../../../img/banner21.png) center center no-repeat; position:absolute;top:32%; margin-top: 0px;right:0;margin-right: -700px; z-index:0;}
+.Yl-container .Yl-wrapper .Yl-slide .Yl-img1{background-size: 100% 100%; }
+
+.Yl-container .Yl-wrapper .Yl-slide .Yl-img11{width: 34%; height: 210px; background:url(../../../img/banner22.png) center center no-repeat; position:absolute;top:30.5%; margin-top: 0px;left:33%; z-index:0;}
+
+.Yl-container .Yl-wrapper .Yl-slide .Yl-img2{width: 700px; height: 300px; background:url(../../../img/banner32.png) center center no-repeat; position:absolute;top:45%; margin-top: -150px;right:0;margin-right: -700px; z-index:0;}
+.Yl-container .Yl-wrapper .Yl-slide .Yl-img21{width: 145px; height: 128px; background:url(../../../img/banner31.png) center center no-repeat; position:absolute;top:38%; margin-top: 0px;left:0;margin-left: -200px; z-index:0;}
+
+.Yl-container .Yl-wrapper .Yl-slide .Yl-font0,.Yl-container .Yl-wrapper .Yl-slide .Yl-font1,.Yl-container .Yl-wrapper .Yl-slide .Yl-font2{ width: 1200px; height:auto; text-align: left; margin: 0 auto;}
+.Yl-container .Yl-wrapper .Yl-slide.Yl-0 .Yl-font0{font-size:48px; color: #fff; margin-top: 80px;}
+.Yl-container .Yl-wrapper .Yl-slide.Yl-0 .Yl-font1{font-size:36px; color: #fff; margin-top: 30px;}
+.Yl-container .Yl-wrapper .Yl-slide.Yl-0 .Yl-font2{font-size:36px; color: #fff; margin-top: 30px;}
+.Yl-container .Yl-wrapper .Yl-slide.Yl-1 .Yl-font0{font-size:48px; color: #fff; margin-top: 80px;}
+.Yl-container .Yl-wrapper .Yl-slide.Yl-1 .Yl-font1{font-size:36px; color: #fff; margin-top: 30px;}
+.Yl-container .Yl-wrapper .Yl-slide.Yl-1 .Yl-font2{font-size:36px; color: #fff; margin-top: 30px;}
+.Yl-container .Yl-wrapper .Yl-slide.Yl-2 .Yl-font0{font-size:48px; color: #fff; margin-top: 80px;}
+.Yl-container .Yl-wrapper .Yl-slide.Yl-2 .Yl-font1{font-size:36px; color: #fff; margin-top: 30px;}
+.Yl-container .Yl-wrapper .Yl-slide.Yl-2 .Yl-font2{font-size:36px; color: #fff; margin-top: 30px;}
+.Yl-container .Yl-pagination{ width:100%; height: 22px; position: absolute; bottom:20px; z-index: 3; text-align: center;}
+.Yl-container .Yl-pagination span{display:inline-block;width:45px;height:7px;border-radius: 3px;margin:0 5px;cursor:pointer;line-height:6px;vertical-align:middle;transition:all 0.3s linear 0s;-webkit-transition:all 0.3s linear 0s; background:#fff;}
+.Yl-container .Yl-pagination span:hover{background:#fff;}
+.Yl-container .Yl-wrapper .Yl-slide .fadeInUp i{opacity:0;display:inline-block;vertical-align:text-bottom;transform:translateY(120px);-webkit-transform:translateY(120px);transition:all 1s ease-in-out 0s;-webkit-transition:all 1s ease-in-out 0s;}
+.Yl-container .Yl-wrapper .Yl-slide .fadeInUp.act i{transform:translateY(0);-webkit-transform:translateY(0);opacity:1;}
+
+.Yl-container .Yl-pagination-bullet-active{background:#fd9e3e !important;}
+.Yl-container .Yl-Button{ position: relative; z-index: 2; width: 1200px; height:60px; margin: 0 auto; text-align:left; margin-top: 50px;}
+.Yl-container .Yl-Button a{ display:inline-block; width:150px; height:45px; line-height:45px; font-size:16px; color:#fff; text-align:center; margin:0 auto; background:none; margin-top:20px; border:1px #fff solid; text-decoration:none;}
+.Yl-container .Yl-Button a:hover{ background:#fff; color:#000;}
+
+.Yl-container .Yl-wrapper .Yl-slide .slideInLeft{ position:relative; z-index: 1;}
+.Yl-container .Yl-wrapper .Yl-slide .slideInLeft i{display:inline-block;text-align:left;}
+.Yl-container .Yl-wrapper .Yl-slide .slideInLeft i b{opacity:0;display:inline-block;white-space:nowrap;overflow:hidden;transition:all 0.6s ease-out 0s;-webkit-transition:all 0.6s ease-out 0s; width:10%;}
+.Yl-container .Yl-wrapper .Yl-slide .slideInLeft.act i b{width:100%;opacity:1;}
+
+@keyframes Yl-img_an{
+	0%{
+		opacity: 0;
+		right:0;
+		margin-right: -700px;
+	}
+	5%{
+		opacity: 1;
+		right:50%;
+		margin-right: -350px;
+	}
+	100%{
+		opacity: 1;
+		right:50%;
+		margin-right: -350px;
+	}
+}
+
+@keyframes Yl-img_an1{
+	0%{
+		opacity: 0;
+		right:0;
+		margin-right: -700px;
+	}
+	5%{
+		opacity: 1;
+		margin-right: 35%;
+	}
+	100%{
+		opacity: 1;
+		margin-right: 35%;
+	}
+}
+@keyframes Yl-img_an11{
+	0%{
+		opacity: 0;
+	}
+	2%{
+		opacity: 0;
+	}
+	10%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes Yl-img_an2{
+	0%{
+		opacity: 0;
+		right:0;
+		margin-right: -700px;
+	}
+	5%{
+		opacity: 1;
+		right:50%;
+		margin-right: -550px;
+	}
+	100%{
+		opacity: 1;
+		right:50%;
+		margin-right: -550px;
+	}
+}
+
+@keyframes Yl-img_an21{
+	0%{
+		opacity: 0;
+		right:0;
+		margin-left: -200px;
+		transform:rotate(-90deg);
+	}
+	5%{
+		opacity: 1;
+		right:50%;
+		margin-left: 32%;
+		transform:rotate(0deg);
+	}
+	100%{
+		opacity: 1;
+		right:50%;
+		margin-left: 32%;
+		transform:rotate(0deg);
+	}
+}
+
+.Yl-font0,.Yl-font1,.Yl-font2,.Yl-Button{
+	display: none !important;
+}
+
+.Yl-0{
+	background-image: url("../../../img/banner1.png");
+}
+.Yl-1{
+	background-image: url("../../../img/banner2.png");
+}
+.Yl-2{
+	background-image: url("../../../img/banner3.png");
+}
+.Yl-0,.Yl-1,.Yl-2{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+

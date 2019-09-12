@@ -1,0 +1,140 @@
+html { 
+	background: #f8f8f8; 
+}
+body { 
+	/*background-image: url("../images/banz.jpg");
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+    background-attachment:fixed;*/
+
+}
+/*调整placeholder样式*/
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {  color: #dbe7f3;  } 
+input:-moz-placeholder, textarea:-moz-placeholder {  color: #dbe7f3;  } 
+input::-moz-placeholder, textarea::-moz-placeholder {  color: #dbe7f3;  } 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {  color: #dbe7f3;  }
+#app{
+	/*min-height: 100vh;*/
+	/*padding: 0rem 0.32rem;*/
+}
+
+.main{
+	width: 100%;
+	height: 100vh;
+}
+
+.scroll-list-wrap{
+	width: 100%;
+	height: 100%;
+}
+
+
+.itemBox>li{
+	width: 100%;
+	height: 3.2rem;
+}
+.itemBox>li.item{
+	background: #f8f8f8;
+	padding: 0rem 0.32rem;
+}
+.item a{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	padding: 0rem 0.24rem;
+	border-bottom: 1px solid #eaeaea;
+}
+.item a .left{
+	width: 4.7rem;
+	height: 2.5rem;
+	/*padding: 0.2rem 0rem;*/
+}
+.left>*{
+	width: 100%;
+}
+.left h4{
+	font-size: 0.4rem;
+	line-height: 0.6rem;
+}
+
+
+
+.left h5 em{
+	width: 0.4rem;
+	height: 0.3rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+}
+.left h5.hsign1 em{
+	background-image: url(../images/icon0.jpg);
+}
+.left h5.hsign2 em{
+	background-image: url(../images/icon1.jpg);
+}
+.left h5.hsign3 em{
+	background-image: url(../images/icon2.jpg);
+}
+.left h5.hsign4 em{
+	background-image: url(../images/icon3.jpg);
+}
+.left h5.hsign5 em{
+	background-image: url(../images/icon4.jpg);
+}
+.left h5.hsign6 em{
+	background-image: url(../images/icon1.jpg);
+}
+.left h5.hsign1 span{
+	color: red;
+}
+.left h5.hsign2 span{
+	color: blue;
+	margin-left: 0.05rem;
+}
+.left h5.hsign3 span{
+	color: #da2e53;
+}
+.left h5.hsign4 span{
+	color: #f26e6a;
+}
+.left h5.hsign5 span{
+	color: #ffa041;
+}
+.left h5.hsign6 span{
+	color: green;
+}
+
+.left p{
+	/*padding-right: 0.5rem;*/
+}
+.left p *{
+	font-size: 0.32rem;
+	color: #999999;
+}
+.left p span{
+	width: 1.8rem;
+}
+.left p em{
+	width: 3rem;
+	text-align: left;
+
+}
+a .right{
+	width: 3.3rem;
+	height: 2.5rem;
+	position: relative;
+}
+.right img{
+	width: 3.75rem;
+	height: 2.5rem;
+}
+.right b{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin-right: 0.2rem;
+	margin-bottom: 0.2rem;
+	color: #fff;
+}
+

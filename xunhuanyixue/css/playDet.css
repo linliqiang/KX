@@ -1,0 +1,99 @@
+html{
+	background: #e0e1e2;
+}
+body{
+	background: #e0e1e2;
+	font-family: 'Helvetica Neue',Helvetica,sans-serif;
+}
+#app{
+	min-height: 100vh;
+	background: #e0e1e2;
+	padding: 0.2rem 0.16rem 0.16rem 0.16rem;
+}
+.main{
+	width: 100%;
+	background: #fff;
+	min-height: calc(100vh - 0.48rem);
+}
+.vid{
+	width: 100%;
+	padding: 0rem 0.16rem;
+	background: #fff;
+	padding-top: 0.16rem;
+}
+video{
+	width: 9.36rem;
+	height: 5.09rem;
+	background: #000;
+}
+.title, .but, .msg{
+	background: #fff;
+	/*margin-bottom: 0.4rem;*/
+}
+.msg{
+	padding: 0.5rem 0.32rem;
+	border-top: 0.4rem solid #e0e1e2;
+}
+.msg img{
+	max-width: 100%;
+}
+.title{
+	padding:0.2rem 0rem;
+	border-bottom: 0.4rem solid #e0e1e2;
+}
+.title p{
+	font-size: 0.36rem;
+	line-height: 0.45rem;
+	padding-left: 0.32rem;
+	margin-top: 0.2rem;
+}
+.title p:nth-child(1){
+	margin-top: 0rem;
+	font-size: 0.45rem;
+	line-height: 0.6rem;
+}
+.title span,.title em{
+	font-size: 0.36rem;
+	color: #999999;
+}
+em{
+	margin-left: 2rem;
+}
+.but{
+	display: -webkit-flex; /* Safari */
+	display: flex;
+	justify-content: center;
+	-webkit-justify-content: center;
+	/*border-radius: 0.3rem;*/
+	overflow: hidden;
+	background: #e0e1e2;
+}
+.but button{
+	width: 50%;
+	height: 1.2rem;
+	background: #fff;
+	font-size: 0.4rem;
+}
+.but button:nth-child(1){
+	border-top-left-radius: 0.3rem;
+	border-bottom-left-radius: 0.3rem;
+}
+.but button:nth-child(2){
+	border-top-right-radius: 0.3rem;
+	border-bottom-right-radius: 0.3rem;
+}
+.but button.butSign{
+	background: #fea31a;
+	color: #fff;
+}
+.msg>p{
+	font-size: 0.38rem;
+	line-height: 0.63rem;
+	color: #000;
+}
+.msg>p>p{
+	font-size: 0.38rem;
+	line-height: 0.63rem;
+	color: #000;
+}
+

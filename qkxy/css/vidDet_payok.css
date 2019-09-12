@@ -1,0 +1,68 @@
+
+.main {
+	width: 886px;
+	height: 900px;
+	background: #f0f2f7; 
+	padding-top: 50px;
+	padding-bottom: 200px;
+
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+
+	justify-content: center;
+	-webkit-justify-content: center;
+
+	align-items: center;
+	-webkit-align-items: center;
+
+	position: relative;
+
+}
+.mainBox{
+	/*border:1px solid #ccc;*/
+	width: 990px;
+	height: 560px;
+
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+
+  	justify-content: center ;
+  	-webkit-justify-content: center ;
+
+
+	align-items: center;
+	-webkit-align-items: center;
+
+	background: #fff;
+
+}
+.mainBox i{
+	font-size: 60px;
+}
+.icon-gou{
+	color: #22ad38;
+}
+.icon-shanchuyixuanqunchengyuanchacha{
+	color: red;
+}
+.mainBox span{
+	margin-left: 20px;
+	font-size: 24px;
+}
+
+.main p{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left:0;
+	margin-top: 430px;
+	text-align: center;
+	font-size: 12px;
+	color: #ccc;
+	letter-spacing: 1px;
+}
+.main p span{
+	font-size: 12px;
+	color: #ccc;
+}
+

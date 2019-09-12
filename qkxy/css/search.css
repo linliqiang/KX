@@ -1,0 +1,40 @@
+
+.main-content{
+	background: #f0f2f7;
+}
+
+/*二级导航*/
+.news{
+	padding-bottom: 100px;
+}
+.news-nav{
+	height: 48px;
+	border:1px solid rgb(209,209,209);
+}
+.news-nav li{
+	float: left;
+	line-height: 46px;
+	margin-left: 50px;
+	height: 46px;
+	padding: 0px 4px;
+}
+.news-nav li:hover{
+	border-bottom: 2px solid #fa8821;
+	color: #fa8821;
+}
+.newsSign{
+	border-bottom: 2px solid #fa8821;
+	color: #fa8821;
+}
+
+
+.seaRes{
+	text-align: right;
+	padding: 20px 30px 20px 0px;
+	margin-bottom: 16px; 
+	/*background: #fff;*/
+	font-size: 14px;
+}
+.seaRes span{
+	color: #fa8821;
+}

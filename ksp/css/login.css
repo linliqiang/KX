@@ -1,0 +1,77 @@
+html{
+	background: #fff;
+}
+body{
+	min-height: 100vh;
+	background: #fff;
+}
+.login{
+	width: 10rem;
+	background:#ccc;
+	min-height: 100vh;
+	background: #a72750;
+	padding-top: 60px;
+}
+.loginBox{
+	width: 9.2rem;
+	height: 10.0rem;
+	background: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3rem;
+	padding-top: 1rem;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction:column; 
+	-webkit-flex-direction:column;
+	align-items:center; 
+	-webkit-align-items:center;
+}
+
+#app input{
+	width: 8.36rem;
+	height: 1rem;
+	margin-top: 0.6rem;
+	border: 1px solid #b3b2b2; 
+	padding-left: 1.5rem;
+	font-size: 0.4rem;
+	color: #000;
+}
+.name{
+	background: url(../images/login1.jpg) no-repeat 0.2rem 0.18rem;
+	background-size: 0.55rem 0.55rem; 
+}
+.pas{
+	background: url(../images/login2.jpg) no-repeat 0.2rem 0.18rem;
+	background-size: 0.55rem 0.55rem;
+}
+.loginBut{
+	width: 8.4rem;
+	height: 1.413333rem;
+	background: #a72750;
+	border-radius: 0.3rem;
+	text-align: center;
+	line-height: 1.413333rem;
+	color: #fff;
+	font-size: 0.453333rem;
+	letter-spacing: 0.2rem;
+	margin-top: 3.066667rem;
+}
+.regBut{
+	color: #a72750;
+	font-size: 0.453333rem;
+	letter-spacing: 0.2rem;
+	margin-top: 0.5rem;
+}
+
+
+.mui-bar-nav{
+	background: #333333;
+	box-shadow: 0px 0px 0px 0px;
+}
+.mui-bar-nav a{
+	color: #fff;
+}
+.mui-bar-nav h1{
+	color: #fff;
+}

@@ -1,0 +1,112 @@
+/* `XHTML, HTML4, HTML5 Reset
+----------------------------------------------------------------------------------------------------*/
+
+/*块级标签：div，section，article，aside*/
+
+/*文字标签：p，h1，h2，h3，h4，h5，h6，span，em，b*/
+
+/*特殊文字标签：i，strong，del，ins，address，mark，abbr，*/
+
+html a,
+html abbr,
+html acronym,
+html address,
+html applet,
+html article,
+html aside,
+html audio,
+html b,
+html big,
+html blockquote,
+html body,
+html canvas,
+html caption,
+html center,
+html cite,
+html code,
+html dd,
+html del,
+html details,
+html dfn,
+html dialog,
+html div,
+html dl,
+html dt,
+html em,
+html embed,
+html fieldset,
+html figcaption,
+html figure,
+html font,
+html footer,
+html form,
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6,
+html header,
+html hgroup,
+html hr,
+html html,
+html i,
+html iframe,
+html img,
+html ins,
+html kbd,
+html label,
+html legend,
+html li,
+html main,
+html mark,
+html menu,
+html meter,
+html nav,
+html object,
+html ol,
+html output,
+html p,
+html pre,
+html progress,
+html q,
+html rp,
+html rt,
+html ruby,
+html s,
+html samp,
+html section,
+html small,
+html span,
+html strike,
+html strong,
+html sub,
+html summary,
+html sup,
+html table,
+html tbody,
+html td,
+html tfoot,
+html th,
+html thead,
+html time,
+html tr,
+html tt,
+html u,
+html ul,
+html var,
+html video,
+html xmp{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #000000;
+  line-height: 1;
+}
+
+
+
+
+
+
+

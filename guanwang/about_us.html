@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>业务合作</title>
+	<style type="text/css">
+	    /*去除百度地图版权*/
+	    .anchorBL{
+	    	display:none;
+	    }
+	 </style>
+	<link rel="stylesheet" href="css/main.css">
+
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=iZK7my9z0zOoKOosnm799eGTD4PhcX1w"></script>
+	
+	<script>
+       if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+            // document.write('<link href="'+cssArr[i]+'" type="text/css" rel=stylesheet>');
+        }
+        else {
+        	document.write('<link rel="stylesheet" href="plug_in/carousel2/css/jquery.bxslider.css">');
+            document.write('<link href="css/pc/about_us.css" type="text/css" rel=stylesheet>');
+            
+           
+        }
+	</script>
+
+
+
+</head>
+<body>
+
+<div id="app">
+	
+
+
+	<div id="header" class="header">
+
+		<div class="nav">
+			<img src="img/logo.png" height="52" width="156" alt="">
+			<ul>
+				<li class="icon1Box">
+
+					<a href="index.html">
+						<div class="nav-sub-left icon1"></div>
+						<div class="nav-sub-right">
+							<span>首页</span>
+							<em>home</em>
+						</div>
+					</a>
+					
+				</li>
+				<li class="icon2Box">
+					<a href="media_platform.html">
+						<div class="nav-sub-left icon2"></div>
+						<div class="nav-sub-right">
+							<span>媒体平台</span>
+							<em>media</em>
+						</div>
+					</a>
+				</li>
+				<li class="icon3Box">
+					<a href="business_cooperation.html">
+						<div class="nav-sub-left icon3"></div>
+						<div class="nav-sub-right">
+							<span>业务合作</span>
+							<em>business</em>
+						</div>
+					</a>
+				</li>
+				<li class="icon4Box">
+					<a href="index.html#m4">
+						<div class="nav-sub-left icon4"></div>
+						<div class="nav-sub-right">
+							<span>合作伙伴</span>
+							<em>Partners</em>
+						</div>
+					</a>
+				</li>
+				<li class="icon5Box">
+					<a href="news.html">
+						<div class="nav-sub-left icon5"></div>
+						<div class="nav-sub-right">
+							<span>新闻中心</span>
+							<em>news</em>
+						</div>
+					</a>
+				</li>
+				<li class="icon6Box">
+					<a>
+						<div class="nav-sub-left icon6"></div>
+						<div class="nav-sub-right">
+							<span>关于我们</span>
+							<em>About us</em>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+
+	</div>
+
+
+
+	<div id="main" class="main">
+
+		<section id="ban" class="ban"></section>
+
+		<section class="content">
+			<ul class="content-nav">
+				<li @click="cnT(1)" :class="{cnav:cnSign==1}">公司介绍</li>
+				<li @click="cnT(2)" :class="{cnav:cnSign==2}">企业文化</li>
+				<li @click="cnT(3)" :class="{cnav:cnSign==3}">企业资质</li>
+				<li @click="cnT(4)" :class="{cnav:cnSign==4}">联系我们</li>
+				<li @click="cnT(5)" :class="{cnav:cnSign==5}">加入我们</li>
+			</ul>
+			<div class="content-body content-body1" :class="{newsItem:cnSign==1}">
+				<h1><em>A</em><span>公司介绍</span></h1>
+				<p>Company introduction</p>
+				<div class="cb1-body">
+					<img src="img/about_us/hup.png" height="257" width="406" alt="">
+					<div>
+						<p>康迅传媒始创于2007年，公司致力于打造医学信息传播与处方药整合营销传播服务平台。凭借“创新发展，跨界经营”的商业模式，深耕学术、营销和传播资源整合领域，为医护人员和医药企业提供全方位学术推广解决方案，业务涵盖传媒广告、编辑出版、医学服务、学术交流、信息技术、新媒体运营、多媒体制作等。</p>
+						<p>十余年的经验积累，使公司已具备最优势的行业专家资源、最精细的数字营销服务，品牌影响力日益彰显，并与行业各学、协会、基金会等机构建立良好的合作关系，积极传播医学健康信息，引领医药营销规范发展！</p>
+					</div>
+				</div>
+			</div>
+			<div class="content-body content-body2" :class="{newsItem:cnSign==2}">
+				<h1><em>B</em><span>企业文化</span></h1>
+				<p>corporate  culture</p>
+				<ul class="cb2-body">
+					<li>
+						<img src="img/about_us/gg_03.png" height="252" width="342" alt="">
+						<p>我们的宗旨</p>
+						<p>传播健康 创造价值</p>
+					</li>
+					<li>
+						<div>
+							<p>我们的精神</p>
+							<p>
+								<span>诚信</span>
+								<span>敬业</span>
+								<span>创新</span>
+								<span>奉献</span>
+							</p>
+						</div>
+						<div>
+							<p>我们的追求</p>
+							<p>
+								<span>专心</span>
+								<span>专业</span>
+								<span>专注</span>
+							</p>
+							<p>
+								<span>坚决</span>
+								<span>坚定</span>
+								<span>坚持</span>
+							</p>
+						</div>
+					</li>
+					<li>
+						<img src="img/about_us/5.png" height="237" width="318" alt="">
+						<p>我们的愿景</p>
+						<p>我们要做医药营销领域的学术推广专家、信息传播专家、整合营销专家</p>
+					</li>
+				</ul>
+
+			</div>
+			<div class="content-body content-body3" :class="{newsItem:cnSign==3}">
+				<h1><em>C</em><span>企业资质</span></h1>
+				<p>Enterprise  qualification</p>
+				<ul class="cb3-body">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="content-body content-body4" :class="{newsItem:cnSign==4}">
+				<h1><em>D</em><span>联系我们</span></h1>
+				<p>Contact  us</p>
+				<div class="cb4">
+					<div id="allmap" class="cb4-left"></div>
+					<ul class="cb4-right">
+						<li :class="{mapSigns:mapSign==1}" @click="mapSignT(1)">
+							<div>01</div>
+							<div>
+									
+								<p><em></em><span>北京市朝阳区高碑店西店村高碑店路15-3</span></p>
+								<p><em></em><span>Tel：010-85354888</span></p>
+							</div>
+						</li>
+						<li :class="{mapSigns:mapSign==2}" @click="mapSignT(2)">
+							<div>02</div>
+							<div>
+								<p><em></em><span>北京市东城区东四西大街42号中华医学会招待所3单元501</span></p>
+								<p><em></em><span>Tel：010-85354888</span></p>
+							</div>
+						</li>
+						<li :class="{mapSigns:mapSign==3}" @click="mapSignT(3)">
+							<div>03</div>
+							<div>
+								<p><em></em><span>成都市成华区万科路9号金库1栋1单元815号</span></p>
+								<p><em></em><span>Tel：028-83266869</span></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="content-body content-body5" :class="{newsItem:cnSign==5}">
+				<h1><em>E</em><span>加入我们</span></h1>
+				<p>Recruit</p>
+				<div id="slider5" class="cb5">
+					<div>
+						<div class="cb5-item1">
+							<h4>软件工程师</h4>
+							<p>Software</p>
+						</div>
+						<div class="cb5-item2">
+							<p>1、工作认真、踏实、细心；</p>
+							<p>2、网页布局及美化有一定得经验和把握；</p>
+							<p>3、熟练设计页面及进行切图；</p>
+						</div>
+						<div class="cb5-item3">
+							<img src="img/about_us/pe_09.png" height="54" width="61" alt="">
+						</div>
+						<h2 class="jia">+</h2>
+					</div>
+					<div>
+						<div class="cb5-item1">
+							<h4>UI设计师</h4>
+							<p>UI Designer</p>
+						</div>
+						<div class="cb5-item2">
+							<p>1、工作认真、踏实、细心；</p>
+							<p>2、网页布局及美化有一定得经验和把握；</p>
+						</div>
+						<div class="cb5-item3">
+							<img src="img/about_us/pe_09.png" height="54" width="61" alt="">
+						</div>
+						<h2 class="jia">+</h2>
+					</div><div>
+						<div class="cb5-item1">
+							<h4>医学编辑</h4>
+							<p>Medical editor</p>
+						</div>
+						<div class="cb5-item2">
+							<p>1、工作认真、踏实、细心；</p>
+						</div>
+						<div class="cb5-item3">
+							<img src="img/about_us/pe_09.png" height="54" width="61" alt="">
+						</div>
+						<h2 class="jia">+</h2>
+					</div><div>
+						<div class="cb5-item1">
+							<h4>软件工程师</h4>
+							<p>Software</p>
+						</div>
+						<div class="cb5-item2">
+							<p>1、工作认真、踏实、细心；</p>
+							<p>2、网页布局及美化有一定得经验和把握；</p>
+							<p>3、熟练设计页面及进行切图；</p>
+						</div>
+						<div class="cb5-item3">
+							<img src="img/about_us/pe_09.png" height="54" width="61" alt="">
+						</div>
+						<h2 class="jia">+</h2>
+					</div><div>
+						<div class="cb5-item1">
+							<h4>UI设计师</h4>
+							<p>UI Designer</p>
+						</div>
+						<div class="cb5-item2">
+							<p>1、工作认真、踏实、细心；</p>
+							<p>2、网页布局及美化有一定得经验和把握；</p>
+							<p>3、熟练设计页面及进行切图；</p>
+						</div>
+						<div class="cb5-item3">
+							<img src="img/about_us/pe_09.png" height="54" width="61" alt="">
+						</div>
+						<h2 class="jia">+</h2>
+					</div><div>
+						<div class="cb5-item1">
+							<h4>UI设计师</h4>
+							<p>UI Designer</p>
+						</div>
+						<div class="cb5-item2">
+							<p>1、工作认真、踏实、细心；</p>
+							<p>2、网页布局及美化有一定得经验和把握；</p>
+							<p>3、熟练设计页面及进行切图；</p>
+						</div>
+						<div class="cb5-item3">
+							<img src="img/about_us/pe_09.png" height="54" width="61" alt="">
+						</div>
+						<h2 class="jia">+</h2>
+					</div><div>
+						<div class="cb5-item1">
+							<h4>医学编辑</h4>
+							<p>Medical editor</p>
+						</div>
+						<div class="cb5-item2">
+							<p>1、工作认真、踏实、细心；</p>
+							<p>2、网页布局及美化有一定得经验和把握；</p>
+							<p>3、熟练设计页面及进行切图；</p>
+						</div>
+						<div class="cb5-item3">
+							<img src="img/about_us/pe_09.png" height="54" width="61" alt="">
+						</div>
+						<h2 class="jia">+</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+
+
+	<div id="footer" class="footer">
+		<div>
+			<ul>
+				<li>
+					<h4>媒体平台</h4>
+					<p><a href="media_platform.html?type=1">中华医学信息导报</a></p>
+					<p><a href="media_platform.html?type=2">神经时讯</a></p>
+					<p><a href="media_platform.html?type=3">全科学苑</a></p>
+					<p><a href="media_platform.html?type=4">围术期医学论坛</a></p>
+					<p><a href="media_platform.html?type=5">心脏健康社区</a></p>
+				</li>
+				<li>
+					<h4>业务合作</h4>
+					<p><a href="business_cooperation.html?type=1">编辑出版</a></p>
+					<p><a href="business_cooperation.html?type=2">医学服务</a></p>
+					<p><a href="business_cooperation.html?type=3">学术活动</a></p>
+					<p><a href="business_cooperation.html?type=4">新媒体</a></p>
+					<p><a href="business_cooperation.html?type=5">多媒体服务</a></p>
+				</li>
+				<li>
+					<h4>合作伙伴</h4>
+					<p><a>外企客户</a></p>
+					<p><a>其他客户</a></p>
+				</li>
+				<li>
+					<h4>新闻中心</h4>
+					<p><a href="news.html?type=1">企业公告</a></p>
+					<p><a href="news.html?type=2">媒体报道</a></p>
+					<p><a href="news.html?type=3">新闻发布</a></p>
+					<p><a>社交媒体</a></p>
+				</li>
+				<li>
+					<h4>关于我们</h4>
+					<p><a href="about_us.html?type=1">公司简介</a></p>
+					<p><a href="about_us.html?type=2">企业文化</a></p>
+					<p><a href="about_us.html?type=3">企业资质</a></p>
+					<p><a href="about_us.html?type=4">联系我们</a></p>
+					<p><a href="about_us.html?type=5">加入我们</a></p>
+				</li>
+			</ul>
+			<div class="footer-right">
+				<div class="wx">
+					<img src="img/vv_1.png" height="36" width="36" alt="">
+					<span>微信</span>
+				</div>
+				<div class="wb">
+					<img src="img/vv_2.png" height="36" width="35" alt="">
+					<span>微博</span>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<div id="footer2" class="footer2">
+		<p>备案号：京ICP备180140024号-4 | 北京康迅传媒股份有限公司</p>
+	</div>
+
+	<div class="bg1"></div>
+	<div class="jiaDet">
+		<div class="zdet-left">
+			<h3>软件工程师</h3>
+			<p>Software</p>
+		</div>
+		<div class="zdet-right">
+			<ul>
+				<li>1、Web前端表现层、页面制作及后端交互的设计和开发；</li>
+				<li>2、JavaScript程序模块开发，通用类库、框架编写；</li>
+				<li>3、与设计师、开发工程师紧密工作，负责产出高质量的产品前端层；</li>
+				<li>4、通过各种前端技术手段，提高用户体验并满足性能要求；</li>
+				<li>5、能充分理解项目需求和设计需求，具有一定研发精神，能解决各种未知问题。</li>
+				<li>6、2年以上的前端领域开发经验，能独立完成前端开发工作；大专及以上学历优先,熟练使用Javascript, jQuery, HTML5, CSS, Ajax 等前端技术，能轻松写出符合W3C标准、兼容主流浏览器的代码；</li>
+				<li>7、工作认真、踏实、细心；</li>
+				<li>8、工作认真、踏实、细心；</li>
+				<li>9、工作认真、踏实、细心；</li>
+				<li>10、工作认真、踏实、细心；</li>
+<!-- 				<li>11、工作认真、踏实、细心；</li>
+				<li>12、工作认真、踏实、细心；</li>
+				<li>13、工作认真、踏实、细心；</li>
+				<li>14、工作认真、踏实、细心；</li>
+				<li>15、工作认真、踏实、细心；</li>
+				<li>16、工作认真、踏实、细心；</li>
+				<li>17、工作认真、踏实、细心；</li>
+				<li>18、工作认真、踏实、细心；</li>
+				<li>19、工作认真、踏实、细心；</li>
+				<li>20、工作认真、踏实、细心；</li> -->
+			</ul>
+			<span class="close">×</span>
+		</div>
+	</div>
+
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/vue.js"></script>
+
+<script type="text/javascript" src="plug_in/carousel2/js/jquery.bxslider.js"></script>
+<script src="js/about_us.js"></script>
+</body>
+</html>

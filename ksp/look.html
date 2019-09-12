@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>卡双平</title>
+
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="stylesheet" href="mui/css/mui.min.css">
+  <link rel="stylesheet" href="mui/css/mui.picker.min.css">
+
+  <link rel="stylesheet" href="css/look.css">
+
+</head>
+<body>
+
+  <header class="mui-bar mui-bar-nav" id="experthead" style="z-index:999">
+      <a class="mui-icon-left-nav mui-icon mui-icon-arrowleft headback" onClick="javascript :history.back(-1);"></a>
+      <h1 class="mui-title">预览</h1>
+  </header>
+  
+  <div id="app" class="padMsg">
+
+    <!-- #患者信息 -->
+    <p class="title">
+      <img src="images/look1.jpg" alt="">
+      <span>患者信息</span>
+    </p>
+
+  	<div class="padMsgBox box1">
+
+      <div class="upload">
+
+                <div class="item" v-for="(item,index) in data.padMsg.imgData" @click="imgBigShow(item.imgUrl)">
+                  <img class="itemimg" :src="item.imgUrl"  alt="">
+                </div>
+
+      </div>
+
+  		<p  id="date01" >
+        <span>入组时间：</span>
+        <input id="time1" type="text"  v-model="data.padMsg.time" readonly="readonly">  
+        <img src="images/timeLogo.jpg" alt="">
+      </p>
+      <p>
+        <span>姓名：</span>
+        <input type="text" v-model="data.padMsg.name" readonly="readonly">
+      </p>
+      <p >
+        <span>性别：</span>
+        <span id="sex">
+  
+          <input id="radio11" class="radio-style" type="radio" name="radio1" value="男"  readonly="readonly"/>
+          <em>男</em>
+
+          <input id="radio12" class="radio-style" type="radio" name="radio1" value="女"  readonly="readonly"/>
+          <em>女</em>
+
+        </span>
+
+      </p>
+      <p>
+        <span>年龄：</span>
+        <input type="number"  v-model="data.padMsg.age" readonly="readonly">
+      </p>
+      <p>
+        <span>电话：</span>
+        <input type="text" v-model="data.padMsg.phone" readonly="readonly">
+      </p>
+      <p>
+        <span>门诊号：</span>
+        <input type="text" v-model="data.padMsg.number" readonly="readonly">
+      </p>
+
+      
+
+  	</div>
+    <!-- 患者信息# -->
+
+
+    <!-- #原始用药方案 -->
+    <p class="title">
+        <img src="images/look2.jpg" alt="">
+        <span>原始用药方案</span>
+    </p>
+
+    <div class="padMsgBox box2">
+
+        <div class="upload">
+
+                  <div class="item" v-for="(item,index) in data.medPro.imgData" @click="imgBigShow(item.imgUrl)">
+                    <img class="itemimg" :src="item.imgUrl"  alt="">
+                  </div>
+
+        </div>
+        
+        <textarea name="" id="textarea1" placeholder="请输入原始用药方案" v-model="data.medPro.msg" readonly="readonly"></textarea>
+
+        
+
+    </div>
+    <!-- 原始用药方案# -->
+
+
+    <!-- #初步检查指标 -->
+    <p class="title">
+      <img src="images/look3.jpg" alt="">
+      <span>初步检查指标</span>
+    </p>
+
+    <!-- 1236789类型 静态页面默认显示这种类型 -->
+    <div class="padMsgBox box3" v-if="dataTitle == 1236789">
+    <!-- <div class="padMsgBox box3"> -->
+
+      <div class="upload">
+
+                <div class="item" v-for="(item,index) in data.insInd.imgData" @click="imgBigShow(item.imgUrl)">
+                  <img class="itemimg" :src="item.imgUrl"  alt="">
+                </div>
+
+      </div>
+
+      <p>
+        <span>FPG：</span>
+        <input type="text" v-model="data.insInd.fpg" readonly="readonly">  
+        <em>mmol</em>
+      </p>
+
+      <p>
+        <span>HbAlc：</span>
+        <input type="text" v-model="data.insInd.hbalc" readonly="readonly">  
+        <em>%</em>
+      </p>
+
+      <p>
+        <span>FINS：</span>
+        <input type="text" v-model="data.insInd.fins" readonly="readonly">  
+        <em>uIU/ml</em>
+      </p>
+    
+      
+
+    </div>
+
+    <!-- 4类型 静态页面默认隐藏 -->
+    <div class="padMsgBox box3" v-if="dataTitle == 4">
+    <!-- <div class="padMsgBox box3"> -->
+
+      <div class="upload">
+
+                <div class="item" v-for="(item,index) in data.insInd4.imgData" @click="imgBigShow(item.imgUrl)">
+                  <img class="itemimg" :src="item.imgUrl"  alt="">
+                </div>
+
+      </div>
+
+      <p>
+        <span>FPG：</span>
+        <input type="text" v-model="data.insInd4.fpg">  
+        <em>mmol</em>
+      </p>
+
+      <p>
+        <span>LH/FSH：</span>
+        <input type="text" v-model="data.insInd4.lh">  
+     
+      </p>
+
+      <p>
+        <span>FINS：</span>
+        <input type="text" v-model="data.insInd4.fins">  
+        <em>uIU/ml</em>
+      </p>
+
+      <p>
+        <span>AST：</span>
+        <input type="text" v-model="data.insInd4.ast">  
+        <em>u/L</em>
+      </p>
+
+      <p>
+        <span>ALT：</span>
+        <input type="text" v-model="data.insInd4.alt">  
+        <em>u/L</em>
+      </p>
+      
+      
+
+    </div>
+
+    <!-- 5类型 静态页面默认隐藏 -->
+    <div class="padMsgBox box3" v-if="dataTitle == 5">
+    <!-- <div class="padMsgBox box3"> -->
+
+      <div class="upload">
+
+                <div class="item" v-for="(item,index) in data.insInd5.imgData" @click="imgBigShow(item.imgUrl)">
+                  <img class="itemimg" :src="item.imgUrl"  alt="">
+                </div>
+
+      </div>
+
+      <p>
+        <span>FPG：</span>
+        <input type="text" v-model="data.insInd5.fpg">  
+        <em>mmol</em>
+      </p>
+
+      <p>
+        <span>LH/fsh：</span>
+        <input type="text" v-model="data.insInd5.lh">  
+        
+      </p>
+
+      <p>
+        <span>FINS：</span>
+        <input type="text" v-model="data.insInd5.fins">  
+        <em>uIU/ml</em>
+      </p>
+      
+      
+
+    </div>
+
+    <!-- 9类型 静态页面默认隐藏 -->
+    <div class="padMsgBox box3" v-if="dataTitle == 9">
+    <!-- <div class="padMsgBox box3"> -->
+
+      <div class="upload">
+
+                <div class="item" v-for="(item,index) in data.insInd9.imgData" @click="imgBigShow(item.imgUrl)">
+                  <img class="itemimg" :src="item.imgUrl"  alt="">
+                </div>
+
+      </div>
+
+      <p>
+        <span style="width:3rem;">FPG与2hPG：</span>
+        <input style="width:3.2rem;" type="text" v-model="data.insInd9.fpg">  
+        <em>mmol/L</em>
+      </p>
+
+      <p>
+        <span>HbAlc：</span>
+        <input type="text" v-model="data.insInd9.hbalc">  
+        <em>%</em>
+      </p>
+
+
+      
+
+    </div>
+
+
+    <!-- 初步检查指标# -->
+
+    <!-- #处方信息 -->
+    <p class="title">
+      <img src="images/look4.jpg" alt="">
+      <span>处方信息</span>
+    </p>
+
+    <div class="padMsgBox box4">
+
+      <div class="upload">
+
+                <div class="item" v-for="(item,index) in data.preMsg.imgData" @click="imgBigShow(item.imgUrl)">
+                  <img class="itemimg" :src="item.imgUrl"  alt="">
+                </div>
+
+      </div>
+      
+      <textarea name="" id="textarea1" placeholder="请输入处方信息" v-model="data.preMsg.msg" readonly="readonly"></textarea>
+
+      
+
+    </div>
+    <!-- 处方信息# -->
+
+
+
+    <!--          随访          -->
+    <h5 class="looks">随访</h5>
+
+    <!-- #原始用药方案 -->
+    <p class="title">
+        <img src="images/look2.jpg" alt="">
+        <span>随访用药方案</span>
+    </p>
+
+    <div class="padMsgBox box2">
+
+        <div class="upload">
+
+                  <div class="item" v-for="(item,index) in data.medPro.imgData" @click="imgBigShow(item.imgUrl)">
+                    <img class="itemimg" :src="item.imgUrl"  alt="">
+                  </div>
+
+        </div>
+
+        
+        <textarea name="" id="textarea1" placeholder="请输入原始用药方案" v-model="data.medPro.msg" readonly="readonly"></textarea>
+
+        
+
+    </div>
+    <!-- 原始用药方案# -->
+
+
+    <!-- #初步检查指标 -->
+    <p class="title">
+      <img src="images/look3.jpg" alt="">
+      <span>随访检查指标</span>
+    </p>
+    <!-- 1236789类型 静态页面默认显示这种类型 -->
+    <div class="padMsgBox box3" v-if="dataTitle == 1236789">
+    <!-- <div class="padMsgBox box3"> -->
+
+      <div class="upload">
+
+                <div class="item" v-for="(item,index) in data.insInd2.imgData" @click="imgBigShow(item.imgUrl)">
+                  <img class="itemimg" :src="item.imgUrl"  alt="">
+                </div>
+
+      </div>
+
+      <p>
+        <span>FPG：</span>
+        <input type="text" v-model="data.insInd2.fpg" readonly="readonly">  
+        <em>mmol</em>
+      </p>
+
+      <p>
+        <span>HbAlc：</span>
+        <input type="text" v-model="data.insInd2.hbalc" readonly="readonly">  
+        <em>%</em>
+      </p>
+
+      <p>
+        <span>FINS：</span>
+        <input type="text" v-model="data.insInd2.fins" readonly="readonly">  
+        <em>uIU/ml</em>
+      </p>
+    
+      
+
+    </div>
+
+    <!-- 4类型 静态页面默认隐藏 -->
+    <div class="padMsgBox box3" v-if="dataTitle == 4">
+    <!-- <div class="padMsgBox box3"> -->
+
+      <div class="upload">
+
+                <div class="item" v-for="(item,index) in data.insInd4.imgData" @click="imgBigShow(item.imgUrl)">
+                  <img class="itemimg" :src="item.imgUrl"  alt="">
+                </div>
+
+      </div>
+
+      <p>
+        <span>FPG：</span>
+        <input type="text" v-model="data.insInd24.fpg">  
+        <em>mmol</em>
+      </p>
+
+      <p>
+        <span>LH/FSH：</span>
+        <input type="text" v-model="data.insInd24.lh">  
+     
+      </p>
+
+      <p>
+        <span>FINS：</span>
+        <input type="text" v-model="data.insInd24.fins">  
+        <em>uIU/ml</em>
+      </p>
+
+      <p>
+        <span>AST：</span>
+        <input type="text" v-model="data.insInd24.ast">  
+        <em>u/L</em>
+      </p>
+
+      <p>
+        <span>ALT：</span>
+        <input type="text" v-model="data.insInd24.alt">  
+        <em>u/L</em>
+      </p>
+      
+      
+
+    </div>
+
+    <!-- 5类型 静态页面默认隐藏 -->
+    <div class="padMsgBox box3" v-if="dataTitle == 5">
+    <!-- <div class="padMsgBox box3"> -->
+
+      <div class="upload">
+
+                <div class="item" v-for="(item,index) in data.insInd5.imgData" @click="imgBigShow(item.imgUrl)">
+                  <img class="itemimg" :src="item.imgUrl"  alt="">
+                </div>
+
+      </div>
+
+      <p>
+        <span>FPG：</span>
+        <input type="text" v-model="data.insInd25.fpg">  
+        <em>mmol</em>
+      </p>
+
+      <p>
+        <span>LH/fsh：</span>
+        <input type="text" v-model="data.insInd25.lh">  
+        
+      </p>
+
+      <p>
+        <span>FINS：</span>
+        <input type="text" v-model="data.insInd25.fins">  
+        <em>uIU/ml</em>
+      </p>
+      
+      
+
+    </div>
+
+    <!-- 9类型 静态页面默认隐藏 -->
+    <div class="padMsgBox box3" v-if="dataTitle == 9">
+    <!-- <div class="padMsgBox box3" > -->
+
+      <div class="upload">
+
+                <div class="item" v-for="(item,index) in data.insInd29.imgData" @click="imgBigShow(item.imgUrl)">
+                  <img class="itemimg" :src="item.imgUrl"  alt="">
+                </div>
+
+      </div>
+
+      <p>
+        <span style="width:3rem;">FPG与2hPG：</span>
+        <input style="width:3.2rem;" type="text" v-model="data.insInd29.fpg">  
+        <em>mmol/L</em>
+      </p>
+
+      <p>
+        <span>HbAlc：</span>
+        <input type="text" v-model="data.insInd29.hbalc">  
+        <em>%</em>
+      </p>
+
+
+      
+
+    </div>
+
+    <!-- 初步检查指标# -->
+
+    <!-- #处方信息 -->
+    <p class="title">
+      <img src="images/look4.jpg" alt="">
+      <span>随访处方信息</span>
+    </p>
+
+    <div class="padMsgBox box4">
+
+      <div class="upload">
+
+                <div class="item" v-for="(item,index) in data.preMsg.imgData" @click="imgBigShow(item.imgUrl)">
+                  <img class="itemimg" :src="item.imgUrl"  alt="">
+                </div>
+
+      </div>
+      
+      <textarea name="" id="textarea1" placeholder="请输入处方信息" v-model="data.preMsg.msg" readonly="readonly"></textarea>
+
+      
+
+    </div>
+    <!-- 处方信息# -->
+
+
+
+
+  </div>
+
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="mui/js/mui.min.js"></script>
+<script src="mui/js/mui.picker.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/look.js"></script>
+</body>
+</html>

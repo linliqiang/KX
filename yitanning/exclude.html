@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+</head>
+<body>
+
+<div class="exclude" id="exclude">
+	<p>排除标准</p>
+	<ul>
+		<li>
+			<span>项目</span>
+			<span>是</span>
+			<span>否</span>
+		</li>
+		<li>
+			<span>1、有严重自杀倾向；</span>
+			<span><input type="radio" name="excludeRadio1" value="1"></span>
+			<span><input type="radio" name="excludeRadio1" value="0"></span>
+		</li>
+		<li>
+			<span>2、现患癫痫、痴呆、精神分裂症或其他精神障碍疾病或有相关疾病史；</span>
+			<span><input type="radio" name="excludeRadio2" value="1"></span>
+			<span><input type="radio" name="excludeRadio2" value="0"></span>
+		</li>
+		<li>
+			<span>3、其他睡眠障碍，例如睡眠呼吸暂停、睡眠周期性肢体运动障碍和嗜睡障碍等；</span>
+			<span><input type="radio" name="excludeRadio3" value="1"></span>
+			<span><input type="radio" name="excludeRadio3" value="0"></span>
+		</li>
+		<li>
+			<span>4、1年内有酒精或药物依赖，或任何药物滥用；</span>
+			<span><input type="radio" name="excludeRadio4" value="1"></span>
+			<span><input type="radio" name="excludeRadio4" value="0"></span>
+		</li>
+		<li>
+			<span>5、哺乳期、妊娠期或有可能在调研期间怀孕的妇女；</span>
+			<span><input type="radio" name="excludeRadio5" value="1"></span>
+			<span><input type="radio" name="excludeRadio5" value="0"></span>
+		</li>
+		<li>
+			<span>6、对右佐匹克隆或文拉法辛存在任何禁忌症或过敏患者；</span>
+			<span><input type="radio" name="excludeRadio6" value="1"></span>
+			<span><input type="radio" name="excludeRadio6" value="0"></span>
+		</li>
+		<li>
+			<span>7、过去使用文拉法辛无效者；</span>
+			<span><input type="radio" name="excludeRadio7" value="1"></span>
+			<span><input type="radio" name="excludeRadio7" value="0"></span>
+		</li>
+		<li>
+			<span>8、正在参加或过去30天参加过其他药物临床试验；</span>
+			<span><input type="radio" name="excludeRadio8" value="1"></span>
+			<span><input type="radio" name="excludeRadio8" value="0"></span>
+		</li>
+		<li>
+			<span>9、目前正在接受或在参加此研究之前2周内，曾接受镇静催眠药物治疗；</span>
+			<span><input type="radio" name="excludeRadio9" value="1"></span>
+			<span><input type="radio" name="excludeRadio9" value="0"></span>
+		</li>
+		<li>
+			<span>10、进入研究前停用其他精神药物未达3个半衰期；</span>
+			<span><input type="radio" name="excludeRadio10" value="1"></span>
+			<span><input type="radio" name="excludeRadio10" value="0"></span>
+		</li>
+		<li>
+			<span>11、停用单胺氧化酶抑制剂（MAOI）未达14天；</span>
+			<span><input type="radio" name="excludeRadio11" value="1"></span>
+			<span><input type="radio" name="excludeRadio11" value="0"></span>
+		</li>
+		<li>
+			<span>12、研究者认为不适合入组的其他情况，详述<input type="text" id="doctorTEXT"></span>
+			<span><input type="radio"id="doctorOK" name="excludeRadio12" value="1" onclick="dTEXT()"></span>
+			<span><input type="radio"id="doctorNO" name="excludeRadio12" value="0" onclick="dTEXT()"></span>
+		</li>
+		<li>
+			<span>需所有问题回答“否”，方可进入调研</span>
+		</li>
+	</ul>
+
+	<div class="exclude-save">
+		<button onclick="excludeSave1()">保存</button>
+	</div>
+
+</div>
+
+<script src="js/exclude.js"></script>
+</body>
+</html>

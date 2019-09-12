@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>搜索</title>
+	<link rel="stylesheet" href="font/iconfont.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+
+<div id="app">
+	
+	<div id="header" class="header">
+		<div class="headerTop">
+
+			<a href="index.html"><img src="img/logo.png" class="logo" height="74" width="193" alt="" /></a>
+			
+			<a href="search.html"><input type="text" class="search" placeholder="请输入要搜索的关键词"></a>
+			
+			<img src="img/searchLogo.png" class="searchLogo" height="21" width="21" alt="" />
+			
+		</div>
+		<div id="navBox" class="navBox">
+			<div class="navB">
+				<ul class="nav clearfix">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="vid.html">视频</a></li>
+					<li><a href="article.html">文章</a></li>
+					<li><a href="play.html">直播</a></li>
+					<li><a href="case.html">病例</a></li>
+					<li><a href="expert.html">专家</a></li>
+					<li><a href="quesition.html">问答</a></li>
+				</ul>
+
+
+				<div class="logReg" v-if="userMsg == false">
+					<a href="login.html">登录</a>
+					<span>|</span>
+					<a href="regPhone.html">注册</a>
+				</div>
+
+				<div class="logUser" v-if="userMsg">
+					<div>
+						<a href="msg.html"><img src="img/sm.png" alt=""></a>
+						<span>3</span>
+						<div class="UserHead">
+							<a href="user.html"><img src="img/zji.jpg" alt=""></a>
+						</div>
+					</div>
+					<ul>
+						<li @click="touser(1)"><i class="iconfont icon-shoucang"></i>我的收藏</li>
+						<li @click="touser(2)"><i class="iconfont icon-fabuxiangmu"></i>我的发布</li>
+						<li @click="touser(3)"><i class="iconfont icon-guanzhu"></i>我的关注</li>
+						<li @click="touser(4)"><i class="iconfont icon-shezhi"></i>个人设置</li>
+						<li @click="touser(5)"><i class="iconfont icon-Opinion"></i>意见反馈</li>
+						<li @click="touser(6)"><i class="iconfont icon-dingdan"></i>订单       </li>
+						<li @click="touser(7)"><i class="iconfont icon-yaoqingma"></i>邀请码    </li>
+						<li @click="signOut()"><i class="iconfont icon-tuichu"></i>退出       </li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="main" class="main">
+
+		<div class="main-content">
+			
+			<div class="col-side">
+				
+				<ul class="col-side2">
+					<li :class="{ colSide2Signs: csNum==1 }" @click="csThing(1)">全部</li>
+					<li :class="{ colSide2Signs: csNum==2 }" @click="csThing(2)">资讯</li>
+					<li :class="{ colSide2Signs: csNum==3 }" @click="csThing(3)">视频</li>
+					<li :class="{ colSide2Signs: csNum==4 }" @click="csThing(4)">文章</li>
+					<li :class="{ colSide2Signs: csNum==5 }" @click="csThing(5)">直播</li>
+					<li :class="{ colSide2Signs: csNum==6 }" @click="csThing(6)">病例</li>
+					<li :class="{ colSide2Signs: csNum==7 }" @click="csThing(7)">问答</li>
+				</ul>
+
+				<p class="seaRes">搜索<span>心脑血管</span>,共搜索出个<span>50</span>结果</p>
+
+				<!-- 咨询 -->
+				<div class="repeatItemBox" v-if="csNum==2 || csNum==1">
+
+					<p class="ribTitle">
+						<img src="img/logoItem_03.png" alt="">
+						<span>咨询</span>
+					</p>
+
+					<div class="repeatItem" v-for="(item,index) in repeatItem1">
+						<a class="transBig" href="newsDet.html"><img src="img/new2_03.png" alt=""></a>
+						<div>
+							<p class="OOver"><a class="titleColor wryh" href="newsDet.html">{{item.title}}</a></p>
+							<p class="TOver">{{item.msg}}</p>
+							<p>
+								<!-- 来源或姓名 -->
+								<span v-if="item.form"><em>来源：</em>{{item.form}}</span>
+								<span v-if="item.form"></span>
+								<span v-if="item.time">{{item.time}}</span>
+							</p>
+						</div>
+					</div>
+
+					<div class="lookMore">
+						<button class="titleColor" @click="lookMore(1)">查看更多>></button>
+					</div>
+
+				</div>
+
+				
+
+				<!-- 视频 -->
+				<div class="repeatItemBox" v-if="csNum==3 || csNum==1">
+
+					<p class="ribTitle">
+						<img src="img/logoItem_06.png" alt="">
+						<span>视频</span>
+					</p>
+
+					<div class="repeatItem" v-for="(item,index) in repeatItem2">
+						<a class="transBig" href="vid.html">
+							<img src="img/new2_03.png" alt="">
+							<span><em>{{item.look}}</em>观看</span>
+						</a>
+						<div>
+							<p class="OOver"><a class="titleColor wryh" href="vid.html">{{item.title}}</a></p>
+							<p class="TOver">{{item.msg}}</p>
+							<p>
+								<!-- 来源或姓名 -->
+								<span v-if="item.name">{{item.name}}</span>
+								<span v-if="item.name"></span>
+								<span v-if="item.company">{{item.company}}</span>
+							</p>
+						</div>
+					</div>
+
+					<div class="lookMore">
+						<button class="titleColor" @click="lookMore(2)">查看更多>></button>
+					</div>
+
+				</div>
+
+				
+
+				<!-- 文章 -->
+				<div class="repeatItemBox" v-if="csNum==4 || csNum==1">
+
+					<p class="ribTitle">
+						<img src="img/logoItem_09.png" alt="">
+						<span>文章</span>
+					</p>
+
+					<div class="repeatItem" v-for="(item,index) in repeatItem3">
+						<a class="transBig" href="artDet.html"><img :src="item.img ? item.img : 'img/new2_032.png'" alt=""></a>
+						<div>
+							<p class="OOver"><a class="titleColor wryh" href="artDet.html">{{item.title}}</a></p>
+							<p class="TOver">{{item.msg}}</p>
+							<p>
+								<!-- 来源或姓名 -->
+								<span v-if="item.name">{{item.name}}</span>
+								<span v-if="item.company">{{item.company}}</span>
+								<span :class="{ timeLe :  item.name == '' && item.company == '' }">{{item.time}}</span>
+							</p>
+						</div>
+					</div>
+
+					<div class="lookMore">
+						<button class="titleColor" @click="lookMore(3)">查看更多>></button>
+					</div>
+
+				</div>
+
+				
+
+				<!-- 直播 -->
+				<div class="repeatItemBox" v-if="csNum==5 || csNum==1">
+
+					<p class="ribTitle">
+						<img src="img/logoItem_12.png" alt="">
+						<span>直播</span>
+					</p>
+
+					<div class="repeatItem" v-for="(item,index) in repeatItem4">
+						<a class="transBig" href="play.html"><img src="img/new2_03.png" alt=""></a>
+						<div>
+							<p class="OOver"><a class="titleColor wryh" href="play.html">{{item.title}}</a></p>
+							<p class="TOver">{{item.msg}}</p>
+							<p>
+								<!-- 来源或姓名 -->
+								<span>{{item.look}}观看</span>
+							</p>
+						</div>
+					</div>
+
+					<div class="lookMore">
+						<button class="titleColor" @click="lookMore(4)">查看更多>></button>
+					</div>
+
+				</div>
+
+				
+
+				<!-- 病例 -->
+				<div class="repeatItemBox" v-if="csNum==6 || csNum==1">
+
+					<p class="ribTitle">
+						<img src="img/logoItem_14.png" alt="">
+						<span>病例</span>
+					</p>
+
+					<div class="repeatItem" v-for="(item,index) in repeatItem5">
+						<a class="transBig" href="caseDet.html"><img :src="item.img ? item.img : 'img/new2_032.png'" alt=""></a>
+						<div>
+							<p class="OOver"><span>{{item.type}}</span><a class="titleColor wryh" href="caseDet.html">{{item.title}}</a></p>
+							<p class="TOver">{{item.msg}}</p>
+							<div>
+								<div v-if=" item.headerImg ">
+									<a v-if=" item.formType == 'doctor' " href="dorDet.html">
+										<img :src="item.headerImg" alt="">
+									</a>
+									<a v-if=" item.formType == 'expert' " href="expDet.html">
+										<img :src="item.headerImg" alt="">
+									</a>
+									<a v-if=" item.formType == '' " href="javascript:void(0)">
+										<img :src="item.headerImg" alt="">
+									</a>
+								</div>
+								<span class="caseform" v-if="item.name">{{item.name}}</span>
+								<span class="casetime" :class="{ timeLe : item.headerImg == '' && item.name == '' }">{{item.time}}</span>
+
+								<div class="signImg" v-if="item.formType != '' && item.headerImg != '' ">
+									<img v-if="item.formType == 'doctor'" src="img/docG.png" alt="">
+									<img v-if="item.formType == 'expert'" src="img/zjg.png" alt="">
+								</div>
+								
+
+							</div>
+						</div>
+					</div>
+
+
+					<div class="lookMore">
+						<button class="titleColor" @click="lookMore(5)">查看更多>></button>
+					</div>
+
+				</div>
+
+				<!-- 问答 -->
+				<div class="quseRepeatBox" v-if="csNum==7 || csNum==1">
+
+					<p class="ribTitle">
+						<img src="img/logoItem_16.png" alt="">
+						<span>问答</span>
+					</p>
+
+
+					<div class="quesItem" v-for="(item,index) in quseRepeatItem1">
+
+						<div>
+							<!-- <img src="img/wd_03.png" alt=""> -->
+							<em>问</em>
+							<a class="titleColor wryh OOver" href="queDet.html">{{item.title}}</a>
+						</div>
+						<div v-show=" item.msg ">
+							<!-- <img src="img/wd_06.png" alt=""> -->
+							<em>答</em>
+							<p class="TOver">{{item.msg}}</p>
+						</div>
+						<div>
+							<span><em>{{item.answer}}</em>回答</span>
+							<span :class="{ quseGuanzhu : item.guanzhu }" @click="quseGuanzhuThing(index)">{{item.guanzhu ? "已关注" : "关注"}}</span>
+							<a href="queDet.html"><i class="iconfont icon-Opinion"></i>写回答</a>
+						</div>
+
+					</div>
+
+
+
+
+					<div class="lookMore">
+						<button class="titleColor" @click="lookMore(6)">查看更多>></button>
+					</div>
+
+				</div>
+
+
+			</div>
+
+
+
+
+
+		</div>
+
+
+		<div class="side-bar">
+			
+			<div class="side-logo">
+				<a href="play.html"><img src="img/ban2_05.png" alt=""></a>
+			</div>
+
+			<p class="cen-title">
+				<img src="img/yuandian_15.png" alt="">
+				<span>直播预告</span>
+			</p>
+
+			<div class="side-list1" v-for="item in 2">
+				<a href="play.html"><img src="img/r_23.png" alt=""></a>
+				<p><a href="play.html">蜻蜓公布了首届倾听日的超级会员蜻蜓公布了首届倾听日的超级会员</a></p>
+				<div>
+					<p>
+						<span>05-12</span>
+						<span>12:00</span>
+					</p>
+				</div>
+			</div>
+
+			<p class="cen-title cen-title2">
+				<img src="img/yuandian_15.png" alt="">
+				<span>推荐专家</span>
+			</p>
+
+			<div class="side-list2-box">
+				<div class="side-list2" v-for="item in 5">
+					<div class="expHeadImg">
+						<a href="expDet.html"><img src="img/zji.jpg" alt=""></a>
+					</div>
+					<div class="expMsg">
+						<p>
+							<span><a href="expDet.html">郭艺芳</a></span>
+							<span>风湿免疫科</span>
+						</p>
+						<p><a href="vidDet.html">蜻蜓公布了首届倾听蜓公布了首届倾听蜓公布了首届倾听日</a></p>
+					</div>
+				</div>
+			</div>
+
+			
+
+		</div>
+		
+		
+
+	</div>
+
+	<div id="footer" class="footer">
+
+		<div class="footerB">
+			
+			<div class="firendLink">
+				<p>友情链接</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">国家卫计委</a>
+					<a href="http://www.baidu.com">世界卫生组织</a>
+					<a href="http://www.baidu.com">国家食品药品监督管理局</a>
+					<a href="http://www.baidu.com">国家中医药管理局</a>
+					<a href="http://www.baidu.com">中国医疗</a>
+					<a href="http://www.baidu.com">新浪健康</a>
+					<a href="http://www.baidu.com">搜狐健康</a>
+					<a href="http://www.baidu.com">凤凰健康</a>
+					<a href="http://www.baidu.com">百姓健康</a>
+					<a href="http://www.baidu.com">爱爱医</a>
+					<a href="http://www.baidu.com">网易健康</a>
+					<a href="http://www.baidu.com">MedSci</a>
+					<a href="http://www.baidu.com">医学论坛网</a>
+					<a href="http://www.baidu.com">华西医院</a>
+					<a href="http://www.baidu.com">北京协和医院</a>
+					<a href="http://www.baidu.com">北京朝阳医院</a>
+					<a href="http://www.baidu.com">医保卡余额查询</a>
+				</div>
+				<p>合作媒体</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">人民日报</a>
+					<a href="http://www.baidu.com">北京新闻网</a>
+					<a href="http://www.baidu.com">北京周报</a>
+				</div>
+			</div>
+			<div class="erweima">
+				<div>
+					<span>关注微信</span>
+					<img src="img/erweima2.png" width="112" height="98" alt="二维码" />
+				</div>
+				<p>
+					<a href="about.html">关于我们</a>
+					<span>|</span>
+					<a href="contact.html">联系我们</a>
+					<span>|</span>
+					<a @click="tofeed">意见反馈</a>
+				</p>
+			</div>
+
+		</div>
+
+		
+	</div>
+
+</div>
+	
+	
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

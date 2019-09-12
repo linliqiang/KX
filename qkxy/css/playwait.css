@@ -1,0 +1,184 @@
+.main-content{
+	background: #fff;
+	padding: 0px 20px;
+}
+
+.ban{
+	width: 787px;
+	height: 443px;
+	margin: 0 auto;
+}
+.ban p{
+	color: #fff;
+}
+.ban a{
+	color: #fff;
+}
+.ban span{
+	color: #fff;
+}
+
+
+.vidTitle{
+	padding: 20px 0px;
+	font-size: 16px;
+	line-height: 26px;
+}
+.vidAut{
+	font-size: 12px;
+	color: rgb(153,153,153);
+}
+.vidAut span:nth-child(2){
+	margin-left: 150px;
+}
+.vidAut span:nth-child(3){
+	float: right;
+	margin-right: 20px;
+}
+.vidMsgT{
+	padding: 0px 0px 20px 0px;
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 0px;
+}
+.vidMsg{
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 2px;
+}
+.main-content>img{
+	max-width: 856px;
+	margin:10px 0px;
+}
+.comment{
+	margin-top: 100px;
+
+}
+
+
+
+.ban>div{
+	width:100%;
+	height: 443px;
+	margin-bottom: 20px;
+}
+.ban>div:nth-child(2n-1){
+	float: left;
+}
+.ban>div:nth-child(2n){
+	float: right;
+}
+
+.ban>div>a{
+	width: 100%;
+	height: 443px;
+	display: inline-block;
+	position: relative;
+}
+.ban>div>a>img{
+	width: 100%;
+	height: 443px;
+}
+.ban a:link, .ban a:visited {  text-decoration: none;color: #fff;  }
+.ban a:hover, .ban a:active {  text-decoration: none;color: #fff;border: none;  }
+
+
+
+/*预告*/
+.playwait>span:nth-child(1){
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	background: rgba(0,0,0,0.6);
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin-left: 10px;
+	margin-top: 10px;
+	border-radius: 10px;
+	line-height: 20px;
+	text-align: center;
+	z-index: 2;
+}
+.playwait>div:nth-child(2){
+	display: inline-block;
+	width: 220px;
+	height: 120px;
+	background: rgba(0,0,0,0);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -110px;
+	margin-top: -80px;
+	z-index: 2;
+}
+.playwait>div:nth-child(2)>p{
+	height: 26px;
+	font-size: 24px;
+}
+.playwaitNum{
+	height: 90px;
+	margin-top: 20px;
+}
+.playwaitNum>div{
+	width: 60px;
+	height: 70px;
+	background: red;
+	float: left;
+	text-align: center;
+	padding-top: 10px;
+}
+.playwaitNum>div:nth-child(3n-1){
+	margin:0px 20px;
+}
+.playwaitNum>div>span:nth-child(1){
+	font-size: 20px;
+	letter-spacing: 4px;
+}
+.playwaitNum>div>span:nth-child(3){
+	font-size: 14px;
+}
+
+
+.playwait>div:nth-child(3){
+	width: 100%;
+	height: 70px;
+	position: absolute;
+	left:0;
+	bottom: 0;
+	background: rgba(0,0,0,0.6);
+	padding: 12px 10px;
+	z-index: 2;
+}
+.playwait>div:nth-child(3) p:nth-child(1){
+	overflow:hidden; 
+    white-space:nowrap;
+    text-overflow:ellipsis; 
+    margin-bottom: 6px;
+}
+.playwait>span:nth-child(5){
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+	top: 0;
+	left:0;
+	z-index: 1;
+}
+
+
+
+
+
+/*视频*/
+.video-js .vjs-big-play-button{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	top: 50%;
+	left:50%;
+	margin-top: -25px;
+	margin-left: -25px;
+}
+
+

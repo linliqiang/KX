@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>选择</title>
+
+  <link rel="stylesheet" href="mui/css/mui.min.css">
+
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="stylesheet" href="css/choise.css">
+
+</head>
+<body>
+  
+<header class="mui-bar mui-bar-nav" id="experthead" style="z-index:999">
+      <a class="mui-icon-left-nav mui-icon mui-icon-arrowleft headback" onClick="javascript :history.back(-1);"></a>
+      <h1 class="mui-title">填写病例</h1>
+      <a class="mui-pull-right mui-icon mui-icon-home" href="fill.html"></a>
+  </header>
+
+  <div id="app" class="choise1">
+
+    <p class="title">
+      <img src="images/icon1.jpg" alt="">
+      <span class="choiseTitle">{{title}}</span>
+    </p>
+
+  	<div class="choise1Box">
+
+  		<div class="item item1">
+        <img src="images/c1.jpg" alt="">
+        <br/>
+        <span>患者信息</span>   
+        <i v-if="choiseLink > 0"><img src="images/chiose_icon1.png"  alt=""></i>
+        <i v-if="choiseLink < 1"><img src="images/chiose_icon2.png"  alt=""></i>
+      </div>
+
+      <div class="item item1">
+        <img src="images/c2.jpg" alt="">
+        <br/>
+        <span>原始用药方案</span>  
+        <i v-if="choiseLink > 1"><img src="images/chiose_icon1.png"  alt=""></i>
+        <i v-if="choiseLink < 2"><img src="images/chiose_icon2.png"  alt=""></i>
+      </div>
+
+      <div class="item item1">
+        <img src="images/c3.jpg" alt="">
+        <br/>
+        <span>初诊检查指标</span>  
+        <i v-if="choiseLink > 2"><img src="images/chiose_icon1.png"  alt=""></i>
+        <i v-if="choiseLink < 3"><img src="images/chiose_icon2.png"  alt=""></i>
+      </div>
+
+      <div class="item item1">
+        <img src="images/c4.jpg" alt="">
+        <br/>
+        <span>处方信息</span>  
+        <i v-if="choiseLink > 3"><img src="images/chiose_icon1.png"  alt=""></i>
+        <i v-if="choiseLink < 4"><img src="images/chiose_icon2.png"  alt=""></i>
+      </div>
+
+
+          <div class="choise1BoxB" v-if="choiseLink >= 4">
+
+            <h4>随访</h4>
+
+            <div>
+
+              <div class="item item2">
+                <img src="images/cc1.jpg" alt="">
+                <br/>
+                <span>随访用药方案</span>  
+                <i v-if="choiseLink2 > 0"><img src="images/chiose_icon1.png"  alt=""></i>
+                <i v-if="choiseLink2 < 1"><img src="images/chiose_icon2.png"  alt=""></i>
+              </div>
+
+              <div class="item item2">
+                <img src="images/cc2.jpg" alt="">
+                <br/>
+                <span>随访检查指标</span>  
+                <i v-if="choiseLink2 > 1"><img src="images/chiose_icon1.png"  alt=""></i>
+                <i v-if="choiseLink2 < 2"><img src="images/chiose_icon2.png"  alt=""></i>
+              </div>
+
+              <div class="item item2">
+                <img src="images/cc3.jpg" alt="">
+                <br/>
+                <span>随访处方信息</span>  
+                <i v-if="choiseLink2 > 2"><img src="images/chiose_icon1.png"  alt=""></i>
+                <i v-if="choiseLink2 < 3"><img src="images/chiose_icon2.png"  alt=""></i>
+              </div>
+
+            </div>
+
+            <p class="look"><span onclick="javascript: window.location.href = 'look.html'">预览</span></p>
+
+          </div>
+
+
+  	</div>
+
+
+
+
+
+  </div>
+<script src="js/vue.js"></script>
+<script src="mui/js/mui.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/choise.js"></script>
+</body>
+</html>

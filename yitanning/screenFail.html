@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+</head>
+<body>
+
+<div class="screenFail" id="screenFail">
+	<p>筛选结果</p>
+	<p>筛选失败，请详述失败原因</p>
+	<p>
+		<input type="radio" id="screenFailRadio1">
+		<label for="">不符合入选标准或不符合排除标准</label>
+	</p>
+	<p>
+		&nbsp;<input type="checkbox" id="sFCheckbox" onclick="screenFailThing1()">
+		<label for="">其他：</label>
+		
+	</p>
+	<p>
+		<textarea name="" cols="40" rows="5" id="sFTextarea"></textarea>
+	</p>
+
+	<div class="screenFail-save">
+		<button onclick="screenFailSave()">返回</button>
+	</div>
+
+</div>
+
+<script src="js/screenFail.js"></script>
+</body>
+</html>

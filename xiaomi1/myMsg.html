@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>个人资料</title>
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/cube-ui/lib/cube.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/myMsg.css">
+</head>
+<body>
+  <div id="app" v-cloak>
+    <div class="topbar">
+      <a class='topl' href="javascript:history.go(-1)"></a>
+      <a class="cen"></a>
+      <a class='topr' href="index.html"></a>
+    </div>
+		<div class="main" flex fd=co jc=fs ai=ce>
+      
+			<ul>
+        <li class="headImg">
+            <a>
+                <em>头像</em>
+                <span>
+
+                  <i center="1">
+                    <img :src="msg.img" alt="" @click="upThing">
+                  </i>
+                  
+                </span>
+                <img src="images/icon_p_1.png"  alt="">
+            </a>
+            
+        </li>
+        <li>
+            <a @click="mod('昵称',1)">
+                <em>昵称</em>
+                <span>{{msg.names}}</span>
+                <img src="images/icon_p_1.png"  alt="">
+            </a>
+            
+        </li>
+        <li>
+            <a @click="mod('姓名',2)">
+                <em>姓名</em>
+                <span>{{msg.name}}</span>
+                <img src="images/icon_p_1.png"  alt="">
+            </a>
+            
+        </li>
+        <li>
+            <a @click="mod('医院',3)">
+                <em>医院</em>
+                <span>{{msg.hos}}</span>
+                <img src="images/icon_p_1.png"  alt="">
+            </a>
+            
+        </li>
+        <li>
+            <a @click="mod('科室',4)">
+                <em>科室</em>
+                <span>{{msg.dep}}</span>
+                <img src="images/icon_p_1.png"  alt="">
+            </a>
+            
+        </li>
+        <li>
+            <a @click="mod('职称',5)">
+                <em>职称</em>
+                <span>{{msg.pos}}</span>
+                <img src="images/icon_p_1.png"  alt="">
+            </a>
+            
+        </li>
+        <li>
+            <a @click="mod('手机号',6)">
+                <em>手机号</em>
+                <span>{{msg.pho}}</span>
+                <img src="images/icon_p_1.png"  alt="">
+            </a>
+            
+        </li>
+      </ul>
+		</div>
+
+
+  <div class='alerts'>
+    <input type='text' v-model="modt">
+    <div>
+      <button class='asclose' @click="alertsclose"></button>
+      <button class='asok' @click="alertsok">完成</button>
+    </div>
+  </div>
+
+  <div class='alerts2'>
+    <p class="p1"><input type="text" v-model="phos" placeholder="输入手机号"><span @click="getCode" class="code">{{code}}</span></p>
+    <p class="p2"><input type="text" v-model="modt" placeholder="输入验证码"></p>
+    <div>
+      <button class='asclose2' @click="alertsclose2"></button>
+      <button class='asok2' @click="alertsok2">完成</button>
+    </div>
+  </div>
+
+
+  </div>
+  <input id="file" class="filepath" onchange="changepic(this)" type="file" style="display:none" accept="image/*">
+
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="https://unpkg.com/cube-ui/lib/cube.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/myMsg.js"></script>
+</body>
+</html>

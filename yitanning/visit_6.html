@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+</head>
+<body>
+
+<div class="visit_6" id="visit_6">
+
+    <p>是否服用盐酸文拉法辛缓释片？
+        <input type="radio" ro="25" name="visit6Radio1" alt="是否服用盐酸文拉法辛缓释片"><label for="">否</label>
+        <input type="radio" name="visit6Radio1" alt="是否服用盐酸文拉法辛缓释片"><label for="">是，请详细记录下来：</label>
+    </p>
+
+    <div class="visit_6-body">
+
+            <ul class="v5bul">
+                <li style="height:60px;">
+                    <span class="paddingtop22">开始日期</span>
+                    <span class="paddingtop22">结束日期</span>
+                    <span class="paddingtop22">剂量</span>
+                    <span class="paddingtop22">单位</span>
+                    <span class="paddingtop22">剂量是否调整</span>
+                </li>
+                <li class="visit6Tr" style="height:60px;">
+                    <span class="paddingtop22"><input type="text" name="v6-time11" id="v6-time11" class="Wdate" readonly="" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'v6-time12\')}'});" alt="开始日期"></span>
+                    <span class="paddingtop22"><input type="text" name="v6-time12" id="v6-time12" class="Wdate" readonly="" onclick="WdatePicker({minDate:'#F{$dp.$D(\'v6-time11\')}'});" alt="结束日期"></span>
+                    <span class="paddingtop22"><input type="text"></span>
+                    <span class="paddingtop22">mg/天</span>
+                    <span class="paddingtop22">
+                        <input type="radio" ro="2" name="visit6Radio2" alt="服药调整情况" onclick="visit6Thing2(1)"><label for="">否</label>
+                        <input type="radio" name="visit6Radio2" alt="服药调整情况" onclick="visit6Thing2(2)"><label for="">是，调整原因</label>
+                        <input type="text" id="visit6t1" alt="服药调整原因">
+                    </span>
+
+                </li>
+                <li class="visit6Tr" style="height:60px;">
+                    <span class="paddingtop22"><input type="text" name="v6-time21" id="v6-time21" class="Wdate" readonly="" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'v6-time22\')}'});" alt="开始日期"></span>
+                    <span class="paddingtop22"><input type="text" name="v6-time22" id="v6-time22" class="Wdate" readonly="" onclick="WdatePicker({minDate:'#F{$dp.$D(\'v6-time21\')}'});" alt="结束日期"></span>
+                    <span class="paddingtop22"><input type="text"></span>
+                    <span class="paddingtop22">mg/天</span>
+                    <span class="paddingtop22">
+                        <input type="radio" ro="2" name="visit6Radio3" alt="服药调整情况" onclick="visit6Thing3(1)"><label for="">否</label>
+                        <input type="radio" name="visit6Radio3" alt="服药调整情况" onclick="visit6Thing3(2)"><label for="">是，调整原因</label>
+                        <input type="text" id="visit6t2" alt="服药调整原因">
+                    </span>
+
+                </li>
+                <li class="visit6Tr" style="height:60px;">
+                    <span class="paddingtop22"><input type="text" name="v6-time31" id="v6-time31" class="Wdate" readonly="" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'v6-time32\')}'});" alt="开始日期"></span>
+                    <span class="paddingtop22"><input type="text" name="v6-time32" id="v6-time32" class="Wdate" readonly="" onclick="WdatePicker({minDate:'#F{$dp.$D(\'v6-time31\')}'});" alt="结束日期"></span>
+                    <span class="paddingtop22"><input type="text"></span>
+                    <span class="paddingtop22">mg/天</span>
+                    <span class="paddingtop22">
+                        <input type="radio" ro="2" name="visit6Radio4" alt="服药调整情况" onclick="visit6Thing4(1)"><label for="">否</label>
+                        <input type="radio" name="visit6Radio4" alt="服药调整情况" onclick="visit6Thing4(2)"><label for="">是，调整原因</label>
+                        <input type="text" id="visit6t3" alt="服药调整原因">
+                    </span>
+
+                </li>
+                <li class="visit6Tr" style="height:60px;">
+                    <span class="paddingtop22"><input type="text" name="v6-time41" id="v6-time41" class="Wdate" readonly="" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'v6-time42\')}'});" alt="开始日期"></span>
+                    <span class="paddingtop22"><input type="text" name="v6-time42" id="v6-time42" class="Wdate" readonly="" onclick="WdatePicker({minDate:'#F{$dp.$D(\'v6-time41\')}'});" alt="结束日期"></span>
+                    <span class="paddingtop22"><input type="text"></span>
+                    <span class="paddingtop22">mg/天</span>
+                    <span class="paddingtop22">
+                        <input type="radio" ro="2" name="visit6Radio5" alt="服药调整情况" onclick="visit6Thing5(1)"><label for="">否</label>
+                        <input type="radio" name="visit6Radio5" alt="服药调整情况" onclick="visit6Thing4(2)"><label for="">是，调整原因</label>
+                        <input type="text" id="visit6t4" alt="服药调整原因">
+                    </span>
+
+                </li>
+                
+            </ul>
+
+            <div class="visit_6-body-bottom">
+                <button onclick="visit6Save()">保存并下一步</button>
+            </div>
+
+        
+    </div>
+            
+</div>
+<script src="js/visit_6.js"></script>
+</body>
+</body>
+</html>

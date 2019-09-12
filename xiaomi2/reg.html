@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>介绍</title>
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/reg.css">
+</head>
+<body>
+  <div id="app" v-cloak>
+		<div class="main" flex fd=co jc=fs ai=ce>
+			<ul>
+        <li>
+          <input type="text" placeholder="请输入您的姓名" v-model="name">
+        </li>
+        <li>
+          <input type="text" placeholder="请输入您的医院名称" v-model="hos">
+        </li>
+        <li>
+          <input type="text" placeholder="请输入您的科室" v-model="dep">
+        </li>
+        <li>
+          <input type="text" placeholder="请输入您的职称" v-model="tit">
+        </li>
+        <li>
+          <input type="number" placeholder="请输入您的手机号码" v-model="phone">
+        </li>
+        <li code>
+          <input type="number" placeholder="请输入6位验证码" v-model="code">
+          <span @click="getCode" class="code">{{n}}</span>
+        </li>   
+      </ul>
+      <button @click="login">注册</button>
+		</div>
+  </div>
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/reg.js"></script>
+</body>
+</html>

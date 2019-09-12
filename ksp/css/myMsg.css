@@ -1,0 +1,94 @@
+html{
+	background: #fff;
+}
+body{
+	min-height: 100vh;
+	background: #fff;
+}
+#app{
+	padding-bottom: 2rem;
+}
+.myMsg{
+	width: 10rem;
+	background:#ccc;
+	min-height: 100vh;
+	background: #a72750;
+	padding-top: 2.266667rem;
+}
+.myMsgBox{
+	width: 9.2rem;
+	height: 12rem;
+	background: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0.3rem;
+	padding-top: 0.4rem;
+	/*padding-bottom: 1rem;*/
+	display: -webkit-flex;
+	display: flex;
+	flex-direction:column; 
+	-webkit-flex-direction:column;
+	align-items:center; 
+	-webkit-align-items:center;
+}
+.myMsgBox h4{
+	width: 8.36rem;
+	font-size: 0.4rem;
+	font-weight: bold;
+}
+
+#app input{
+	width: 8.36rem;
+	height: 1rem;
+	margin-top: 0.4rem;
+	border: 1px solid #b3b2b2; 
+	padding-left: 1.2rem;
+	font-size: 0.4rem;
+	color: #000;
+}
+.num{
+	background: url(../images/icon_reg_3.jpg) no-repeat 0.22rem 0.18rem;
+	background-size: 0.6rem 0.6rem;
+}
+.pas{
+	background: url(../images/icon_reg_4.jpg) no-repeat 0.22rem 0.18rem;
+	background-size: 0.6rem 0.6rem;
+}
+.name{
+	background: url(../images/icon_reg_5.jpg) no-repeat 0.22rem 0.18rem;
+	background-size: 0.6rem 0.6rem; 
+}
+.hospital{
+	background: url(../images/icon_reg_6.jpg) no-repeat 0.2rem 0.18rem;
+	background-size: 0.7rem 0.6rem;
+}
+.department{
+	background: url(../images/icon_reg_7.jpg) no-repeat 0.22rem 0.18rem;
+	background-size: 0.6rem 0.6rem;
+}
+
+
+.myMsgBut{
+	width: 8.4rem;
+	height: 1.413333rem;
+	background: #a72750;
+	border-radius: 0.3rem;
+	text-align: center;
+	line-height: 1.413333rem;
+	color: #fff;
+	font-size: 0.453333rem;
+	letter-spacing: 0.2rem;
+	margin-top: 1rem;
+}
+
+
+.mui-bar-nav{
+	background: #333333;
+	box-shadow: 0px 0px 0px 0px;
+}
+.mui-bar-nav a{
+	color: #fff;
+}
+.mui-bar-nav h1{
+	color: #fff;
+}

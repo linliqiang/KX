@@ -1,0 +1,116 @@
+@charset "UTF-8";
+body{
+	min-height: 100vh;
+}
+body{
+	background: #f8f8f8;
+	min-width: 1180px;
+}
+input[type="text"],input[type="number"]{
+	padding-left: 10px;
+	border: 1px solid #e2dfdf;
+	font-size: 12px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+	-webkit-appearance: none !important;
+	margin: 0;
+}
+a:link, a:visited {  text-decoration: none;color: #fff;border: none;  }
+a:hover, a:active {  text-decoration: none;color: #fff;border: none;  }
+#app{
+	width: 1350px;
+	min-height: 100vh;
+	margin-left:auto;
+	margin-right: auto;
+}
+.ban{
+	width: 1350px;
+	height: 185px;
+	background-image: url("../img/ban.png");
+	background-position: center center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.nav{
+	width: 100%;
+	height: 52px;
+	display: -webkit-flex; /* Safari */
+  display: flex;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+}
+.nav li{
+	width: 336px;
+	height: 50px;
+	background:#2a9cf4;
+	text-align: center;
+	line-height: 50px;
+	color: #fff;
+	font-size: 18px;
+}
+.nav .navs{
+	background: #4155ae;
+}
+
+.main{
+	margin-top: 26px;
+  padding: 10px 0px 200px 0px;
+  background: #fff;
+}
+.main li{
+	display:-webkit-flex;  display:flex;
+	justify-content:center; -webkit-justify-content:center;
+	align-items:center; -webkit-align-items:center;
+}
+
+.main li *{
+	font-size: 14px;
+}
+.main li span{
+	display: inline-block;
+	height: 50px;
+	width: 130px;
+	text-align: center;
+	line-height: 50px;
+	border:1px solid #ccc;
+	border-bottom: 0px;
+	border-right: 0px;
+}
+.main ul li:last-child span{
+	border-bottom: 1px solid #ccc; 
+}
+.main ul li span:last-child{
+	border-right: 1px solid #ccc; 
+}	
+.main li span:nth-child(1),.main li span:nth-child(4){
+	width: 230px;
+}
+.main li.list1 span{
+	background: #00b7ef;
+	color: #fff;
+}
+.main li span a{
+	width: 60px;
+	height: 25px;
+	display: inline-block;
+	background: red;
+	line-height: 25px;
+	color: #fff;
+	font-size: 14px;
+	border-radius: 6px;
+	cursor: pointer;
+}
+.main li span a.aok{
+	background: #48a1b7;
+}
+.main li span a.aoi{
+	background: #ff5400;
+}
+.main li span a.aon{
+	background: #cdcdcd;
+}

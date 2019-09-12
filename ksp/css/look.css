@@ -1,0 +1,268 @@
+html{
+	background: #fff;
+}
+body{
+	min-height: 100vh;
+	background: #fff;
+}
+
+/*#重置mui样式*/
+p{
+	margin-bottom: 0px;
+}
+/*重置mui样式#*/
+#app{
+	padding-top: 1.6rem;
+	padding-bottom: 0.586667rem;
+}
+.mui-bar-nav{
+	height: 1.2rem;
+	background: #333333;
+	box-shadow: 0px 0px 0px 0px;
+}
+.mui-bar-nav a,.mui-bar-nav h1{
+	color: #fff;
+}
+.mui-bar-nav h1{
+	letter-spacing: 1px;
+}
+.mui-bar-nav .mui-pull-right{
+	font-size: 15px;
+	height: 100%;
+	padding-top: 15px;
+}
+.padMsg{
+	width: 10rem;
+	background:#ccc;
+	min-height: 100vh;
+	background: #a72750;
+	padding-top: 0.8rem;
+}
+
+.title{
+	width: 9.2rem;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 0.466667rem;
+	display: -webkit-flex;
+	display: flex;
+	align-items:center;
+	-webkit-align-items:center;
+}
+.title img{
+	width: 0.7rem;
+	height: 0.6rem;
+	align-self: flex-start;
+	margin-right: 0.2rem;
+}
+.title span{
+	color: #fff;
+	padding-top: 0.05rem;
+}
+
+
+
+
+
+
+/*原始用药方案*/
+.padMsgBox{
+	width: 9.2rem;
+	/*height: 10.0rem;*/
+	background: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0.4rem;
+	border-radius: 0.3rem;
+	padding-bottom: 0.6rem;
+	/*padding-top: 0.933333rem;*/
+	display: -webkit-flex;
+	display: flex;
+	flex-direction:column; 
+	-webkit-flex-direction:column;
+	align-items:center; 
+	-webkit-align-items:center;
+	margin-bottom: 0.4rem;
+}
+
+.padMsgBox textarea{
+	width: 8.0rem;
+	min-height: 2.453333rem;
+	border: 1px solid #b3b2b2;
+	border-radius: 0.2rem;
+	margin-top: 0.533333rem;
+	padding: 0.24rem;
+	font-size: 15px;
+	color: #000 !important;
+}
+/*底部图片部分*/
+.padMsgBox .upload{
+	width: 8.0rem;
+	/*height: 1.866667rem;*/
+	padding: 0px 0px 0.2rem 0px;
+	border: 0px solid #dedddd;
+	margin-top: 0.2rem;
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+  	flex-wrap: wrap;
+  	-webkit-flex-wrap: wrap;
+}
+/*.box1{
+	width: 9.2rem;
+	background: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0.8rem;
+	border-radius: 0.3rem;
+	padding-bottom: 0.6rem;
+	padding-top: 0.933333rem;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction:column; 
+	-webkit-flex-direction:column;
+	align-items:center; 
+	-webkit-align-items:center;
+}*/
+.box1 p{
+	width: 8.0rem;
+	height: 1rem;
+	border: 1px solid #b3b2b2;
+	border-radius: 0.2rem;
+	margin-top: 0.3rem;
+	display: flex;
+	display: -webkit-flex;
+	align-items:center; 
+	-webkit-align-items:center;
+	justify-content: flex-start;
+	-webkit-justify-content: flex-start;
+}
+
+.box1 p span{
+	width: 2.266667rem;
+	text-align: right;
+	font-size: 15px;
+	padding-top: 0.05rem;
+}
+.box1 p>input{
+	width: 4.5rem;
+	border: 0px solid #dedddd;
+	height: 0.9rem;
+	font-size: 15px;
+	color: #000;
+}
+
+.box1 p:nth-child(1) input{
+	width: 4.5rem;
+	margin-right: 0.1rem;
+}
+.box1 p:nth-child(1) img{
+	width: 0.6rem;
+	height: 0.6rem;
+	margin-left: 0.2rem;
+}
+
+/*性别*/
+#sex{
+	width:5.5rem;
+	height:1rem;
+	border:0px solid #dedddd;
+	display: flex;
+	display: -webkit-flex;
+	align-items:center; 
+	-webkit-align-items:center;
+	justify-content: flex-start;
+	-webkit-justify-content: flex-start;
+}
+#sex em{
+	margin-left: 0.1rem;
+	padding-top: 0.05rem;
+}
+#radio11{
+	margin-left: 15px;
+}
+#radio12{
+	margin-left: 0.8rem;
+}
+.item{
+	width: 1.84rem;
+	height: 1.333333rem;
+	margin-top: 0.5rem;
+}
+.item:nth-child(3n-1){
+	margin-left: 1.1rem;
+	margin-right: 1.1rem;
+}
+.itemimg{
+	width: 1.84rem;
+	height: 1.333333rem;
+}
+
+/*单选框样式1*/
+.radio-style{
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    position: relative;
+    z-index: 99;
+    opacity: 0;
+    background: pink;
+    font-size: 16px;
+}
+.radio-style-img {   
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    position: relative;
+    margin-left: -0.5rem;
+    z-index: 98; 
+    /*border: 1px solid red; */
+} 
+
+
+
+.box3 p{
+	width: 8.0rem;
+	height: 1rem;
+	border: 1px solid #b3b2b2;
+	border-radius: 0.2rem;
+	margin-top: 0.3rem;
+	display: flex;
+	display: -webkit-flex;
+	align-items:center; 
+	-webkit-align-items:center;
+	justify-content: flex-start;
+	-webkit-justify-content: flex-start;
+}
+
+.box3 p span{
+	width: 2rem;
+	text-align: right;
+	font-size: 15px;
+	padding-top: 0.05rem;
+}
+.box3 p input{
+	width: 4.2rem;
+	border: 0px solid #dedddd;
+	height: 0.9rem;
+	font-size: 15px;
+	color: #000;
+}
+.box3 p em{
+	width: 1.5rem;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	text-align: center;
+	background: #a72750;
+	color: #fff;
+	border-radius: 0.2rem;
+}
+
+
+.looks{
+	width: 9.2rem;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 0.466667rem;
+	padding-bottom: 0.3rem;
+	color: #fff;
+}

@@ -1,0 +1,104 @@
+.main-content{
+	background: #f0f2f7;
+}
+.repeatItemBox{
+	margin-top: 18px;
+}
+/*轮播*/
+.example {
+	width: 846px;
+	height: 298px;
+	font-size: 40px;
+	text-align: center;
+	margin: 0px auto;
+	background-color: #fff;
+} 
+.ban{
+	width: 100%;
+	height: 298px;
+	margin-top: 20px;
+	background: #fff;
+}
+.ban img{
+	width: 846px;
+	height: 298px;
+}
+/*.artList{
+	margin-top: 10px;
+	overflow: hidden;
+	background: #fff;
+}*/
+/*重置轮播样式*/
+.ft-carousel .carousel-inner .carousel-item {
+	width: 846px;
+	float: left;
+	height: 100%;
+}
+.carousel-indicators{
+	/*display: none;*/
+}
+.carousel-btn{
+	display: none;
+}
+
+
+
+
+
+
+.col-side2-box{
+	width: 846px;
+	height: 51px;
+	overflow: hidden;
+	background: #fff;
+	position: relative;
+	border: 1px solid rgba(209,209,209,0.6);
+}
+.col-side2{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 51px;
+	padding: 10px 0px 10px 30px;
+	border: 0px;
+	overflow: hidden;
+}
+.col-side2-box-p{
+	width: 60px;
+	height: 51px;
+	background: #fff;
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: none;
+}
+.col-side2-box-p i{
+	position: absolute;
+	color: rgba(250,136,33,1);
+	cursor: pointer;
+}	
+.col-side2-box-p i.isign{
+	color: rgba(250,136,33,0.4);
+}
+.icon-zuo{
+	left: 0;
+	top: 0;
+	margin-left: 5px;
+	margin-top: 17px;
+}
+.icon-you{
+	right: 0;
+	top: 0;
+	margin-right: 5px;
+	margin-top: 17px;
+}
+.lsign{
+	position: absolute;
+	left: absolute
+	left:0;
+	top: 0;
+	width: 30px;
+	height: 49px;
+	background: #fff;
+	z-index: 99;
+}

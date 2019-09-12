@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>首页</title>
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/cube-ui/lib/cube.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div id="app" v-cloak>
+
+		<div class="main">
+
+            
+
+      			<div class="scroll-list-wrap">
+              <cube-scroll
+                ref="scroll"
+                :data="data"
+                :options="options"
+                @pulling-up="onPullingUp">
+                <ul class="itemBox">
+                    <li>
+                      <div class="topbar">
+                        <a class='topl' href="javascript:history.go(-1)"></a>
+                        <a class='topr' href="per.html">个人中心</a>
+                      </div>
+                      <!-- 搜索 -->
+                      <div class="search" center="1">
+                        <input type="text" placeholder="搜索">
+                        <em><a href="list.html?type=0"></a></em>
+                      </div>
+                      <!-- 轮播 -->
+                      <div class="ban">
+                        <cube-slide :data="items"/>
+                      </div>
+
+                      <!-- 横向滚动 -->
+                      <div class="row">
+
+                              <cube-scroll
+                                ref="scroll"
+                                :data="items2"
+                                direction="horizontal"
+                                class="horizontal-scroll-list-wrap">
+                                <ul class="list-wrapper">
+                                  <li v-for="(item,index) in items2" class="list-item">
+                                    <a :href="'list.html?type='+(index+1)">
+                                      <img :src="item.image" alt="">
+                                    </a>
+                                    
+                                  </li>
+                                </ul>
+                              </cube-scroll>
+
+                      </div>
+
+                    </li>
+      
+                    <li class="vidTit">
+                        <h6>视频推荐</h6>
+                    </li>
+
+                    <li v-for="(item,index) in data" class="item">
+                      <a href="details.html" flex  jc=sb ai=ce>
+
+                        <img :src="item.img" alt="">
+                        
+                        <div class="left" flex fd=co jc=sb ai=fs>
+                          <h4 lh="2">{{item.title}}</h4>
+                          <h5 class="hsign1" flex ai=fs v-show="item.sign==1"><em></em><span>血液疾病诊治</span></h5>
+                          <h5 class="hsign2" flex ai=fs v-show="item.sign==2"><em></em><span>IFD疑难病例</span></h5>
+                          <h5 class="hsign3" flex ai=fs v-show="item.sign==3"><em></em><span>IFD诊疗</span></h5>
+                          <h5 class="hsign4" flex ai=fs v-show="item.sign==4"><em></em><span>其他血液疑难病例</span></h5>
+                          <h5 class="hsign5" flex ai=fs v-show="item.sign==5"><em></em><span>大查房</span></h5>
+                          <h5 class="hsign6" flex ai=fs v-show="item.sign==6"><em></em><span>第六种</span></h5>
+                          <p flex jc=sb ai=fs>
+                            <span lh="1">{{item.author}}</span>
+                            <em lh="1">{{item.company}}</em>
+                          </p>
+                        </div>
+
+                      </a>
+                    </li>
+                    <li class="mod" flex jc=ce ai=ce>
+                      <span>{{upt}}</span>
+                    </li>
+                </ul>
+              </cube-scroll>
+            </div>
+     
+		</div>
+  </div>
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="https://unpkg.com/cube-ui/lib/cube.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

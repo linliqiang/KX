@@ -1,0 +1,117 @@
+.main-content{
+	width: 1180px;
+	padding: 0px 0px 0px 0px;
+	background:#fff;
+}
+.ban{
+	width: 100%;
+	height: 248px;
+	background: url("../img/ddoo.png") no-repeat ;
+	position: relative;
+	background-size: 100% 100%;
+}
+.banCon{
+	width: 1000px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	left:0;
+	margin-top: 70px;
+	margin-left: 70px;
+}
+.banCon>div:nth-child(1){
+	width: 92px;
+	height: 92px;
+	border-radius: 50%;
+	overflow: hidden;
+	float: left;
+}
+.banCon>div:nth-child(1) img{
+	width: 92px;
+	height: 92px;
+}
+.banCon>div:nth-child(2){
+	float: left;
+	width: 300px;
+	height: 92px;
+	margin-left: 20px;
+	padding-top: 12px;
+	color: #fff;
+}
+.banCon>div:nth-child(2)>div{
+	display: flex;
+	align-items:center;
+}
+.banCon>div:nth-child(2)>div span{
+	color: #fff;
+}
+.banCon>div:nth-child(2)>div span:nth-child(1){
+	font-size: 20px;
+}
+.banCon>div:nth-child(2)>div>img{
+	border-radius: 10%;
+	margin:0px 10px;
+}
+.banCon>div:nth-child(2) p{
+	margin-top: 12px;
+	color: #fff;
+}
+.banCon>a:nth-child(3){
+	float: right;
+	margin-top: 30px;
+}
+.expt{
+	height: 54px;
+	padding: 18px 0px 18px 18px;
+	display: flex;
+	align-items:center;
+	border-bottom: 1px solid #ccc;
+}
+.expt span{
+	border-left:3px solid #fa8821;
+	padding-left: 8px;
+	font-size: 16px;
+}
+.expDetMsg{
+	padding: 10px 18px 40px 18px;
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 2px;
+}
+.news{
+	padding-bottom: 100px;
+}
+.news-nav{
+	height: 48px;
+	margin: 10px 0px;
+	display: flex;
+	align-items:center;
+	justify-content: center;
+	border-bottom: 1px solid #ccc;
+}
+.news-nav li{
+	width: 50px;
+	text-align: center;
+	line-height: 46px;
+	height: 46px;
+	cursor: pointer;
+}
+.news-nav li:nth-child(1){
+	margin-right: 100px;
+}
+.news-nav li:hover{
+	border-bottom: 2px solid #fa8821;
+	color: #fa8821;
+}
+.newsSign{
+	border-bottom: 2px solid #fa8821;
+	color: #fa8821;
+}
+
+.repeatItemBox{
+	padding: 0px 86px;
+}
+.quesItem{
+	padding: 16px 170px;
+	border-bottom: 1px solid #efeeee;
+}

@@ -1,0 +1,62 @@
+.main-content{
+	background: #fff;
+	/*background: green;*/
+	padding: 0px 20px;
+}
+
+
+.ban{
+	width: 787px;
+	height: 443px;
+	margin:0 auto;
+}
+
+
+
+.vidTitle{
+	margin-top: 20px;
+	font-size: 16px;
+	line-height: 26px;
+}
+.vidAut{
+	font-size: 12px;
+	color: rgb(153,153,153);
+}
+.vidAut span:nth-child(2){
+	margin-left: 150px;
+}
+.vidAut span:nth-child(3){
+	float: right;
+	margin-right: 20px;
+}
+.vidMsgT{
+	font-size: 16px;
+	font-weight: bold;
+	margin: 20px 0px 20px 0px;
+}
+.vidMsg{
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 2px;
+}
+.main-content>img{
+	max-width: 856px;
+	margin:10px 0px;
+}
+.comment{
+	margin-top: 100px;
+}
+
+
+
+
+/*视频开始按钮样式重置*/
+.video-js .vjs-big-play-button{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	top: 50%;
+	left:50%;
+	margin-top: -25px;
+	margin-left: -25px;
+}

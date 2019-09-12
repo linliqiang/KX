@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>答题</title>
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/ans_w.css">
+</head>
+<body>
+  <div id="app" v-cloak>
+
+		<div class="main">
+      
+			<ul>
+        <li v-for="(item,index) in data">
+            <h1>{{(index+1)+"、"+item.title}}</h1>
+            <div>
+              <p>
+                <input type="radio" :name="index+1" value="1">
+                <em>A、{{item.qus1}}</em>
+              </p>
+              <p>
+                <input type="radio" :name="index+1" value="2">
+                <em>B、{{item.qus2}}</em>
+              </p>
+              <p>
+                <input type="radio" :name="index+1" value="3">
+                <em>C、{{item.qus3}}</em>
+              </p>
+              <p>
+                <input type="radio" :name="index+1" value="4">
+                <em>D、{{item.qus4}}</em>
+              </p>
+            </div>
+            
+        </li>
+
+      </ul>
+
+      <h3>
+        <button></button>
+      </h3>
+
+		</div>
+  </div>
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/ans_w.js"></script>
+</body>
+</html>

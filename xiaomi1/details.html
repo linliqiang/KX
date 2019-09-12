@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+  <title>详情</title>
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/cube-ui/lib/cube.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/details.css">
+</head>
+<body>
+  <div id="app" v-cloak>
+    
+		<div class="main">
+
+        <div class="msgtop">
+                <div class="f1">
+                    <video
+                      x5-playsinline="" 
+                      preload="auto" 
+                      webkit-playsinline='true' 
+                      playsinline='true'
+                      id="video"
+                      controls
+                      poster="images/m.png">
+                      <source src="video/qwe.mp4" type="video/mp4">
+                      <source src="video/qwe.mp4" type="video/mp4">
+                      <source src="video/qwe.ogg" type="video/ogg">
+                      <source src="video/qwe.webm" type="video/webm">
+                    </video>
+                  </div>
+
+                  <div class="f2">
+                    <h1>医疗网是最大的中文医疗黄页网站</h1>
+                  </div>
+
+                  <div class="f3" flex  ai=ce>
+
+                      <div class="st-left" flex jc=fs ai=ce>
+                        <span>视频质量：</span>
+                        <div class="st-left-s">
+                          <cube-rate v-model="value1" :disabled="disabled1" :max="max1" :justify="justify1"></cube-rate>
+                        </div>
+                      </div>
+
+                      <div class="st-right" flex jc=fs ai=ce>
+                        <span>感兴趣程度：</span>
+                        <div class="st-right-s">
+                          <cube-rate v-model="value2" :disabled="disabled2" :max="max2" :justify="justify2"></cube-rate>
+                        </div>
+                      </div>
+
+                  </div>
+
+                  <div class="f32">
+                    <span>张海花</span>
+                    <span>成都华西医院</span>
+                    <span>2019-11-10</span>
+                  </div>
+                  
+                  <div class="f4">
+                    <button @click="signt(1)" :class="{bsign1:sign==1}"><em></em><span>留言</span></button>
+                    <button @click="signt(2)" :class="{bsign2:sign==2}"><em></em><span>视频简介</span></button>
+                    <button @click="signt(3)" :class="{bsign3:sign==3}"><em></em><span>评分</span></button>
+                </div>
+        </div>
+
+
+        <div class="f5">
+          
+            <!-- 留言 -->
+            <div class="comment" :class="{f5body:sign==1}">
+              <div class="scroll-list-wrap" >
+                  <cube-scroll
+                    ref="scroll"
+                    :data="dataUser"
+                    :options="options"
+                    @pulling-up="onPullingUp">
+                    <ul class="msg">
+
+                      <li  class="msgitem" v-for="(item,index) in dataUser">
+                        <div class="msg-left">
+                          <img :src="item.img"  alt="">
+                        </div>
+                        <div class="msg-right">
+                          <p>{{item.name}}</p>
+                          <h4>{{item.time}}</h4>
+                          <h5>{{item.msg}}</h5>
+                        </div>
+                      </li>
+
+                    </ul>
+                  </cube-scroll>
+              </div>
+            </div>
+
+            <!-- 简介 -->
+            <div class="int"  :class="{f5body:sign==2,int2:sign!=2}">
+              啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇
+
+              <img src="images/head.jpg" alt="">
+
+              冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁
+              懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠啊哦谁懂我皇冠
+            </div>
+
+            <div class="score"  :class="{f5body:sign==3}">
+            
+            <!-- 评论 -->
+            <div class="scroll-list-wrap" >
+                <cube-scroll
+                  ref="scroll2"
+                  :data="dataUser2"
+                  :options="options2"
+                  @pulling-up="onPullingUp2">
+                  <ul class="msg2">
+
+                    <li class="msgitem21">
+                      <h3><span>收到的评价</span></h3>
+                      <p>
+                        <span><em>内容精炼</em><b>10</b></span>
+                        <span><em>讲解清晰</em><b>11</b></span>
+                        <span><em>长度合适</em><b>17</b></span>
+                      </p>
+                    </li>
+
+                    <li  class="msgitem2" v-for="(item,index) in dataUser2">
+                      <div class="msg2-left">
+                        <img :src="item.img"  alt="">
+                      </div>
+                      <div class="msg2-right">
+                        <div class="m2r1" flex jc=sb ai=ce>
+                          <div flex fd=co>
+                            <span>{{item.name}}</span>
+                            <em>{{item.time}}</em>
+                          </div>
+                          <div class="m2r12">
+                            <div flex ai=ce>
+                              <span>视频质量：</span>
+                              <div>
+                                <cube-rate v-model="item.value1" :disabled="disabled1" :max="max1" :justify="true"></cube-rate>
+                              </div>
+                            </div>
+                            <div flex ai=ce>
+                              <span>视频质量：</span>
+                              <div>
+                                <cube-rate v-model="item.value2" :disabled="disabled1" :max="max1" :justify="true"></cube-rate>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="m2r2">
+                          <p>{{item.msg}}</p>
+                        </div>
+                        <div class="m2r3" flex ai=ce>
+                          <span v-show="item.v1">内容精炼</span>
+                          <span v-show="item.v2">讲解清晰</span>
+                          <span v-show="item.v3">长度适中</span>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </cube-scroll>
+            </div>
+        </div>
+
+        </div>
+
+            <div class="textarea" style="display:none">
+              <textarea name="" id="" placeholder="写下你的评论..." v-model="contentText"></textarea>
+              <div>
+                <button class="butOk" @click="queding">确定</button>
+              </div>
+            </div>
+            <div class="bgcase" @click="quxiao" style="display:none"></div>
+            
+
+            <div class="sub"  v-show="sign == 1" :class="{}"> 
+              <button @click="areaShow">写下你的评论吧...</button>
+              <span class="scbut" @click="shouc"></span>
+            </div>
+
+
+          <!-- #评分弹框 -->
+          <div class="sco" >
+            <h1>
+              <span>您的评分</span>
+              <em @click="cha"></em>
+            </h1>
+
+            <section class="f3 f3t" flex  jc=sb ai=ce>
+
+                <div class="st-left" flex jc=fs ai=ce>
+                  <span>视频质量：</span>
+                  <div class="st-left-s">
+                    <cube-rate v-model="value3" :disabled="disabled3" :max="max3" :justify="justify3"></cube-rate>
+                  </div>
+                </div>
+
+                <div class="st-right" flex jc=fs ai=ce>
+                  <span>感兴趣程度：</span>
+                  <div class="st-right-s">
+                    <cube-rate v-model="value4" :disabled="disabled4" :max="max4" :justify="justify4"></cube-rate>
+                  </div>
+                </div>
+
+            </section>
+
+            <h1>
+              <span>您的评价</span>
+            </h1>
+
+            <div class="sbut" flex jc=ce ai=ce>
+              <button :class="{st:starText1}" @click="stt(1)">内容精炼</button>
+              <button :class="{st:starText2}" @click="stt(2)">讲解清晰</button>
+              <button :class="{st:starText3}" @click="stt(3)">长度合适</button>
+            </div>
+
+            <textarea name="" id="" placeholder="请写下你的评价..." v-model="contentText2" ></textarea>
+
+            <div class="rateSub">
+              <button @click="retaSubs">发送</button>
+            </div>
+
+          </div>
+          <!-- 评分弹框# -->
+
+          <!-- #答题弹框 -->
+          <div class="datibox" :class="{datiboxs:datisign}">
+                <b @click="datitt"></b>
+                <h6>观后答题<span>（成功提交后不可更改，请仔细检查后再提交）</span></h6>
+                <ul>
+
+                  <li>
+                      <h1>1、高峰论坛活动展板高峰论坛活动展板（多选）</h1>
+                      <div>
+                        <p>
+                          <input type="checkbox" name="c1" value="1" alt="1">
+                          <em>A、答案答案</em>
+                        </p>
+                        <p>
+                          <input type="checkbox" name="c1" value="2" alt="1">
+                          <em>B、答案答案</em>
+                        </p>
+                        <p>
+                          <input type="checkbox" name="c1" value="3" alt="1">
+                          <em>C、答案答案</em>
+                        </p>
+                        <p>
+                          <input type="checkbox" name="c1" value="4" alt="1">
+                          <em>D、答案答案</em>
+                        </p>
+                        <p>
+                          <input type="checkbox" name="c1" value="5" alt="1">
+                          <em>E、答案答案</em>
+                        </p>
+                      </div>
+                  </li>
+                  <li v-for="(item,index) in dataans">
+                      <h1>{{(index+2)+"、"+item.title}}</h1>
+                      <div>
+                        <p>
+                          <input type="radio" :name="index+1" value="1" v-model="item.value" :alt="index+2">
+                          <em>A、{{item.qus1}}</em>
+                        </p>
+                        <p>
+                          <input type="radio" :name="index+1" value="2" v-model="item.value" :alt="index+2">
+                          <em>B、{{item.qus2}}</em>
+                        </p>
+                        <p>
+                          <input type="radio" :name="index+1" value="3" v-model="item.value" :alt="index+2">
+                          <em>C、{{item.qus3}}</em>
+                        </p>
+                        <p>
+                          <input type="radio" :name="index+1" value="4" v-model="item.value" :alt="index+2">
+                          <em>D、{{item.qus4}}</em>
+                        </p>
+                      </div>
+                  </li>
+                </ul>
+                <div class="subbox">
+                  <button  @click="datitt2">提交</button>
+                </div>
+          </div>
+          <!-- 答题弹框# -->
+
+          <div class="dati" @click="datit">答题</div>
+
+    </div>
+  </div>
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="https://unpkg.com/cube-ui/lib/cube.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/details.js"></script>
+</body>
+</html>

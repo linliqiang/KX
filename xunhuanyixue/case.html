@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>病例点评</title>
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://unpkg.com/cube-ui/lib/cube.min.css">
+  <link rel="stylesheet" href="css/case.css">
+</head>
+<body>
+  	<div id="app" class="caseCom" v-cloak>
+		<div class="title">
+			<a v-for="(item,index) in data0" :class="{ titleSign : sign == index }" @click="titleT(item.Id,index)">
+				<span>{{item.Title}}</span>
+			</a>
+        </div>
+		<!-- 第一组数据 -->
+		<div class="scroll-list-wrap" v-if=" sign == 0 ">
+		  <cube-scroll
+		    ref="scroll"
+		    :data="data"
+		    :options="options"
+		    @pulling-up="onPullingUp">
+				<ul class="itemBox">
+	            	<li v-for="(item,index) in data" @click="caseDet(item.Id)">
+				    	<a>
+				    		<img :src="'http://xhyx.ikangxun.com'+item.OSSName" alt="">
+				    		<div class="ibright">
+				    			<p class="ibright1">{{item.Title}}</p>
+				    			<p class="ibright2">
+				    				<span v-if="item.Author">作者：{{item.Author}}</span>
+				    				<span>{{longTimeToData(item.CreateDate)}}</span>
+				    			</p>
+				    		</div>
+				    	</a>
+				    </li>
+	            </ul>	
+	            <div class='noData' v-if="fnoData"><span>没有数据 (ㄒoㄒ)</span></div>
+		  </cube-scroll>
+		</div>
+		<!-- 第二组数据 -->
+		<div class="scroll-list-wrap" v-if=" sign == 1 ">
+			<cube-scroll
+			    ref="scroll2"
+			    :data="data2"
+			   	:options="options2"
+			    @pulling-up="onPullingUp2">
+
+	           	<ul class="itemBox">
+	            	<li v-for="(item,index) in data2" @click="caseDet(item.Id)">
+				    	<a>
+				    		<img :src="'http://xhyx.ikangxun.com'+item.OSSName" alt="">
+				    		<div class="ibright">
+				    			<p class="ibright1">{{item.Title}}</p>
+				    			<p class="ibright2">
+				    				<span v-if="item.Author">作者：{{item.Author}}</span>
+				    				<span>{{longTimeToData(item.CreateDate)}}</span>
+				    			</p>
+				    		</div>
+				    	</a>
+					</li>
+	            </ul>	
+	            <div class='noData' v-if="fnoData2"><span>没有数据 (ㄒoㄒ)</span></div>
+	  		</cube-scroll>
+		</div>
+		<!-- 第三组数据 -->
+        <div class="scroll-list-wrap" v-if=" sign == 2 ">
+			<cube-scroll
+			    ref="scroll3"
+			    :data="data3"
+			   	:options="options3"
+			    @pulling-up="onPullingUp3">
+
+	           	<ul class="itemBox">
+	            	<li v-for="(item,index) in data3" @click="caseDet(item.Id)">
+				    	<a>
+				    		<img :src="'http://xhyx.ikangxun.com'+item.OSSName" alt="">
+				    		<div class="ibright">
+				    			<p class="ibright1">{{item.Title}}</p>
+				    			<p class="ibright2">
+				    				<span v-if="item.Author">作者：{{item.Author}}</span>
+				    				<span>{{longTimeToData(item.CreateDate)}}</span>
+				    			</p>
+				    		</div>
+				    	</a>
+					</li>
+	            </ul>	
+	            <div class='noData' v-if="fnoData3"><span>没有数据 (ㄒoㄒ)</span></div>
+	  		</cube-scroll>
+		</div>
+  	</div>
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="https://unpkg.com/cube-ui/lib/cube.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/case.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+<title>伊坦宁登记研究</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/fillin.css">
+<link rel="stylesheet" href="css/anxiousH.css">
+<link rel="stylesheet" href="css/beSelected.css">
+<link rel="stylesheet" href="css/exclude.css">
+<link rel="stylesheet" href="css/screenSuccess.css">
+<link rel="stylesheet" href="css/screenFail.css">
+<link rel="stylesheet" href="css/visit.css">
+
+</head>
+<body>
+
+<div class="main">
+    
+    <div class="banner"></div>
+
+    <div class="nav">
+        <ul>
+            <li>项目说明</li>
+            <li>填写病例</li>
+            <li>病例列表</li>
+            <li>个人信息</li>
+        </ul>
+    </div>
+
+    <!-- 筛选 -->
+    <div class="plate1" id="plete1">
+        
+        <div class="plate1-nav">
+            <ul>
+                <li class="plate1-nav1" id="plate1Nav1" onclick="plate1Nav(1)">筛选期评估（第-3~0天）</li>
+                <li class="plate1-nav2" id="plate1Nav2" onclick="plate1Nav(2)">医院焦虑抑郁量表（HAD）</li>
+                <li class="plate1-nav3" id="plate1Nav3" onclick="plate1Nav(3)">入选标准</li>
+                <li class="plate1-nav4" id="plate1Nav4" onclick="plate1Nav(4)">排除标准</li>
+                <li class="plate1-nav5" id="plate1Nav5" onclick="plate1Nav(5)">筛选结果</li>
+            </ul>
+
+            <!-- 第一个左侧遮罩 -->
+            <div class="bg1" id="bg1"></div>
+
+        </div>
+        
+        <!-- 加载模块容器 -->
+        <div class="plate1-body" id="plate1body"></div>
+    </div>
+
+    <!-- 访问 -->
+    <div class="plate2" id="plete2">
+        
+        <div class="plate1-nav">
+            <ul>
+                <li class="plate1-nav1 plate2list" id="plate2Nav1" onclick="plate2Nav(1)">访视1（第0天，基线）</li>
+                <li class="plate1-nav2 plate2list" id="plate2Nav2" onclick="plate2Nav(2)">访视2</li>
+                <li class="plate1-nav3 plate2list" id="plate2Nav3" onclick="plate2Nav(3)">访视3</li>
+                <li class="plate1-nav4 plate2list" id="plate2Nav4" onclick="plate2Nav(4)">调研完成记录</li>
+            </ul>
+        </div>
+
+        <div class="plate2-body" id="plate2body">
+            
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/My97DatePicker/WdatePicker.js"></script>
+<script src="js/bdyz.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>

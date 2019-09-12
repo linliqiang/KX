@@ -1,0 +1,89 @@
+ul,ol,li,div {
+	margin: 0;
+	padding: 0;
+}
+ul,ol {
+	list-style: none;
+}
+.example {
+	width: 567px;
+	height: 304px;
+	font-size: 40px;
+	text-align: center;
+	margin: 0px auto;
+	background-color: #464576;
+}     
+.carousel-item{
+	line-height: 336px;
+	color: #fff;
+	font-family: Arial Black
+}
+.ft-carousel {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.ft-carousel .carousel-inner {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+}
+.ft-carousel .carousel-inner .carousel-item {
+	float: left;
+	height: 100%;
+}
+.ft-carousel .carousel-item img {
+	width: 100%;
+	height: 100%;
+}
+.ft-carousel .carousel-indicators {
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	width: 100%;
+	text-align: center;
+	font-size: 0;
+	box-sizing:border-box;
+}
+.ft-carousel .carousel-indicators span {
+	display: inline-block;
+	width: 30px;
+	height: 2px;
+	background-color: #fff;
+	margin: 0 4px;
+	border-radius: 2px;
+	cursor: pointer;
+	margin-right: 4px;
+}
+.ft-carousel .carousel-indicators span.active {
+	background-color: #ccc;
+}
+.ft-carousel .carousel-btn {
+	position: absolute;
+	top: 50%;
+	width: 44px;
+	height: 45px;
+	margin-top: -25px;
+	cursor: pointer;
+	border-radius: 10%;
+}
+.ft-carousel .carousel-prev-btn {
+	left: 0;
+	background: url(../img/kk_06.png) no-repeat;
+	opacity: 0;
+	transition: opacity 0.4s;
+}
+.ft-carousel .carousel-next-btn {
+	right: 0;
+	background: url(../img/kk_03.png) no-repeat;
+	opacity: 0;
+	transition: opacity 0.4s;
+}
+div.example:hover span.carousel-prev-btn{
+	opacity: 0.6;
+}
+div.example:hover span.carousel-next-btn{
+	opacity: 0.6;
+}

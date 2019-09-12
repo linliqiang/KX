@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>阿立哌医生</title>
+	
+	<link href="http://www.jq22.com/jquery/bootstrap-3.3.4.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	
+	<link rel="stylesheet" href="css/doc.css">
+
+</head>
+<body>
+
+<div id="app">
+	
+	<section class="ban"></section>
+
+	<ul class="navss">
+		<li><a href="pro-exp.html">项目说明</a></li>
+		<li><a href="choise.html">填写病例</a></li>
+		<li><a href="case-list.html">病例列表</a></li>
+		<li class="navs"><a>个人信息</a></li>
+	</ul>
+
+	<section class="main">
+
+		<div class="choise" flex jc=fs ai=ce>
+			<button @click="chot(1)" :class="{chos:cho==1}">个人资料</button>
+			<button @click="chot(2)" :class="{chos:cho==2}">修改密码</button>
+		</div>
+		<div class="content content1" :class="{cho:cho==1}">
+			<h4>医生基本信息</h4>
+			<ul class="msg">
+				<li>
+					<div>
+						<span>姓        名：</span>
+						<p t="请填写真实姓名"><input type="text" alt="真实姓名"></p>
+					</div>
+					<div>
+						<span>手机号码：</span>
+						<p t="请填写正确手机号码"><input type="text" reg="reg1" alt="正确手机号码"></p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<span>电子邮箱：</span>
+						<p t="请填写正确邮箱名称"><input type="text" reg="reg2" alt="正确邮箱名称"></p>
+					</div>
+					<div>
+						<span>身份证号：</span>
+						<p t="仅供核对个人所得税使用"><input type="text" reg="reg3" alt="正确身份证号"></p>
+					</div>
+				</li>
+				<li>
+						<div class="containerss">
+							<h5>医院所在地:</h5>
+					      <form class="form-inline">
+					        <div data-toggle="distpicker">
+					          <div class="form-group">
+					            <label class="sr-only" for="province1">Province</label>
+					            <select class="form-control" id="province1" alt="医院所在地省份"></select>
+					          </div>
+					          <div class="form-group">
+					            <label class="sr-only" for="city1">City</label>
+					            <select class="form-control" id="city1" alt="医院所在地市级城市"></select>
+					          </div>
+					          <div class="form-group">
+					            <label class="sr-only" for="district1">District</label>
+					            <select class="form-control" id="district1" alt="医院所在地区级城市"></select>
+					          </div>
+					        </div>
+					      </form>
+					    </div>
+				</li>
+				<li>
+					<div>
+						<span>医院名称：</span>
+						<p t="请填写医院的全称"><input type="text"  alt="医院全称"></p>
+					</div>
+					<div>
+						<span>医院级别：</span>
+						<p t="请选择医院级别"><input type="text" alt="医院级别"></p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<span>科        室：</span>
+						<p t="请填写医院科室名称"><input type="text"  alt="科室"></p>
+					</div>
+					<div>
+						<span>职        称：</span>
+						<p t="请填写职称信息"><input type="text"  alt="职称"></p>
+					</div>
+				</li>
+			</ul>
+			<h4>收款人信息</h4>
+			<ul class="msg">
+				<li>
+					<div>
+						<span>收款人：</span>
+						<p t="请填写真实姓名"><input type="text"  alt="收款人"></p>
+					</div>
+					<div>
+						<span>身份证号：</span>
+						<p t="仅供核对个人所得税使用"><input type="text" reg="reg3" alt="正确身份证号码"></p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<span>开户行：</span>
+						<p t="必须精确到省市区(例:招商银行成都市青羊支行)"><input type="text" alt="开户银行"></p>
+					</div>
+					<div>
+						<span>银行账号：</span>
+						<p t="仅供支付劳务费用"><input type="text" alt="银行账号"></p>
+					</div>
+				</li>
+				<li>
+					<div class="containerss">
+							<h5>银行所在地:</h5>
+					      <form class="form-inline">
+					        <div data-toggle="distpicker">
+					          <div class="form-group">
+					            <label class="sr-only" for="province1">Province</label>
+					            <select class="form-control" id="province1" alt="开户行所在地省份"></select>
+					          </div>
+					          <div class="form-group">
+					            <label class="sr-only" for="city1">City</label>
+					            <select class="form-control" id="city1" alt="开户行所在地市级城市"></select>
+					          </div>
+					          <div class="form-group">
+					            <label class="sr-only" for="district1">District</label>
+					            <select class="form-control" id="district1" alt="开户行所在地区级城市"></select>
+					          </div>
+					        </div>
+					      </form>
+					    </div>
+				</li>
+			</ul>
+			<div class="msgSub"><button>提交信息</button></div>
+			
+		</div>
+		<div class="content content2" :class="{cho:cho==2}">
+				<ul class="content2-main">
+					<li>
+						<span>请输入原始密码：</span>
+						<input id="oldpaw" type="password" alt="请输入原始密码">
+					</li>
+					<li>
+						<span>请输入新密码：</span>
+						<input id="newpaw" type="password" alt="请输入新密码">
+					</li>
+					<li>
+						<span>请再次输入新密码：</span>
+						<input id="newpaw2" type="password" alt="请再次输入新密码">
+					</li>
+					<li>
+						<button class="pawSub">确认修改</button>
+					</li>
+				</ul>
+		</div>
+		
+		
+		
+	</section>
+
+	
+
+</div>
+<!-- <script src="js/jquery.min.js"></script> -->
+<script src="http://www.jq22.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/bdyz.js"></script>
+<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+<script src="js2/distpicker.data.js"></script>
+<script src="js2/distpicker.js"></script>
+<script src="js2/main2.js"></script>
+<script src="js/doc.js"></script>
+</body>
+</html>

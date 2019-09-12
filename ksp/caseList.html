@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>卡双平</title>
+
+  <link rel="stylesheet" href="mui/css/mui.min.css">
+
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="stylesheet" href="css/caseList.css">
+
+</head>
+<body>
+
+<header class="mui-bar mui-bar-nav" id="experthead" style="z-index:999">
+      <a class="mui-icon-left-nav mui-icon mui-icon-arrowleft headback" onClick="javascript :history.back(-1);"></a>
+      <h1 class="mui-title">病例列表</h1>
+  </header>
+  
+  <div id="app" class="caseList">
+
+
+<!--     <div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+     　　<div class="mui-scroll">
+     　　
+            <div class="item" v-for="(item,index) in data">
+              <p>{{item.title}}</p>
+              <h6></h6>
+              <div>
+                <p><span>患者姓名：</span><em>{{item.name}}</em></p>
+                <p><span>性别：</span><em>{{item.sex}}</em></p>
+                <p><span>年龄：</span><em>{{item.age}}岁</em></p>
+              </div>
+            </div>
+
+     　　　
+     　　</div>
+    </div> -->
+
+    
+    <div class="item" v-for="(item,index) in data">
+      <p>{{item.title}}</p>
+      <h6></h6>
+      <div>
+        <p><span>患者姓名：</span><em>{{item.name}}</em></p>
+        <p><span>性别：</span><em>{{item.sex}}</em></p>
+        <p><span>年龄：</span><em>{{item.age}}岁</em></p>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="mui/js/mui.min.js"></script>
+
+<!-- <script src="mui/js/mui.pullToRefresh.js"></script> -->
+<!-- <script src="mui/js/mui.pullToRefresh.material.js"></script> -->
+
+<script src="js/main.js"></script>
+<script src="js/caseList.js"></script>
+</body>
+</html>

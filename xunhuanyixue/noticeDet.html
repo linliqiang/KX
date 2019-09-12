@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>预告详情</title>
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="mui/css/mui.min.css">
+  <link rel="stylesheet" href="css/noticeDet.css">
+</head>
+<body>
+  <div id="app" class="noticeDet" v-cloak>
+		<div class="main">
+      <div class="banBox">
+
+        
+
+        <video  
+          v-if="data.meet.PSSPath"
+          id="vieeo"
+          :poster="data.meet.OSSName"
+          :src="data.meet.PSSPath"
+          controls="controls">
+        </video>
+
+        <img v-else :src="data.meet.OSSName"  alt="">
+
+      </div>
+      <div class="title">
+        <p class="titlet">{{data.meet.Title}}</p>
+        <p>时间：{{longTimeToData(data.meet.StartDate)}}</p>
+        <p v-if="data.meet.Places">地点：{{data.meet.Places}}</p>
+        <p v-if="data.meet.TeacherName">主讲：{{data.meet.TeacherName}}</p>
+      </div>
+      <div class="but">
+        <button :class="{ butSign : sign == 1 }" @click="butThing(1)">内容简介</button>
+        <button :class="{ butSign : sign == 2 }" @click="butThing(2)">主讲简介</button>
+      </div>
+      <div class="msg">
+        <p v-show="sign == 1" v-html="data.meet.Content"></p>
+        <p v-show="sign == 2">{{data.meet.TeacherRemake}}</p>
+        <div class="sub">
+          <button @click="signUp">报名</button>
+        </div>
+      </div>
+		</div>
+  </div>
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="mui/js/mui.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/noticeDet.js"></script>
+</body>
+</html>

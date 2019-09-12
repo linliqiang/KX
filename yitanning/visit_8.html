@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+</head>
+<body>
+
+<div class="visit_8" id="visit_8">
+
+    <p>是否曾经发生不良事件？
+        <input type="radio" ro="250" name="visit8Radio1" alt="是否有不良事件记录表"><label for="">否</label>
+        <input type="radio" name="visit8Radio1" alt="是否有不良事件记录表"><label for="">是，请详细记录下来：</label>
+    </p>
+
+    <div class="visit_8-body">
+   
+            <ul class="v8bul">
+                <li style="height:60px;">
+                    <span>编号</span>
+                    <span>不良事件名称</span>
+                    <span>发生日期</span>
+                    <span>是否持续</span>
+                    <span>不良事件的结局</span>
+                    <span>严重程度</span>
+                    <span>药物剂量调整</span>
+                    <span>严重不良事件</span>
+                    <span>处理措施</span>
+                    <span>与研究药物的关系</span>
+                </li>
+                <li class="visit8Tr" style="height:168px;">
+                    <span>1</span>
+                    <span><input type="text" alt="不良事件名称"></span>
+                    <span><input type="text" name="v8-time11" id="v8-time11" class="Wdate" readonly="" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'v8-time12\')}'});" alt="发生日期"></span>
+                    <span style="padding-top:50px;">
+                        <input type="radio" alt="不良事件是否持续" ro="2" name="visit8Radio2" onclick="visit8Thing2(1)"><label for="">否</label>
+                        <input type="radio" alt="不良事件是否持续" name="visit8Radio2" onclick="visit8Thing2(2)"><label for="">是</label><br>
+                        结束日期<br>
+                        <input type="text" name="v8-time12" id="v8-time12" class="Wdate visit8t1" readonly="" onclick="WdatePicker({minDate:'#F{$dp.$D(\'v8-time11\')}'});" alt="结束日期">
+                    </span>
+                    <span style="padding-top:18px;text-align: left;">
+                        <input type="radio" alt="不良事件结局" ro="5" name="visit8Radio3">已恢复/已解决<br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio3">恢复/解决中<br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio3">未恢复/未解决<br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio3">已恢复已解决伴<br>
+                        <label for="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有后遗症</label><br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio3">致命的<br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio3">未知的<br>
+                    </span>
+                    <span style="padding-top:50px">
+                        <input type="radio" alt="不良事件严重程度" ro="2" name="visit8Radio4"><label for="">轻度</label><br>
+                        <input type="radio" alt="不良事件严重程度" name="visit8Radio4"><label for="">中度</label><br>
+                        <input type="radio" alt="不良事件严重程度" name="visit8Radio4"><label for="">重度</label>
+                    </span>
+                    <span style="padding-top:12px;text-align: left;">
+                        <input type="radio" alt="药物剂量调整" ro="6" name="visit8Radio5"><label for="">增加</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio5"><label for="">不变</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio5"><label for="">暂停</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio5"><label for="">减少</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio5"><label for="">永久停药</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio5"><label for="">不适用</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio5"><label for="">未知</label>
+                    </span>
+                    <span>
+                        <input type="radio" alt="是否属于严重不良事件" ro="1" name="visit8Radio6"><label for="">否</label><br>
+                        <input type="radio" alt="是否属于严重不良事件" name="visit8Radio6"><label for="">是</label>
+                    </span>
+                    <span style="padding-top:50px;text-align: left;">
+                        <input type="radio" alt="处理措施" ro="2" name="visit8Radio7"><label for="">无</label><br>
+                        <input type="radio" alt="处理措施" name="visit8Radio7"><label for="">药物治疗</label><br>
+                        <input type="radio" alt="处理措施" name="visit8Radio7"><label for="">非药物治疗</label>
+                    </span>
+                    <span style="padding-top:18px;text-align: left;">
+                        <input type="radio" alt="与研究药物的关系" ro="4" name="visit8Radio8"><label for="">肯定有关</label><br>
+                        <input type="radio" alt="与研究药物的关系" name="visit8Radio8"><label for="">很可能有关</label><br>
+                        <input type="radio" alt="与研究药物的关系" name="visit8Radio8"><label for="">可能有关</label><br>
+                        <input type="radio" alt="与研究药物的关系" name="visit8Radio8"><label for="">可能无关</label><br>
+                        <input type="radio" alt="与研究药物的关系" name="visit8Radio8"><label for="">无关</label>
+                    </span>
+                </li>
+                <li class="visit8Tr" style="height:168px;">
+                    <span>2</span>
+                    <span><input type="text" alt="不良事件名称"></span>
+                    <span><input type="text" name="v8-time21" id="v8-time21" class="Wdate" readonly="" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'v8-time22\')}'});" alt="发生日期"></span>
+                    <span style="padding-top:50px;">
+                        <input type="radio" alt="不良事件是否持续" ro="2" name="visit8Radio9" onclick="visit8Thing3(1)"><label for="">否</label>
+                        <input type="radio" alt="不良事件是否持续" name="visit8Radio9" onclick="visit8Thing3(2)"><label for="">是</label><br>
+                        结束日期<br>
+                        <input type="text" name="v8-time22" id="v8-time22" class="Wdate visit8t2" readonly="" onclick="WdatePicker({minDate:'#F{$dp.$D(\'v8-time21\')}'});" alt="结束日期">
+                    </span>
+                    <span style="padding-top:18px;text-align: left;">
+                        <input type="radio" alt="不良事件结局" ro="5" name="visit8Radio10">已恢复/已解决<br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio10">恢复/解决中<br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio10">未恢复/未解决<br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio10">已恢复已解决伴<br>
+                        <label for="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有后遗症</label><br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio10">致命的<br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio10">未知的<br>
+                    </span>
+                    <span style="padding-top:50px">
+                        <input type="radio" alt="不良事件严重程度" ro="2" name="visit8Radio11"><label for="">轻度</label><br>
+                        <input type="radio" alt="不良事件严重程度" name="visit8Radio11"><label for="">中度</label><br>
+                        <input type="radio" alt="不良事件严重程度" name="visit8Radio11"><label for="">重度</label>
+                    </span>
+                    <span style="padding-top:12px;text-align: left;">
+                        <input type="radio" alt="药物剂量调整" ro="6" name="visit8Radio12"><label for="">增加</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio12"><label for="">不变</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio12"><label for="">暂停</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio12"><label for="">减少</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio12"><label for="">永久停药</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio12"><label for="">不适用</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio12"><label for="">未知</label>
+                    </span>
+                    <span>
+                        <input type="radio" alt="是否属于严重不良事件" ro="1" name="visit8Radio13"><label for="">否</label><br>
+                        <input type="radio" alt="是否属于严重不良事件" name="visit8Radio13"><label for="">是</label>
+                    </span>
+                    <span style="padding-top:50px;text-align: left;">
+                        <input type="radio" alt="处理措施" ro="2" name="visit8Radio14"><label for="">无</label><br>
+                        <input type="radio" alt="处理措施" name="visit8Radio14"><label for="">药物治疗</label><br>
+                        <input type="radio" alt="处理措施" name="visit8Radio14"><label for="">非药物治疗</label>
+                    </span>
+                    <span style="padding-top:18px;text-align: left;">
+                        <input type="radio" alt="与研究药物的关系" ro="4" name="visit8Radio15"><label for="">肯定有关</label><br>
+                        <input type="radio" alt="与研究药物的关系" name="visit8Radio15"><label for="">很可能有关</label><br>
+                        <input type="radio" alt="与研究药物的关系" name="visit8Radio15"><label for="">可能有关</label><br>
+                        <input type="radio" alt="与研究药物的关系" name="visit8Radio15"><label for="">可能无关</label><br>
+                        <input type="radio" alt="与研究药物的关系" name="visit8Radio15"><label for="">无关</label>
+                    </span>
+                </li>
+                <li class="visit8Tr" style="height:168px;">
+                    <span>3</span>
+                    <span><input type="text" alt="不良事件名称"></span>
+                    <span><input type="text" name="v8-time31" id="v8-time31" class="Wdate" readonly="" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'v8-time32\')}'});" alt="发生日期"></span>
+                    <span style="padding-top:50px;">
+                        <input type="radio" alt="不良事件是否持续" ro="2" name="visit8Radio16" onclick="visit8Thing4(1)"><label for="">否</label>
+                        <input type="radio" alt="不良事件是否持续" name="visit8Radio16" onclick="visit8Thing4(2)"><label for="">是</label><br>
+                        结束日期<br>
+                        <input type="text" name="v8-time32" id="v8-time32" class="Wdate visit8t3" readonly="" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'v8-time31\')}'});" alt="结束日期">
+                    </span>
+                    <span style="padding-top:18px;text-align: left;">
+                        <input type="radio" alt="不良事件结局" ro="5" name="visit8Radio17">已恢复/已解决<br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio17">恢复/解决中<br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio17">未恢复/未解决<br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio17">已恢复已解决伴<br>
+                        <label for="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有后遗症</label><br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio17">致命的<br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio17">未知的<br>
+                    </span>
+                    <span style="padding-top:50px">
+                        <input type="radio" alt="不良事件严重程度" ro="2" name="visit8Radio18"><label for="">轻度</label><br>
+                        <input type="radio" alt="不良事件严重程度" name="visit8Radio18"><label for="">中度</label><br>
+                        <input type="radio" alt="不良事件严重程度" name="visit8Radio18"><label for="">重度</label>
+                    </span>
+                    <span style="padding-top:12px;text-align: left;">
+                        <input type="radio" alt="药物剂量调整" ro="6" name="visit8Radio19"><label for="">增加</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio19"><label for="">不变</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio19"><label for="">暂停</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio19"><label for="">减少</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio19"><label for="">永久停药</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio19"><label for="">不适用</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio19"><label for="">未知</label>
+                    </span>
+                    <span>
+                        <input type="radio" alt="是否属于严重不良事件" ro="1" name="visit8Radio20"><label for="">否</label><br>
+                        <input type="radio" alt="是否属于严重不良事件" name="visit8Radio20"><label for="">是</label>
+                    </span>
+                    <span style="padding-top:50px;text-align: left;">
+                        <input type="radio" alt="处理措施" ro="2" name="visit8Radio21"><label for="">无</label><br>
+                        <input type="radio" alt="处理措施" name="visit8Radio21"><label for="">药物治疗</label><br>
+                        <input type="radio" alt="处理措施" name="visit8Radio21"><label for="">非药物治疗</label>
+                    </span>
+                    <span style="padding-top:18px;text-align: left;">
+                        <input type="radio" alt="与研究药物的关系" ro="4" name="visit8Radio22"><label for="">肯定有关</label><br>
+                        <input type="radio" alt="与研究药物的关系" name="visit8Radio22"><label for="">很可能有关</label><br>
+                        <input type="radio" alt="与研究药物的关系" name="visit8Radio22"><label for="">可能有关</label><br>
+                        <input type="radio" alt="与研究药物的关系" name="visit8Radio22"><label for="">可能无关</label><br>
+                        <input type="radio" alt="与研究药物的关系" name="visit8Radio22"><label for="">无关</label>
+                    </span>
+                </li>
+                <li class="visit8Tr" style="height:168px;">
+                    <span>4</span>
+                    <span><input type="text" alt="不良事件名称"></span>
+                    <span><input type="text" name="v8-time41" id="v8-time41" class="Wdate" readonly="" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'v8-time42\')}'});" alt="发生日期"></span>
+                    <span style="padding-top:50px;">
+                        <input type="radio" alt="不良事件是否持续" ro="2" name="visit8Radio23" onclick="visit8Thing5(1)"><label for="">否</label>
+                        <input type="radio" alt="不良事件是否持续" name="visit8Radio23" onclick="visit8Thing5(2)"><label for="">是</label><br>
+                        结束日期<br>
+                        <input type="text" name="v8-time42" id="v8-time42" class="Wdate visit8t4" readonly="" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'v8-time41\')}'});" alt="结束日期">
+                    </span>
+                    <span style="padding-top:18px;text-align: left;">
+                        <input type="radio" alt="不良事件结局" ro="5" name="visit8Radio24">已恢复/已解决<br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio24">恢复/解决中<br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio24">未恢复/未解决<br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio24">已恢复已解决伴<br>
+                        <label for="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有后遗症</label><br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio24">致命的<br>
+                        <input type="radio" alt="不良事件结局" name="visit8Radio24">未知的<br>
+                    </span>
+                    <span style="padding-top:50px">
+                        <input type="radio" alt="不良事件严重程度" ro="2" name="visit8Radio25"><label for="">轻度</label><br>
+                        <input type="radio" alt="不良事件严重程度" name="visit8Radio25"><label for="">中度</label><br>
+                        <input type="radio" alt="不良事件严重程度" name="visit8Radio25"><label for="">重度</label>
+                    </span>
+                    <span style="padding-top:12px;text-align: left;">
+                        <input type="radio" alt="药物剂量调整" ro="6" name="visit8Radio26"><label for="">增加</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio26"><label for="">不变</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio26"><label for="">暂停</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio26"><label for="">减少</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio26"><label for="">永久停药</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio26"><label for="">不适用</label><br>
+                        <input type="radio" alt="药物剂量调整" name="visit8Radio26"><label for="">未知</label>
+                    </span>
+                    <span>
+                        <input type="radio" alt="是否属于严重不良事件" ro="1" name="visit8Radio27"><label for="">否</label><br>
+                        <input type="radio" alt="是否属于严重不良事件" name="visit8Radio27"><label for="">是</label>
+                    </span>
+                    <span style="padding-top:50px;text-align: left;">
+                        <input type="radio" alt="处理措施" ro="2" name="visit8Radio28"><label for="">无</label><br>
+                        <input type="radio" alt="处理措施" name="visit8Radio28"><label for="">药物治疗</label><br>
+                        <input type="radio" alt="处理措施" name="visit8Radio28"><label for="">非药物治疗</label>
+                    </span>
+                    <span style="padding-top:18px;text-align: left;">
+                        <input type="radio" alt="与研究药物的关系" ro="4" name="visit8Radio29"><label for="">肯定有关</label><br>
+                        <input type="radio" alt="与研究药物的关系" name="visit8Radio29"><label for="">很可能有关</label><br>
+                        <input type="radio" alt="与研究药物的关系" name="visit8Radio29"><label for="">可能有关</label><br>
+                        <input type="radio" alt="与研究药物的关系" name="visit8Radio29"><label for="">可能无关</label><br>
+                        <input type="radio" alt="与研究药物的关系" name="visit8Radio29"><label for="">无关</label>
+                    </span>
+                </li>
+                
+                
+                
+            </ul>
+
+            <div class="visit_8-body-bottom">
+                <button onclick="visit8Save()">保存并下一步</button>
+            </div>
+
+        
+    </div>
+            
+</div>
+<script src="js/visit_8.js"></script>
+</body>
+</body>
+</html>

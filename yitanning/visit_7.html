@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+</head>
+<body>
+
+<div class="visit_7" id="visit_7">
+
+    <p>是否有合并用药记录？
+        <input type="radio" ro="57" name="visit7Radio1" alt="是否服用盐酸文拉法辛缓释片"><label for="">否</label>
+        <input type="radio" name="visit7Radio1" alt="是否服用盐酸文拉法辛缓释片"><label for="">是，请详细记录下来：</label>
+    </p>
+
+    <div class="visit_7-body">
+   
+            <ul class="v7bul">
+                <li style="height:60px;">
+                    <span>药品通用名</span>
+                    <span>每日总剂量</span>
+                    <span>剂量单位</span>
+                    <span>频率</span>
+                    <span>用药途径</span>
+                    <span>开始日期</span>
+                    <span>是否持续</span>
+                    <span>适应症名称</span>
+                    <span style="width:195px;">原因</span>
+                </li>
+                <li class="visit7Tr" style="height:168px;">
+                    <span><input type="text" alt="药品通用名"></span>
+                    <span><input type="text" alt="每日总剂量"></span>
+                    <span>mg/d</span>
+                    <span><input type="text" alt="剂量单位"></span>
+                    
+                    <span><input type="text" alt="用药途径"></span>
+                    <span><input type="text" name="v7-time11" id="v7-time11" class="Wdate" readonly="" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'v7-time12\')}'});" alt="开始日期"></span>
+                    <span style="padding-top:40px;line-height: 40px;text-align: left;">
+                        <p><input type="radio" name="visit7Radio2" ro="2" alt="是否持续" onclick="visit7Thing2(1)"><label for="">否</label><input type="radio" name="visit7Radio2" alt="是否持续" onclick="visit7Thing2(2)"><label for="">是</label></p>
+                        <input type="text" name="v7-time12" id="v7-time12" class="Wdate visit7t1" readonly="" onclick="WdatePicker({minDate:'#F{$dp.$D(\'v7-time11\')}'});" alt="持续时间">
+                    </span>
+                    <span><input type="text"></span>
+                    <span style="padding-top:12px;line-height: 24px;width:195px;;text-align: left;padding-left:20px;">
+                        <input type="radio" name="visit7Radio3" alt="用药原因" ro="5" onclick="visit7Thing3(1)"><label for="">治疗不良事件</label><br>
+                        <input type="radio" name="visit7Radio3" alt="用药原因" ro="5" onclick="visit7Thing3(1)"><label for="">既往用药</label><br>
+                        <input type="radio" name="visit7Radio3" alt="用药原因" ro="5" onclick="visit7Thing3(1)"><label for="">预防</label><br>
+                        <input type="radio" name="visit7Radio3" alt="用药原因" ro="5" onclick="visit7Thing3(1)"><label for="">补充</label><br>
+                        <input type="radio" name="visit7Radio3" alt="用药原因" onclick="visit7Thing3(2)"><label for="">其他，请详述：</label><br>
+                        <input type="text" style="width:150px" alt="用药原因" class="visit7t2">
+                    </span>
+                </li>
+                <li class="visit7Tr" style="height:168px;">
+                    <span><input type="text" alt="药品通用名"></span>
+                    <span><input type="text" alt="每日总剂量"></span>
+                    <span>mg/d</span>
+                    <span><input type="text" alt="剂量单位"></span>
+                    
+                    <span><input type="text" alt="用药途径"></span>
+                    <span><input type="text" name="v7-time21" id="v7-time21" class="Wdate" readonly="" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'v7-time22\')}'});" alt="开始日期"></span>
+                    <span style="padding-top:40px;line-height: 40px;text-align: left;">
+                        <p><input type="radio" name="visit7Radio4" alt="是否持续" ro="2" onclick="visit7Thing4(1)"><label for="">否</label><input type="radio"name="visit7Radio4" alt="是否持续" onclick="visit7Thing4(2)"><label for="">是</label></p>
+                        <input type="text" name="v7-time22" id="v7-time22" class="Wdate visit7t3" readonly="" onclick="WdatePicker({minDate:'#F{$dp.$D(\'v7-time21\')}'});" alt="持续时间">
+                    </span>
+                    <span><input type="text"></span>
+                    <span style="padding-top:12px;line-height: 24px;width:195px;;text-align: left;padding-left:20px;">
+                        <input type="radio" name="visit7Radio5" alt="用药原因" ro="5" onclick="visit7Thing5(1)"><label for="">治疗不良事件</label><br>
+                        <input type="radio" name="visit7Radio5" alt="用药原因" ro="5" onclick="visit7Thing5(1)"><label for="">既往用药</label><br>
+                        <input type="radio" name="visit7Radio5" alt="用药原因" ro="5" onclick="visit7Thing5(1)"><label for="">预防</label><br>
+                        <input type="radio" name="visit7Radio5" alt="用药原因" ro="5" onclick="visit7Thing5(1)"><label for="">补充</label><br>
+                        <input type="radio" name="visit7Radio5" alt="用药原因" onclick="visit7Thing5(2)"><label for="">其他，请详述：</label><br>
+                        <input type="text" style="width:150px;" alt="用药原因" class="visit7t4">
+                    </span>
+                </li>
+                <li class="visit7Tr" style="height:168px;">
+                    <span><input type="text" alt="药品通用名"></span>
+                    <span><input type="text" alt="每日总剂量"></span>
+                    <span>mg/d</span>
+                    <span><input type="text" alt="剂量单位"></span>
+                    
+                    <span><input type="text" alt="用药途径"></span>
+                    <span><input type="text" name="v7-time31" id="v7-time31" class="Wdate" readonly="" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'v7-time32\')}'});" alt="开始日期"></span>
+                    <span style="padding-top:40px;line-height: 40px;text-align: left;">
+                        <p><input type="radio" name="visit7Radio6" alt="是否持续" ro="2" onclick="visit7Thing6(1)"><label for="">否</label><input type="radio" name="visit7Radio6" alt="是否持续" onclick="visit7Thing6(2)"><label for="">是</label></p>
+                        <input type="text" name="v7-time32" id="v7-time32" class="Wdate visit7t5" readonly="" onclick="WdatePicker({minDate:'#F{$dp.$D(\'v7-time31\')}'});" alt="持续时间">
+                    </span>
+                    <span><input type="text"></span>
+                    <span style="padding-top:12px;line-height: 24px;width:195px;;text-align: left;padding-left:20px;">
+                        <input type="radio" name="visit7Radio7" alt="用药原因" ro="5" onclick="visit7Thing7(1)"><label for="">治疗不良事件</label><br>
+                        <input type="radio" name="visit7Radio7" alt="用药原因" ro="5" onclick="visit7Thing7(1)"><label for="">既往用药</label><br>
+                        <input type="radio" name="visit7Radio7" alt="用药原因" ro="5" onclick="visit7Thing7(1)"><label for="">预防</label><br>
+                        <input type="radio" name="visit7Radio7" alt="用药原因" ro="5" onclick="visit7Thing7(1)"><label for="">补充</label><br>
+                        <input type="radio" name="visit7Radio7" alt="用药原因" onclick="visit7Thing7(2)"><label for="">其他，请详述：</label><br>
+                        <input type="text" style="width:150px;" alt="用药原因" class="visit7t6">
+                    </span>
+                </li>
+                <li class="visit7Tr" style="height:168px;">
+                    <span><input type="text" alt="药品通用名"></span>
+                    <span><input type="text" alt="每日总剂量"></span>
+                    <span>mg/d</span>
+                    <span><input type="text" alt="剂量单位"></span>
+                    
+                    <span><input type="text" alt="用药途径"></span>
+                    <span><input type="text" name="v7-time41" id="v7-time41" class="Wdate" readonly="" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'v7-time42\')}'});" alt="开始日期"></span>
+                    <span style="padding-top:40px;line-height: 40px;text-align: left;">
+                        <p><input type="radio" name="visit7Radio8" alt="是否持续" ro="2" onclick="visit7Thing8(1)"><label for="">否</label><input type="radio" name="visit7Radio8" alt="是否持续" onclick="visit7Thing8(2)"><label for="">是</label></p>
+                        <input type="text" name="v7-time42" id="v7-time42" class="Wdate visit7t7" readonly="" onclick="WdatePicker({minDate:'#F{$dp.$D(\'v7-time41\')}'});" alt="持续时间">
+                    </span>
+                    <span><input type="text"></span>
+                    <span style="padding-top:12px;line-height: 24px;width:195px;;text-align: left;padding-left:20px;">
+                        <input type="radio" name="visit7Radio9" alt="用药原因" ro="5" onclick="visit7Thing9(1)"><label for="">治疗不良事件</label><br>
+                        <input type="radio" name="visit7Radio9" alt="用药原因" ro="5" onclick="visit7Thing9(1)"><label for="">既往用药</label><br>
+                        <input type="radio" name="visit7Radio9" alt="用药原因" ro="5" onclick="visit7Thing9(1)"><label for="">预防</label><br>
+                        <input type="radio" name="visit7Radio9" alt="用药原因" ro="5" onclick="visit7Thing9(1)"><label for="">补充</label><br>
+                        <input type="radio" name="visit7Radio9" alt="用药原因" onclick="visit7Thing9(2)"><label for="">其他，请详述：</label><br>
+                        <input type="text" style="width:150px;" alt="用药原因" class="visit7t8">
+                    </span>
+                </li>
+                
+            </ul>
+
+            <div class="visit_7-body-bottom">
+                <button onclick="visit7Save()">保存并下一步</button>
+            </div>
+
+        
+    </div>
+            
+</div>
+<script src="js/visit_7.js"></script>
+</body>
+</body>
+</html>

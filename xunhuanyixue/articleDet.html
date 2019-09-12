@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>文章集锦</title>
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/articleDet.css">
+</head>
+<body>
+  <div id="app" class="articleDet" v-cloak>
+    <div class="main">
+  		<h4>{{data.data.Title}}</h4>
+  		<div>
+  			<img :src="'http://xhyx.ikangxun.com'+data.data.OSSName" alt="">
+  		</div>
+  		<p v-html="data.data.Content"></p>
+    </div>
+  </div>
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/articleDet.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>卡双平</title>
+
+  <link rel="stylesheet" href="mui/css/mui.min.css">
+
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+
+  <link rel="stylesheet" href="css/reg.css">
+
+</head>
+<body>
+
+  <header class="mui-bar mui-bar-nav" id="experthead" style="z-index:999">
+      <a class="mui-icon-left-nav mui-icon mui-icon-arrowleft headback" onClick="javascript :history.back(-1);"></a>
+      <h1 class="mui-title">注册</h1>
+  </header>
+  
+  <div id="app" class="reg">
+  	<div class="regBox">
+  		<input class="num" type="text" placeholder="用户账号" v-model="acc">
+      <input class="pas" type="password" placeholder="用户密码" v-model="pas">
+      <p></p>
+      <input class="name" type="text" placeholder="姓名" v-model="name">
+      <input class="hospital" type="text" placeholder="医院" v-model="hospital">
+      <input class="department" type="text" placeholder="科室" v-model="department">
+      <input class="titles titlesz" type="text" placeholder="职称" v-model="duty">
+      <input class="phone" type="number" placeholder="电话" v-model="phone" oninput="oi2(this)">
+      <div class="codeBox">
+        <input class="code" type="text" placeholder="验证码" v-model="code">
+        <div>
+          <canvas id="canvas"></canvas>
+        </div>
+        <u id="changeImg" @click="getCode">获取验证码</u>
+      </div> 
+      <a class="regBut" @click="regBut">注册</a>
+  	</div>
+  </div>
+
+<script src="js/vue.js"></script>
+<script src="mui/js/mui.min.js"></script>  
+<script src="js/main.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/reg.js"></script>
+</body>
+</html>

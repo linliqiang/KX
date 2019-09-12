@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+</head>
+<body>
+
+<div class="fillin" id="fillin">
+	<div class="fillin-top">
+		<label for="">方案号：</label>
+		<input type="text" alt="方案号" readonly= "true" value="YTNBLX-V1.0">
+		<label for="">&nbsp;&nbsp;&nbsp;版本号：</label>
+		<input type="text"  alt="版本号" readonly= "true" value="YTNBLX-SXB-V1.0">
+	</div>
+	<div class="fillin-top">
+		<label for="">筛选号：</label>
+		<input type="text"  alt="筛选号" oninput="fillThing1(this)">
+		<label for="">中心编号：</label>
+		<input type="text"  alt="中心编号" oninput="fillThing1(this)">
+		<label for="">患者姓名缩写：</label>
+		<input type="text"  alt="患者姓名缩写" oninput="fillThing1(this)">
+		<p style="color:red;padding:8px 0px 8px 0px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（两字姓名请填写姓和名的前两个字母，如：赵丽 ZHLI；三字姓名请填写前两个汉字的首字母和第三个汉字的前两个字母，如：徐晓军 XXJU；四字姓名请填写每个汉字的首字母，如：欧阳雪莹 OYXY）</p>
+	</div>
+
+	<div class="fillin-body">
+		
+		<div class="fillin-body-top">
+			<label for="">筛选时间：</label>
+			<input type="text"  alt="筛选时间" name="g-visitdate" id="g-visitdate" class="Wdate" readonly="" onclick="new WdatePicker()">
+		</div>
+
+		<div class="fillin-body-b1">
+			<div>人口学<br/>统计资料</div>
+			<div>
+				<ul>
+					<li>
+						<label for="">出生日期：</label>
+						<input type="text" alt="出生日期" name="g-visitdate" id="g-visitdate" class="Wdate" readonly="" onclick="new WdatePicker()">
+						<label for="" style="margin-left:150px">年龄：</label>
+						<input type="text"  alt="年龄">
+					</li>
+					<li>
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;民族：</span>
+						<input type="radio" name="fillinRadio1" alt="民族" ro="2" cle="cle1" onclick="cleText(this,0)"><label for="">汉族</label>
+						<input type="radio" name="fillinRadio1" alt="民族" cle="cle1" onclick="cleText(this,1)"><label for="">其他&nbsp;&nbsp;</label><input cle="cle1" style="width:68px" type="text"  alt="其他民族">
+						<span style="margin-left:150px">性别：</span>
+						<input type="radio" name="fillinRadio2" alt="性别" ro="1"><label for="">男</label>
+						<input type="radio" name="fillinRadio2" alt="性别"><label for="">女</label>
+					</li>
+					<li>
+						<label for="">文化程度：</label>
+						<input type="text"  alt="文化程度">
+						<label style="margin-left:150px" for="">职业：</label>
+						<input type="text"  alt="职业">
+					</li>
+					<li>
+						<span>患者来源：</span>
+						<input type="radio" name="fillinRadio3" alt="患者来源" ro="1"><label for="">住院</label>
+						<input type="radio" name="fillinRadio3" alt="患者来源"><label for="">门诊</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="fillin-body-b2">
+			<div>疾病诊断名称</div>
+			<div>
+				<input type="text"  alt="疾病诊断名称">
+			</div>
+		</div>
+
+		<div class="fillin-body-b3">
+			<div>病史</div>
+			<div>
+				<ul>
+					<li>
+						<span>既往史：</span>
+						<input type="radio" name="fillinRadio4" alt="既往病史" ro="2" cle="cle2" onclick="cleText(this,0)"><label for="">无</label>
+						<input type="radio" name="fillinRadio4" alt="既往病史" cle="cle2" onclick="cleText(this,1)"><label for="">有，请说明：</label>
+						<input type="text" cle="cle2" alt="既往病史">
+					</li>
+					<li>
+						<span>现病史：</span>
+						<input type="radio" name="fillinRadio5" alt="现在病史" ro="2" cle="cle3" onclick="cleText(this,0)"><label for="">无</label>
+						<input type="radio" name="fillinRadio5" alt="现在病史" cle="cle3" onclick="cleText(this,1)"><label for="">有，请说明</label>
+						<input type="text" cle="cle3"  alt="现在病史">
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="fillin-body-b4">
+			<div>用药史及现<br/>用药情况</div>
+			<div>
+				<ul>
+					<li>
+						<span>是否有重要的用药史（过去三个月）或当前正在使用药物？</span>
+					</li>
+					<li>
+						<input type="radio" name="fillinRadio6" alt="重要用药史" ro="2" cle="cle4" onclick="cleText(this,0)"><label for="">否</label>
+						<input type="radio" name="fillinRadio6" alt="重要用药史" cle="cle4" onclick="cleText(this,1)"><label for="">是，请说明</label>
+						<input type="text" cle="cle4"  alt="重要用药史">
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="fillin-body-b5">
+			<div>过敏史</div>
+			<div>
+				<ul>
+					<li>
+						<span>是否对药物（右佐匹克隆或文拉法辛）/食物/其他物质过敏？</span>
+					</li>
+					<li>
+						<input type="radio" name="fillinRadio7" alt="药物过敏史" ro="2" cle="cle5" onclick="cleText(this,0)"><label for="">否</label>
+						<input type="radio" name="fillinRadio7" alt="药物过敏史" cle="cle5" onclick="cleText(this,1)"><label for="">是，请说明</label>
+						<input type="text" cle="cle5"  alt="过敏史">
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="fillin-body-b6">
+			<div>尿妊娠试验</div>
+			<div>
+				<ul>
+					<li>
+						<span>是否适用于该患者？</span>
+					</li>
+					<li>
+						<input type="radio" name="fillinRadio8" ro="6" cle="cle6" onclick="cleText(this,0,1)">
+						<label for="" alt="是否适用尿妊娠试验">否（男性、节育手术或绝经一年以上女性）</label>
+					</li>
+					<li>
+						<input type="radio" name="fillinRadio8" cle="cle6" onclick="cleText(this,1,2)">
+						<label for="" alt="是否适用尿妊娠试验">是，如是，请完成下列信息</label>
+					</li>
+					<li class="fillin-disnone">
+						<label for="">检查日期：</label>
+						<input type="text" cle="cle6"  alt="检查日期" name="g-visitdate" id="g-visitdate" class="Wdate" readonly="" onclick="new WdatePicker()">
+					</li>
+					<li class="fillin-disnone">
+						<span>检查结果：</span>
+						<input type="radio" name="fillinRadio9" alt="检查结果" ro="3" cle="cle6" cletwo="cle21" onclick="cleText2(this,0)"><label for="">阴性</label>
+						<input type="radio" name="fillinRadio9" alt="检查结果" ro="2" cle="cle6" cletwo="cle21" onclick="cleText2(this,0)"><label for="">阳性，患者不能进入研究</label>
+					</li>
+					<li class="fillin-disnone">
+						<input type="radio" name="fillinRadio9" alt="未检查原因" cle="cle6" cletwo="cle21" onclick="cleText2(this,1)">
+						<label for="">未做，注明原因</label>
+						<input type="text" cle="cle6" cletwo="cle21">
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="fillin-body-b7">
+			<button onclick="fillinSave(1)">保存</button>
+		</div>
+
+	</div>
+
+</div>
+<script src="js/fillin.js"></script>
+</body>
+</html>

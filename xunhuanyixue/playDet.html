@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>精彩回顾</title>
+  <script src="js/fiexible.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/playDet.css">
+</head>
+<body>
+  <div id="app" class="playingDet" v-cloak>
+		<div class="main">
+      <div class="vid">
+        <video  
+          id="vieeo"
+          :poster="data.meet.OSSName"
+          :src="data.meet.PSSPath"
+          controls="controls">
+        </video>
+      </div>
+      <div class="title">
+        <p>{{data.meet.Title}}</p>
+        <p v-if="data.meet.TeacherName"><span>主讲：{{data.meet.TeacherName}}</span></p>
+        <p><span>时间：{{longTimeToData(data.meet.StartDate)}}</span></p>
+      </div>
+      <div class="but">
+        <button :class="{ butSign : sign == 1 }" @click="butThing(1)">内容简介</button>
+        <button :class="{ butSign : sign == 2 }" @click="butThing(2)">主讲简介</button>
+      </div>
+      <div class="msg">
+        <p v-show="sign == 1" v-html="data.meet.Content"></p>
+        <p v-show="sign == 2">{{data.meet.TeacherRemake}}</p>
+      </div>
+		</div>
+  </div>
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/playDet.js"></script>
+</body>
+</html>

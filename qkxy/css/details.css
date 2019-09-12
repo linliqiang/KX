@@ -1,0 +1,18 @@
+/*针对文章，资讯，病例，问答详情页*/
+.main-content{
+	width: 846px;
+	padding: 20px 20px 0px 20px;
+}
+.det-author2 span.autName{
+	margin-left: 0px;
+}
+.det-author2 span{
+	margin-top: 0px;
+}
+
+
+
+.det-Msg ul,.det-Msg ol{
+	padding-left: 20px;
+	/*list-style-type: decimal; */
+}

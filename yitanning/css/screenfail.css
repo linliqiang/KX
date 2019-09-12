@@ -1,0 +1,47 @@
+
+.screenFail{
+	font-size: 12px;
+	border: 1px solid rgb(234,232,233);
+	border-radius: 10px;
+}
+
+.screenFail p:nth-child(1){
+	text-align: center;
+	padding: 16px 0px 16px 0px;
+	border-bottom: 1px solid rgb(234,232,233);
+	font-size: 12px;
+}
+
+.screenFail p:nth-child(2){
+	font-size: 18px;
+	padding: 110px 0px 22px 430px;
+}
+.screenFail p:nth-child(3),.screenFail p:nth-child(4){
+	padding: 2px 0px 24px 430px;
+	font-size: 14px;
+}
+.screenFail p:nth-child(5){
+	text-align: center;
+}
+.screenFail p:nth-child(5) textarea{
+	margin-left: 200px;
+	margin-top: -40px;
+}
+
+.screenFail-save{
+	width: 1090px;
+	/*height: 86px;*/
+	text-align: center;
+	padding: 44px 0px 208px 0px;
+	border-bottom: 2px solid rgb(0,183,238);
+	margin-left: 10px;
+}
+.screenFail-save button{
+	display: inline-block;
+	width: 146px;
+	height: 44px;
+	border: 1px solid rgb(0,183,238);
+	color: rgb(0,183,238);
+	border-radius: 8px;
+	background: #ffffff;
+}

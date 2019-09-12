@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>全科学苑</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/login.css">
+
+</head>
+<body>
+
+<div id="app">
+	
+	<div class="header">
+		<div class="headerTop">
+
+			<a href="index.html"><img src="img/logo.png" class="logo" alt="" /></a>
+			<img src="img/logo2.png" class="logo2" alt="">
+
+		</div>
+		
+	</div>
+
+
+
+	<div class="main">
+
+		<div class="main-content">
+			
+			<div class="loginBox">
+				
+				<div class="loginH">
+					<span>账号密码登录</span>
+					<a href="regPhone.html">注册新用户</a>
+				</div>
+
+				<div class="nameBox">
+					<input type="text" v-model="userName" placeholder="请输入账号">
+				</div>
+
+				<div class="pswBox">
+					<input type="password" v-model="userPsw" placeholder="请输入密码">
+				</div>
+
+				<div class="smortM">
+					<span>{{tipsMsg}}</span>
+					<a href="loginSm.html">短信登录</a>
+				</div>
+
+				<div class="loginBut">
+					<button @click="login()">登录</button>
+				</div>
+
+				<div class="forget">
+					<a href="forget.html">忘记密码？</a>
+				</div>
+
+				<p class="other">
+					<span></span>
+					<span>社交账号登录</span>
+					<span></span>
+				</p>
+
+				<div class="otherBut">
+					<img src="img/loginot_05.png" alt="">
+					<img src="img/loginot_03.png" alt="">
+					<img src="img/loginot_07.png" alt="">
+				</div>
+				
+
+			</div>
+
+				
+
+
+
+		</div>
+
+
+		
+		
+		
+
+	</div>
+
+	<div class="footer">
+
+		<div class="footerB">
+			
+			<div class="firendLink">
+				<p>友情链接</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">国家卫计委</a>
+					<a href="http://www.baidu.com">世界卫生组织</a>
+					<a href="http://www.baidu.com">国家食品药品监督管理局</a>
+					<a href="http://www.baidu.com">国家中医药管理局</a>
+					<a href="http://www.baidu.com">中国医疗</a>
+					<a href="http://www.baidu.com">新浪健康</a>
+					<a href="http://www.baidu.com">搜狐健康</a>
+					<a href="http://www.baidu.com">凤凰健康</a>
+					<a href="http://www.baidu.com">百姓健康</a>
+					<a href="http://www.baidu.com">爱爱医</a>
+					<a href="http://www.baidu.com">网易健康</a>
+					<a href="http://www.baidu.com">MedSci</a>
+					<a href="http://www.baidu.com">医学论坛网</a>
+					<a href="http://www.baidu.com">华西医院</a>
+					<a href="http://www.baidu.com">北京协和医院</a>
+					<a href="http://www.baidu.com">北京朝阳医院</a>
+					<a href="http://www.baidu.com">医保卡余额查询</a>
+				</div>
+				<p>合作媒体</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">人民日报</a>
+					<a href="http://www.baidu.com">北京新闻网</a>
+					<a href="http://www.baidu.com">北京周报</a>
+				</div>
+			</div>
+			<div class="erweima">
+				<div>
+					<span>关注微信</span>
+					<img src="img/erweima2.png" width="112" height="98" alt="二维码" />
+				</div>
+				<p>
+					<a href="about.html">关于我们</a>
+					<span>|</span>
+					<a href="contact.html">联系我们</a>
+					<span>|</span>
+					<a @click="tofeed">意见反馈</a>
+				</p>
+			</div>
+
+		</div>
+
+		
+	</div>
+
+</div>
+	
+	
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

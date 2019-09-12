@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>专家详情</title>
+	<link rel="stylesheet" href="font/iconfont.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/expDet.css">
+</head>
+<body>
+
+<div id="app">
+	
+	<div id="header" class="header">
+		<div class="headerTop">
+
+			<a href="index.html"><img src="img/logo.png" class="logo" height="74" width="193" alt="" /></a>
+			
+			<a href="search.html"><input type="text" class="search" placeholder="请输入要搜索的关键词"></a>
+			
+			<img src="img/searchLogo.png" class="searchLogo" height="21" width="21" alt="" />
+			
+		</div>
+		<div id="navBox" class="navBox">
+			<div class="navB">
+				<ul class="nav clearfix">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="vid.html">视频</a></li>
+					<li><a href="article.html">文章</a></li>
+					<li><a href="play.html">直播</a></li>
+					<li><a href="case.html">病例</a></li>
+					<li><a :class="{ navSign: navSign==6}" href="expert.html">专家</a></li>
+					<li><a href="quesition.html">问答</a></li>
+				</ul>
+
+
+				<div class="logReg" v-if="userMsg == false">
+					<a href="login.html">登录</a>
+					<span>|</span>
+					<a href="regPhone.html">注册</a>
+				</div>
+
+				<div class="logUser" v-if="userMsg">
+					<div>
+						<a href="msg.html"><img src="img/sm.png" alt=""></a>
+						<span>3</span>
+						<div class="UserHead">
+							<a href="user.html"><img src="img/zji.jpg" alt=""></a>
+						</div>
+					</div>
+					<ul>
+						<li @click="touser(1)"><i class="iconfont icon-shoucang"></i>我的收藏</li>
+						<li @click="touser(2)"><i class="iconfont icon-fabuxiangmu"></i>我的发布</li>
+						<li @click="touser(3)"><i class="iconfont icon-guanzhu"></i>我的关注</li>
+						<li @click="touser(4)"><i class="iconfont icon-shezhi"></i>个人设置</li>
+						<li @click="touser(5)"><i class="iconfont icon-Opinion"></i>意见反馈</li>
+						<li @click="touser(6)"><i class="iconfont icon-dingdan"></i>订单       </li>
+						<li @click="touser(7)"><i class="iconfont icon-yaoqingma"></i>邀请码    </li>
+						<li @click="signOut()"><i class="iconfont icon-tuichu"></i>退出       </li>
+					</ul>
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="main" class="main">
+
+		<div class="main-content">
+			
+			<!-- 一楼 -->
+			<div class="ban">
+				
+				<div class="banCon">
+					<div>
+						<img src="img/zji.jpg" alt="">
+					</div>
+					<div>
+						<div><span>张一凡</span><img src="img/zjg.png" alt=""><span>风湿免疫科</span></div>
+						<p>成都市二医院</p>
+					</div>
+					<a href="edit.html" v-if="userMsg.type == 'expert'"><img src="img/xie.png" alt=""></a>
+				</div>
+				
+			</div> 
+
+			<p class="expt">
+				<span>个人简介</span>
+			</p> 
+
+			<p class="expDetMsg">男，主任医师，教授，呼吸内科主任，呼吸疾病研究所所长，国务院特贴专家，兼任中华医学会呼吸病学分会副主任委员，中国医师协会呼吸分会副会长等职位，1958年7月生，1982年毕业于中国医科大学医疗系，1991年获博士学位。曾留学于日本国立千叶大学和英国牛津大学。中国医师协会呼吸分会副会长等职位，1958年7月生，1982年毕业于中国医科大学医疗系，1991年获博士学位。曾留学于日本国立千叶大学和英国牛津大学。中国医师协会呼吸分会副会长等职位，1958年7月生，1982年毕业于中国医科大学医疗系，1991年获博士学位。曾留学于日本国立千叶大学和英国牛津大学。中国医师协会呼吸分会副会长等职位，1958年7月生，1982年毕业于中国医科大学医疗系，1991年获博士学位。曾留学于日本国立千叶大学和英国牛津大学。中国医师协会呼吸分会副会长等职位，1958年7月生，1982年毕业于中国医科大学医疗系，1991年获博士学位。曾留学于日本国立千叶大学和英国牛津大学。中国医师协会呼吸分会副会长等职位，1958年7月生，1982年毕业于中国医科大学医疗系，1991年获博士学位。曾留学于日本国立千叶大学和英国牛津大学。中国医师协会呼吸分会副会长等职位，1958年7月生，1982年毕业于中国医科大学医疗系，1991年获博士学位。曾留学于日本国立千叶大学和英国牛津大学。中国医师协会呼吸分会副会长等职位，1958年7月生，1982年毕业于中国医科大学医疗系，1991年获博士学位。曾留学于日本国立千叶大学和英国牛津大学。</p>
+
+		
+
+			<div class="news">
+				<ul class="news-nav">
+					<li :class="{ newsSign: newsNum==1 }" @click="newsThing(1)">视频</li>
+					<li :class="{ newsSign: newsNum==2 }" @click="newsThing(2)">文章</li>
+					<li :class="{ newsSign: newsNum==3 }" @click="newsThing(3)">病例</li>
+					<li :class="{ newsSign: newsNum==4 }" @click="newsThing(4)">提问</li>
+				</ul>
+
+
+
+				<div class="repeatItemBox" v-show=" newsNum == 1 ">
+
+					<div class="repeatItem" v-for="(item,index) in repeatItem1">
+						<a class="transBig" href="vid.html">
+							<img src="img/new2_03.png" alt="">
+							<span><em>{{item.look}}</em>观看</span>
+						</a>
+						<div>
+							<p class="OOver"><a class="titleColor wryh" href="vid.html">{{item.title}}</a></p>
+							<p class="TOver">{{item.msg}}</p>
+							<p>
+								<!-- 来源或姓名 -->
+								<span v-if="item.name">{{item.name}}</span>
+								<span v-if="item.name"></span>
+								<span v-if="item.company">{{item.company}}</span>
+							</p>
+						</div>
+					</div>
+
+					<div class="lookMore">
+						<button class="titleColor" @click="lookMore(1)">查看更多>></button>
+					</div>
+
+				</div>
+
+
+				<!-- 文章 -->
+				<div class="repeatItemBox" v-show=" newsNum == 2 ">
+
+					<div class="repeatItem" v-for="(item,index) in repeatItem2">
+						<a class="transBig" href="artDet.html"><img :src="item.img ? item.img : 'img/new2_032.png'" alt=""></a>
+						<div>
+							<p class="OOver"><a class="titleColor wryh" href="artDet.html">{{item.title}}</a></p>
+							<p class="TOver">{{item.msg}}</p>
+							<p>
+								<!-- 来源或姓名 -->
+								<span v-if="item.name">{{item.name}}</span>
+								<span v-if="item.company">{{item.company}}</span>
+								<span v-if="item.time">{{item.time}}</span>
+							</p>
+						</div>
+					</div>
+
+					<div class="lookMore">
+						<button class="titleColor" @click="lookMore(2)">查看更多>></button>
+					</div>
+
+				</div>
+
+				<!-- 病例 -->
+				<div class="repeatItemBox" v-show=" newsNum == 3 ">
+
+					<div class="repeatItem" v-for="(item,index) in repeatItem3">
+						<a class="transBig" href="caseDet.html"><img :src="item.img ? item.img : 'img/new2_032.png'" alt=""></a>
+						<div>
+							<p class="OOver"><span>{{item.type}}</span><a class="titleColor wryh" href="caseDet.html">{{item.title}}</a></p>
+							<p class="TOver">{{item.msg}}</p>
+							<div>
+								<!-- <div v-if=" item.headerImg ">
+									<img :src="item.headerImg" alt="">
+								</div> -->
+								<span class="caseform" v-if="item.name">{{item.name}}</span>
+								<span class="casetime" v-if="item.time">{{item.time}}</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="lookMore">
+						<button class="titleColor" @click="lookMore(3)">查看更多>></button>
+					</div>
+
+				</div>
+
+
+				<!-- 问答 -->
+				<div class="quseRepeatBox" v-show=" newsNum == 4 ">
+
+					<div class="quesItem" v-for="(item,index) in quseRepeatItem1">
+
+						<div>
+							<!-- <img src="img/wd_03.png" alt=""> -->
+							<em>问</em>
+							<a class="titleColor wryh OOver" href="queDet.html">{{item.title}}</a>
+						</div>
+						<div v-show=" item.msg ">
+							<!-- <img src="img/wd_06.png" alt=""> -->
+							<em>答</em>
+							<p class="TOver">{{item.msg}}</p>
+						</div>
+						<div>
+							<span><em>{{item.answer}}</em>回答</span>
+							<span :class="{ quseGuanzhu : item.guanzhu }" @click="quseGuanzhuThing(index)">{{item.guanzhu ? "已关注" : "关注"}}</span>
+							<a href="queDet.html"><i class="iconfont icon-Opinion"></i>写回答</a>
+						</div>
+
+					</div>
+
+					<div class="lookMore">
+						<button class="titleColor" @click="lookMore(4)">查看更多>></button>
+					</div>
+
+				</div>
+
+
+
+
+
+
+				
+
+			</div>
+
+
+
+
+
+		</div>
+
+
+		<div class="side-bar">
+			
+			<div class="side-logo">
+				<img src="img/ban2_05.png" alt="">
+			</div>
+
+			<p class="left-title">
+				<span>作品推荐</span>
+			</p>
+
+			<div class="side-item" v-for="(item,index) in 5">
+				<img src="img/yuandian_15.png" alt="">
+				<p class="TOver cp"><a href="artDet.html">新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南</a></p>
+			</div>
+
+			
+
+		</div>
+		
+		
+
+	</div>
+
+	<div id="footer" class="footer">
+
+		<div class="footerB">
+			
+			<div class="firendLink">
+				<p>友情链接</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">国家卫计委</a>
+					<a href="http://www.baidu.com">世界卫生组织</a>
+					<a href="http://www.baidu.com">国家食品药品监督管理局</a>
+					<a href="http://www.baidu.com">国家中医药管理局</a>
+					<a href="http://www.baidu.com">中国医疗</a>
+					<a href="http://www.baidu.com">新浪健康</a>
+					<a href="http://www.baidu.com">搜狐健康</a>
+					<a href="http://www.baidu.com">凤凰健康</a>
+					<a href="http://www.baidu.com">百姓健康</a>
+					<a href="http://www.baidu.com">爱爱医</a>
+					<a href="http://www.baidu.com">网易健康</a>
+					<a href="http://www.baidu.com">MedSci</a>
+					<a href="http://www.baidu.com">医学论坛网</a>
+					<a href="http://www.baidu.com">华西医院</a>
+					<a href="http://www.baidu.com">北京协和医院</a>
+					<a href="http://www.baidu.com">北京朝阳医院</a>
+					<a href="http://www.baidu.com">医保卡余额查询</a>
+				</div>
+				<p>合作媒体</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">人民日报</a>
+					<a href="http://www.baidu.com">北京新闻网</a>
+					<a href="http://www.baidu.com">北京周报</a>
+				</div>
+			</div>
+			<div class="erweima">
+				<div>
+					<span>关注微信</span>
+					<img src="img/erweima2.png" width="112" height="98" alt="二维码" />
+				</div>
+				<p>
+					<a href="about.html">关于我们</a>
+					<span>|</span>
+					<a href="contact.html">联系我们</a>
+					<span>|</span>
+					<a @click="tofeed">意见反馈</a>
+				</p>
+			</div>
+
+		</div>
+
+		
+	</div>
+
+</div>
+	
+	
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/expDet.js"></script>
+</body>
+</html>

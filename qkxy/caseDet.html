@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<title>病例详情</title>
+	<link rel="stylesheet" href="font/iconfont.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/details.css">
+</head>
+<body>
+
+<div id="app">
+	
+	<div id="header" class="header">
+		<div class="headerTop">
+
+			<a href="index.html"><img src="img/logo.png" class="logo" height="74" width="193" alt="" /></a>
+			
+			<a href="search.html"><input type="text" class="search" placeholder="请输入要搜索的关键词"></a>
+			
+			<img src="img/searchLogo.png" class="searchLogo" height="21" width="21" alt="" />
+			
+		</div>
+		<div id="navBox" class="navBox">
+			<div class="navB">
+				<ul class="nav clearfix">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="vid.html">视频</a></li>
+					<li><a href="article.html">文章</a></li>
+					<li><a href="play.html">直播</a></li>
+					<li><a :class="{ navSign: navSign==5}" href="case.html">病例</a></li>
+					<li><a href="expert.html">专家</a></li>
+					<li><a href="quesition.html">问答</a></li>
+				</ul>
+
+
+				<div class="logReg" v-if="userMsg == false">
+					<a href="login.html">登录</a>
+					<span>|</span>
+					<a href="regPhone.html">注册</a>
+				</div>
+
+				<div class="logUser" v-if="userMsg">
+					<div>
+						<a href="msg.html"><img src="img/sm.png" alt=""></a>
+						<span>3</span>
+						<div class="UserHead">
+							<a href="user.html"><img src="img/zji.jpg" alt=""></a>
+						</div>
+					</div>
+					<ul>
+						<li @click="touser(1)"><i class="iconfont icon-shoucang"></i>我的收藏</li>
+						<li @click="touser(2)"><i class="iconfont icon-fabuxiangmu"></i>我的发布</li>
+						<li @click="touser(3)"><i class="iconfont icon-guanzhu"></i>我的关注</li>
+						<li @click="touser(4)"><i class="iconfont icon-shezhi"></i>个人设置</li>
+						<li @click="touser(5)"><i class="iconfont icon-Opinion"></i>意见反馈</li>
+						<li @click="touser(6)"><i class="iconfont icon-dingdan"></i>订单       </li>
+						<li @click="touser(7)"><i class="iconfont icon-yaoqingma"></i>邀请码    </li>
+						<li @click="signOut()"><i class="iconfont icon-tuichu"></i>退出       </li>
+					</ul>
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="main" class="main">
+
+		<div class="main-content">
+			
+
+			<p class="det-title">新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复</p>
+
+			<!-- 医生发布 -->
+			<div class="det-author" style="display:none">
+				<div class="autImg">
+					<img src="img/header001.png" alt="">
+				</div>
+				<div class="autImgSign">
+					<img src="img/docG.png" alt="">
+				</div>
+				<span class="autName">胡大一</span>
+				<span class="autTime">2018-11-12</span>
+			</div>
+			<!-- 专家发布 -->
+			<div class="det-author" style="display:none">
+				<div class="autImg">
+					<img src="img/header001.png" alt="">
+				</div>
+				<div class="autImgSign">
+					<img src="img/zjg.png" alt="">
+				</div>
+				<span class="autName">胡大一</span>
+				<span class="autTime">2018-11-12</span>
+			</div>
+			<!-- 后台发布 -->
+			<div class="det-author" style="height:52px;">
+				<span class="autName">胡大一</span>
+				<span class="autTime">2018-11-12</span>
+			</div>
+
+			<p class="det-summary">除了积极发展中国医师协会神经调控专业委员会外，国明教授积极推动中国抗癫痫会神经调控专业委员会的成立，并成功于2018年4月1日在北京成立，国明教授担任主任委员。除了积极发展中国医师协会神经调控专业委员会外，国明教授积极推动中国抗癫痫会神经调控专业委员会的成立，并成功于2018年4月1日在北京成立，国明教授担任主任委员。除了积极发展中国医师协会神经调控专业委员会外，国明教授积极推动中国抗癫痫会神经调控专业委员会的成立，并成功于2018年4月1日在北京成立，国明教授担任主任委员。</p>
+
+			<p class="det-Msg">除了积极发展中国医师协会神经调控专业委员会外，国明教授积极推动中国抗癫痫会神经调控专业委员会的成立，并成功于2018年4月1日在北京成立，国明教授担任主任委员。除了积极发展中国医师协会神经调控专业委员会外，国明教授积极推动中国抗癫痫会神经调控专业委员会的成立，并成功于2018年4月1日在北京成立，国明教授担任主任委员。除了积极发展中国医师协会神经调控专业委员会外，国明教授积极推动中国抗癫痫会神经调控专业委员会的成立，并成功于2018年4月1日在北京成立，国明教授担任主任委员。除了积极发展中国医师协会神经调控专业委员会外，国明教授积极推动中国抗癫痫会神经调控专业委员会的成立，并成功于2018年4月1日在北京成立，国明教授担任主任委员。除了积极发展中国医师协会神经调控专业委员会外，国明教授积极推动中国抗癫痫会神经调控专业委员会的成立，并成功于2018年4月1日在北京成立，国明教授担任主任委员。</p>
+
+			<img class="det-img" src="img/img112.png" alt="">
+
+			<p class="det-Msg">除了积极发展中国医师协会神经调控专业委员会外，国明教授积极推动中国抗癫痫会神经调控专业委员会的成立，并成功于2018年4月1日在北京成立，国明教授担任主任委员。除了积极发展中国医师协会神经调控专业委员会外，国明教授积极推动中国抗癫痫会神经调控专业委员会的成立，并成功于2018年4月1日在北京成立，国明教授担任主任委员。</p>
+
+			<!-- 赞和收藏 -->
+			<div class="zanBox">
+				<div :class="{ zs : zanB }" @click="mzan">
+					<i class="iconfont icon-zan"></i>
+					<span :class="{zanBc:!zanB}">{{zanB ? "已赞" : "赞"}}</span>
+					<span v-show="zanN!=0">|</span>
+					<span v-show="zanN!=0">{{zanN}}</span>
+				</div>
+				<div :class="{ zs : shouB }" @click="mshou">
+					<i class="iconfont icon-shoucang"></i>
+					<span>{{shouB ? "已收藏" : "收藏"}}</span>
+					<span v-show="shouN!=0">|</span>
+					<span v-show="shouN!=0">{{shouN}}</span>
+				</div>
+			</div>
+			<!-- 分享 -->
+			<div class="shareBox">
+				<div>
+					<span>分享到：</span>
+					<img src="img/fx_50.png" alt="">
+					<img src="img/fx_52.png" alt="">
+					<img src="img/fx_54.png" alt="">
+					<img src="img/fx_56.png" alt="">
+				</div>
+			</div>
+
+			<!-- #评论区域 -->
+			<div class="comment">
+
+				<p class="comment-f1">
+					<span>发布评论</span>
+					<span>共有<span>{{commentData.data.length}}</span>条评论</span>
+				</p>
+				<textarea class="textarea1" id="mainarea" name="mainarea" @click="isToLogin" placeholder="写下你的评论..."></textarea>
+				<div class="comment-f3">
+					<div><i class="iconfont icon-xiaolian yjxiao"></i></div>
+					<button class="yijiBut" @click="huifu1OK">发送</button>
+				</div>
+
+				<div class="comment-main">
+
+					<div  class="comment-item">
+
+						<!-- 一级评论 -->
+						<div class="my-rep" v-for="(item,index) in commentData.data">
+							<!-- 专家或医生标志 -->
+							<div v-if="item.formType" class="csign">
+								<img v-if="item.formType=='doctor'" src="img/docG.png" alt="">
+								<img v-if="item.formType=='expert'" src="img/zjg.png" alt="">
+							</div>
+							<!-- 我的评论 -->
+							<div class="my-rep1">
+								<div>
+									<a v-if="item.formType=='doctor'" href="dorDet.html">
+										<img :src="item.img" alt="">
+									</a>
+									<a v-if="item.formType=='expert'" href="expDet.html">
+										<img :src="item.img" alt="">
+									</a>
+									<a v-if="item.formType=='ordinary'" href="javascript:void(0)">
+										<img :src="item.img" alt="">
+									</a>
+									
+								</div>
+								<div>
+									<p class="peo">{{item.name}}</p>
+									<p>{{item.time}}</p>
+								</div>
+							</div>
+							<div class="my-rep2 rep-text" v-html="replace(item.msg)"></div>
+							<div class="my-rep3">
+								<div @click="dianzan($event,index)"><i class="iconfont icon-zan"></i><span>{{item.zan}}</span></div>
+								<div @click="huifu2(index)">
+									<i class="iconfont icon-pinglun"></i>
+									<button>评论</button>
+								</div>
+								<button class="de-rep1" @click=delCom(index)>删除</button>
+							</div>
+
+							<!-- 二级评论容器 -->
+							<div class="other-rep">
+
+								<!-- 二级评论-每条 -->
+								<div class="other-rep-item" v-for="(item2,index2) in item.otherData.slice(0,item.n)">
+									<div class="rep-text">
+										<span class="peo">{{item2.formName}}</span>
+										<span v-show="item2.toName">回复</span>
+										<span v-show="item2.toName" class="peo">{{item2.toName}}</span>
+										<span>：</span>
+										<span v-html="replace(item2.msg)"></span>
+									</div>
+									<div>
+										<div>{{item2.time}}</div>  
+										<div class="repBut2"  @click="huifu2(index,item2.formName,index2)">
+											<i class="iconfont icon-pinglun"></i>
+											<button>回复</button>
+										</div> 
+										<button class="de-rep2" @click=delCom(index,index2)>删除</button>
+									</div>
+	
+								</div>
+
+								<!-- 展开收起 -->
+								<p class="pinlunsz">
+									<button  @click="showAll(index)" v-show=" item.otherData.length > 3 ">{{item.ntext}}</button>
+								</p>
+
+							</div>
+
+
+							<!-- 二级评论容器 -->
+							<div class="rep-textarea1" v-show="item.repBoxShow">
+								<textarea class="textarea1" :id="forId(index)" v-html="item.repBoxMsg"></textarea>
+								<div>
+									<i class="iconfont icon-xiaolian erjixiao"></i>
+									<button @click="huifu2qu(index)">取消</button>
+									<button @click="huifu2OK(index)">发送</button>
+								</div>
+							</div>
+
+						</div>
+
+						
+
+					</div>
+
+				</div>
+
+			</div>
+			<!-- 评论区域# -->
+
+	
+
+		</div>
+
+
+		<div class="side-bar">
+			
+			<div class="side-logo">
+				<img src="img/ban2_05.png" alt="">
+			</div>
+
+			<p class="left-title">
+				<span>热门视频</span>
+			</p>
+
+			<div class="side-item" v-for="(item,index) in 5">
+				<img src="img/yuandian_15.png" alt="">
+				<p class="TOver cp"><a href="caseDet.html">新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南新生儿复苏石兰临床指南</a></p>
+			</div>
+
+			
+
+		</div>
+		
+		
+
+	</div>
+
+	<div id="footer" class="footer">
+
+		<div class="footerB">
+			
+			<div class="firendLink">
+				<p>友情链接</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">国家卫计委</a>
+					<a href="http://www.baidu.com">世界卫生组织</a>
+					<a href="http://www.baidu.com">国家食品药品监督管理局</a>
+					<a href="http://www.baidu.com">国家中医药管理局</a>
+					<a href="http://www.baidu.com">中国医疗</a>
+					<a href="http://www.baidu.com">新浪健康</a>
+					<a href="http://www.baidu.com">搜狐健康</a>
+					<a href="http://www.baidu.com">凤凰健康</a>
+					<a href="http://www.baidu.com">百姓健康</a>
+					<a href="http://www.baidu.com">爱爱医</a>
+					<a href="http://www.baidu.com">网易健康</a>
+					<a href="http://www.baidu.com">MedSci</a>
+					<a href="http://www.baidu.com">医学论坛网</a>
+					<a href="http://www.baidu.com">华西医院</a>
+					<a href="http://www.baidu.com">北京协和医院</a>
+					<a href="http://www.baidu.com">北京朝阳医院</a>
+					<a href="http://www.baidu.com">医保卡余额查询</a>
+				</div>
+				<p>合作媒体</p>
+				<div class="clearfix">
+					<a href="http://www.baidu.com">人民日报</a>
+					<a href="http://www.baidu.com">北京新闻网</a>
+					<a href="http://www.baidu.com">北京周报</a>
+				</div>
+			</div>
+			<div class="erweima">
+				<div>
+					<span>关注微信</span>
+					<img src="img/erweima2.png" width="112" height="98" alt="二维码" />
+				</div>
+				<p>
+					<a href="about.html">关于我们</a>
+					<span>|</span>
+					<a href="contact.html">联系我们</a>
+					<span>|</span>
+					<a @click="tofeed">意见反馈</a>
+				</p>
+			</div>
+
+		</div>
+
+		
+	</div>
+
+</div>
+	
+	
+<script src="js/vue.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="qqFace/js/jquery.qqFace.js"></script>
+<script src="js/main.js"></script>
+<script src="js/caseDet.js"></script>
+</body>
+</html>
